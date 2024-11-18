@@ -124,7 +124,8 @@ const Signup = () => {
                 variant="contained"
                 onClick={() => {
                   storageService.set("local", "token", "234543");
-                  navigate("/signup");
+                  navigate("/home")
+                  // navigate("/signup");
                 }}
                 sx={{
                   bgcolor: theme.palette.secondary.contrastText,
