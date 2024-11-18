@@ -1,6 +1,8 @@
 import { Button, useTheme } from "@mui/material";
 import Chart from "chart.js/auto";
 import { useEffect, useRef, useState } from "react";
+import moment from 'moment';
+
 import impressionsData from "../../../Data/impressions.json";
 import ImpressionsTable from "./ImpressionsTable";
 
@@ -31,11 +33,17 @@ const ImpressionsChart = () => {
       return acc;
     }, {});
 
+    const formatToDDMMM = (dateStr: string) => {
+      return moment(dateStr).format('DD-MMM');
+    };
+
     return {
-      labels: Object.keys(groupedData),
+      labels: groupBy === "date"
+        ? Object.keys(groupedData).map(formatToDDMMM)
+        : Object.keys(groupedData),
       dataPoints: Object.values(groupedData),
       detailedData: Object.entries(groupedData).map(([key, impressions]) => ({
-        key,
+        key: groupBy === "date" ? formatToDDMMM(key) : key,
         impressions,
       })),
     };
