@@ -5,7 +5,7 @@ const Layout: React.FC<{ children: JSX.Element }> = ({ children }) => {
   return (
     <Box sx={{ display: "flex" }}>
       <Sidebar />
-      <Box sx={{ margin: '10px' ,width: "100%" }}>{children}</Box>
+      <Box sx={{ padding: '10px' ,width: "100%" }}>{children}</Box>
     </Box>
   );
 };

@@ -67,10 +67,10 @@ const Sidebar: React.FC = () => {
         open={!isMobile || menuOpen}
         onClose={toggleDrawer}
         sx={{
-          width: isMobile ? 0 : 320,
+          width: isMobile ? 0 : 220,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: 320,
+            width: 220,
             boxSizing: "border-box",
             backgroundColor: theme.palette.background.default,
           },

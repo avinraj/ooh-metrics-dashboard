@@ -151,7 +151,7 @@ const Demographics = () => {
             style={{ margin: "0px", width: "100%", paddingRight: "16px" }}
           >
             {["Age", "Education", "Income", "Ethnicity"].map((category) => (
-              <Grid item xs={6} key={category}>
+              <Grid item xs={12} md={6} key={category}>
                 <Box
                   sx={{
                     p: 2,
