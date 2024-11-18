@@ -1,0 +1,617 @@
+{
+    "uuid": "15f08b3e-96b3-4e52-9c03-fe11c9d99b74",
+    "userId": "57ba2fc8-743b-44f4-89be-29805d7bd869",
+    "name": "Nickelytics Demo",
+    "pointOfContact": "Nickelytics",
+    "email": "demo@nickelytics.com",
+    "website": "https://www.nickelytics.com",
+    "phone": "(123) 342-3437",
+    "address": {
+        "state": "FL",
+        "city": "",
+        "zipcode": "",
+        "unit": "",
+        "street": ""
+    },
+    "userIds": [
+        "299a6467-0e4f-4378-966c-6879c966bbc9,f10b8c47-858b-4fbf-a798-8d2425d9a67f",
+        "a25a8fc8-8a84-4967-98eb-192a4cb795de"
+    ],
+    "organizationType": "BRAND",
+    "productType": "Clothes",
+    "clientType": "DEMO",
+    "profileImage": "",
+    "campaigns": [
+        {
+            "vehicleIds": [
+                "2T2ZK1BA8BC048668",
+                "1GCHC33J2VF021081",
+                "2FMGK5BC1BBD72795",
+                "5FNRL38776B432709",
+                "1GNLVFED9AS101273",
+                "2C3CCABG1EH263156",
+                "3GCRKREA9AG287732"
+            ],
+            "assetIds": [],
+            "products": [],
+            "dataPackage": "Street_Metrics",
+            "genericDesign": [],
+            "consumerTargetIncomeLevel": [],
+            "consumerTargetEthnicGroup": [],
+            "consumerTargetGender": [],
+            "consumerTargetAgeRange": [],
+            "consumerTargetEducation": [],
+            "services": [
+                "DIY_DIGITAL_RETARGETING",
+                "WEB_VISITATION_ANALYSIS",
+                "APP_INSTALL_ANALYSIS",
+                "WEB_LIFT_ANALYSIS"
+            ],
+            "name": "Demo-campaign",
+            "start": "2025-08-01T00:00:00.000Z",
+            "end": "2026-11-06T00:00:00.000Z",
+            "geofenceId": "b43a6331-3bc4-4ee2-848c-1d5c8f691695",
+            "mediaType": "FULL_WRAP",
+            "mediaFormat": "CAR",
+            "assets": 13,
+            "reach": "1000000",
+            "clientId": "15f08b3e-96b3-4e52-9c03-fe11c9d99b74",
+            "uuid": "0f6e5e9b-560a-41ed-8e35-683d376f3fe1",
+            "streetMetricsMetaDataV3": {
+                "id": 26882,
+                "flights": [
+                    {
+                        "flightId": 30090,
+                        "flightRef": "Demo-campaign",
+                        "assetIds": [
+                            37228659,
+                            37228660,
+                            37228661,
+                            37228662,
+                            37228665
+                        ],
+                        "mediaId": 1192
+                    }
+                ]
+            },
+            "additionalServices": null,
+            "budget": null,
+            "campaignGoal": null,
+            "consumerTargetPetOwner": null,
+            "designApproved": null,
+            "geographicalRequirement": null,
+            "selfGenericDesign": null,
+            "images": [],
+            "driversHistory": [],
+            "nicAssetsHistory": [],
+            "interestedDrivers": [
+                "avinraj@nickelytics.com"
+            ],
+            "geofence": {
+                "_id": "60b2bebce6ec50a0e43323e9",
+                "type": "Feature",
+                "timezone": "UTC",
+                "properties": {
+                    "id": 120,
+                    "name": "NASHVILLE"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -86.780082291,
+                        36.090466459
+                    ]
+                },
+                "uuid": "b43a6331-3bc4-4ee2-848c-1d5c8f691695",
+                "createdAt": "2021-05-29T22:14:38.564Z",
+                "updatedAt": "2021-05-29T22:14:38.564Z",
+                "__v": 0
+            },
+            "vehicles": [
+                {
+                    "_id": "653b99572eaa93a4b4f2fe7e",
+                    "email": "testsdjhb3232@gmail.com",
+                    "vin": "1GCHC33J2VF021081",
+                    "year": 1997,
+                    "make": "CHEVROLET",
+                    "vehicleModel": "GMT-400",
+                    "bodyType": "Pickup",
+                    "uuid": "94645e2e-bfeb-499d-b15c-588be0e49a31",
+                    "createdAt": "2023-10-27T11:04:55.225Z",
+                    "updatedAt": "2023-10-27T11:05:59.961Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37228660,
+                        "displayName": "Test 1997 Chevrolet Gmt-400"
+                    }
+                },
+                {
+                    "_id": "653b99572eaa93a4b4f2fe7f",
+                    "email": "testjhs44@gmail.com",
+                    "vin": "1GNLVFED9AS101273",
+                    "year": 2010,
+                    "make": "CHEVROLET",
+                    "vehicleModel": "Traverse",
+                    "bodyType": "Sport Utility Vehicle (SUV)",
+                    "uuid": "5eb0997d-8169-422e-bb86-1093991a2643",
+                    "createdAt": "2023-10-27T11:04:55.225Z",
+                    "updatedAt": "2023-10-27T13:12:22.647Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37228665,
+                        "displayName": "Test 2010 Chevrolet Traverse"
+                    }
+                },
+                {
+                    "_id": "65602d1b947b2688a651c1f6",
+                    "email": "bulk1@gmail.com",
+                    "vin": "2C3CCABG1EH263156",
+                    "year": 2014,
+                    "make": "CHRYSLER",
+                    "vehicleModel": "300",
+                    "bodyType": "Sedan",
+                    "uuid": "e3c26a16-6c79-4e60-9684-1233bfc675c6",
+                    "createdAt": "2023-11-24T04:56:59.792Z",
+                    "updatedAt": "2023-11-24T05:02:31.233Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37233891,
+                        "displayName": " Bulk 1 2014 Chrysler 300"
+                    }
+                },
+                {
+                    "_id": "653b99572eaa93a4b4f2fe7c",
+                    "email": "test23sdsd@gmail.com",
+                    "vin": "2FMGK5BC1BBD72795",
+                    "year": 2011,
+                    "make": "FORD",
+                    "vehicleModel": "Flex",
+                    "bodyType": "Sport Utility Vehicle (SUV)",
+                    "uuid": "f77cb9b7-b6cd-4dc1-8a33-a55c462a6212",
+                    "createdAt": "2023-10-27T11:04:55.225Z",
+                    "updatedAt": "2023-10-27T11:06:03.505Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37228661,
+                        "displayName": "Test 2011 Ford Flex"
+                    }
+                },
+                {
+                    "_id": "653b99572eaa93a4b4f2fe7b",
+                    "email": "test23423@gmail.com",
+                    "vin": "2T2ZK1BA8BC048668",
+                    "year": 2011,
+                    "make": "LEXUS",
+                    "vehicleModel": "RX",
+                    "bodyType": "Sport Utility Vehicle (SUV)",
+                    "uuid": "f31943c9-f42a-4627-97fb-11abad09a1f5",
+                    "createdAt": "2023-10-27T11:04:55.225Z",
+                    "updatedAt": "2023-10-27T11:05:56.488Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37228659,
+                        "displayName": "Test 2011 Lexus Rx"
+                    }
+                },
+                {
+                    "_id": "653b99572eaa93a4b4f2fe7d",
+                    "email": "testdsfh4@gmail.com",
+                    "vin": "5FNRL38776B432709",
+                    "year": 2006,
+                    "make": "HONDA",
+                    "vehicleModel": "Odyssey",
+                    "bodyType": "Minivan",
+                    "uuid": "37a011ba-ddbd-4514-8428-cc0b8e77cbd0",
+                    "createdAt": "2023-10-27T11:04:55.225Z",
+                    "updatedAt": "2023-10-27T11:06:07.189Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37228662,
+                        "displayName": "Test 2006 Honda Odyssey"
+                    }
+                }
+            ],
+            "nicassets": []
+        },
+        {
+            "start": "2024-05-28T00:00:00.000Z",
+            "end": "2024-09-19T00:00:00.000Z",
+            "name": "Demo-Campaign 1 ",
+            "vehicleIds": [],
+            "assetIds": [
+                "BOT-746556991",
+                "BOT-961597627"
+            ],
+            "geofenceId": "c3f52f4f-6f85-477d-bd7a-9f044d3c2291",
+            "clientId": "15f08b3e-96b3-4e52-9c03-fe11c9d99b74",
+            "products": [],
+            "dataPackage": "Street_Metrics",
+            "mediaType": "ROBOTS",
+            "assets": 5,
+            "genericDesign": [],
+            "consumerTargetIncomeLevel": [],
+            "consumerTargetEthnicGroup": [],
+            "consumerTargetGender": [],
+            "consumerTargetAgeRange": [],
+            "consumerTargetEducation": [],
+            "services": [
+                "DIY_DIGITAL_RETARGETING"
+            ],
+            "reach": "4500000",
+            "driversHistory": [],
+            "nicAssetsHistory": [
+                {
+                    "uuid": "aafd5ecf-b0b1-4c79-8ed3-d0692addf657",
+                    "fileIds": [],
+                    "installerImages": [],
+                    "startDate": "2024-05-28T13:31:12.654Z"
+                },
+                {
+                    "uuid": "59c78efb-24e1-4759-9718-f862a2bf5512",
+                    "fileIds": [],
+                    "installerImages": [],
+                    "startDate": "2024-05-28T13:42:05.957Z"
+                }
+            ],
+            "images": [
+                "https://fastly.picsum.photos/id/738/536/354.jpg?hmac=JD1xUUMU1w6-Tv6eyLPl-EADiFvYWM80b0ONf6CN5Ls"
+            ],
+            "uuid": "46a07807-3620-4a9c-8ab5-7d28ce6ea3e1",
+            "streetMetricsMetaDataV3": {
+                "id": 26882,
+                "flights": [
+                    {
+                        "flightId": 30090,
+                        "flightRef": "Demo-Campaign 1 ",
+                        "assetIds": [
+                            37228659,
+                            37228660
+                        ],
+                        "mediaId": 6505
+                    }
+                ]
+            },
+            "geofence": {
+                "_id": "60b2bebce6ec50a0e4332422",
+                "type": "Feature",
+                "timezone": "UTC",
+                "properties": {
+                    "id": 126,
+                    "name": "AUSTIN"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -97.907246328,
+                        30.374016696
+                    ]
+                },
+                "uuid": "c3f52f4f-6f85-477d-bd7a-9f044d3c2291",
+                "createdAt": "2021-05-29T22:14:38.565Z",
+                "updatedAt": "2021-05-29T22:14:38.565Z",
+                "__v": 0
+            },
+            "vehicles": [],
+            "nicassets": [
+                {
+                    "_id": "6655d993e49d26b4a4e97c53",
+                    "displayName": "NIC-BOT-720451948",
+                    "assetOwnerId": "635e216c-3d77-480b-9a4a-de36ab27655c",
+                    "assetId": "BOT-746556991",
+                    "mediaPositions": [],
+                    "assetImageLinks": [],
+                    "installerImages": [],
+                    "location": {
+                        "coordinates": []
+                    },
+                    "totalMiles": 0,
+                    "ownerSideId": "SROB_4",
+                    "ownerSideName": "smart_rob_4",
+                    "status": "ONLINE",
+                    "uuid": "aafd5ecf-b0b1-4c79-8ed3-d0692addf657",
+                    "createdAt": "2024-05-28T13:18:11.504Z",
+                    "updatedAt": "2024-11-17T22:59:12.342Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37228659,
+                        "displayName": "NicAsset - BOT-746556991"
+                    },
+                    "campaignName": "Demo-Campaign 1 ",
+                    "campaignId": "46a07807-3620-4a9c-8ab5-7d28ce6ea3e1"
+                },
+                {
+                    "_id": "6655de56e49d26b4a4e97d5b",
+                    "displayName": "NIC-BOT-146756512",
+                    "assetOwnerId": "635e216c-3d77-480b-9a4a-de36ab27655c",
+                    "assetId": "BOT-961597627",
+                    "mediaPositions": [],
+                    "assetImageLinks": [],
+                    "installerImages": [],
+                    "location": {
+                        "coordinates": []
+                    },
+                    "totalMiles": 833.8886552098453,
+                    "ownerSideId": "TROB_4",
+                    "ownerSideName": "techno_rob_1",
+                    "status": "ONLINE",
+                    "uuid": "59c78efb-24e1-4759-9718-f862a2bf5512",
+                    "createdAt": "2024-05-28T13:38:30.426Z",
+                    "updatedAt": "2024-11-17T22:59:12.293Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37228660,
+                        "displayName": "NicAsset - BOT-961597627"
+                    },
+                    "campaignName": "Demo-Campaign 1 ",
+                    "campaignId": "46a07807-3620-4a9c-8ab5-7d28ce6ea3e1"
+                }
+            ]
+        },
+        {
+            "start": "2024-06-28T00:00:00.000Z",
+            "end": "2025-03-18T00:00:00.000Z",
+            "name": "Demo-Campaign 2",
+            "vehicleIds": [],
+            "assetIds": [
+                "BOT-149154196",
+                "BOT-840565747"
+            ],
+            "geofenceId": "44d8d173-a7b0-413a-bce1-d67f7cd39985",
+            "clientId": "15f08b3e-96b3-4e52-9c03-fe11c9d99b74",
+            "products": [],
+            "dataPackage": "Street_Metrics",
+            "mediaType": "ROBOTS",
+            "assets": 4,
+            "genericDesign": [],
+            "consumerTargetIncomeLevel": [],
+            "consumerTargetEthnicGroup": [],
+            "consumerTargetGender": [],
+            "consumerTargetAgeRange": [],
+            "consumerTargetEducation": [],
+            "services": [
+                "WEB_VISITATION_ANALYSIS"
+            ],
+            "reach": "10000000",
+            "driversHistory": [],
+            "nicAssetsHistory": [
+                {
+                    "uuid": "77c2efa2-a490-42ef-a8bd-a848dfa36ee1",
+                    "fileIds": [],
+                    "installerImages": [],
+                    "startDate": "2024-05-28T13:31:58.651Z"
+                },
+                {
+                    "uuid": "6ade7393-c00e-4d90-bf82-55b890de78e6",
+                    "fileIds": [],
+                    "installerImages": [
+                        "https://fastly.picsum.photos/id/738/536/354.jpg?hmac=JD1xUUMU1w6-Tv6eyLPl-EADiFvYWM80b0ONf6CN5Ls"
+                    ],
+                    "startDate": "2024-06-11T17:00:25.496Z",
+                    "endDate": "2024-06-11T17:28:07.271Z"
+                },
+                {
+                    "uuid": "6ade7393-c00e-4d90-bf82-55b890de78e6",
+                    "fileIds": [],
+                    "installerImages": [
+                        "https://fastly.picsum.photos/id/738/536/354.jpg?hmac=JD1xUUMU1w6-Tv6eyLPl-EADiFvYWM80b0ONf6CN5Ls"
+                    ],
+                    "startDate": "2024-06-11T18:04:09.834Z"
+                }
+            ],
+            "images": [],
+            "uuid": "fbcefb96-43f8-495c-ac51-dd5373cdeda5",
+            "streetMetricsMetaDataV3": {
+                "id": 218469,
+                "flights": [
+                    {
+                        "flightId": 39876,
+                        "flightRef": "Demo-Campaign 1",
+                        "assetIds": [],
+                        "mediaId": 6505
+                    }
+                ]
+            },
+            "geofence": {
+                "_id": "60b2bebce6ec50a0e43323d2",
+                "type": "Feature",
+                "timezone": "UTC",
+                "properties": {
+                    "id": 119,
+                    "name": "BIRMINGHAM"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -86.970081856,
+                        33.539125155
+                    ]
+                },
+                "uuid": "44d8d173-a7b0-413a-bce1-d67f7cd39985",
+                "createdAt": "2021-05-29T22:14:38.563Z",
+                "updatedAt": "2021-05-29T22:14:38.563Z",
+                "__v": 0
+            },
+            "vehicles": [],
+            "nicassets": [
+                {
+                    "_id": "6655d986e49d26b4a4e97c4c",
+                    "displayName": "NIC-BOT-354437114",
+                    "assetOwnerId": "635e216c-3d77-480b-9a4a-de36ab27655c",
+                    "assetId": "BOT-149154196",
+                    "mediaPositions": [],
+                    "assetImageLinks": [],
+                    "installerImages": [],
+                    "location": {
+                        "coordinates": []
+                    },
+                    "totalMiles": 0,
+                    "ownerSideId": "SROB_3",
+                    "ownerSideName": "smart_rob_3",
+                    "status": "ONLINE",
+                    "uuid": "77c2efa2-a490-42ef-a8bd-a848dfa36ee1",
+                    "createdAt": "2024-05-28T13:17:58.522Z",
+                    "updatedAt": "2024-11-17T22:59:13.026Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37359899,
+                        "displayName": "NicAsset - BOT-149154196"
+                    },
+                    "campaignName": "Demo-Campaign 2",
+                    "campaignId": "fbcefb96-43f8-495c-ac51-dd5373cdeda5"
+                },
+                {
+                    "_id": "6655d97de49d26b4a4e97c45",
+                    "displayName": "NIC-BOT-605917101",
+                    "assetOwnerId": "635e216c-3d77-480b-9a4a-de36ab27655c",
+                    "assetId": "BOT-840565747",
+                    "mediaPositions": [],
+                    "assetImageLinks": [],
+                    "installerImages": [
+                        "https://fastly.picsum.photos/id/738/536/354.jpg?hmac=JD1xUUMU1w6-Tv6eyLPl-EADiFvYWM80b0ONf6CN5Ls"
+                    ],
+                    "location": {
+                        "coordinates": []
+                    },
+                    "totalMiles": 0,
+                    "ownerSideId": "SROB_2",
+                    "ownerSideName": "smart_rob_2",
+                    "status": "ONLINE",
+                    "uuid": "6ade7393-c00e-4d90-bf82-55b890de78e6",
+                    "createdAt": "2024-05-28T13:17:49.524Z",
+                    "updatedAt": "2024-11-17T22:59:13.077Z",
+                    "__v": 0,
+                    "campaignName": "Demo-Campaign 2",
+                    "campaignId": "fbcefb96-43f8-495c-ac51-dd5373cdeda5",
+                    "streetMetricsMetaDataV3": {
+                        "id": 37363808,
+                        "displayName": "NicAsset - BOT-840565747"
+                    }
+                }
+            ]
+        },
+        {
+            "start": "2024-05-22T00:00:00.000Z",
+            "end": "2024-11-19T00:00:00.000Z",
+            "name": "Demo-Campaign 3",
+            "vehicleIds": [
+                "3GNDA53P88S595616"
+            ],
+            "assetIds": [],
+            "geofenceId": "0a02eee2-aead-419d-aa1a-406f456a20d9",
+            "clientId": "15f08b3e-96b3-4e52-9c03-fe11c9d99b74",
+            "products": [],
+            "dataPackage": "Street_Metrics",
+            "mediaType": "ROBOTS",
+            "assets": 3,
+            "genericDesign": [],
+            "consumerTargetIncomeLevel": [],
+            "consumerTargetEthnicGroup": [],
+            "consumerTargetGender": [],
+            "consumerTargetAgeRange": [],
+            "consumerTargetEducation": [],
+            "services": [
+                "WEB_VISITATION_ANALYSIS"
+            ],
+            "reach": "11000000",
+            "driversHistory": [
+                {
+                    "driverId": "155d65b5-df3d-4058-bc3e-d226e4f02998",
+                    "fileIds": {
+                        "frontSide": "https://nickelytics-api-files-fsrskn1vp2p.s3.us-east-2.amazonaws.com/shared/vehicle-photo/4f9f494a-1b85-4797-a870-1863d466872d/11-04-2024/1947debd-5cba-495a-9d87-aec8c57ff92d.jpg",
+                        "driverSide": "https://nickelytics-api-files-fsrskn1vp2p.s3.us-east-2.amazonaws.com/shared/vehicle-photo/4f9f494a-1b85-4797-a870-1863d466872d/11-04-2024/46dbcf0f-ff1e-49e0-82dd-0c289f8c776f.jpg"
+                    },
+                    "installerImages": null,
+                    "startDate": "2024-10-23T06:09:24.976Z"
+                }
+            ],
+            "nicAssetsHistory": [
+                {
+                    "uuid": "6ade7393-c00e-4d90-bf82-55b890de78e6",
+                    "fileIds": [],
+                    "installerImages": [],
+                    "startDate": "2024-05-28T13:32:12.297Z",
+                    "endDate": "2024-06-11T17:00:16.086Z"
+                },
+                {
+                    "uuid": "6ade7393-c00e-4d90-bf82-55b890de78e6",
+                    "fileIds": [],
+                    "installerImages": [
+                        "https://fastly.picsum.photos/id/738/536/354.jpg?hmac=JD1xUUMU1w6-Tv6eyLPl-EADiFvYWM80b0ONf6CN5Ls"
+                    ],
+                    "startDate": "2024-06-11T17:28:16.278Z",
+                    "endDate": "2024-06-11T17:36:02.622Z"
+                }
+            ],
+            "images": [],
+            "uuid": "64f71798-deda-4e28-9d2d-979753123f8b",
+            "streetMetricsMetaDataV3": {
+                "id": 218470,
+                "flights": [
+                    {
+                        "flightId": 39877,
+                        "flightRef": "Demo-Campaign 3",
+                        "assetIds": [],
+                        "mediaId": 6505
+                    }
+                ]
+            },
+            "geofence": {
+                "_id": "60b2bebce6ec50a0e43323ff",
+                "type": "Feature",
+                "timezone": "UTC",
+                "properties": {
+                    "id": 7,
+                    "name": "BOSTON"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        -71.542080659,
+                        42.686940578
+                    ]
+                },
+                "uuid": "0a02eee2-aead-419d-aa1a-406f456a20d9",
+                "createdAt": "2021-05-29T22:14:38.564Z",
+                "updatedAt": "2021-05-29T22:14:38.564Z",
+                "__v": 0
+            },
+            "vehicles": [
+                {
+                    "_id": "66ea6d65ba3d1ce4a0f87821",
+                    "email": "vishnu@nickelytics.com",
+                    "vin": "3GNDA53P88S595616",
+                    "year": 2008,
+                    "make": "CHEVROLET",
+                    "vehicleModel": "HHR",
+                    "bodyType": "Sport Utility Vehicle (SUV)",
+                    "uuid": "4f9f494a-1b85-4797-a870-1863d466872d",
+                    "createdAt": "2024-09-18T06:04:21.636Z",
+                    "updatedAt": "2024-11-04T09:28:02.305Z",
+                    "__v": 0,
+                    "streetMetricsMetaDataV3": {
+                        "id": 37442728,
+                        "displayName": "Vishnu 4 2008 Chevrolet Hhr"
+                    },
+                    "fileIds": {
+                        "frontSide": "https://nickelytics-api-files-fsrskn1vp2p.s3.us-east-2.amazonaws.com/shared/vehicle-photo/4f9f494a-1b85-4797-a870-1863d466872d/11-04-2024/1947debd-5cba-495a-9d87-aec8c57ff92d.jpg",
+                        "driverSide": "https://nickelytics-api-files-fsrskn1vp2p.s3.us-east-2.amazonaws.com/shared/vehicle-photo/4f9f494a-1b85-4797-a870-1863d466872d/11-04-2024/46dbcf0f-ff1e-49e0-82dd-0c289f8c776f.jpg"
+                    }
+                }
+            ],
+            "nicassets": []
+        }
+    ],
+    "user": {
+        "email": "demo@nickelytics.com",
+        "role": "CLIENT",
+        "uuid": "57ba2fc8-743b-44f4-89be-29805d7bd869",
+        "tokenVersion": 65
+    },
+    "users": [
+        {
+            "email": "12@gmail.com",
+            "role": "CLIENT",
+            "uuid": "a25a8fc8-8a84-4967-98eb-192a4cb795de"
+        }
+    ]
+}

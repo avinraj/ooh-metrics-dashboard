@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
   const menuItems = [
     { label: "Ad Type", action: "Ad Type", image: car, path: "/ad-type" },
     { label: "Highlight", action: "Highlight", path: "/highlight" },
-    { label: "Impressions", action: "Impressions", image: eye, path: "/impressions" },
+    { label: "Reports", action: "Reports", image: eye, path: "/reports" },
     { label: "Audience", action: "Audience", image: audience, path: "/audience" },
     { label: "Map View", action: "Map View", image: location, path: "/map-view" },
     { label: "Cars", action: "Cars", image: carLogo, path: "/cars" },
