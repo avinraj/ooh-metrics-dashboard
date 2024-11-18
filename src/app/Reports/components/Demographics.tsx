@@ -136,24 +136,28 @@ const Demographics = () => {
   return (
     <div>
       <div>
-        <Typography variant="h3" style={{marginBlock: '30px'}}>Demographics</Typography>
+        <Typography variant="h3" style={{ marginBlock: "30px" }}>
+          Demographics
+        </Typography>
         <div
           style={{
             backgroundColor: theme.palette.secondary.main,
             borderRadius: "8px",
           }}
         >
-          <Grid container spacing={2} style={{ margin: "0px", width: "100%" }}>
+          <Grid
+            container
+            spacing={2}
+            style={{ margin: "0px", width: "100%", paddingRight: "16px" }}
+          >
             {["Age", "Education", "Income", "Ethnicity"].map((category) => (
-              <Grid
-                item
-                xs={6}
-                key={category}
-                style={{ borderStyle: "groove", borderWidth: "2px" }}
-              >
+              <Grid item xs={6} key={category}>
                 <Box
                   sx={{
                     p: 2,
+                    borderStyle: "solid",
+                    borderWidth: "1px",
+                    borderRadius: "10px",
                   }}
                 >
                   <Typography variant="h6" color="text.primary" gutterBottom>

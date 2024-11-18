@@ -1,7 +1,6 @@
-import React from "react";
 import { Box, Button, Card, Grid, TextField, Typography } from "@mui/material";
-import logo from "../../assets/oohlogo.png";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/oohlogo.png";
 const Signup3 = () => {
   const navigate = useNavigate();
   return (

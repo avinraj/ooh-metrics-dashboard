@@ -34,7 +34,7 @@ const Affinities = () => {
               <Grid item xs={12} sm={6} md={3} key={index}>
                 <Card
                   elevation={0}
-                  style={{ background: "none", borderStyle: "groove" }}
+                  style={{ background: "none", borderStyle: "solid", borderWidth: '1px' }}
                 >
                   <CardContent>
                     <Typography
