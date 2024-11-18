@@ -1,11 +1,11 @@
 // AppRoutes.tsx
-import { Routes, Route } from "react-router-dom";
-import Home from "../app/Home/Home";
-import Signup from "../app/Signup/Signup";
+import { Route, Routes } from "react-router-dom";
 import HighLight from "../app/Highlight/HighLight";
-import ProtectedRoute from "./ProtectedRoute";
+import Home from "../app/Home/Home";
+import Reports from "../app/Reports/pages/Reports";
+import Signup from "../app/Signup/Signup";
 import Layout from "../layout/Layout";
-import Impressions from "../app/Impressions/pages/Impressions";
+import ProtectedRoute from "./ProtectedRoute";
 
 const AppRoutes = () => {
   return (
@@ -32,11 +32,11 @@ const AppRoutes = () => {
         }
       />
        <Route
-        path="/impressions"
+        path="/reports"
         element={
           <ProtectedRoute>
             <Layout>
-              <Impressions />
+              <Reports />
             </Layout>
           </ProtectedRoute>
         }
