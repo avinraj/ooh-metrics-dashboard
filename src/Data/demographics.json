@@ -1,0 +1,527 @@
+[
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 910,
+        "category": "Age",
+        "group": "<18",
+        "percent": 31.44
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 270,
+        "category": "Age",
+        "group": "18-24",
+        "percent": 9.33
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 610,
+        "category": "Age",
+        "group": "25-34",
+        "percent": 21.08
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 310,
+        "category": "Age",
+        "group": "35-44",
+        "percent": 10.71
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 300,
+        "category": "Age",
+        "group": "45-54",
+        "percent": 10.37
+    },
+    {
+        "PROFILE_INDEX": 6,
+        "DEVICE_COUNT": 248,
+        "category": "Age",
+        "group": "55-64",
+        "percent": 8.57
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 910,
+        "category": "Age",
+        "group": "<18",
+        "percent": 31.44
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 270,
+        "category": "Age",
+        "group": "18-24",
+        "percent": 9.33
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 610,
+        "category": "Age",
+        "group": "25-34",
+        "percent": 21.08
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 310,
+        "category": "Age",
+        "group": "35-44",
+        "percent": 10.71
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 300,
+        "category": "Age",
+        "group": "45-54",
+        "percent": 10.37
+    },
+    {
+        "PROFILE_INDEX": 6,
+        "DEVICE_COUNT": 248,
+        "category": "Age",
+        "group": "55-64",
+        "percent": 8.57
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 910,
+        "category": "Age",
+        "group": "<18",
+        "percent": 31.44
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 270,
+        "category": "Age",
+        "group": "18-24",
+        "percent": 9.33
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 610,
+        "category": "Age",
+        "group": "25-34",
+        "percent": 21.08
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 310,
+        "category": "Age",
+        "group": "35-44",
+        "percent": 10.71
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 300,
+        "category": "Age",
+        "group": "45-54",
+        "percent": 10.37
+    },
+    {
+        "PROFILE_INDEX": 6,
+        "DEVICE_COUNT": 248,
+        "category": "Age",
+        "group": "55-64",
+        "percent": 8.57
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 910,
+        "category": "Age",
+        "group": "<18",
+        "percent": 31.44
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 270,
+        "category": "Age",
+        "group": "18-24",
+        "percent": 9.33
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 610,
+        "category": "Age",
+        "group": "25-34",
+        "percent": 21.08
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 310,
+        "category": "Age",
+        "group": "35-44",
+        "percent": 10.71
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 300,
+        "category": "Age",
+        "group": "45-54",
+        "percent": 10.37
+    },
+    {
+        "PROFILE_INDEX": 6,
+        "DEVICE_COUNT": 248,
+        "category": "Age",
+        "group": "55-64",
+        "percent": 8.57
+    },
+    {
+        "PROFILE_INDEX": 7,
+        "DEVICE_COUNT": 246,
+        "category": "Age",
+        "group": "65+",
+        "percent": 8.5
+    },
+    {
+        "PROFILE_INDEX": 8,
+        "DEVICE_COUNT": 458,
+        "category": "Education",
+        "group": "No High School",
+        "percent": 12.62
+    },
+    {
+        "PROFILE_INDEX": 9,
+        "DEVICE_COUNT": 1106,
+        "category": "Education",
+        "group": "High School",
+        "percent": 30.49
+    },
+    {
+        "PROFILE_INDEX": 10,
+        "DEVICE_COUNT": 1192,
+        "category": "Education",
+        "group": "Some College/2 Year",
+        "percent": 32.86
+    },
+    {
+        "PROFILE_INDEX": 11,
+        "DEVICE_COUNT": 658,
+        "category": "Education",
+        "group": "Bachelor",
+        "percent": 18.14
+    },
+    {
+        "PROFILE_INDEX": 12,
+        "DEVICE_COUNT": 214,
+        "category": "Education",
+        "group": "Higher Degree",
+        "percent": 5.9
+    },
+    {
+        "PROFILE_INDEX": 18,
+        "DEVICE_COUNT": 1152,
+        "category": "Ethnicity",
+        "group": "African American",
+        "percent": 23.2
+    },
+    {
+        "PROFILE_INDEX": 19,
+        "DEVICE_COUNT": 60,
+        "category": "Ethnicity",
+        "group": "Asian",
+        "percent": 1.21
+    },
+    {
+        "PROFILE_INDEX": 20,
+        "DEVICE_COUNT": 416,
+        "category": "Ethnicity",
+        "group": "Hispanic",
+        "percent": 8.38
+    },
+    {
+        "PROFILE_INDEX": 21,
+        "DEVICE_COUNT": 38,
+        "category": "Ethnicity",
+        "group": "Other or Mixed",
+        "percent": 0.77
+    },
+    {
+        "PROFILE_INDEX": 22,
+        "DEVICE_COUNT": 3300,
+        "category": "Ethnicity",
+        "group": "White",
+        "percent": 66.45
+    },
+    {
+        "PROFILE_INDEX": 13,
+        "DEVICE_COUNT": 1380,
+        "category": "Income",
+        "group": "0-29K",
+        "percent": 33.74
+    },
+    {
+        "PROFILE_INDEX": 14,
+        "DEVICE_COUNT": 1962,
+        "category": "Income",
+        "group": "30-74K",
+        "percent": 47.97
+    },
+    {
+        "PROFILE_INDEX": 15,
+        "DEVICE_COUNT": 302,
+        "category": "Income",
+        "group": "75-99K",
+        "percent": 7.38
+    },
+    {
+        "PROFILE_INDEX": 16,
+        "DEVICE_COUNT": 290,
+        "category": "Income",
+        "group": "100-149K",
+        "percent": 7.09
+    },
+    {
+        "PROFILE_INDEX": 17,
+        "DEVICE_COUNT": 156,
+        "category": "Income",
+        "group": "150K+",
+        "percent": 3.81
+    },
+    {
+        "PROFILE_INDEX": 19,
+        "DEVICE_COUNT": 60,
+        "category": "Ethnicity",
+        "group": "Asian",
+        "percent": 1.21
+    },
+    {
+        "PROFILE_INDEX": 20,
+        "DEVICE_COUNT": 416,
+        "category": "Ethnicity",
+        "group": "Hispanic",
+        "percent": 8.38
+    },
+    {
+        "PROFILE_INDEX": 21,
+        "DEVICE_COUNT": 38,
+        "category": "Ethnicity",
+        "group": "Other or Mixed",
+        "percent": 0.77
+    },
+    {
+        "PROFILE_INDEX": 22,
+        "DEVICE_COUNT": 3300,
+        "category": "Ethnicity",
+        "group": "White",
+        "percent": 66.45
+    },
+    {
+        "PROFILE_INDEX": 13,
+        "DEVICE_COUNT": 1380,
+        "category": "Income",
+        "group": "0-29K",
+        "percent": 33.74
+    },
+    {
+        "PROFILE_INDEX": 14,
+        "DEVICE_COUNT": 1962,
+        "category": "Income",
+        "group": "30-74K",
+        "percent": 47.97
+    },
+    {
+        "PROFILE_INDEX": 15,
+        "DEVICE_COUNT": 302,
+        "category": "Income",
+        "group": "75-99K",
+        "percent": 7.38
+    },
+    {
+        "PROFILE_INDEX": 16,
+        "DEVICE_COUNT": 290,
+        "category": "Income",
+        "group": "100-149K",
+        "percent": 7.09
+    },
+    {
+        "PROFILE_INDEX": 17,
+        "DEVICE_COUNT": 156,
+        "category": "Income",
+        "group": "150K+",
+        "percent": 3.81
+    },
+    {
+        "PROFILE_INDEX": 19,
+        "DEVICE_COUNT": 60,
+        "category": "Ethnicity",
+        "group": "Asian",
+        "percent": 1.21
+    },
+    {
+        "PROFILE_INDEX": 20,
+        "DEVICE_COUNT": 416,
+        "category": "Ethnicity",
+        "group": "Hispanic",
+        "percent": 8.38
+    },
+    {
+        "PROFILE_INDEX": 21,
+        "DEVICE_COUNT": 38,
+        "category": "Ethnicity",
+        "group": "Other or Mixed",
+        "percent": 0.77
+    },
+    {
+        "PROFILE_INDEX": 22,
+        "DEVICE_COUNT": 3300,
+        "category": "Ethnicity",
+        "group": "White",
+        "percent": 66.45
+    },
+    {
+        "PROFILE_INDEX": 13,
+        "DEVICE_COUNT": 1380,
+        "category": "Income",
+        "group": "0-29K",
+        "percent": 33.74
+    },
+    {
+        "PROFILE_INDEX": 14,
+        "DEVICE_COUNT": 1962,
+        "category": "Income",
+        "group": "30-74K",
+        "percent": 47.97
+    },
+    {
+        "PROFILE_INDEX": 15,
+        "DEVICE_COUNT": 302,
+        "category": "Income",
+        "group": "75-99K",
+        "percent": 7.38
+    },
+    {
+        "PROFILE_INDEX": 16,
+        "DEVICE_COUNT": 290,
+        "category": "Income",
+        "group": "100-149K",
+        "percent": 7.09
+    },
+    {
+        "PROFILE_INDEX": 17,
+        "DEVICE_COUNT": 156,
+        "category": "Income",
+        "group": "150K+",
+        "percent": 3.81
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 910,
+        "category": "Age",
+        "group": "<18",
+        "percent": 31.44
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 270,
+        "category": "Age",
+        "group": "18-24",
+        "percent": 9.33
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 610,
+        "category": "Age",
+        "group": "25-34",
+        "percent": 21.08
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 310,
+        "category": "Age",
+        "group": "35-44",
+        "percent": 10.71
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 300,
+        "category": "Age",
+        "group": "45-54",
+        "percent": 10.37
+    },
+    {
+        "PROFILE_INDEX": 6,
+        "DEVICE_COUNT": 248,
+        "category": "Age",
+        "group": "55-64",
+        "percent": 8.57
+    },
+    {
+        "PROFILE_INDEX": 7,
+        "DEVICE_COUNT": 246,
+        "category": "Age",
+        "group": "65+",
+        "percent": 8.5
+    },
+    {
+        "PROFILE_INDEX": 8,
+        "DEVICE_COUNT": 458,
+        "category": "Education",
+        "group": "No High School",
+        "percent": 12.62
+    },
+    {
+        "PROFILE_INDEX": 9,
+        "DEVICE_COUNT": 1106,
+        "category": "Education",
+        "group": "High School",
+        "percent": 30.49
+    },
+    {
+        "PROFILE_INDEX": 10,
+        "DEVICE_COUNT": 1192,
+        "category": "Education",
+        "group": "Some College/2 Year",
+        "percent": 32.86
+    },
+    {
+        "PROFILE_INDEX": 11,
+        "DEVICE_COUNT": 658,
+        "category": "Education",
+        "group": "Bachelor",
+        "percent": 18.14
+    },
+    {
+        "PROFILE_INDEX": 12,
+        "DEVICE_COUNT": 214,
+        "category": "Education",
+        "group": "Higher Degree",
+        "percent": 5.9
+    },
+    {
+        "PROFILE_INDEX": 18,
+        "DEVICE_COUNT": 1152,
+        "category": "Ethnicity",
+        "group": "African American",
+        "percent": 23.2
+    },
+    {
+        "PROFILE_INDEX": 19,
+        "DEVICE_COUNT": 60,
+        "category": "Ethnicity",
+        "group": "Asian",
+        "percent": 1.21
+    },
+    {
+        "PROFILE_INDEX": 20,
+        "DEVICE_COUNT": 416,
+        "category": "Ethnicity",
+        "group": "Hispanic",
+        "percent": 8.38
+    },
+    {
+        "PROFILE_INDEX": 21,
+        "DEVICE_COUNT": 38,
+        "category": "Ethnicity",
+        "group": "Other or Mixed",
+        "percent": 0.77
+    },
+    {
+        "PROFILE_INDEX": 22,
+        "DEVICE_COUNT": 3300,
+        "category": "Ethnicity",
+        "group": "White",
+        "percent": 66.45
+    }
+]

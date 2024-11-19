@@ -1,0 +1,41 @@
+{
+    "sideBar": {
+      "adType": "Tipo de anuncio",
+      "highlight": "Destacar",
+      "reports": "Informes",
+      "audience": "Audiencia",
+      "mapView": "Vista del mapa",
+      "cars": "Autos",
+      "attribution": "Atribución",
+      "deviceIds": "ID de dispositivos",
+      "logout": "Cerrar sesión"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "Impresiones",
+        "date": "Fecha",
+        "vehicle": "Vehículo",
+        "chart": "Gráfico",
+        "table": "Mesa",
+        "impressionsPerMile": "Impresiones por milla",
+        "miles": "Millas",
+        "avg": "Prom."
+      },
+      "demographics": {
+        "demographics": "Demografía",
+        "age": "Edad",
+        "education": "Educación",
+        "income": "Ingreso",
+        "ethnicity": "Etnicidad",
+        "chartType": "Tipo de gráfico",
+        "verticalBar": "Barra vertical",
+        "horizontalBar": "Barra horizontal",
+        "doughnutChart": "Gráfico de dona",
+        "polarChart": "Gráfico polar"
+      },
+      "affinities": {
+        "affinities": "Afiliaciones"
+      }
+    }
+  }
+  

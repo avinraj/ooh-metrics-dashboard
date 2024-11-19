@@ -1,0 +1,415 @@
+[
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 530,
+        "category": "Affinities",
+        "group": "Bargain Hunter",
+        "percent": 7.34
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 458,
+        "category": "Affinities",
+        "group": "Business Travelers",
+        "percent": 6.34
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 754,
+        "category": "Affinities",
+        "group": "Casual Diner",
+        "percent": 10.44
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Celeb-obsessed",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 530,
+        "category": "Affinities",
+        "group": "Bargain Hunter",
+        "percent": 7.34
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 458,
+        "category": "Affinities",
+        "group": "Business Travelers",
+        "percent": 6.34
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 754,
+        "category": "Affinities",
+        "group": "Casual Diner",
+        "percent": 10.44
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Celeb-obsessed",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 530,
+        "category": "Affinities",
+        "group": "Bargain Hunter",
+        "percent": 7.34
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 458,
+        "category": "Affinities",
+        "group": "Business Travelers",
+        "percent": 6.34
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 754,
+        "category": "Affinities",
+        "group": "Casual Diner",
+        "percent": 10.44
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Celeb-obsessed",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 530,
+        "category": "Affinities",
+        "group": "Bargain Hunter",
+        "percent": 7.34
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 458,
+        "category": "Affinities",
+        "group": "Business Travelers",
+        "percent": 6.34
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 754,
+        "category": "Affinities",
+        "group": "Casual Diner",
+        "percent": 10.44
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Celeb-obsessed",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 430,
+        "category": "Affinities",
+        "group": "Coffee Lover",
+        "percent": 5.95
+    },
+    {
+        "PROFILE_INDEX": 6,
+        "DEVICE_COUNT": 10,
+        "category": "Affinities",
+        "group": "College Student",
+        "percent": 0.14
+    },
+    {
+        "PROFILE_INDEX": 7,
+        "DEVICE_COUNT": 450,
+        "category": "Affinities",
+        "group": "Do-it-yourselfer",
+        "percent": 6.23
+    },
+    {
+        "PROFILE_INDEX": 8,
+        "DEVICE_COUNT": 24,
+        "category": "Affinities",
+        "group": "Expecting Parent",
+        "percent": 0.33
+    },
+    {
+        "PROFILE_INDEX": 9,
+        "DEVICE_COUNT": 404,
+        "category": "Affinities",
+        "group": "Fashionista",
+        "percent": 5.59
+    },
+    {
+        "PROFILE_INDEX": 10,
+        "DEVICE_COUNT": 828,
+        "category": "Affinities",
+        "group": "Fast Foodie",
+        "percent": 11.46
+    },
+    {
+        "PROFILE_INDEX": 11,
+        "DEVICE_COUNT": 302,
+        "category": "Affinities",
+        "group": "Fitness Minded",
+        "percent": 4.18
+    },
+    {
+        "PROFILE_INDEX": 12,
+        "DEVICE_COUNT": 8,
+        "category": "Affinities",
+        "group": "Hardcore Gamer",
+        "percent": 0.11
+    },
+    {
+        "PROFILE_INDEX": 13,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Looking for Love",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 14,
+        "DEVICE_COUNT": 108,
+        "category": "Affinities",
+        "group": "Luxury Lifestyle",
+        "percent": 1.5
+    },
+    {
+        "PROFILE_INDEX": 15,
+        "DEVICE_COUNT": 242,
+        "category": "Affinities",
+        "group": "Makeup Addict",
+        "percent": 3.35
+    },
+    {
+        "PROFILE_INDEX": 16,
+        "DEVICE_COUNT": 86,
+        "category": "Affinities",
+        "group": "Movie/TV Streamer",
+        "percent": 1.19
+    },
+    {
+        "PROFILE_INDEX": 18,
+        "DEVICE_COUNT": 114,
+        "category": "Affinities",
+        "group": "Music Streamer",
+        "percent": 1.58
+    },
+    {
+        "PROFILE_INDEX": 19,
+        "DEVICE_COUNT": 280,
+        "category": "Affinities",
+        "group": "Online Shopper",
+        "percent": 3.88
+    },
+    {
+        "PROFILE_INDEX": 20,
+        "DEVICE_COUNT": 334,
+        "category": "Affinities",
+        "group": "Organic Shopper",
+        "percent": 4.62
+    },
+    {
+        "PROFILE_INDEX": 21,
+        "DEVICE_COUNT": 434,
+        "category": "Affinities",
+        "group": "Outdoors",
+        "percent": 6.01
+    },
+    {
+        "PROFILE_INDEX": 22,
+        "DEVICE_COUNT": 294,
+        "category": "Affinities",
+        "group": "Parent",
+        "percent": 4.07
+    },
+    {
+        "PROFILE_INDEX": 23,
+        "DEVICE_COUNT": 530,
+        "category": "Affinities",
+        "group": "Pet Owner",
+        "percent": 7.34
+    },
+    {
+        "PROFILE_INDEX": 24,
+        "DEVICE_COUNT": 304,
+        "category": "Affinities",
+        "group": "Sports Junkie",
+        "percent": 4.21
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 530,
+        "category": "Affinities",
+        "group": "Bargain Hunter",
+        "percent": 7.34
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 458,
+        "category": "Affinities",
+        "group": "Business Travelers",
+        "percent": 6.34
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 754,
+        "category": "Affinities",
+        "group": "Casual Diner",
+        "percent": 10.44
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Celeb-obsessed",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 430,
+        "category": "Affinities",
+        "group": "Coffee Lover",
+        "percent": 5.95
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 530,
+        "category": "Affinities",
+        "group": "Bargain Hunter",
+        "percent": 7.34
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 458,
+        "category": "Affinities",
+        "group": "Business Travelers",
+        "percent": 6.34
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 754,
+        "category": "Affinities",
+        "group": "Casual Diner",
+        "percent": 10.44
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Celeb-obsessed",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 430,
+        "category": "Affinities",
+        "group": "Coffee Lover",
+        "percent": 5.95
+    },
+    {
+        "PROFILE_INDEX": 1,
+        "DEVICE_COUNT": 530,
+        "category": "Affinities",
+        "group": "Bargain Hunter",
+        "percent": 7.34
+    },
+    {
+        "PROFILE_INDEX": 2,
+        "DEVICE_COUNT": 458,
+        "category": "Affinities",
+        "group": "Business Travelers",
+        "percent": 6.34
+    },
+    {
+        "PROFILE_INDEX": 3,
+        "DEVICE_COUNT": 754,
+        "category": "Affinities",
+        "group": "Casual Diner",
+        "percent": 10.44
+    },
+    {
+        "PROFILE_INDEX": 4,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Celeb-obsessed",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 5,
+        "DEVICE_COUNT": 430,
+        "category": "Affinities",
+        "group": "Coffee Lover",
+        "percent": 5.95
+    },
+    {
+        "PROFILE_INDEX": 6,
+        "DEVICE_COUNT": 10,
+        "category": "Affinities",
+        "group": "College Student",
+        "percent": 0.14
+    },
+    {
+        "PROFILE_INDEX": 7,
+        "DEVICE_COUNT": 450,
+        "category": "Affinities",
+        "group": "Do-it-yourselfer",
+        "percent": 6.23
+    },
+    {
+        "PROFILE_INDEX": 8,
+        "DEVICE_COUNT": 24,
+        "category": "Affinities",
+        "group": "Expecting Parent",
+        "percent": 0.33
+    },
+    {
+        "PROFILE_INDEX": 9,
+        "DEVICE_COUNT": 404,
+        "category": "Affinities",
+        "group": "Fashionista",
+        "percent": 5.59
+    },
+    {
+        "PROFILE_INDEX": 10,
+        "DEVICE_COUNT": 828,
+        "category": "Affinities",
+        "group": "Fast Foodie",
+        "percent": 11.46
+    },
+    {
+        "PROFILE_INDEX": 11,
+        "DEVICE_COUNT": 302,
+        "category": "Affinities",
+        "group": "Fitness Minded",
+        "percent": 4.18
+    },
+    {
+        "PROFILE_INDEX": 12,
+        "DEVICE_COUNT": 8,
+        "category": "Affinities",
+        "group": "Hardcore Gamer",
+        "percent": 0.11
+    },
+    {
+        "PROFILE_INDEX": 13,
+        "DEVICE_COUNT": 150,
+        "category": "Affinities",
+        "group": "Looking for Love",
+        "percent": 2.08
+    },
+    {
+        "PROFILE_INDEX": 14,
+        "DEVICE_COUNT": 108,
+        "category": "Affinities",
+        "group": "Luxury Lifestyle",
+        "percent": 1.5
+    }
+]

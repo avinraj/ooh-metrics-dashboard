@@ -1,0 +1,40 @@
+{
+    "sideBar": {
+        "adType": "Ad Type",
+        "highlight": "Highlight",
+        "reports": "Reports",
+        "audience": "Audience",
+        "mapView": "Map View",
+        "cars": "Cars",
+        "attribution": "Attribution",
+        "deviceIds": "Device IDs",
+        "logout": "Log out"
+    },
+    "reports": {
+        "impressions": {
+            "impressions": "Impressions",
+            "date": "Date",
+            "vehicle": "Vehicle",
+            "chart": "Chart",
+            "table": "Table",
+            "impressionsPerMile": "Impressions per mile",
+            "miles": "Miles",
+            "avg": "avg."
+        },
+        "demographics": {
+            "demographics": "Demographics",
+            "age": "Age",
+            "education": "Education",
+            "income": "Income",
+            "ethnicity": "Ethnicity",
+            "chartType": "Chart Type",
+            "verticalBar": "Vertical bar",
+            "horizontalBar": "Horizontal bar",
+            "doughnutChart": "Doughnut chart",
+            "polarChart": "Polar chart"
+        },
+        "affinities": {
+            "affinities": "Affinities"
+        }
+    }
+}

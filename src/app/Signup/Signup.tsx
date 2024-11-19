@@ -9,15 +9,23 @@ import {
 } from "@mui/material";
 import logo from "../../assets/oohlogo.png";
 import googleImg from "../../assets/googleicon.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StorageService from "../core/services/storage.serive";
+import { useAuth } from "../../hooks/useAuth";
 
 const Signup = () => {
   const theme = useTheme();
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const storageService = new StorageService();
+  const { isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/home");
+    }
+  }, [isAuthenticated]);
 
   const handleEmailChange = (e: any) => {
     setEmail(e.target.value);
@@ -124,7 +132,8 @@ const Signup = () => {
                 variant="contained"
                 onClick={() => {
                   storageService.set("local", "token", "234543");
-                  navigate("/signup");
+                  navigate("/home");
+                  // navigate("/signup");
                 }}
                 sx={{
                   bgcolor: theme.palette.secondary.contrastText,
