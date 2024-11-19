@@ -4,8 +4,12 @@ import HighLight from "../app/Highlight/HighLight";
 import Home from "../app/Home/Home";
 import Reports from "../app/Reports/pages/Reports";
 import Signup from "../app/Signup/Signup";
-import Layout from "../layout/Layout";
+
 import ProtectedRoute from "./ProtectedRoute";
+import Layout from "../layout/Layout";
+import AdPage from "../app/Adtype/AdPage";
+import Cars from "../app/Cars/pages/Cars";
+import MapView from "../app/MapView/pages/MapView";
 
 const AppRoutes = () => {
   return (
@@ -31,12 +35,42 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-       <Route
+      <Route
         path="/reports"
         element={
           <ProtectedRoute>
             <Layout>
               <Reports />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/AdType"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <AdPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/cars"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Cars />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/map-view"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <MapView />
             </Layout>
           </ProtectedRoute>
         }

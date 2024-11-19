@@ -9,9 +9,12 @@ import {
   IconButton,
   useTheme,
   useMediaQuery,
+  Select,
+  MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import logo from "../../../assets/oohlogo.png";
 import car from "../../../assets/1023401.png";
@@ -19,25 +22,79 @@ import audience from "../../../assets/audience-removebg-preview.png";
 import eye from "../../../assets/eye.png";
 import location from "../../../assets/location.png";
 import carLogo from "../../../assets/car-removebg-preview.png";
+import markerIcon from "../../../assets/marker.png";
+import footstep from "../../../assets/footsteps.png";
 import AdType from "./AdType";
+import StorageService from "../services/storage.serive";
 
 const Sidebar: React.FC = () => {
+  const storageService = new StorageService();
   const theme = useTheme();
   const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string>("Highlight");
 
+  const { t, i18n } = useTranslation();
+  const defaultLang = storageService.get("local", "i18nextLng", false);
+  const [language, setLanguage] = useState(defaultLang ? defaultLang : "en");
+
+  const handleLanguageChange = (event: any) => {
+    const selectedLanguage = event.target.value as string;
+    setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
+
+    // Adjust RTL if Arabic is selected
+    document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
+  };
+
   const menuItems = [
-    { label: "Ad Type", action: "Ad Type", image: car, path: "/ad-type" },
-    { label: "Highlight", action: "Highlight", path: "/highlight" },
-    { label: "Reports", action: "Reports", image: eye, path: "/reports" },
+    { label: "Ad Type", action: "Ad Type", image: car, path: "/AdType" },
+    { label: "Highlight", action: "Highlight", image: markerIcon, path: "/highlight" },
+    { label: "Impressions", action: "Impressions", image: eye, path: "/impressions" },
     { label: "Audience", action: "Audience", image: audience, path: "/audience" },
     { label: "Map View", action: "Map View", image: location, path: "/map-view" },
     { label: "Cars", action: "Cars", image: carLogo, path: "/cars" },
-    { label: "Attribution", action: "Attribution", path: "/attribution" },
-    { label: "Device IDs", action: "Device IDs", path: "/device-ids" },
-    { label: "Log out", action: "Log out", path: "/logout" },
+    { label: "Attribution", action: "Attribution", image: footstep, path: "/attribution" },
+    // { label: "Device IDs", action: "Device IDs", path: "/device-ids" },
+    // { label: "Log out", action: "Log out", path: "/logout" },
+    {
+      label: t("sideBar.adType"),
+      action: "Ad Type",
+      image: car,
+      path: "/ad-type",
+    },
+    { label: t("sideBar.highlight"), action: "Highlight", path: "/highlight" },
+    {
+      label: t("sideBar.reports"),
+      action: "Reports",
+      image: eye,
+      path: "/reports",
+    },
+    {
+      label: t("sideBar.audience"),
+      action: "Audience",
+      image: audience,
+      path: "/audience",
+    },
+    {
+      label: t("sideBar.mapView"),
+      action: "Map View",
+      image: location,
+      path: "/map-view",
+    },
+    { label: t("sideBar.cars"), action: "Cars", image: carLogo, path: "/cars" },
+    {
+      label: t("sideBar.attribution"),
+      action: "Attribution",
+      path: "/attribution",
+    },
+    {
+      label: t("sideBar.deviceIds"),
+      action: "Device IDs",
+      path: "/device-ids",
+    },
+    { label: t("sideBar.logout"), action: "Log out", path: "/logout" },
   ];
 
   const handleItemClick = (item: { action: string; path: string }) => {
@@ -56,21 +113,25 @@ const Sidebar: React.FC = () => {
           color="inherit"
           aria-label="menu"
           onClick={toggleDrawer}
-          sx={{ position: "absolute", top: 16, left: 16 }}
+          sx={{
+            position: "absolute",
+            top: 16,
+            [language === "ar" ? "right" : "left"]: 16, // Correctly toggle between right and left based on language
+          }}
         >
           <MenuIcon />
         </IconButton>
       )}
       <Drawer
         variant={isMobile ? "temporary" : "permanent"}
-        anchor="left"
+        anchor={language === "ar" ? "right" : "left"}
         open={!isMobile || menuOpen}
         onClose={toggleDrawer}
         sx={{
-          width: isMobile ? 0 : 220,
+          width: isMobile ? 0 : "18%",
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: 220,
+            width: isMobile ? "70%" : "18%",
             boxSizing: "border-box",
             backgroundColor: theme.palette.background.default,
           },
@@ -78,17 +139,37 @@ const Sidebar: React.FC = () => {
       >
         <Box
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
             padding: 2,
             backgroundColor: theme.palette.primary.main,
             fontWeight: "bold",
             fontSize: 20,
           }}
         >
-          <img src={logo} alt="OOH Logo" style={{ marginRight: 10, height: "40px" }} />
-          <h2 style={{ color: theme.palette.primary.contrastText }}>OOH METRICS</h2>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img src={logo} alt="OOH Logo" style={{ marginRight: 10, height: "40px" }} />
+            <h2 style={{ color: theme.palette.primary.contrastText }}>OOH METRICS</h2>
+          </div>
+
+          <Select
+            value={language}
+            onChange={handleLanguageChange}
+            size="small"
+            sx={{
+              color: theme.palette.primary.contrastText,
+              backgroundColor: "white",
+              borderRadius: "4px",
+            }}
+          >
+            <MenuItem value="en">English</MenuItem>
+            <MenuItem value="es">Español</MenuItem>
+            <MenuItem value="ar">العربية</MenuItem>
+          </Select>
         </Box>
         <List sx={{ padding: 2 }}>
           {menuItems.map((item) => (
@@ -98,9 +179,7 @@ const Sidebar: React.FC = () => {
                   onClick={() => handleItemClick(item)}
                   sx={{
                     backgroundColor:
-                      selectedItem === item.action
-                        ? theme.palette.primary.main
-                        : theme.palette.background.default,
+                      selectedItem === item.action ? theme.palette.primary.main : theme.palette.background.default,
                     "&:hover": {
                       backgroundColor: theme.palette.primary.light,
                     },
@@ -111,18 +190,11 @@ const Sidebar: React.FC = () => {
                   }}
                 >
                   {item.image && (
-                    <img
-                      src={item.image}
-                      alt={item.label}
-                      style={{ width: 54, height: 54, marginRight: 10 }}
-                    />
+                    <img src={item.image} alt={item.label} style={{ width: 25, height: 25, marginRight: 10 }} />
                   )}
                   <ListItemText
                     sx={{
-                      color:
-                        selectedItem === item.action
-                          ? theme.palette.primary.contrastText
-                          : theme.palette.text.primary,
+                      color: selectedItem === item.action ? theme.palette.primary.contrastText : theme.palette.text.primary,
                     }}
                     primary={item.label}
                   />
