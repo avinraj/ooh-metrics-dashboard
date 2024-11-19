@@ -11,8 +11,10 @@ import {
 import Chart from "chart.js/auto";
 import { useEffect, useRef, useState } from "react";
 import data from "../../../Data/demographics.json";
+import { useTranslation } from "react-i18next";
 
 const Demographics = () => {
+  const { t } = useTranslation();
   const theme = useTheme(); // Use the theme from ImpressionsChart
   const chartRefs: any = {
     age: useRef(null),
@@ -29,7 +31,6 @@ const Demographics = () => {
 
   const handleChartTypeChange = (category: string) => (event: any) => {
     const value = event.target.value;
-    console.log(category, value);
     setChartTypes((prev: any) => ({ ...prev, [category]: value }));
   };
 
@@ -137,7 +138,7 @@ const Demographics = () => {
     <div>
       <div>
         <Typography variant="h3" style={{ marginBlock: "30px" }}>
-          Demographics
+          {t("reports.demographics.demographics")}
         </Typography>
         <div
           style={{
@@ -161,7 +162,7 @@ const Demographics = () => {
                   }}
                 >
                   <Typography variant="h6" color="text.primary" gutterBottom>
-                    {category}
+                    {t(`reports.demographics.${category.toLowerCase()}`)}
                   </Typography>
                   <div style={{ display: "flex", justifyContent: "end" }}>
                     <FormControl variant="outlined">
@@ -169,7 +170,7 @@ const Demographics = () => {
                         style={{ color: theme.palette.text.primary }}
                         id={`${category}-chart-type-label`}
                       >
-                        Chart Type
+                        {t("reports.demographics.chartType")}
                       </InputLabel>
                       <Select
                         labelId={`${category}-chart-type-label`}
@@ -177,12 +178,12 @@ const Demographics = () => {
                         onChange={handleChartTypeChange(category.toLowerCase())}
                         label="Chart Type"
                       >
-                        <MenuItem value="bar">Vertical Bar</MenuItem>
+                        <MenuItem value="bar"> {t("reports.demographics.verticalBar")}</MenuItem>
                         <MenuItem value="horizontalBar">
-                          Horizontal Bar
+                        {t("reports.demographics.horizontalBar")}
                         </MenuItem>
-                        <MenuItem value="doughnut">Doughnut Chart</MenuItem>
-                        <MenuItem value="polarArea">Polar Chart</MenuItem>
+                        <MenuItem value="doughnut"> {t("reports.demographics.doughnutChart")}</MenuItem>
+                        <MenuItem value="polarArea">{t("reports.demographics.polarChart")}</MenuItem>
                       </Select>
                     </FormControl>
                   </div>

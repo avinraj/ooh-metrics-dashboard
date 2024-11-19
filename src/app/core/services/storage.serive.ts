@@ -5,14 +5,14 @@ class StorageService {
     this.prefix = 'OOH';
   }
 
-  get(type: 'local' | 'session', key: string): string | undefined {
+  get(type: 'local' | 'session', key: string, prefixStat: boolean = true): string | undefined {
     let data;
     switch (type) {
       case 'local':
-        data = localStorage.getItem(`${this.prefix}-${key}`);
+        data = localStorage.getItem(prefixStat ? `${this.prefix}-${key}` : key);
         break;
       case 'session':
-        data = sessionStorage.getItem(`${this.prefix}-${key}`);
+        data = sessionStorage.getItem(prefixStat ? `${this.prefix}-${key}` : key);
         break;
       default:
         throw new Error('Invalid storage type');

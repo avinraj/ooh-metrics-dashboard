@@ -1,9 +1,11 @@
 import { Card, CardContent, Grid, Typography, useTheme } from "@mui/material";
 import affinitiesData from "../../../Data/affinities.json";
 import AffinitiesChart from "./AffinitiesChart";
+import { useTranslation } from "react-i18next";
 
 const Affinities = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
 
   // Extract, sort, and filter top unique device counts
   const uniqueTopDevices = [];
@@ -22,7 +24,7 @@ const Affinities = () => {
   return (
     <div>
       <div>
-        <Typography variant="h3" style={{marginBlock: '30px'}}>Affinities</Typography>
+        <Typography variant="h3" style={{marginBlock: '30px'}}>{t("reports.affinities.affinities")}</Typography>
         <div
           style={{
             backgroundColor: theme.palette.secondary.main,
