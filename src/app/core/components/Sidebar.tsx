@@ -19,6 +19,8 @@ import audience from "../../../assets/audience-removebg-preview.png";
 import eye from "../../../assets/eye.png";
 import location from "../../../assets/location.png";
 import carLogo from "../../../assets/car-removebg-preview.png";
+import markerIcon from "../../../assets/marker.png";
+import footstep from "../../../assets/footsteps.png";
 import AdType from "./AdType";
 
 const Sidebar: React.FC = () => {
@@ -29,15 +31,15 @@ const Sidebar: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<string>("Highlight");
 
   const menuItems = [
-    { label: "Ad Type", action: "Ad Type", image: car, path: "/ad-type" },
-    { label: "Highlight", action: "Highlight", path: "/highlight" },
+    { label: "Ad Type", action: "Ad Type", image: car, path: "/AdType" },
+    { label: "Highlight", action: "Highlight", image: markerIcon, path: "/highlight" },
     { label: "Impressions", action: "Impressions", image: eye, path: "/impressions" },
     { label: "Audience", action: "Audience", image: audience, path: "/audience" },
     { label: "Map View", action: "Map View", image: location, path: "/map-view" },
     { label: "Cars", action: "Cars", image: carLogo, path: "/cars" },
-    { label: "Attribution", action: "Attribution", path: "/attribution" },
-    { label: "Device IDs", action: "Device IDs", path: "/device-ids" },
-    { label: "Log out", action: "Log out", path: "/logout" },
+    { label: "Attribution", action: "Attribution", image: footstep, path: "/attribution" },
+    // { label: "Device IDs", action: "Device IDs", path: "/device-ids" },
+    // { label: "Log out", action: "Log out", path: "/logout" },
   ];
 
   const handleItemClick = (item: { action: string; path: string }) => {
@@ -98,31 +100,22 @@ const Sidebar: React.FC = () => {
                   onClick={() => handleItemClick(item)}
                   sx={{
                     backgroundColor:
-                      selectedItem === item.action
-                        ? theme.palette.primary.main
-                        : theme.palette.background.default,
+                      selectedItem === item.action ? theme.palette.primary.main : theme.palette.background.default,
                     "&:hover": {
                       backgroundColor: theme.palette.primary.light,
                     },
-                    border: selectedItem === item.action ? "1px solid transparent" : "1px solid #ccc",
+                    border: selectedItem === item.action ? "1px solid black" : "1px solid #ccc",
                     borderRadius: "2px",
                     marginBottom: "8px",
                     fontSize: "20px",
                   }}
                 >
                   {item.image && (
-                    <img
-                      src={item.image}
-                      alt={item.label}
-                      style={{ width: 54, height: 54, marginRight: 10 }}
-                    />
+                    <img src={item.image} alt={item.label} style={{ width: 25, height: 25, marginRight: 10 }} />
                   )}
                   <ListItemText
                     sx={{
-                      color:
-                        selectedItem === item.action
-                          ? theme.palette.primary.contrastText
-                          : theme.palette.text.primary,
+                      color: selectedItem === item.action ? theme.palette.primary.contrastText : theme.palette.text.primary,
                     }}
                     primary={item.label}
                   />
