@@ -37,11 +37,7 @@ const MapView = () => {
       </Grid2>
       <Grid2 mt={3}>
         <Box display="flex" alignItems="center" gap={2}>
-          <Typography
-            fontSize="26px"
-            fontWeight="bold"
-            sx={{ backgroundColor: theme.palette.primary.main, padding: "8px" }}
-          >
+          <Typography variant="h3" sx={{ backgroundColor: theme.palette.primary.main, padding: "8px" }}>
             Map
           </Typography>
           {["BASIC", "HEAT", "LIVE"].map((text) => (

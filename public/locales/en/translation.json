@@ -36,5 +36,8 @@
         "affinities": {
             "affinities": "Affinities"
         }
+    },
+    "highlights":{
+"welcome":"Welcome"
     }
 }

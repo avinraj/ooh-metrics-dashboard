@@ -10,6 +10,7 @@ import Layout from "../layout/Layout";
 import AdPage from "../app/Adtype/AdPage";
 import Cars from "../app/Cars/pages/Cars";
 import MapView from "../app/MapView/pages/MapView";
+import Attribution from "../app/Attribution/pages/Attribution";
 
 const AppRoutes = () => {
   return (
@@ -71,6 +72,16 @@ const AppRoutes = () => {
           <ProtectedRoute>
             <Layout>
               <MapView />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/attribution"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Attribution />
             </Layout>
           </ProtectedRoute>
         }
