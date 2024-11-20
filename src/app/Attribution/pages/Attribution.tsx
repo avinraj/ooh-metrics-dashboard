@@ -1,8 +1,7 @@
-import { Box, Grid2, Typography, useTheme } from "@mui/material";
-import QrCodeIcon from "@mui/icons-material/QrCode";
 import LinkIcon from "@mui/icons-material/Link";
 import PeopleIcon from "@mui/icons-material/People";
-import React from "react";
+import QrCodeIcon from "@mui/icons-material/QrCode";
+import { Box, Grid2, Typography, useTheme } from "@mui/material";
 
 const Attribution = () => {
   const theme = useTheme();
