@@ -1,30 +1,29 @@
-import React, { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
+  Box,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
-  Box,
-  IconButton,
-  useTheme,
-  useMediaQuery,
-  Select,
   MenuItem,
+  Select,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-import logo from "../../../assets/oohlogo.png";
 import car from "../../../assets/1023401.png";
-import audience from "../../../assets/audience-removebg-preview.png";
-import eye from "../../../assets/eye.png";
-import location from "../../../assets/location.png";
 import carLogo from "../../../assets/car-removebg-preview.png";
-import markerIcon from "../../../assets/marker.png";
+import eye from "../../../assets/eye.png";
 import footstep from "../../../assets/footsteps.png";
-import AdType from "./AdType";
+import location from "../../../assets/location.png";
+import markerIcon from "../../../assets/marker.png";
+import logo from "../../../assets/oohlogo.png";
+import AdPage from "../../Adtype/AdPage";
 import StorageService from "../services/storage.serive";
 
 const Sidebar: React.FC = () => {
@@ -49,52 +48,15 @@ const Sidebar: React.FC = () => {
   };
 
   const menuItems = [
-    { label: "Ad Type", action: "Ad Type", image: car, path: "/AdType" },
-    { label: "Highlight", action: "Highlight", image: markerIcon, path: "/highlight" },
-    { label: "Impressions", action: "Impressions", image: eye, path: "/impressions" },
-    { label: "Audience", action: "Audience", image: audience, path: "/audience" },
-    { label: "Map View", action: "Map View", image: location, path: "/map-view" },
-    { label: "Cars", action: "Cars", image: carLogo, path: "/cars" },
-    { label: "Attribution", action: "Attribution", image: footstep, path: "/attribution" },
-    // { label: "Device IDs", action: "Device IDs", path: "/device-ids" },
-    // { label: "Log out", action: "Log out", path: "/logout" },
-    {
-      label: t("sideBar.adType"),
-      action: "Ad Type",
-      image: car,
-      path: "/ad-type",
-    },
-    { label: t("sideBar.highlight"), action: "Highlight", path: "/highlight" },
-    {
-      label: t("sideBar.reports"),
-      action: "Reports",
-      image: eye,
-      path: "/reports",
-    },
-    {
-      label: t("sideBar.audience"),
-      action: "Audience",
-      image: audience,
-      path: "/audience",
-    },
-    {
-      label: t("sideBar.mapView"),
-      action: "Map View",
-      image: location,
-      path: "/map-view",
-    },
+    { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "/AdType" },
+    { label: t("sideBar.highlight"), action: "Highlight", image: markerIcon, path: "/highlight" },
+    { label: t("sideBar.reports"), action: "Reports", image: eye, path: "/reports" },
+
+    { label: t("sideBar.mapView"), action: "Map View", image: location, path: "/map-view" },
     { label: t("sideBar.cars"), action: "Cars", image: carLogo, path: "/cars" },
-    {
-      label: t("sideBar.attribution"),
-      action: "Attribution",
-      path: "/attribution",
-    },
-    {
-      label: t("sideBar.deviceIds"),
-      action: "Device IDs",
-      path: "/device-ids",
-    },
-    { label: t("sideBar.logout"), action: "Log out", path: "/logout" },
+    { label: t("sideBar.attribution"), action: "Attribution", image: footstep, path: "/attribution" },
+    // { label:t("sideBar.deviceIds"), action: "Device IDs", path: "/device-ids" },
+    // { label:t("sideBar.logout"), action: "Log out", path: "/logout" },
   ];
 
   const handleItemClick = (item: { action: string; path: string }) => {
@@ -202,7 +164,7 @@ const Sidebar: React.FC = () => {
               </ListItem>
               {selectedItem === "Ad Type" && item.action === "Ad Type" && (
                 <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
-                  <AdType />
+                  <AdPage />
                 </Box>
               )}
             </React.Fragment>

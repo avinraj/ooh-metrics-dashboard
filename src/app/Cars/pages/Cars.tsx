@@ -37,7 +37,7 @@ const Cars = () => {
       </Grid2>
       <Grid2 size={12} display={"flex"} justifyContent={"space-between"} alignItems={"center"} padding={2}>
         <Box sx={{ backgroundColor: theme.palette.primary.main, display: "inline-block", padding: "0 8px", marginTop: 3 }}>
-          <Typography sx={{ fontWeight: "bold", fontSize: "15px" }}>Cars</Typography>
+          <Typography variant="h3">Cars</Typography>
         </Box>
         <Box
           sx={{

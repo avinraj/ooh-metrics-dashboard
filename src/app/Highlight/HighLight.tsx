@@ -3,13 +3,16 @@ import car from "../../assets/images__1_-removebg-preview.png";
 import meter from "../../assets/speed-meter-outline-512.webp";
 import adIcon from "../../assets/addIcon.png";
 import impression from "../../assets/impressions.png";
+import { useTranslation } from "react-i18next";
 
 const HighLight = () => {
   const theme = useTheme();
+
+  const { t } = useTranslation();
   return (
     <Grid container>
       <Grid item xs={12}>
-        <Typography variant="h3">Welcome, Cocacola</Typography>
+        <Typography variant="h3"> {t("highlights.welcome")}, Cocacola</Typography>
       </Grid>
       <Grid item xs={12}>
         <Box mt={7}>
@@ -23,7 +26,7 @@ const HighLight = () => {
 
       <Grid container item xs={12} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} mt={7}>
         <Grid item xs={3}>
-          <Card sx={{ backgroundColor: "#DEDEDE", width: 200, padding: 1 }}>
+          <Card sx={{ backgroundColor: "#DEDEDE", minWidth: 200, padding: 1 }}>
             <Box sx={{ textAlign: "center" }}>
               <Typography sx={{ fontSize: "80px", fontWeight: "bold", margin: 0, padding: 0 }}>25</Typography>
               <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -37,7 +40,7 @@ const HighLight = () => {
           </Card>
         </Grid>
         <Grid item xs={3}>
-          <Card sx={{ backgroundColor: "#DEDEDE", width: 200, padding: 1 }}>
+          <Card sx={{ backgroundColor: "#DEDEDE", minWidth: 200, padding: 1 }}>
             <Box sx={{ textAlign: "center" }}>
               <Typography sx={{ fontSize: "30px", fontWeight: "bold" }}>
                 33,500 <br />
@@ -53,7 +56,7 @@ const HighLight = () => {
           </Card>
         </Grid>
         <Grid item xs={3}>
-          <Card sx={{ backgroundColor: "#DEDEDE", width: 200 }}>
+          <Card sx={{ backgroundColor: "#DEDEDE", minWidth: 200 }}>
             <Box sx={{ textAlign: "center" }} padding={2}>
               <Typography sx={{ fontSize: "30px", fontWeight: "bold" }}>
                 1,103,500 <br />
@@ -69,7 +72,7 @@ const HighLight = () => {
           </Card>
         </Grid>
         <Grid item xs={3}>
-          <Card sx={{ backgroundColor: "#DEDEDE", width: 200 }}>
+          <Card sx={{ backgroundColor: "#DEDEDE", minWidth: 200 }}>
             <Box sx={{ textAlign: "center" }} padding={2}>
               <Typography sx={{ fontSize: "80px", fontWeight: "bold" }}>33</Typography>
               <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
