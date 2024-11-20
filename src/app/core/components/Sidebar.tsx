@@ -134,7 +134,7 @@ const Sidebar: React.FC = () => {
           </Select>
         </Box>
         <List sx={{ padding: 2 }}>
-          <Box>
+          <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
             <AdType onOpenSwitchModal={() => console.log("Modal opened")} />
           </Box>
           {menuItems.map((item) => (
