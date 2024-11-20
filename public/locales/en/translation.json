@@ -39,5 +39,34 @@
     },
     "highlights":{
 "welcome":"Welcome"
-    }
+    },
+    
+        "adtype": {
+          "vehicles": {
+            "Cars": "Cars",
+            "Buses": "Buses",
+            "Trucks": "Trucks",
+            "Robots": "Robots",
+            "e-scooter": "E-scooter",
+            "Rickshaws": "Rickshaws",
+            "2-wheelers": "2-wheelers"
+          },
+          "digitalScreens": {
+            "Car Rooftoppers": "Car Rooftoppers",
+            "Van Digital Billboards": "Van Digital Billboards",
+            "Backpacks": "Backpacks"
+          },
+          "Mobile Ads": "Mobile Ads",
+          "Static Billboards": "Static Billboards",
+          "Vehicle Ads": "Vehicle Ads",
+          "Digital Screens": "Digital Screens"
+        },
+        "map":{
+            "Map":"Map",
+            "Basic":"Basic",
+            "Heat":"Heat",
+            "Live":"Live"
+        }
+      
+      
 }

@@ -12,7 +12,7 @@ const HighLight = () => {
   return (
     <Grid container>
       <Grid item xs={12}>
-        <Typography variant="h3"> {t("highlights.welcome")}, Cocacola</Typography>
+        <Typography variant="h3"> {t("highlights.welcome")}, Zoho</Typography>
       </Grid>
       <Grid item xs={12}>
         <Box mt={7}>
@@ -24,66 +24,47 @@ const HighLight = () => {
         </Box>
       </Grid>
 
-      <Grid container item xs={12} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} mt={7}>
-        <Grid item xs={3}>
-          <Card sx={{ backgroundColor: "#DEDEDE", minWidth: 200, padding: 1 }}>
-            <Box sx={{ textAlign: "center" }}>
-              <Typography sx={{ fontSize: "80px", fontWeight: "bold", margin: 0, padding: 0 }}>25</Typography>
-              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <img src={car} alt="" width={150} height={150} />
-              </Box>
-
-              <Box sx={{ backgroundColor: "black", color: "white", mt: 1, border: "1px solid black", borderRadius: 3 }}>
-                <Typography variant="h6">TOTAL CARS</Typography>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-        <Grid item xs={3}>
-          <Card sx={{ backgroundColor: "#DEDEDE", minWidth: 200, padding: 1 }}>
-            <Box sx={{ textAlign: "center" }}>
-              <Typography sx={{ fontSize: "30px", fontWeight: "bold" }}>
-                33,500 <br />
-                Miles
+      <Grid
+        container
+        item
+        xs={12}
+        spacing={4}
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+        mt={7}
+      >
+        {[
+          { value: 25, label: "TOTAL CARS", icon: car },
+          { value: "33,500 miles", label: "TOTAL MILES", icon: meter },
+          { value: "1,103,500 million", label: "TOTAL IMPRESSIONS", icon: adIcon },
+          { value: 33, label: "IMPRESSIONS PER MILE", icon: impression },
+        ].map((item, index) => (
+          <Grid item xs={12} sm={3} key={index}>
+            <Card sx={{ backgroundColor: "#DEDEDE", padding: 2, textAlign: "center", width: "350px" }}>
+              <Typography variant="h4" fontWeight={"bold"}>
+                {item.value}
               </Typography>
-              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <img src={meter} alt="" style={{ margin: "0 auto" }} width={150} height={150} />
+              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mt: 2 }}>
+                <img src={item.icon} alt={item.label} width={120} height={120} />
               </Box>
-              <Box sx={{ backgroundColor: "black", color: "white", mt: 1, border: "1px solid black", borderRadius: 3 }}>
-                <Typography>TOTAL MILES</Typography>
+              <Box
+                sx={{
+                  backgroundColor: "black",
+                  color: "white",
+                  mt: 2,
+                  border: "1px solid black",
+                  borderRadius: 3,
+                  padding: "4px 8px",
+                }}
+              >
+                <Typography variant="h6">{item.label}</Typography>
               </Box>
-            </Box>
-          </Card>
-        </Grid>
-        <Grid item xs={3}>
-          <Card sx={{ backgroundColor: "#DEDEDE", minWidth: 200 }}>
-            <Box sx={{ textAlign: "center" }} padding={2}>
-              <Typography sx={{ fontSize: "30px", fontWeight: "bold" }}>
-                1,103,500 <br />
-                Million
-              </Typography>
-              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <img src={adIcon} alt="" width={120} height={120} />
-              </Box>
-              <Box sx={{ backgroundColor: "black", color: "white", mt: 1, border: "1px solid black", borderRadius: 3 }}>
-                <Typography>TOTAL IMPRESSIONS</Typography>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-        <Grid item xs={3}>
-          <Card sx={{ backgroundColor: "#DEDEDE", minWidth: 200 }}>
-            <Box sx={{ textAlign: "center" }} padding={2}>
-              <Typography sx={{ fontSize: "80px", fontWeight: "bold" }}>33</Typography>
-              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <img src={impression} alt="" width={120} height={120} />
-              </Box>
-              <Box sx={{ backgroundColor: "black", color: "white", mt: 1, border: "1px solid black", borderRadius: 3 }}>
-                <Typography>IMPRESSIONS PER MILE</Typography>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Grid>
   );

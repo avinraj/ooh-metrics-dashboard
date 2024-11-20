@@ -1,53 +1,118 @@
-import { Box, Grid, useTheme } from "@mui/material";
-import profile from "../../../assets/Screenshot 2024-11-12 234726.png";
-import carwrap from "../../../assets/carwrap-removebg-preview.png";
-import digitalscreen from "../../../assets/images-removebg-preview.png";
-const AdType = () => {
-  const theme = useTheme()
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Typography, useTheme } from "@mui/material";
+import React, { useState } from "react";
+
+interface AdTypeProps {
+  onOpenSwitchModal: () => void;
+}
+
+const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
+  const theme = useTheme();
+  const [expanded, setExpanded] = useState<string | false>(false);
+  const [expanded2, setExpanded2] = useState<string | false>(false);
+
+  const handleAccordionChange = (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
+    setExpanded(isExpanded ? panel : false);
+    // const panelExists = adTypeConfig.some(({ options }) =>
+    //   options.includes(panel)
+    // );
+    // console.log(panelExists)
+    // if (panelExists) {
+    //   setExpanded(false);
+    // }else setExpanded(panel);
+  };
+  const handleAccordionChange2 = (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
+    setExpanded2(isExpanded ? panel : false);
+    // const panelExists = adTypeConfig.some(({ options }) =>
+    //   options.includes(panel)
+    // );
+    // console.log(panelExists)
+    // if (panelExists) {
+    //   setExpanded(false);
+    // }else setExpanded(panel);
+  };
+
+  const handleButtonClick = (value: string) => {
+    console.log(value);
+    onOpenSwitchModal();
+    setExpanded(false);
+    setExpanded2(false);
+  };
+
+  const buttonStyle = {
+    fontWeight: "bold",
+    textAlign: "start",
+    fontSize: "13px",
+    color: "black",
+    padding: "8px 0",
+    textTransform: "none",
+    width: "100%",
+    justifyContent: "start",
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.dark,
+    },
+  };
+
+  const renderButton = (label: string) => (
+    <>
+      <Button
+        type="button"
+        onClick={() => {
+          handleButtonClick(label);
+        }}
+        sx={buttonStyle}
+      >
+        {label}
+      </Button>
+      <Divider component="li" />
+    </>
+  );
+
+  const adTypeConfig = [
+    {
+      title: "Vehicle Wraps",
+      options: ["Cars", "Buses", "Trucks", "Robots", "E-scooter", "Rickshaws", "2-wheelers"],
+    },
+    {
+      title: "Digital Screens",
+      options: ["Car Rooftoppers", "Van Digital Billboards", "Backpack Billboards"],
+    },
+    {
+      title: "Mobile Ads",
+      options: [],
+    },
+    {
+      title: "Static Billboards",
+      options: [],
+    },
+  ];
+
   return (
-    <Grid container>
-      <Grid item xs={12}>
-        <Box sx={{ backgroundColor: theme.palette.primary.contrastText, padding: 2 }}>
-          <Box sx={{ border: "1px solid #fff", borderRadius: 3 }}>
-            <Box sx={{ alignItems: "center", justifyContent: "center", display: "flex" }}>
-              <img src={profile} alt="" width={80} height={80} />
-            </Box>
-            <h3 style={{ color: "rgb(78, 214, 78)", textAlign: "center" }}>Nickelytics Demo</h3>
-          </Box>
-          <Box sx={{ border: "1px solid #fff", borderRadius: 3, color: theme.palette.background.default, marginTop: 3, padding: 2 }}>
-            {" "}
-            AD type
-            <Box
-              sx={{
-                border: "1px solid #fff",
-                borderRadius: 3,
-                color: theme.palette.background.default,
-                alignItems: "center",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-              <img src={carwrap} alt="" width={80} height={80} />
-              Vehicle wraps
-            </Box>
-            <Box
-              sx={{
-                border: "1px solid #fff",
-                borderRadius: 3,
-                color: theme.palette.background.default,
-                alignItems: "center",
-                justifyContent: "center",
-                display: "flex",
-                marginTop: 3,
-              }}
-            >
-              <img src={digitalscreen} alt="" width={80} height={80} />
-              Digital screens
-            </Box>
-          </Box>
-        </Box>
-      </Grid>
-    </Grid>
+    <div>
+      <Accordion
+        elevation={0}
+        variant="outlined"
+        sx={{ background: "transparent" }}
+        expanded={expanded === "adType"}
+        onChange={handleAccordionChange("adType")}
+      >
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography sx={{ color: "black" }}>Ad Type</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          {adTypeConfig.map(({ title, options }) => (
+            <Accordion key={title} elevation={0} expanded={expanded2 === title} onChange={handleAccordionChange2(title)}>
+              <AccordionSummary expandIcon={options.length ? <ExpandMoreIcon /> : null}>
+                <Typography variant="body1" sx={{ color: "black", fontSize: "15px" }}>
+                  {title}
+                </Typography>
+              </AccordionSummary>
+              {options.length > 0 && <AccordionDetails>{options.map((option) => renderButton(option))}</AccordionDetails>}
+            </Accordion>
+          ))}
+        </AccordionDetails>
+      </Accordion>
+    </div>
   );
 };
 
