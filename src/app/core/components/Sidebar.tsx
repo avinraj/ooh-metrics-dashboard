@@ -1,31 +1,30 @@
-import React, { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
+  Box,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
-  Box,
-  IconButton,
-  useTheme,
-  useMediaQuery,
-  Select,
   MenuItem,
+  Select,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-import logo from "../../../assets/oohlogo.png";
 import car from "../../../assets/1023401.png";
-import eye from "../../../assets/eye.png";
-import location from "../../../assets/location.png";
 import carLogo from "../../../assets/car-removebg-preview.png";
-import markerIcon from "../../../assets/marker.png";
+import eye from "../../../assets/eye.png";
 import footstep from "../../../assets/footsteps.png";
-import AdType from "./AdType";
-import StorageService from "../services/storage.serive";
+import location from "../../../assets/location.png";
+import markerIcon from "../../../assets/marker.png";
+import logo from "../../../assets/oohlogo.png";
 import AdPage from "../../Adtype/AdPage";
+import StorageService from "../services/storage.serive";
 
 const Sidebar: React.FC = () => {
   const storageService = new StorageService();
