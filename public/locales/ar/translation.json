@@ -39,6 +39,32 @@
     },
     "highlights": {
   "welcome": "مرحبًا"
+},
+"adtype":{
+"vehicles":{
+  "Cars": "سيارات",
+  "Buses": "حافلات",
+  "Trucks": "شاحنات",
+  "Robots": "روبوتات",
+  "e-scooter": "سكوتر كهربائي",
+  "Rickshaws": "ركشات",
+  "2-wheelers": "دراجات نارية"
+},
+"digitalScreens":{
+  
+    "Car Rooftoppers": "إعلانات فوق السيارات",
+    "Van Digital Billboards": "لوحات رقمية على الشاحنات",
+    "Backpacks": "حقائب ظهر"
+  
+},
+
+  "Mobile Ads": "إعلانات متنقلة",
+  "Static Billboards": "لوحات إعلانات ثابتة",
+  "Vehicle Ads": "إعلانات المركبات",
+  "Digital Screens": "الشاشات الرقمية"
+
+
 }
+
   }
   

@@ -16,15 +16,15 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import car from "../../../assets/1023401.png";
 import carLogo from "../../../assets/car-removebg-preview.png";
 import eye from "../../../assets/eye.png";
 import footstep from "../../../assets/footsteps.png";
 import location from "../../../assets/location.png";
 import markerIcon from "../../../assets/marker.png";
 import logo from "../../../assets/oohlogo.png";
-import AdPage from "../../Adtype/AdPage";
+
 import StorageService from "../services/storage.serive";
+import AdType from "./AdType";
 
 const Sidebar: React.FC = () => {
   const storageService = new StorageService();
@@ -32,7 +32,7 @@ const Sidebar: React.FC = () => {
   const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<string>("Highlight");
+  const [selectedItem, setSelectedItem] = useState<string>("Ad Type");
 
   const { t, i18n } = useTranslation();
   const defaultLang = storageService.get("local", "i18nextLng", false);
@@ -48,7 +48,7 @@ const Sidebar: React.FC = () => {
   };
 
   const menuItems = [
-    { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "/AdType" },
+    // { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "" },
     { label: t("sideBar.highlight"), action: "Highlight", image: markerIcon, path: "/highlight" },
     { label: t("sideBar.reports"), action: "Reports", image: eye, path: "/reports" },
 
@@ -115,7 +115,7 @@ const Sidebar: React.FC = () => {
             }}
           >
             <img src={logo} alt="OOH Logo" style={{ marginRight: 10, height: "40px" }} />
-            <h2 style={{ color: theme.palette.primary.contrastText }}>OOH METRICS</h2>
+            <h2 style={{ color: theme.palette.primary.contrastText }}>OOHmetrics</h2>
           </div>
 
           <Select
@@ -134,6 +134,9 @@ const Sidebar: React.FC = () => {
           </Select>
         </Box>
         <List sx={{ padding: 2 }}>
+          <Box>
+            <AdType onOpenSwitchModal={() => console.log("Modal opened")} />
+          </Box>
           {menuItems.map((item) => (
             <React.Fragment key={item.label}>
               <ListItem disablePadding>
@@ -162,11 +165,6 @@ const Sidebar: React.FC = () => {
                   />
                 </ListItemButton>
               </ListItem>
-              {selectedItem === "Ad Type" && item.action === "Ad Type" && (
-                <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
-                  <AdPage />
-                </Box>
-              )}
             </React.Fragment>
           ))}
         </List>

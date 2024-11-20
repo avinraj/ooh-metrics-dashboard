@@ -39,7 +39,30 @@
     },
     "highlights": {
   "welcome": "Bienvenido"
-}
+},
+
+  "adtype": {
+    "vehicles": {
+      "Cars": "Coches",
+      "Buses": "Autobuses",
+      "Trucks": "Camiones",
+      "Robots": "Robots",
+      "e-scooter": "Patinete eléctrico",
+      "Rickshaws": "Rikshaws",
+      "2-wheelers": "Motos"
+    },
+    "digitalScreens": {
+      "Car Rooftoppers": "Anuncios en los techos de los coches",
+      "Van Digital Billboards": "Vallas digitales en furgonetas",
+      "Backpacks": "Mochilas"
+    },
+    "Mobile Ads": "Anuncios móviles",
+    "Static Billboards": "Vallas publicitarias estáticas",
+    "Vehicle Ads": "Anuncios en vehículos",
+    "Digital Screens": "Pantallas digitales"
+  }
+
+
 
   }
   
