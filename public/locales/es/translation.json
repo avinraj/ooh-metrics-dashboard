@@ -37,7 +37,7 @@
       "verticalBar": "Barra vertical",
       "horizontalBar": "Barra horizontal",
       "doughnutChart": "Gráfico de dona",
-      "polarChart": "Gráfico polar"
+      "lineChart": "Gráfico de líneas"
     },
     "affinities": {
       "affinities": "Afiliaciones"

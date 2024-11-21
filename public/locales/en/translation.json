@@ -37,7 +37,7 @@
       "verticalBar": "Vertical bar",
       "horizontalBar": "Horizontal bar",
       "doughnutChart": "Doughnut chart",
-      "polarChart": "Polar chart"
+      "lineChart": "Line chart"
     },
     "affinities": {
       "affinities": "Affinities"
