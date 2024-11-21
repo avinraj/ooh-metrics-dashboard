@@ -1,0 +1,75 @@
+{
+  "sideBar": {
+    "adType": "광고 유형",
+    "highlight": "하이라이트",
+    "reports": "보고서",
+    "audience": "청중",
+    "mapView": "지도 보기",
+    "cars": "차량",
+    "attribution": "귀속",
+    "deviceIds": "디바이스 ID",
+    "logout": "로그아웃"
+  },
+  "filterPanel": {
+    "campaign": "캠페인",
+    "selectDateRange": "날짜 범위 선택",
+    "vehicle": "차량",
+    "show": "보기"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "노출 수",
+      "date": "날짜",
+      "vehicle": "차량",
+      "chart": "차트",
+      "table": "테이블",
+      "impressionsPerMile": "마일당 노출 수",
+      "miles": "마일",
+      "avg": "평균"
+    },
+    "demographics": {
+      "demographics": "인구 통계",
+      "age": "나이",
+      "education": "교육",
+      "income": "소득",
+      "ethnicity": "민족",
+      "chartType": "차트 유형",
+      "verticalBar": "세로 막대 차트",
+      "horizontalBar": "가로 막대 차트",
+      "doughnutChart": "도넛 차트",
+      "lineChart": "라인 차트"
+    },
+    "affinities": {
+      "affinities": "관심사"
+    }
+  },
+  "highlights": {
+    "welcome": "환영합니다"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "차",
+      "Buses": "버스",
+      "Trucks": "트럭",
+      "Robots": "로봇",
+      "e-scooter": "전자 스쿠터",
+      "Rickshaws": "리크샤",
+      "2-wheelers": "2륜차"
+    },
+    "digitalScreens": {
+      "Car Rooftoppers": "차 옥상 광고",
+      "Van Digital Billboards": "밴 디지털 광고판",
+      "Backpacks": "백팩 광고"
+    },
+    "Mobile Ads": "모바일 광고",
+    "Static Billboards": "정적 광고판",
+    "Vehicle Ads": "차량 광고",
+    "Digital Screens": "디지털 화면"
+  },
+  "map": {
+    "map": "지도",
+    "basic": "기본",
+    "heat": "히트맵",
+    "live": "실시간"
+  }
+}
