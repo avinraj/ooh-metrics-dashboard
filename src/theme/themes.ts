@@ -2,6 +2,7 @@ import { createTheme, Theme } from "@mui/material/styles";
 
 const getTheme = (mode: 'light' | 'dark'): Theme => {
   return createTheme({
+    typography: { h3: { color: mode === 'dark' ? "#2f2f2f" : "#000000", } },
     palette: {
       primary: {
         main: "#FFFF00", // Yellow for primary elements
