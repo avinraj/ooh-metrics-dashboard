@@ -18,7 +18,7 @@ interface ReportsAccProps {
 
 const ReportsAcc: React.FC<ReportsAccProps> = ({ onOpenSwitchModal }) => {
   const theme = useTheme();
-  const { t} = useTranslation();
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState<string | false>(false);
   const [selectedVal, setSelectedVal] = useState<string | null>(null);
   const { selectedMenu } = useSelector((state: any) => state?.selectedMenu);
@@ -51,8 +51,7 @@ const ReportsAcc: React.FC<ReportsAccProps> = ({ onOpenSwitchModal }) => {
         selectedMenu === "affinities"
       ) {
         setSelectedVal(selectedMenu);
-      }
-      else setSelectedVal(null)
+      } else setSelectedVal(null);
     }
   }, [selectedMenu]);
 
@@ -76,11 +75,14 @@ const ReportsAcc: React.FC<ReportsAccProps> = ({ onOpenSwitchModal }) => {
           }}
           expandIcon={<ExpandMoreIcon />}
         >
-          <Typography sx={{ color: "black" }}>{t("sideBar.reports")}</Typography>
+          <Typography sx={{ color: "black" }}>
+            {t("sideBar.reports")}
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           {reportsConfig.map(({ title, value }) => (
             <Box
+              key={value}
               onClick={() => {
                 onAccClick(value);
               }}

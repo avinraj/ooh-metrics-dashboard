@@ -33,7 +33,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
   };
 
   const handleButtonClick = (value: string) => {
-    console.log(value);
+    console.log(value)
     onOpenSwitchModal();
     setExpanded(false);
     setExpanded2(false);
@@ -54,7 +54,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
   };
 
   const renderButton = (label: string) => (
-    <>
+    <div key={label}>
       <Button
         type="button"
         onClick={() => {
@@ -65,7 +65,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
         {label}
       </Button>
       <Divider component="li" />
-    </>
+    </div>
   );
 
   const adTypeConfig = [
