@@ -1,0 +1,76 @@
+{
+    "sideBar": {
+      "adType": "Reklaamitüüp",
+      "highlight": "Esiletõstetud",
+      "reports": "Aruanded",
+      "audience": "Sihtgrupp",
+      "mapView": "Kaardi vaade",
+      "cars": "Autod",
+      "attribution": "Atribuutika",
+      "deviceIds": "Seadme ID-d",
+      "logout": "Logi välja"
+    },
+    "filterPanel": {
+      "campaign": "Kampaania",
+      "selectDateRange": "Vali kuupäevavahemik",
+      "vehicle": "Sõiduk",
+      "show": "Kuva"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "Kuvamised",
+        "date": "Kuupäev",
+        "vehicle": "Sõiduk",
+        "chart": "Diagramm",
+        "table": "Tabel",
+        "impressionsPerMile": "Kuvamised miili kohta",
+        "miles": "Miilid",
+        "avg": "Keskmine"
+      },
+      "demographics": {
+        "demographics": "Demograafia",
+        "age": "Vanus",
+        "education": "Haridus",
+        "income": "Tulu",
+        "ethnicity": "Etnilisus",
+        "chartType": "Diagrammi tüüp",
+        "verticalBar": "Vertikaalne tulp",
+        "horizontalBar": "Horistontaalne tulp",
+        "doughnutChart": "Kringeldiagramm",
+        "lineChart": "Joondiagramm"
+      },
+      "affinities": {
+        "affinities": "Afinaatiad"
+      }
+    },
+    "highlights": {
+      "welcome": "Tere tulemast"
+    },
+    "adtype": {
+      "vehicles": {
+        "Cars": "Autod",
+        "Buses": "Bussid",
+        "Trucks": "Veokid",
+        "Robots": "Robotid",
+        "e-scooter": "Elektriline tõukeratas",
+        "Rickshaws": "Riksšad",
+        "2-wheelers": "Kaksirattalised"
+      },
+      "digitalScreens": {
+        "Car Rooftoppers": "Auto katuse reklaamid",
+        "Van Digital Billboards": "Vanutit digitaalreklaamid",
+        "Backpacks": "Seljakottide reklaamid"
+      },
+      "Mobile Ads": "Mobiilireklaamid",
+      "Static Billboards": "Staatiilised reklaampostid",
+      "Vehicle Ads": "Sõiduki reklaamid",
+      "Digital Screens": "Digitaalsed ekraanid"
+    },
+    "map": {
+      "map": "Kaart",
+      "basic": "Põhi",
+      "heat": "Küttes kaart",
+      "live": "Otse"
+    }
+  }
+  

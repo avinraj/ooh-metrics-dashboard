@@ -1,0 +1,76 @@
+{
+    "sideBar": {
+      "adType": "广告类型",
+      "highlight": "亮点",
+      "reports": "报告",
+      "audience": "受众",
+      "mapView": "地图视图",
+      "cars": "汽车",
+      "attribution": "归因",
+      "deviceIds": "设备ID",
+      "logout": "登出"
+    },
+    "filterPanel": {
+      "campaign": "活动",
+      "selectDateRange": "选择日期范围",
+      "vehicle": "车辆",
+      "show": "显示"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "展示次数",
+        "date": "日期",
+        "vehicle": "车辆",
+        "chart": "图表",
+        "table": "表格",
+        "impressionsPerMile": "每英里展示次数",
+        "miles": "英里",
+        "avg": "平均"
+      },
+      "demographics": {
+        "demographics": "人口统计",
+        "age": "年龄",
+        "education": "教育",
+        "income": "收入",
+        "ethnicity": "种族",
+        "chartType": "图表类型",
+        "verticalBar": "垂直柱状图",
+        "horizontalBar": "水平柱状图",
+        "doughnutChart": "环形图",
+        "lineChart": "折线图"
+      },
+      "affinities": {
+        "affinities": "兴趣倾向"
+      }
+    },
+    "highlights": {
+      "welcome": "欢迎"
+    },
+    "adtype": {
+      "vehicles": {
+        "Cars": "汽车",
+        "Buses": "公交车",
+        "Trucks": "卡车",
+        "Robots": "机器人",
+        "e-scooter": "电动滑板车",
+        "Rickshaws": "黄包车",
+        "2-wheelers": "两轮车"
+      },
+      "digitalScreens": {
+        "Car Rooftoppers": "车顶广告牌",
+        "Van Digital Billboards": "货车数字广告牌",
+        "Backpacks": "背包广告"
+      },
+      "Mobile Ads": "移动广告",
+      "Static Billboards": "静态广告牌",
+      "Vehicle Ads": "车身广告",
+      "Digital Screens": "数字屏幕"
+    },
+    "map": {
+      "map": "地图",
+      "basic": "基础",
+      "heat": "热力图",
+      "live": "实时"
+    }
+  }
+  

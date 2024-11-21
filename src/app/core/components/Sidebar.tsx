@@ -27,6 +27,7 @@ import { SET_SELECTED_MENU } from "../../../store/actions";
 import StorageService from "../services/storage.serive";
 import AdType from "./AdType";
 import ReportsAcc from "./Reports";
+import { languages } from "../../../i18n/languages";
 
 const Sidebar: React.FC = () => {
   const dispatch = useDispatch();
@@ -161,9 +162,11 @@ const Sidebar: React.FC = () => {
               borderRadius: "4px",
             }}
           >
-            <MenuItem value="en">English</MenuItem>
-            <MenuItem value="es">Español</MenuItem>
-            <MenuItem value="ar">العربية</MenuItem>
+            {languages.map((lang: any) => (
+              <MenuItem key={lang?.code} value={lang?.code}>
+                {lang?.name}
+              </MenuItem>
+            ))}
           </Select>
         </Box>
         <List sx={{ padding: 2 }}>

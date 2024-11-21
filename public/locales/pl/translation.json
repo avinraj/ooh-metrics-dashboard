@@ -1,0 +1,76 @@
+{
+    "sideBar": {
+      "adType": "Typ reklamy",
+      "highlight": "Najważniejsze",
+      "reports": "Raporty",
+      "audience": "Odbiorcy",
+      "mapView": "Widok mapy",
+      "cars": "Samochody",
+      "attribution": "Atrybucja",
+      "deviceIds": "Identyfikatory urządzeń",
+      "logout": "Wyloguj się"
+    },
+    "filterPanel": {
+      "campaign": "Kampania",
+      "selectDateRange": "Wybierz zakres dat",
+      "vehicle": "Pojazd",
+      "show": "Pokaż"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "Wyświetlenia",
+        "date": "Data",
+        "vehicle": "Pojazd",
+        "chart": "Wykres",
+        "table": "Tabela",
+        "impressionsPerMile": "Wyświetlenia na milę",
+        "miles": "Mile",
+        "avg": "Średnio"
+      },
+      "demographics": {
+        "demographics": "Demografia",
+        "age": "Wiek",
+        "education": "Edukacja",
+        "income": "Dochód",
+        "ethnicity": "Grupa etniczna",
+        "chartType": "Typ wykresu",
+        "verticalBar": "Słupkowy pionowy",
+        "horizontalBar": "Słupkowy poziomy",
+        "doughnutChart": "Wykres pierścieniowy",
+        "lineChart": "Wykres liniowy"
+      },
+      "affinities": {
+        "affinities": "Zainteresowania"
+      }
+    },
+    "highlights": {
+      "welcome": "Witamy"
+    },
+    "adtype": {
+      "vehicles": {
+        "Cars": "Samochody",
+        "Buses": "Autobusy",
+        "Trucks": "Ciężarówki",
+        "Robots": "Roboty",
+        "e-scooter": "E-hulajnoga",
+        "Rickshaws": "Riksze",
+        "2-wheelers": "Pojazdy dwukołowe"
+      },
+      "digitalScreens": {
+        "Car Rooftoppers": "Reklamy na dachach aut",
+        "Van Digital Billboards": "Cyfrowe bilbordy na furgonetkach",
+        "Backpacks": "Reklamy na plecakach"
+      },
+      "Mobile Ads": "Reklamy mobilne",
+      "Static Billboards": "Stacjonarne bilbordy",
+      "Vehicle Ads": "Reklamy na pojazdach",
+      "Digital Screens": "Cyfrowe ekrany"
+    },
+    "map": {
+      "map": "Mapa",
+      "basic": "Podstawowa",
+      "heat": "Mapa cieplna",
+      "live": "Na żywo"
+    }
+  }
+  

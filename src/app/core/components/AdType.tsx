@@ -1,6 +1,15 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Typography, useTheme } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Button,
+  Divider,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface AdTypeProps {
   onOpenSwitchModal: () => void;
@@ -8,29 +17,32 @@ interface AdTypeProps {
 
 const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
   const theme = useTheme();
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState<string | false>(false);
   const [expanded2, setExpanded2] = useState<string | false>(false);
 
-  const handleAccordionChange = (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
-    setExpanded(isExpanded ? panel : false);
-    // const panelExists = adTypeConfig.some(({ options }) =>
-    //   options.includes(panel)
-    // );
-    // console.log(panelExists)
-    // if (panelExists) {
-    //   setExpanded(false);
-    // }else setExpanded(panel);
-  };
-  const handleAccordionChange2 = (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
-    setExpanded2(isExpanded ? panel : false);
-    // const panelExists = adTypeConfig.some(({ options }) =>
-    //   options.includes(panel)
-    // );
-    // console.log(panelExists)
-    // if (panelExists) {
-    //   setExpanded(false);
-    // }else setExpanded(panel);
-  };
+  const handleAccordionChange =
+    (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+      // const panelExists = adTypeConfig.some(({ options }) =>
+      //   options.includes(panel)
+      // );
+      // console.log(panelExists)
+      // if (panelExists) {
+      //   setExpanded(false);
+      // }else setExpanded(panel);
+    };
+  const handleAccordionChange2 =
+    (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded2(isExpanded ? panel : false);
+      // const panelExists = adTypeConfig.some(({ options }) =>
+      //   options.includes(panel)
+      // );
+      // console.log(panelExists)
+      // if (panelExists) {
+      //   setExpanded(false);
+      // }else setExpanded(panel);
+    };
 
   const handleButtonClick = (value: string) => {
     console.log(value);
@@ -54,7 +66,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
   };
 
   const renderButton = (label: string) => (
-    <>
+    <div key={label}>
       <Button
         type="button"
         onClick={() => {
@@ -65,24 +77,36 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
         {label}
       </Button>
       <Divider component="li" />
-    </>
+    </div>
   );
 
   const adTypeConfig = [
     {
-      title: "Vehicle Wraps",
-      options: ["Cars", "Buses", "Trucks", "Robots", "E-scooter", "Rickshaws", "2-wheelers"],
+      title: t("adtype.Vehicle Ads"),
+      options: [
+        t("adtype.vehicles.Cars"),
+        t("adtype.vehicles.Buses"),
+        t("adtype.vehicles.Trucks"),
+        t("adtype.vehicles.Robots"),
+        t("adtype.vehicles.e-scooter"),
+        t("adtype.vehicles.Rickshaws"),
+        t("adtype.vehicles.2-wheelers"),
+      ],
     },
     {
-      title: "Digital Screens",
-      options: ["Car Rooftoppers", "Van Digital Billboards", "Backpack Billboards"],
+      title: t("adtype.Digital Screens"),
+      options: [
+        t("adtype.digitalScreens.Car Rooftoppers"),
+        t("adtype.digitalScreens.Van Digital Billboards"),
+        t("adtype.digitalScreens.Backpacks"),
+      ],
     },
     {
-      title: "Mobile Ads",
+      title: t("adtype.Mobile Ads"),
       options: [],
     },
     {
-      title: "Static Billboards",
+      title: t("adtype.Static Billboards"),
       options: [],
     },
   ];
@@ -97,17 +121,31 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
         onChange={handleAccordionChange("adType")}
       >
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography sx={{ color: "black" }}>Ad Type</Typography>
+          <Typography sx={{ color: "black" }}>{t("sideBar.adType")}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           {adTypeConfig.map(({ title, options }) => (
-            <Accordion key={title} elevation={0} expanded={expanded2 === title} onChange={handleAccordionChange2(title)}>
-              <AccordionSummary expandIcon={options.length ? <ExpandMoreIcon /> : null}>
-                <Typography variant="body1" sx={{ color: "black", fontSize: "15px" }}>
+            <Accordion
+              key={title}
+              elevation={0}
+              expanded={expanded2 === title}
+              onChange={handleAccordionChange2(title)}
+            >
+              <AccordionSummary
+                expandIcon={options.length ? <ExpandMoreIcon /> : null}
+              >
+                <Typography
+                  variant="body1"
+                  sx={{ color: "black", fontSize: "15px" }}
+                >
                   {title}
                 </Typography>
               </AccordionSummary>
-              {options.length > 0 && <AccordionDetails>{options.map((option) => renderButton(option))}</AccordionDetails>}
+              {options.length > 0 && (
+                <AccordionDetails>
+                  {options.map((option) => renderButton(option))}
+                </AccordionDetails>
+              )}
             </Accordion>
           ))}
         </AccordionDetails>

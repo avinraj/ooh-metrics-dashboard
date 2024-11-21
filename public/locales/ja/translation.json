@@ -1,0 +1,76 @@
+{
+    "sideBar": {
+      "adType": "広告タイプ",
+      "highlight": "ハイライト",
+      "reports": "レポート",
+      "audience": "オーディエンス",
+      "mapView": "マップビュー",
+      "cars": "車",
+      "attribution": "帰属",
+      "deviceIds": "デバイスID",
+      "logout": "ログアウト"
+    },
+    "filterPanel": {
+      "campaign": "キャンペーン",
+      "selectDateRange": "日付範囲を選択",
+      "vehicle": "車両",
+      "show": "表示"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "インプレッション",
+        "date": "日付",
+        "vehicle": "車両",
+        "chart": "チャート",
+        "table": "テーブル",
+        "impressionsPerMile": "マイルごとのインプレッション",
+        "miles": "マイル",
+        "avg": "平均"
+      },
+      "demographics": {
+        "demographics": "人口統計",
+        "age": "年齢",
+        "education": "教育",
+        "income": "収入",
+        "ethnicity": "民族",
+        "chartType": "チャートタイプ",
+        "verticalBar": "縦棒グラフ",
+        "horizontalBar": "横棒グラフ",
+        "doughnutChart": "ドーナツチャート",
+        "lineChart": "折れ線グラフ"
+      },
+      "affinities": {
+        "affinities": "関心"
+      }
+    },
+    "highlights": {
+      "welcome": "ようこそ"
+    },
+    "adtype": {
+      "vehicles": {
+        "Cars": "車",
+        "Buses": "バス",
+        "Trucks": "トラック",
+        "Robots": "ロボット",
+        "e-scooter": "電動スクーター",
+        "Rickshaws": "人力車",
+        "2-wheelers": "二輪車"
+      },
+      "digitalScreens": {
+        "Car Rooftoppers": "車の屋根広告",
+        "Van Digital Billboards": "バンのデジタル広告",
+        "Backpacks": "バックパック広告"
+      },
+      "Mobile Ads": "モバイル広告",
+      "Static Billboards": "静的広告板",
+      "Vehicle Ads": "車両広告",
+      "Digital Screens": "デジタルスクリーン"
+    },
+    "map": {
+      "map": "地図",
+      "basic": "基本",
+      "heat": "ヒートマップ",
+      "live": "ライブ"
+    }
+  }
+  
