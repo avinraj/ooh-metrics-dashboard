@@ -17,16 +17,19 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import carLogo from "../../../assets/car-removebg-preview.png";
-import eye from "../../../assets/eye.png";
 import footstep from "../../../assets/footsteps.png";
 import location from "../../../assets/location.png";
 import markerIcon from "../../../assets/marker.png";
 import logo from "../../../assets/oohlogo.png";
 
+import { useDispatch } from "react-redux";
+import { SET_SELECTED_MENU } from "../../../store/actions";
 import StorageService from "../services/storage.serive";
 import AdType from "./AdType";
+import ReportsAcc from "./Reports";
 
 const Sidebar: React.FC = () => {
+  const dispatch = useDispatch();
   const storageService = new StorageService();
   const theme = useTheme();
   const navigate = useNavigate();
@@ -49,18 +52,42 @@ const Sidebar: React.FC = () => {
 
   const menuItems = [
     // { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "" },
-    { label: t("sideBar.highlight"), action: "Highlight", image: markerIcon, path: "/highlight" },
-    { label: t("sideBar.reports"), action: "Reports", image: eye, path: "/reports" },
+    {
+      label: t("sideBar.highlight"),
+      action: "Highlight",
+      image: markerIcon,
+      path: "/highlight",
+    },
+    // {
+    //   label: t("sideBar.reports"),
+    //   action: "Reports",
+    //   image: eye,
+    //   path: "/reports",
+    // },
 
-    { label: t("sideBar.mapView"), action: "Map View", image: location, path: "/map-view" },
+    {
+      label: t("sideBar.mapView"),
+      action: "Map View",
+      image: location,
+      path: "/map-view",
+    },
     { label: t("sideBar.cars"), action: "Cars", image: carLogo, path: "/cars" },
-    { label: t("sideBar.attribution"), action: "Attribution", image: footstep, path: "/attribution" },
+    {
+      label: t("sideBar.attribution"),
+      action: "Attribution",
+      image: footstep,
+      path: "/attribution",
+    },
     // { label:t("sideBar.deviceIds"), action: "Device IDs", path: "/device-ids" },
     // { label:t("sideBar.logout"), action: "Log out", path: "/logout" },
   ];
 
   const handleItemClick = (item: { action: string; path: string }) => {
     setSelectedItem(item.action);
+    dispatch({
+      type: SET_SELECTED_MENU,
+      selectedMenu: item.action,
+    });
     navigate(item.path);
     if (isMobile) setMenuOpen(false); // Close sidebar on mobile after selecting an item
   };
@@ -114,8 +141,14 @@ const Sidebar: React.FC = () => {
               alignItems: "center",
             }}
           >
-            <img src={logo} alt="OOH Logo" style={{ marginRight: 10, height: "40px" }} />
-            <h2 style={{ color: theme.palette.primary.contrastText }}>OOHmetrics</h2>
+            <img
+              src={logo}
+              alt="OOH Logo"
+              style={{ marginRight: 10, height: "40px" }}
+            />
+            <h2 style={{ color: theme.palette.primary.contrastText }}>
+              OOHmetrics
+            </h2>
           </div>
 
           <Select
@@ -137,6 +170,13 @@ const Sidebar: React.FC = () => {
           <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
             <AdType onOpenSwitchModal={() => console.log("Modal opened")} />
           </Box>
+          <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
+            <ReportsAcc
+              onOpenSwitchModal={(value) => {
+                handleItemClick({ action: value, path: "/reports" });
+              }}
+            />
+          </Box>
           {menuItems.map((item) => (
             <React.Fragment key={item.label}>
               <ListItem disablePadding>
@@ -144,22 +184,34 @@ const Sidebar: React.FC = () => {
                   onClick={() => handleItemClick(item)}
                   sx={{
                     backgroundColor:
-                      selectedItem === item.action ? theme.palette.primary.main : theme.palette.background.default,
+                      selectedItem === item.action
+                        ? theme.palette.primary.main
+                        : theme.palette.background.default,
                     "&:hover": {
                       backgroundColor: theme.palette.primary.light,
                     },
-                    border: selectedItem === item.action ? "1px solid transparent" : "1px solid #ccc",
+                    border:
+                      selectedItem === item.action
+                        ? "1px solid transparent"
+                        : "1px solid #ccc",
                     borderRadius: "2px",
                     marginBottom: "8px",
                     fontSize: "20px",
                   }}
                 >
                   {item.image && (
-                    <img src={item.image} alt={item.label} style={{ width: 25, height: 25, marginRight: 10 }} />
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      style={{ width: 25, height: 25, marginRight: 10 }}
+                    />
                   )}
                   <ListItemText
                     sx={{
-                      color: selectedItem === item.action ? theme.palette.primary.contrastText : theme.palette.text.primary,
+                      color:
+                        selectedItem === item.action
+                          ? theme.palette.primary.contrastText
+                          : theme.palette.text.primary,
                     }}
                     primary={item.label}
                   />
