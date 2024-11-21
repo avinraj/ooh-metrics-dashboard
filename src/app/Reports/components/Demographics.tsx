@@ -26,7 +26,7 @@ const Demographics = () => {
     age: "bar",
     education: "bar",
     income: "doughnut",
-    ethnicity: "polarArea",
+    ethnicity: "line",
   });
 
   const handleChartTypeChange = (category: string) => (event: any) => {
@@ -69,7 +69,9 @@ const Demographics = () => {
             color: theme.palette.text.primary,
           },
           position:
-            chartType === "bar" || chartType === "horizontalBar"
+            chartType === "bar" ||
+            chartType === "horizontalBar" ||
+            chartType === "line"
               ? "top"
               : "left", // Position legend on the left for doughnut charts
         },
@@ -101,7 +103,7 @@ const Demographics = () => {
             label: `${category}`,
             data: counts,
             backgroundColor:
-              chartType === "doughnut" || chartType === "polarArea"
+              chartType === "doughnut"
                 ? yellowShades
                 : theme.palette.primary.main, // Apply yellow shades for doughnut chart
           },
@@ -137,61 +139,92 @@ const Demographics = () => {
   return (
     <div>
       <div>
-        <Typography variant="h3" style={{ marginBlock: "30px" }}>
+        <Box
+          sx={{
+            backgroundColor: theme.palette.primary.main,
+            padding: "5px",
+            width: "fit-content",
+            marginBlock: "25px",
+          }}
+        >
+          <Typography variant="h3">
           {t("reports.demographics.demographics")}
-        </Typography>
+          </Typography>
+        </Box>
         <div
           style={{
             backgroundColor: theme.palette.secondary.main,
             borderRadius: "8px",
           }}
         >
-          <Grid
-            container
-            spacing={2}
-            style={{ margin: "0px", width: "100%", paddingRight: "16px" }}
-          >
-            {["Age", "Education", "Income", "Ethnicity"].map((category) => (
-              <Grid item xs={12} md={6} key={category}>
-                <Box
-                  sx={{
-                    p: 2,
-                    borderStyle: "solid",
-                    borderWidth: "1px",
-                    borderRadius: "10px",
+          <Grid container spacing={2} justifyContent="space-evenly" style={{ margin: "0px", width: "100%" }}>
+            {["Age", "Education", "Income", "Ethnicity"].map(
+              (category, index) => (
+                <Grid
+                  item
+                  xs={11}
+                  md={5.8}
+                  key={category}
+                  style={{
+                    paddingLeft: "0px",
+                    paddingBottom: "16px",
+                    paddingTop: index < 2 ? "16px": "0px"
                   }}
                 >
-                  <Typography variant="h6" color="text.primary" gutterBottom>
-                    {t(`reports.demographics.${category.toLowerCase()}`)}
-                  </Typography>
-                  <div style={{ display: "flex", justifyContent: "end" }}>
-                    <FormControl variant="outlined">
-                      <InputLabel
-                        style={{ color: theme.palette.text.primary }}
-                        id={`${category}-chart-type-label`}
-                      >
-                        {t("reports.demographics.chartType")}
-                      </InputLabel>
-                      <Select
-                        labelId={`${category}-chart-type-label`}
-                        value={chartTypes[category.toLowerCase()]}
-                        onChange={handleChartTypeChange(category.toLowerCase())}
-                        label="Chart Type"
-                      >
-                        <MenuItem value="bar"> {t("reports.demographics.verticalBar")}</MenuItem>
-                        <MenuItem value="horizontalBar">
-                        {t("reports.demographics.horizontalBar")}
-                        </MenuItem>
-                        <MenuItem value="doughnut"> {t("reports.demographics.doughnutChart")}</MenuItem>
-                        <MenuItem value="polarArea">{t("reports.demographics.polarChart")}</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </div>
+                  <Box
+                    sx={{
+                      p: 2,
+                      borderStyle: "solid",
+                      borderWidth: "1px",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <Typography variant="h6" color="text.primary" gutterBottom>
+                      {t(`reports.demographics.${category.toLowerCase()}`)}
+                    </Typography>
+                    <div style={{ display: "flex", justifyContent: "end" }}>
+                      <FormControl variant="outlined">
+                        <InputLabel
+                          style={{ color: theme.palette.text.primary }}
+                          id={`${category}-chart-type-label`}
+                        >
+                          {t("reports.demographics.chartType")}
+                        </InputLabel>
+                        <Select
+                          size="small"
+                          labelId={`${category}-chart-type-label`}
+                          value={chartTypes[category.toLowerCase()]}
+                          onChange={handleChartTypeChange(
+                            category.toLowerCase()
+                          )}
+                          label="Chart Type"
+                        >
+                          <MenuItem value="bar">
+                            {" "}
+                            {t("reports.demographics.verticalBar")}
+                          </MenuItem>
+                          <MenuItem value="horizontalBar">
+                            {t("reports.demographics.horizontalBar")}
+                          </MenuItem>
+                          <MenuItem value="doughnut">
+                            {" "}
+                            {t("reports.demographics.doughnutChart")}
+                          </MenuItem>
+                          <MenuItem value="line">
+                            {t("reports.demographics.lineChart")}
+                          </MenuItem>
+                        </Select>
+                      </FormControl>
+                    </div>
 
-                  <canvas ref={chartRefs[category.toLowerCase()]}></canvas>
-                </Box>
-              </Grid>
-            ))}
+                    <canvas
+                      ref={chartRefs[category.toLowerCase()]}
+                      style={{ maxHeight: "250px", minHeight: "250px" }}
+                    ></canvas>
+                  </Box>
+                </Grid>
+              )
+            )}
           </Grid>
         </div>
       </div>

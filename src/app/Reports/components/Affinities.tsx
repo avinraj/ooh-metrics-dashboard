@@ -1,4 +1,11 @@
-import { Card, CardContent, Grid, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  Grid,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import affinitiesData from "../../../Data/affinities.json";
 import AffinitiesChart from "./AffinitiesChart";
 import { useTranslation } from "react-i18next";
@@ -24,19 +31,39 @@ const Affinities = () => {
   return (
     <div>
       <div>
-        <Typography variant="h3" style={{marginBlock: '30px'}}>{t("reports.affinities.affinities")}</Typography>
+        <Box
+          sx={{
+            backgroundColor: theme.palette.primary.main,
+            padding: "5px",
+            width: "fit-content",
+            marginBlock: "25px",
+          }}
+        >
+          <Typography variant="h3">
+            {t("reports.affinities.affinities")}
+          </Typography>
+        </Box>
         <div
           style={{
             backgroundColor: theme.palette.secondary.main,
             borderRadius: "8px",
           }}
         >
-          <Grid container spacing={2} padding={1} style={{ paddingBottom: 0 }}>
+          <Grid
+            container
+            spacing={2}
+            padding={1}
+            style={{ paddingInline: "15px", paddingBlock: "0px" }}
+          >
             {uniqueTopDevices.map((item, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
                 <Card
                   elevation={0}
-                  style={{ background: "none", borderStyle: "solid", borderWidth: '1px' }}
+                  style={{
+                    background: "none",
+                    borderStyle: "solid",
+                    borderWidth: "1px",
+                  }}
                 >
                   <CardContent>
                     <Typography

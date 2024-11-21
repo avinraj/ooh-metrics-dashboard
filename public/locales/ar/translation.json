@@ -37,7 +37,7 @@
       "verticalBar": "شريط عمودي",
       "horizontalBar": "شريط أفقي",
       "doughnutChart": "رسم بياني على شكل دونات",
-      "polarChart": "رسم بياني قطبي"
+      "lineChart": "مخطط خطي"
     },
     "affinities": {
       "affinities": "الاهتمامات"
