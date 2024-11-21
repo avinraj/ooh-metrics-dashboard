@@ -8,9 +8,17 @@ const Layout: React.FC<{ children: JSX.Element }> = ({ children }) => {
   return (
     <Box sx={{ display: "flex" }}>
       {/* <div style={{width: isMobile ? "0" : "18%"}}> */}
-        <Sidebar />
+      <Sidebar />
       {/* </div> */}
-      <Box sx={{ padding: "10px", width: isMobile ? "100%" : "82%"}}>{children}</Box>
+      <Box
+        sx={{
+          padding: "10px",
+          paddingTop: "60px",
+          width: isMobile ? "100%" : "82%",
+        }}
+      >
+        {children}
+      </Box>
     </Box>
   );
 };
