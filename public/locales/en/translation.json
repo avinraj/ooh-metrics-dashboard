@@ -1,72 +1,76 @@
 {
-    "sideBar": {
-        "adType": "Ad Type",
-        "highlight": "Highlight",
-        "reports": "Reports",
-        "audience": "Audience",
-        "mapView": "Map View",
-        "cars": "Cars",
-        "attribution": "Attribution",
-        "deviceIds": "Device IDs",
-        "logout": "Log out"
+  "sideBar": {
+    "adType": "Ad Type",
+    "highlight": "Highlight",
+    "reports": "Reports",
+    "audience": "Audience",
+    "mapView": "Map View",
+    "cars": "Cars",
+    "attribution": "Attribution",
+    "deviceIds": "Device IDs",
+    "logout": "Log out"
+  },
+  "filterPanel": {
+    "campaign": "Campaign",
+    "selectDateRange": "Select Date Range",
+    "vehicle": "Vehicle",
+    "show": "SHOW"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "Impressions",
+      "date": "Date",
+      "vehicle": "Vehicle",
+      "chart": "Chart",
+      "table": "Table",
+      "impressionsPerMile": "Impressions per mile",
+      "miles": "Miles",
+      "avg": "avg."
     },
-    "reports": {
-        "impressions": {
-            "impressions": "Impressions",
-            "date": "Date",
-            "vehicle": "Vehicle",
-            "chart": "Chart",
-            "table": "Table",
-            "impressionsPerMile": "Impressions per mile",
-            "miles": "Miles",
-            "avg": "avg."
-        },
-        "demographics": {
-            "demographics": "Demographics",
-            "age": "Age",
-            "education": "Education",
-            "income": "Income",
-            "ethnicity": "Ethnicity",
-            "chartType": "Chart Type",
-            "verticalBar": "Vertical bar",
-            "horizontalBar": "Horizontal bar",
-            "doughnutChart": "Doughnut chart",
-            "polarChart": "Polar chart"
-        },
-        "affinities": {
-            "affinities": "Affinities"
-        }
+    "demographics": {
+      "demographics": "Demographics",
+      "age": "Age",
+      "education": "Education",
+      "income": "Income",
+      "ethnicity": "Ethnicity",
+      "chartType": "Chart Type",
+      "verticalBar": "Vertical bar",
+      "horizontalBar": "Horizontal bar",
+      "doughnutChart": "Doughnut chart",
+      "polarChart": "Polar chart"
     },
-    "highlights":{
-"welcome":"Welcome"
+    "affinities": {
+      "affinities": "Affinities"
+    }
+  },
+  "highlights": {
+    "welcome": "Welcome"
+  },
+
+  "adtype": {
+    "vehicles": {
+      "Cars": "Cars",
+      "Buses": "Buses",
+      "Trucks": "Trucks",
+      "Robots": "Robots",
+      "e-scooter": "E-scooter",
+      "Rickshaws": "Rickshaws",
+      "2-wheelers": "2-wheelers"
     },
-    
-        "adtype": {
-          "vehicles": {
-            "Cars": "Cars",
-            "Buses": "Buses",
-            "Trucks": "Trucks",
-            "Robots": "Robots",
-            "e-scooter": "E-scooter",
-            "Rickshaws": "Rickshaws",
-            "2-wheelers": "2-wheelers"
-          },
-          "digitalScreens": {
-            "Car Rooftoppers": "Car Rooftoppers",
-            "Van Digital Billboards": "Van Digital Billboards",
-            "Backpacks": "Backpacks"
-          },
-          "Mobile Ads": "Mobile Ads",
-          "Static Billboards": "Static Billboards",
-          "Vehicle Ads": "Vehicle Ads",
-          "Digital Screens": "Digital Screens"
-        },
-        "map":{
-            "Map":"Map",
-            "Basic":"Basic",
-            "Heat":"Heat",
-            "Live":"Live"
-        }
-      
-      
+    "digitalScreens": {
+      "Car Rooftoppers": "Car Rooftoppers",
+      "Van Digital Billboards": "Van Digital Billboards",
+      "Backpacks": "Backpacks"
+    },
+    "Mobile Ads": "Mobile Ads",
+    "Static Billboards": "Static Billboards",
+    "Vehicle Ads": "Vehicle Ads",
+    "Digital Screens": "Digital Screens"
+  },
+  "map": {
+    "map": "Map",
+    "basic": "Basic",
+    "heat": "Heat",
+    "live": "Live"
+  }
 }

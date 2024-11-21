@@ -1,70 +1,76 @@
 {
-    "sideBar": {
-      "adType": "نوع الإعلان",
-      "highlight": "أهم ما يميز",
-      "reports": "تقارير",
-      "audience": "الجمهور",
-      "mapView": "عرض الخريطة",
-      "cars": "السيارات",
-      "attribution": "نسبة التحميل",
-      "deviceIds": "معرفات الأجهزة",
-      "logout": "تسجيل الخروج"
+  "sideBar": {
+    "adType": "نوع الإعلان",
+    "highlight": "أهم ما يميز",
+    "reports": "تقارير",
+    "audience": "الجمهور",
+    "mapView": "عرض الخريطة",
+    "cars": "السيارات",
+    "attribution": "نسبة التحميل",
+    "deviceIds": "معرفات الأجهزة",
+    "logout": "تسجيل الخروج"
+  },
+  "filterPanel": {
+    "campaign": "الحملة",
+    "selectDateRange": "حدد النطاق الزمني",
+    "vehicle": "المركبة",
+    "show": "عرض"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "الظهور",
+      "date": "التاريخ",
+      "vehicle": "المركبة",
+      "chart": "رسم بياني",
+      "table": "جدول",
+      "impressionsPerMile": "الظهور لكل ميل",
+      "miles": "أميال",
+      "avg": "متوسط"
     },
-    "reports": {
-      "impressions": {
-        "impressions": "الظهور",
-        "date": "التاريخ",
-        "vehicle": "المركبة",
-        "chart": "رسم بياني",
-        "table": "جدول",
-        "impressionsPerMile": "الظهور لكل ميل",
-        "miles": "أميال",
-        "avg": "متوسط"
-      },
-      "demographics": {
-        "demographics": "البيانات السكانية",
-        "age": "العمر",
-        "education": "التعليم",
-        "income": "الدخل",
-        "ethnicity": "العرق",
-        "chartType": "نوع الرسم البياني",
-        "verticalBar": "شريط عمودي",
-        "horizontalBar": "شريط أفقي",
-        "doughnutChart": "رسم بياني على شكل دونات",
-        "polarChart": "رسم بياني قطبي"
-      },
-      "affinities": {
-        "affinities": "الاهتمامات"
-      }
+    "demographics": {
+      "demographics": "البيانات السكانية",
+      "age": "العمر",
+      "education": "التعليم",
+      "income": "الدخل",
+      "ethnicity": "العرق",
+      "chartType": "نوع الرسم البياني",
+      "verticalBar": "شريط عمودي",
+      "horizontalBar": "شريط أفقي",
+      "doughnutChart": "رسم بياني على شكل دونات",
+      "polarChart": "رسم بياني قطبي"
     },
-    "highlights": {
-  "welcome": "مرحبًا"
-},
-"adtype":{
-"vehicles":{
-  "Cars": "سيارات",
-  "Buses": "حافلات",
-  "Trucks": "شاحنات",
-  "Robots": "روبوتات",
-  "e-scooter": "سكوتر كهربائي",
-  "Rickshaws": "ركشات",
-  "2-wheelers": "دراجات نارية"
-},
-"digitalScreens":{
-  
-    "Car Rooftoppers": "إعلانات فوق السيارات",
-    "Van Digital Billboards": "لوحات رقمية على الشاحنات",
-    "Backpacks": "حقائب ظهر"
-  
-},
+    "affinities": {
+      "affinities": "الاهتمامات"
+    }
+  },
+  "highlights": {
+    "welcome": "مرحبًا"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "سيارات",
+      "Buses": "حافلات",
+      "Trucks": "شاحنات",
+      "Robots": "روبوتات",
+      "e-scooter": "سكوتر كهربائي",
+      "Rickshaws": "ركشات",
+      "2-wheelers": "دراجات نارية"
+    },
+    "digitalScreens": {
+      "Car Rooftoppers": "إعلانات فوق السيارات",
+      "Van Digital Billboards": "لوحات رقمية على الشاحنات",
+      "Backpacks": "حقائب ظهر"
+    },
 
-  "Mobile Ads": "إعلانات متنقلة",
-  "Static Billboards": "لوحات إعلانات ثابتة",
-  "Vehicle Ads": "إعلانات المركبات",
-  "Digital Screens": "الشاشات الرقمية"
-
-
-}
-
+    "Mobile Ads": "إعلانات متنقلة",
+    "Static Billboards": "لوحات إعلانات ثابتة",
+    "Vehicle Ads": "إعلانات المركبات",
+    "Digital Screens": "الشاشات الرقمية"
+  },
+  "map": {
+    "map": "الخريطة",
+    "basic": "أساسي",
+    "heat": "حرارة",
+    "live": "مباشر"
   }
-  
+}
