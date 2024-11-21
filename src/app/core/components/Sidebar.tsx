@@ -20,6 +20,7 @@ import carLogo from "../../../assets/car-removebg-preview.png";
 import footstep from "../../../assets/footsteps.png";
 import location from "../../../assets/location.png";
 import markerIcon from "../../../assets/marker.png";
+import eye from "../../../assets/eye.png";
 import logo from "../../../assets/oohlogo.png";
 
 import { useDispatch } from "react-redux";
@@ -59,12 +60,12 @@ const Sidebar: React.FC = () => {
       image: markerIcon,
       path: "/highlight",
     },
-    // {
-    //   label: t("sideBar.reports"),
-    //   action: "Reports",
-    //   image: eye,
-    //   path: "/reports",
-    // },
+    {
+      label: t("sideBar.reports"),
+      action: "Reports",
+      image: eye,
+      path: "/reports",
+    },
 
     {
       label: t("sideBar.mapView"),
@@ -164,7 +165,7 @@ const Sidebar: React.FC = () => {
           >
             {languages.map((lang: any) => (
               <MenuItem key={lang?.code} value={lang?.code}>
-                {lang?.name}
+                {`${lang?.name} (${lang?.code.toUpperCase()})`}
               </MenuItem>
             ))}
           </Select>
@@ -173,55 +174,59 @@ const Sidebar: React.FC = () => {
           <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
             <AdType onOpenSwitchModal={() => console.log("Modal opened")} />
           </Box>
-          <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
-            <ReportsAcc
-              onOpenSwitchModal={(value) => {
-                handleItemClick({ action: value, path: "/reports" });
-              }}
-            />
-          </Box>
-          {menuItems.map((item) => (
-            <React.Fragment key={item.label}>
-              <ListItem disablePadding>
-                <ListItemButton
-                  onClick={() => handleItemClick(item)}
-                  sx={{
-                    backgroundColor:
-                      selectedItem === item.action
-                        ? theme.palette.primary.main
-                        : theme.palette.background.default,
-                    "&:hover": {
-                      backgroundColor: theme.palette.primary.light,
-                    },
-                    border:
-                      selectedItem === item.action
-                        ? "1px solid transparent"
-                        : "1px solid #ccc",
-                    borderRadius: "2px",
-                    marginBottom: "8px",
-                    fontSize: "20px",
-                  }}
-                >
-                  {item.image && (
-                    <img
-                      src={item.image}
-                      alt={item.label}
-                      style={{ width: 25, height: 25, marginRight: 10 }}
-                    />
-                  )}
-                  <ListItemText
+
+          {menuItems.map((item) =>
+            item.action !== "Reports" ? (
+              <React.Fragment key={item.label}>
+                <ListItem disablePadding>
+                  <ListItemButton
+                    onClick={() => handleItemClick(item)}
                     sx={{
-                      color:
+                      backgroundColor:
                         selectedItem === item.action
-                          ? theme.palette.primary.contrastText
-                          : theme.palette.text.primary,
+                          ? theme.palette.primary.main
+                          : theme.palette.background.default,
+                      "&:hover": {
+                        backgroundColor: theme.palette.primary.light,
+                      },
+                      border:
+                        selectedItem === item.action
+                          ? "1px solid transparent"
+                          : "1px solid #ccc",
+                      borderRadius: "2px",
+                      marginBottom: "8px",
+                      fontSize: "20px",
                     }}
-                    primary={item.label}
-                  />
-                </ListItemButton>
-              </ListItem>
-            </React.Fragment>
-          ))}
+                  >
+                    {item.image && (
+                      <img
+                        src={item.image}
+                        alt={item.label}
+                        style={{ width: 25, height: 25, marginRight: 10 }}
+                      />
+                    )}
+                    <ListItemText
+                      sx={{
+                        color:
+                          selectedItem === item.action
+                            ? theme.palette.primary.contrastText
+                            : theme.palette.text.primary,
+                      }}
+                      primary={item.label}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              </React.Fragment>
+            ) : (
+              <Box sx={{ paddingBottom: 1 }}>
+                <ReportsAcc
+                  onOpenSwitchModal={(value) => {
+                    handleItemClick({ action: value, path: "/reports" });
+                  }}
+                />
+              </Box>
+            )
+          )}
         </List>
       </Drawer>
     </>
