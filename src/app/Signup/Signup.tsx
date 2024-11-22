@@ -13,6 +13,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StorageService from "../core/services/storage.serive";
 import { useAuth } from "../../hooks/useAuth";
+import { useDispatch } from "react-redux";
+import { SET_SELECTED_MENU } from "../../store/actions";
 
 const Signup = () => {
   const theme = useTheme();
@@ -20,10 +22,15 @@ const Signup = () => {
   const navigate = useNavigate();
   const storageService = new StorageService();
   const { isAuthenticated } = useAuth();
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/home");
+      dispatch({
+        type: SET_SELECTED_MENU,
+        selectedMenu: "Highlight",
+      });
+      navigate("/highlight");
     }
   }, [isAuthenticated]);
 

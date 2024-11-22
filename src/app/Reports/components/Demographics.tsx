@@ -24,9 +24,9 @@ const Demographics = () => {
   };
   const [chartTypes, setChartTypes] = useState<any>({
     age: "bar",
-    education: "bar",
-    income: "doughnut",
-    ethnicity: "line",
+    education: "horizontalBar",
+    income: "line",
+    ethnicity: "doughnut",
   });
 
   const handleChartTypeChange = (category: string) => (event: any) => {

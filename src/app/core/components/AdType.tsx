@@ -55,7 +55,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
     fontWeight: "bold",
     textAlign: "start",
     fontSize: "13px",
-    color: "black",
+    color: theme.palette.text.primary,
     padding: "8px 0",
     textTransform: "none",
     width: "100%",
@@ -96,6 +96,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
     {
       title: t("adtype.Digital Screens"),
       options: [
+        t("adtype.digitalScreens.digitalBillboards"),
         t("adtype.digitalScreens.Car Rooftoppers"),
         t("adtype.digitalScreens.Van Digital Billboards"),
         t("adtype.digitalScreens.Backpacks"),
@@ -116,12 +117,15 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
       <Accordion
         elevation={0}
         variant="outlined"
-        sx={{ background: "transparent" }}
+        sx={{
+          background: "transparent",
+          borderColor: theme.palette.text.disabled,
+        }}
         expanded={expanded === "adType"}
         onChange={handleAccordionChange("adType")}
       >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography sx={{ color: "black" }}>{t("sideBar.adType")}</Typography>
+        <AccordionSummary expandIcon={<ExpandMoreIcon sx={{color: theme.palette.text.primary}} />}>
+          <Typography sx={{ color: theme.palette.text.primary }}>{t("sideBar.adType")}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           {adTypeConfig.map(({ title, options }) => (
@@ -130,13 +134,14 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal }) => {
               elevation={0}
               expanded={expanded2 === title}
               onChange={handleAccordionChange2(title)}
+              sx={{backgroundColor: theme.palette.secondary.main}}
             >
               <AccordionSummary
-                expandIcon={options.length ? <ExpandMoreIcon /> : null}
+                expandIcon={options.length ? <ExpandMoreIcon sx={{color: theme.palette.text.primary}} /> : null}
               >
                 <Typography
                   variant="body1"
-                  sx={{ color: "black", fontSize: "15px" }}
+                  sx={{ color: theme.palette.text.primary, fontSize: "15px" }}
                 >
                   {title}
                 </Typography>

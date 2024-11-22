@@ -65,7 +65,10 @@ const ReportsAcc: React.FC<ReportsAccProps> = ({ onOpenSwitchModal }) => {
       <Accordion
         elevation={0}
         variant="outlined"
-        sx={{ background: "transparent" }}
+        sx={{
+          background: "transparent",
+          borderColor: theme.palette.text.disabled,
+        }}
         expanded={expanded === "reports"}
         onChange={handleAccordionChange("reports")}
       >
@@ -73,24 +76,36 @@ const ReportsAcc: React.FC<ReportsAccProps> = ({ onOpenSwitchModal }) => {
           sx={{
             backgroundColor: selectedVal ? theme.palette.primary.main : "none",
           }}
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={
+            <ExpandMoreIcon
+              sx={{ color: selectedVal ? "black" : theme.palette.text.primary }}
+            />
+          }
         >
-          <Typography sx={{ color: "black" }}>
+          <Typography
+            sx={{ color: selectedVal ? "black" : theme.palette.text.primary }}
+          >
             {t("sideBar.reports")}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {reportsConfig.map(({ title, value }) => (
+          {reportsConfig.map(({ title, value }, index) => (
             <Box
               key={value}
               onClick={() => {
                 onAccClick(value);
               }}
               sx={{
+                borderTopLeftRadius: index === 0 ? "5px" : 0,
+                borderTopRightRadius: index === 0 ? "5px" : 0,
+                borderBottomLeftRadius:
+                  reportsConfig.length === index + 1 ? "5px" : 0,
+                borderBottomRightRadius:
+                  reportsConfig.length === index + 1 ? "5px" : 0,
                 backgroundColor:
                   selectedVal === value
                     ? theme.palette.primary.main
-                    : "#f5f5f5",
+                    : theme.palette.secondary.main,
                 cursor: "pointer",
                 // "&:hover": {
                 //   backgroundColor: theme.palette.secondary.dark,
@@ -100,7 +115,10 @@ const ReportsAcc: React.FC<ReportsAccProps> = ({ onOpenSwitchModal }) => {
               <Typography
                 variant="body1"
                 sx={{
-                  color: "black",
+                  color:
+                    selectedVal === value
+                      ? "black"
+                      : theme.palette.text.primary,
                   fontSize: "15px",
                   paddingBlock: "10px",
                   paddingInline: "12px",
@@ -108,7 +126,9 @@ const ReportsAcc: React.FC<ReportsAccProps> = ({ onOpenSwitchModal }) => {
               >
                 {title}
               </Typography>
-              <Divider component="li" />
+              {reportsConfig.length === index + 1 ? null : (
+                <Divider component="li" />
+              )}
             </Box>
           ))}
         </AccordionDetails>

@@ -12,32 +12,33 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import carLogo from "../../../assets/car-removebg-preview.png";
+import eye from "../../../assets/eye.png";
 import footstep from "../../../assets/footsteps.png";
 import location from "../../../assets/location.png";
 import markerIcon from "../../../assets/marker.png";
-import eye from "../../../assets/eye.png";
 import logo from "../../../assets/oohlogo.png";
 
 import { useDispatch } from "react-redux";
+import { languages } from "../../../i18n/languages";
 import { SET_SELECTED_MENU } from "../../../store/actions";
 import StorageService from "../services/storage.serive";
 import AdType from "./AdType";
 import ReportsAcc from "./Reports";
-import { languages } from "../../../i18n/languages";
 
 const Sidebar: React.FC = () => {
+  const locationVal = useLocation();
   const dispatch = useDispatch();
   const storageService = new StorageService();
   const theme = useTheme();
   const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<string>("Ad Type");
+  const [selectedItem, setSelectedItem] = useState<string>("Highlight");
 
   const { t, i18n } = useTranslation();
   const defaultLang = storageService.get("local", "i18nextLng", false);
@@ -66,7 +67,6 @@ const Sidebar: React.FC = () => {
       image: eye,
       path: "/reports",
     },
-
     {
       label: t("sideBar.mapView"),
       action: "Map View",
@@ -83,6 +83,27 @@ const Sidebar: React.FC = () => {
     // { label:t("sideBar.deviceIds"), action: "Device IDs", path: "/device-ids" },
     // { label:t("sideBar.logout"), action: "Log out", path: "/logout" },
   ];
+
+  useEffect(() => {
+    const currentPath = locationVal.pathname;
+    const matchingMenuItem = menuItems.find(
+      (item) => item.path === currentPath
+    );
+    if (matchingMenuItem) {
+      setSelectedItem(
+        matchingMenuItem.action === "Reports"
+          ? "impressions"
+          : matchingMenuItem.action
+      );
+      dispatch({
+        type: SET_SELECTED_MENU,
+        selectedMenu:
+          matchingMenuItem.action === "Reports"
+            ? "impressions"
+            : matchingMenuItem.action,
+      });
+    }
+  }, []);
 
   const handleItemClick = (item: { action: string; path: string }) => {
     setSelectedItem(item.action);
@@ -171,7 +192,7 @@ const Sidebar: React.FC = () => {
           </Select>
         </Box>
         <List sx={{ padding: 2 }}>
-          <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
+          <Box sx={{ paddingTop: 1, paddingBottom: 1 }} key={"adType"}>
             <AdType onOpenSwitchModal={() => console.log("Modal opened")} />
           </Box>
 
@@ -218,7 +239,7 @@ const Sidebar: React.FC = () => {
                 </ListItem>
               </React.Fragment>
             ) : (
-              <Box sx={{ paddingBottom: 1 }}>
+              <Box sx={{ paddingBottom: 1 }} key={'Reports'}>
                 <ReportsAcc
                   onOpenSwitchModal={(value) => {
                     handleItemClick({ action: value, path: "/reports" });
