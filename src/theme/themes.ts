@@ -19,6 +19,7 @@ const getTheme = (mode: 'light' | 'dark'): Theme => {
       text: {
         primary: mode === 'dark' ? "#FFFFFF" : "#000000", // White text in dark mode, black text in light mode
         secondary: mode === 'dark' ? "#000000" : "#FFFFFF", // Black text in dark mode, white text in light mode
+        disabled: mode === 'dark' ? "#FFFFFF" : "#cccccc",
       },
     },
     components: {
