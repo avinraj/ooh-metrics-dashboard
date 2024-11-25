@@ -92,7 +92,7 @@ const Signup = () => {
             fullWidth
             onClick={() => {
               storageService.set("local", "token", "234543");
-              navigate("/home");
+              navigate("/highlight");
             }}
             sx={{
               bgcolor: "#f7ff3c",

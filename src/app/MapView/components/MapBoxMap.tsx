@@ -2,6 +2,7 @@ import { CircularProgress, useTheme } from "@mui/material";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
+import carIcon from "../../../assets/car-icon-map.png";
 import location1 from "../../../Data/location/location1.json";
 import location2 from "../../../Data/location/location2.json";
 import location3 from "../../../Data/location/location3.json";
@@ -19,11 +20,13 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
   const theme = useTheme();
   const primaryColor = theme.palette.primary.main;
 
-  const [loading, setLoading] = useState(true); // State to manage loader visibility
+  const [loading, setLoading] = useState(true);
+  let arrIndex = 0;
 
   mapboxgl.accessToken =
     "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA";
 
+  // Combine location data and group by VIN
   const locationData = [
     ...location1,
     ...location2,
@@ -32,22 +35,55 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
     ...location5,
   ];
 
-  const geojsonData: any = {
-    type: "FeatureCollection",
-    features: locationData.map((location) => ({
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [location.longitude, location.latitude],
-      },
-      properties: {
-        uuid: location.uuid,
-        vin: location.vin,
-        time: location.time,
-        bearing: location.bearing,
-        speed: location.speed,
-      },
-    })),
+  // Group data by VIN and ensure no more than one entry per VIN
+  const groupByVin = (data: any) => {
+    const grouped: any = {};
+
+    data.forEach((location: any) => {
+      if (!grouped[location.vin]) {
+        grouped[location.vin] = {
+          vin: location.vin,
+          coordinates: [location.longitude, location.latitude],
+          bearing: Number(location.bearing),
+          coordinates2: [],
+        };
+      }
+
+      grouped[location.vin].coordinates2.push({
+        lat: location.latitude,
+        lon: location.longitude,
+        bearing: Number(location.bearing),
+      });
+    });
+
+    return grouped;
+  };
+
+  const liveCarData = groupByVin(locationData);
+
+  const generateCarData = (arrIndex = 0): any => {
+    const seenVins = new Set();
+
+    const features = Object.values(liveCarData)
+      .flat()
+      .filter((car: any) => {
+        if (seenVins.has(car.vin)) return false;
+        seenVins.add(car.vin);
+        return true;
+      })
+      .map((car: any) => ({
+        type: "Feature",
+        geometry: {
+          type: "Point",
+          coordinates: [car.coordinates2[arrIndex].lon, car.coordinates2[arrIndex].lat],
+        },
+        properties: {
+          id: car.vin,
+          vin: car.vin,
+          bearing: car.coordinates2[arrIndex].bearing,
+        },
+      }));
+    return { type: "FeatureCollection", features };
   };
 
   const createHeatLayer = (map: mapboxgl.Map) => {
@@ -57,7 +93,15 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
         type: "heatmap",
         source: "data-points",
         paint: {
-          "heatmap-weight": ["interpolate", ["linear"], ["get", "speed"], 0, 0, 10, 1],
+          "heatmap-weight": [
+            "interpolate",
+            ["linear"],
+            ["get", "speed"],
+            0,
+            0,
+            10,
+            1,
+          ],
           "heatmap-intensity": 1,
           "heatmap-color": [
             "interpolate",
@@ -98,6 +142,52 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
     }
   };
 
+  const createLiveLayer = (map: mapboxgl.Map) => {
+    if (!map.hasImage("car-icon")) {
+      const image = new Image();
+      image.src = carIcon;
+      image.onload = () => {
+        map.addImage("car-icon", image);
+        setupLiveLayer(map); // Proceed after image is loaded
+      };
+    } else {
+      setupLiveLayer(map); // Image already exists, proceed with setting up live layer
+    }
+  };
+
+  const setupLiveLayer = (map: mapboxgl.Map) => {
+    if (!map.getSource("live-cars")) {
+      map.addSource("live-cars", {
+        type: "geojson",
+        data: generateCarData(0),
+      });
+    }
+
+    if (!map.getLayer("live-layer")) {
+      map.addLayer({
+        id: "live-layer",
+        type: "symbol",
+        source: "live-cars",
+        layout: {
+          "icon-image": "car-icon",
+          "icon-size": 0.1,
+          "icon-rotate": ["get", "bearing"],
+        },
+      });
+    }
+
+    const updateCarCoordinates = () => {
+      arrIndex = arrIndex + 3;
+
+      const source = map.getSource("live-cars") as mapboxgl.GeoJSONSource;
+      source.setData(generateCarData(arrIndex));
+    };
+
+    const intervalId = setInterval(updateCarCoordinates, 2000);
+
+    return () => clearInterval(intervalId); // Cleanup on unmount
+  };
+
   useEffect(() => {
     if (!mapContainerRef.current) return;
 
@@ -114,14 +204,34 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
       if (!map.getSource("data-points")) {
         map.addSource("data-points", {
           type: "geojson",
-          data: geojsonData,
+          data: {
+            type: "FeatureCollection",
+            features: locationData.map((location) => ({
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [location.longitude, location.latitude],
+              },
+              properties: {
+                uuid: location.uuid,
+                vin: location.vin,
+                time: location.time,
+                bearing: location.bearing,
+                speed: location.speed,
+              },
+            })),
+          },
         });
       }
 
+      setLoading(false);
+
       if (layerType === "heat") {
         createHeatLayer(map);
-      } else {
+      } else if (layerType === "point") {
         createPointLayer(map);
+      } else if (layerType === "live") {
+        createLiveLayer(map);
       }
     });
 
@@ -131,36 +241,32 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
         mapRef.current = null;
       }
     };
-  }, []);
+  }, [layerType]);
 
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
 
-    setLoading(true); // Show loader
+    setLoading(true);
 
-    // Remove previous layers when the layer type changes
-    if (map.getLayer("heatmap-layer")) {
-      map.removeLayer("heatmap-layer");
-    }
-    if (map.getLayer("point-layer")) {
-      map.removeLayer("point-layer");
-    }
+    if (map.getLayer("heatmap-layer")) map.removeLayer("heatmap-layer");
+    if (map.getLayer("point-layer")) map.removeLayer("point-layer");
+    if (map.getLayer("live-layer")) map.removeLayer("live-layer");
 
-    // Wait for 3 seconds, then switch the layer
     setTimeout(() => {
       if (layerType === "heat") {
         createHeatLayer(map);
-      } else {
+      } else if (layerType === "point") {
         createPointLayer(map);
+      } else if (layerType === "live") {
+        createLiveLayer(map);
       }
-
-      setLoading(false); // Hide loader
-    }, 3000); // 3 seconds delay
+      setLoading(false);
+    }, 3000);
   }, [layerType]);
 
   return (
-    <div style={{position: 'relative'}}>
+    <div style={{ position: "relative" }}>
       {loading && (
         <div
           style={{
@@ -172,7 +278,7 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
             color: "white",
             padding: "10px 20px",
             borderRadius: "5px",
-            zIndex: '1'
+            zIndex: "1",
           }}
         >
           <CircularProgress color="primary" />

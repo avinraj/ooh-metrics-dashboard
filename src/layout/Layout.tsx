@@ -13,7 +13,7 @@ const Layout: React.FC<{ children: JSX.Element }> = ({ children }) => {
       <Box
         sx={{
           padding: "10px",
-          paddingTop: "60px",
+          paddingTop: isMobile ? "60px" : "10px",
           width: isMobile ? "100%" : "82%",
         }}
       >
