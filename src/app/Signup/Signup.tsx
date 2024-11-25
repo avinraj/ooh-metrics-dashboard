@@ -1,10 +1,9 @@
-import { Box, Button, Card, Grid, TextField, Typography, useTheme } from "@mui/material";
-import logo from "../../assets/oohlogo.png";
-import googleImg from "../../assets/googleicon.jpg";
+import { Box, Button, Grid, TextField, Typography, useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import StorageService from "../core/services/storage.serive";
+import logo from "../../assets/oohlogo.png";
 import { useAuth } from "../../hooks/useAuth";
+import StorageService from "../core/services/storage.serive";
 
 const Signup = () => {
   const theme = useTheme();
@@ -15,7 +14,7 @@ const Signup = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/home");
+      navigate("/highlight");
     }
   }, [isAuthenticated]);
 

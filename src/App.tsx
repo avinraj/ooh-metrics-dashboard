@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const selectedLang: any = storageService.get("local", "i18nextLng", false);
-    const languageToSet = languages.includes(selectedLang)
+    const languageToSet = languages.some((lang) => lang.code === selectedLang)
       ? selectedLang
       : "en";
     i18n.changeLanguage(languageToSet);

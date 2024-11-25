@@ -1,0 +1,77 @@
+{
+    "sideBar": {
+      "adType": "Anzeigentyp",
+      "highlight": "Höhepunkte",
+      "reports": "Berichte",
+      "audience": "Zielgruppe",
+      "mapView": "Kartenansicht",
+      "cars": "Autos",
+      "attribution": "Zuweisung",
+      "deviceIds": "Geräte-IDs",
+      "logout": "Abmelden"
+    },
+    "filterPanel": {
+      "campaign": "Kampagne",
+      "selectDateRange": "Datumsbereich auswählen",
+      "vehicle": "Fahrzeug",
+      "show": "Anzeigen"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "Impressionen",
+        "date": "Datum",
+        "vehicle": "Fahrzeug",
+        "chart": "Diagramm",
+        "table": "Tabelle",
+        "impressionsPerMile": "Impressionen pro Meile",
+        "miles": "Meilen",
+        "avg": "Durchschnitt"
+      },
+      "demographics": {
+        "demographics": "Demografie",
+        "age": "Alter",
+        "education": "Bildung",
+        "income": "Einkommen",
+        "ethnicity": "Ethnizität",
+        "chartType": "Diagrammtyp",
+        "verticalBar": "Vertikales Balkendiagramm",
+        "horizontalBar": "Horizontales Balkendiagramm",
+        "doughnutChart": "Kreisdiagramm",
+        "lineChart": "Liniendiagramm"
+      },
+      "affinities": {
+        "affinities": "Affinitäten"
+      }
+    },
+    "highlights": {
+      "welcome": "Willkommen"
+    },
+    "adtype": {
+      "vehicles": {
+        "Cars": "Autos",
+        "Buses": "Busse",
+        "Trucks": "Lkw",
+        "Robots": "Roboter",
+        "e-scooter": "E-Scooter",
+        "Rickshaws": "Rikschas",
+        "2-wheelers": "Zweiräder"
+      },
+      "digitalScreens": {
+        "digitalBillboards": "Digitale Werbetafeln",
+        "Car Rooftoppers": "Auto-Dachwerbung",
+        "Van Digital Billboards": "Van Digitale Werbetafeln",
+        "Backpacks": "Rucksäcke"
+      },
+      "Mobile Ads": "Mobile Werbung",
+      "Static Billboards": "Statische Werbetafeln",
+      "Vehicle Ads": "Fahrzeugwerbung",
+      "Digital Screens": "Digitale Bildschirme"
+    },
+    "map": {
+      "map": "Karte",
+      "basic": "Basis",
+      "heat": "Hitzekarte",
+      "live": "Live"
+    }
+  }
+  

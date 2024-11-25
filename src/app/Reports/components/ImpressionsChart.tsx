@@ -1,8 +1,9 @@
 import { Button, useTheme } from "@mui/material";
 import Chart from "chart.js/auto";
+import moment from "moment";
 import { useEffect, useRef, useState } from "react";
-import moment from 'moment';
 
+import { useTranslation } from "react-i18next";
 import impressionsData from "../../../Data/impressions.json";
 import ImpressionsTable from "./ImpressionsTable";
 
@@ -12,11 +13,12 @@ const buttonStyles = {
   border: "black",
   borderStyle: "groove",
   borderWidth: "thin",
-  borderRadius: "0px"
+  borderRadius: "0px",
 };
 
 const ImpressionsChart = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
   const chartRef = useRef<HTMLCanvasElement | null>(null);
   const [groupBy, setGroupBy] = useState<"date" | "vehicle">("date");
   const [activeGroup1, setActiveGroup1] = useState("Date");
@@ -34,13 +36,14 @@ const ImpressionsChart = () => {
     }, {});
 
     const formatToDDMMM = (dateStr: string) => {
-      return moment(dateStr).format('DD-MMM');
+      return moment(dateStr).format("DD-MMM");
     };
 
     return {
-      labels: groupBy === "date"
-        ? Object.keys(groupedData).map(formatToDDMMM)
-        : Object.keys(groupedData),
+      labels:
+        groupBy === "date"
+          ? Object.keys(groupedData).map(formatToDDMMM)
+          : Object.keys(groupedData),
       dataPoints: Object.values(groupedData),
       detailedData: Object.entries(groupedData).map(([key, impressions]) => ({
         key: groupBy === "date" ? formatToDDMMM(key) : key,
@@ -123,7 +126,7 @@ const ImpressionsChart = () => {
       ? theme.palette.primary.main
       : theme.palette.secondary.main,
     fontWeight: isActive ? "bold" : "normal",
-    color: theme.palette.text.primary
+    color: theme.palette.text.primary,
   });
 
   return (
@@ -160,7 +163,7 @@ const ImpressionsChart = () => {
                 setGroupBy("date");
               }}
             >
-              Date
+              {t("reports.impressions.date")}
             </Button>
             <Button
               variant="contained"
@@ -172,7 +175,7 @@ const ImpressionsChart = () => {
                 setGroupBy("vehicle");
               }}
             >
-              Vehicle
+              {t("reports.impressions.vehicle")}
             </Button>
           </div>
 
@@ -184,7 +187,7 @@ const ImpressionsChart = () => {
               style={getButtonStyle(activeGroup2 === "Chart")}
               onClick={() => setActiveGroup2("Chart")}
             >
-              Chart
+              {t("reports.impressions.chart")}
             </Button>
             <Button
               variant="contained"
@@ -193,7 +196,7 @@ const ImpressionsChart = () => {
               style={getButtonStyle(activeGroup2 === "Table")}
               onClick={() => setActiveGroup2("Table")}
             >
-              Table
+              {t("reports.impressions.table")}
             </Button>
           </div>
         </div>
@@ -201,7 +204,7 @@ const ImpressionsChart = () => {
       {activeGroup2 === "Chart" ? (
         <canvas ref={chartRef} />
       ) : (
-        <div style={{paddingTop: '6%'}}>
+        <div style={{ paddingTop: "6%" }}>
           <ImpressionsTable data={impressionsData} groupBy={groupBy} />
         </div>
       )}

@@ -6,6 +6,7 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ElectricScooterIcon from "@mui/icons-material/ElectricScooter";
 import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
+import { useTranslation } from "react-i18next";
 
 interface AdTypeProps {
   onOpenSwitchModal: () => void;
@@ -14,6 +15,7 @@ interface AdTypeProps {
 
 const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) => {
   const theme = useTheme();
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState<string | false>(false);
   const [expanded2, setExpanded2] = useState<string | false>(false);
   const [selectedAdType, setSelectedAdType] = useState<{ label: string; icon: JSX.Element | null }>({
@@ -40,28 +42,30 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
 
   const adTypeConfig = [
     {
-      title: "Vehicle Wraps",
+      title: t("adtype.Vehicle Ads"),
       options: [
-        { label: "Cars", icon: <DirectionsCarIcon /> },
-        { label: "Buses", icon: <DirectionsBusIcon /> },
-        { label: "Trucks", icon: <LocalShippingIcon /> },
-        { label: "E-scooter", icon: <ElectricScooterIcon /> },
-        { label: "2-wheelers", icon: <TwoWheelerIcon /> },
+        { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon /> },
+        { label: t("adtype.vehicles.Buses"), icon: <DirectionsBusIcon /> },
+        { label: t("adtype.vehicles.Trucks"), icon: <LocalShippingIcon /> },
+        { label: t("adtype.vehicles.e-scooter"), icon: <ElectricScooterIcon /> },
+        { label: t("adtype.vehicles.2-wheelers"), icon: <TwoWheelerIcon /> },
       ],
     },
     {
-      title: "Digital Screens",
+      title: t("adtype.Digital Screens"),
       options: [
-        { label: "Car Rooftoppers", icon: <DirectionsCarIcon /> },
-        { label: "Van Digital Billboards", icon: <LocalShippingIcon /> },
+        { label: t("adtype.digitalScreens.digitalBillboards"), icon: <DirectionsCarIcon /> },
+        { label: t("adtype.digitalScreens.Car Rooftoppers"), icon: <DirectionsCarIcon /> },
+        { label: t("adtype.digitalScreens.Van Digital Billboards"), icon: <LocalShippingIcon /> },
+        { label: t("adtype.digitalScreens.Backpacks"), icon: <LocalShippingIcon /> },
       ],
     },
     {
-      title: "Mobile Ads",
+      title: t("adtype.Mobile Ads"),
       options: [],
     },
     {
-      title: "Static Billboards",
+      title: t("adtype.Static Billboards"),
       options: [],
     },
   ];
@@ -103,7 +107,10 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
       <Accordion
         elevation={0}
         variant="outlined"
-        sx={{ background: "transparent" }}
+        sx={{
+          background: "transparent",
+          borderColor: theme.palette.text.disabled,
+        }}
         expanded={expanded === "adType"}
         onChange={handleAccordionChange("adType")}
       >
@@ -111,15 +118,23 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
           <Typography sx={{ color: "black", display: "flex", alignItems: "center" }}>
             {selectedAdType.icon}
             <span style={{ marginLeft: selectedAdType.icon ? 8 : 0 }}>
-              {selectedAdType.label ? selectedAdType.label && "Ad Type" : "Ad Type"}
+              {selectedAdType.label ? selectedAdType.label && t("sideBar.adType") : t("sideBar.adType")}
             </span>
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           {adTypeConfig.map(({ title, options }) => (
-            <Accordion key={title} elevation={0} expanded={expanded2 === title} onChange={handleAccordionChange2(title)}>
-              <AccordionSummary expandIcon={options.length ? <ExpandMoreIcon /> : null}>
-                <Typography variant="body1" sx={{ color: "black", fontSize: "15px" }}>
+            <Accordion
+              key={title}
+              elevation={0}
+              expanded={expanded2 === title}
+              onChange={handleAccordionChange2(title)}
+              sx={{ backgroundColor: theme.palette.secondary.main }}
+            >
+              <AccordionSummary
+                expandIcon={options.length ? <ExpandMoreIcon sx={{ color: theme.palette.text.primary }} /> : null}
+              >
+                <Typography variant="body1" sx={{ color: theme.palette.text.primary, fontSize: "15px" }}>
                   {title}
                 </Typography>
               </AccordionSummary>

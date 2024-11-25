@@ -1,13 +1,25 @@
-import { Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import ImpressionsChart from "../components/ImpressionsChart";
 import { useTranslation } from "react-i18next";
 
 const Impressions = () => {
   const { t } = useTranslation();
+  const theme = useTheme();
   return (
     <div>
       <div>
-        <Typography variant="h3" style={{marginBlock: '30px'}}>{t('reports.impressions.impressions')}</Typography>
+        <Box
+          sx={{
+            backgroundColor: theme.palette.primary.main,
+            padding: "5px",
+            width: "fit-content",
+            marginBlock: "25px",
+          }}
+        >
+          <Typography variant="h3">
+            {t("reports.impressions.impressions")}
+          </Typography>
+        </Box>
         <ImpressionsChart />
       </div>
     </div>

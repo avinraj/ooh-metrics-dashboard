@@ -1,0 +1,76 @@
+{
+  "sideBar": {
+    "adType": "Advertentietype",
+    "highlight": "Hoogtepunten",
+    "reports": "Rapporten",
+    "audience": "Publiek",
+    "mapView": "Kaartweergave",
+    "cars": "Auto's",
+    "attribution": "Toewijzing",
+    "deviceIds": "Apparaat ID's",
+    "logout": "Uitloggen"
+  },
+  "filterPanel": {
+    "campaign": "Campagne",
+    "selectDateRange": "Selecteer datumbereik",
+    "vehicle": "Voertuig",
+    "show": "Toon"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "Vertoningen",
+      "date": "Datum",
+      "vehicle": "Voertuig",
+      "chart": "Grafiek",
+      "table": "Tabel",
+      "impressionsPerMile": "Vertoningen per mijl",
+      "miles": "Mijlen",
+      "avg": "Gemiddeld"
+    },
+    "demographics": {
+      "demographics": "Demografie",
+      "age": "Leeftijd",
+      "education": "Opleiding",
+      "income": "Inkomen",
+      "ethnicity": "Etniciteit",
+      "chartType": "Grafiektype",
+      "verticalBar": "Verticale staaf",
+      "horizontalBar": "Horizontale staaf",
+      "doughnutChart": "Cirkeldiagram",
+      "lineChart": "Lijngrafiek"
+    },
+    "affinities": {
+      "affinities": "Affiniteiten"
+    }
+  },
+  "highlights": {
+    "welcome": "Welkom"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "Auto's",
+      "Buses": "Bussen",
+      "Trucks": "Vrachtwagens",
+      "Robots": "Robotten",
+      "e-scooter": "E-scooter",
+      "Rickshaws": "Riksja's",
+      "2-wheelers": "Twee-wielers"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "Digitale Billboards",
+      "Car Rooftoppers": "Auto Dakreclames",
+      "Van Digital Billboards": "Van Digitale Billboards",
+      "Backpacks": "Rugzakken"
+    },
+    "Mobile Ads": "Mobiele advertenties",
+    "Static Billboards": "Statistische billboards",
+    "Vehicle Ads": "Voertuigreclames",
+    "Digital Screens": "Digitale schermen"
+  },
+  "map": {
+    "map": "Kaart",
+    "basic": "Basis",
+    "heat": "Hittekaart",
+    "live": "Live"
+  }
+}

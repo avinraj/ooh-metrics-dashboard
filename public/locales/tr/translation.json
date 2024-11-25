@@ -1,0 +1,77 @@
+{
+    "sideBar": {
+      "adType": "Reklam Türü",
+      "highlight": "Öne Çıkanlar",
+      "reports": "Raporlar",
+      "audience": "Hedef Kitle",
+      "mapView": "Harita Görünümü",
+      "cars": "Arabalar",
+      "attribution": "Atıf",
+      "deviceIds": "Cihaz Kimlikleri",
+      "logout": "Çıkış Yap"
+    },
+    "filterPanel": {
+      "campaign": "Kampanya",
+      "selectDateRange": "Tarih Aralığı Seç",
+      "vehicle": "Araç",
+      "show": "Göster"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "Gösterimler",
+        "date": "Tarih",
+        "vehicle": "Araç",
+        "chart": "Grafik",
+        "table": "Tablo",
+        "impressionsPerMile": "Mil Başına Gösterim",
+        "miles": "Mil",
+        "avg": "Ortalama"
+      },
+      "demographics": {
+        "demographics": "Demografi",
+        "age": "Yaş",
+        "education": "Eğitim",
+        "income": "Gelir",
+        "ethnicity": "Etnik Köken",
+        "chartType": "Grafik Türü",
+        "verticalBar": "Dikey Çubuk",
+        "horizontalBar": "Yatay Çubuk",
+        "doughnutChart": "Halka Grafik",
+        "lineChart": "Çizgi Grafik"
+      },
+      "affinities": {
+        "affinities": "İlgi Alanları"
+      }
+    },
+    "highlights": {
+      "welcome": "Hoş Geldiniz"
+    },
+    "adtype": {
+      "vehicles": {
+        "Cars": "Arabalar",
+        "Buses": "Otobüsler",
+        "Trucks": "Kamyonlar",
+        "Robots": "Robotlar",
+        "e-scooter": "Elektrikli Scooter",
+        "Rickshaws": "Beciktaşlar",
+        "2-wheelers": "İki Tekerlekli Araçlar"
+      },
+      "digitalScreens": {
+        "digitalBillboards": "Dijital Reklam Panoları",
+        "Car Rooftoppers": "Araba Çatı Reklamları",
+        "Van Digital Billboards": "Minibüs Dijital Reklam Panoları",
+        "Backpacks": "Sırt Çantası Reklamları"
+      },
+      "Mobile Ads": "Mobil Reklamlar",
+      "Static Billboards": "Statik Reklam Panoları",
+      "Vehicle Ads": "Araç Reklamları",
+      "Digital Screens": "Dijital Ekranlar"
+    },
+    "map": {
+      "map": "Harita",
+      "basic": "Temel",
+      "heat": "Isı Haritası",
+      "live": "Canlı"
+    }
+  }
+  

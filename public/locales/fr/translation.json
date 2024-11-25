@@ -1,0 +1,77 @@
+{
+    "sideBar": {
+      "adType": "Type de publicité",
+      "highlight": "Mise en évidence",
+      "reports": "Rapports",
+      "audience": "Audience",
+      "mapView": "Vue de la carte",
+      "cars": "Voitures",
+      "attribution": "Attribution",
+      "deviceIds": "Identifiants des appareils",
+      "logout": "Se déconnecter"
+    },
+    "filterPanel": {
+      "campaign": "Campagne",
+      "selectDateRange": "Sélectionner la plage de dates",
+      "vehicle": "Véhicule",
+      "show": "Afficher"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "Impressions",
+        "date": "Date",
+        "vehicle": "Véhicule",
+        "chart": "Graphique",
+        "table": "Tableau",
+        "impressionsPerMile": "Impressions par mile",
+        "miles": "Miles",
+        "avg": "Moyenne"
+      },
+      "demographics": {
+        "demographics": "Démographie",
+        "age": "Âge",
+        "education": "Éducation",
+        "income": "Revenu",
+        "ethnicity": "Ethnicité",
+        "chartType": "Type de graphique",
+        "verticalBar": "Barres verticales",
+        "horizontalBar": "Barres horizontales",
+        "doughnutChart": "Graphique en anneau",
+        "lineChart": "Graphique en ligne"
+      },
+      "affinities": {
+        "affinities": "Affinités"
+      }
+    },
+    "highlights": {
+      "welcome": "Bienvenue"
+    },
+    "adtype": {
+      "vehicles": {
+        "Cars": "Voitures",
+        "Buses": "Autobus",
+        "Trucks": "Camions",
+        "Robots": "Robots",
+        "e-scooter": "Trottinette électrique",
+        "Rickshaws": "Rickshaws",
+        "2-wheelers": "Véhicules à deux roues"
+      },
+      "digitalScreens": {
+        "digitalBillboards": "Panneaux Publicitaires Numériques",
+        "Car Rooftoppers": "Publicités sur les toits de voitures",
+        "Van Digital Billboards": "Panneaux numériques de fourgonnettes",
+        "Backpacks": "Publicités sur sacs à dos"
+      },
+      "Mobile Ads": "Publicités mobiles",
+      "Static Billboards": "Panneaux publicitaires statiques",
+      "Vehicle Ads": "Publicités sur véhicules",
+      "Digital Screens": "Écrans numériques"
+    },
+    "map": {
+      "map": "Carte",
+      "basic": "De base",
+      "heat": "Carte thermique",
+      "live": "En direct"
+    }
+  }
+  

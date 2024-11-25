@@ -1,0 +1,77 @@
+{
+    "sideBar": {
+      "adType": "Mainostyyppi",
+      "highlight": "Korostus",
+      "reports": "Raportit",
+      "audience": "Yleisö",
+      "mapView": "Karttanäkymä",
+      "cars": "Autot",
+      "attribution": "Attribuutio",
+      "deviceIds": "Laitteen tunnukset",
+      "logout": "Kirjaudu ulos"
+    },
+    "filterPanel": {
+      "campaign": "Kampanja",
+      "selectDateRange": "Valitse päivämääräväli",
+      "vehicle": "Ajoneuvo",
+      "show": "Näytä"
+    },
+    "reports": {
+      "impressions": {
+        "impressions": "Näytöt",
+        "date": "Päivämäärä",
+        "vehicle": "Ajoneuvo",
+        "chart": "Kaavio",
+        "table": "Taulukko",
+        "impressionsPerMile": "Näytöt mailia kohti",
+        "miles": "Mailit",
+        "avg": "Keskimäärin"
+      },
+      "demographics": {
+        "demographics": "Demografia",
+        "age": "Ikä",
+        "education": "Koulutus",
+        "income": "Tulo",
+        "ethnicity": "Etnisyys",
+        "chartType": "Kaaviotyyppi",
+        "verticalBar": "Pystysuora pylväs",
+        "horizontalBar": "Vaakasuora pylväs",
+        "doughnutChart": "Donitsikaavio",
+        "lineChart": "Viivakaavio"
+      },
+      "affinities": {
+        "affinities": "Mieltymykset"
+      }
+    },
+    "highlights": {
+      "welcome": "Tervetuloa"
+    },
+    "adtype": {
+      "vehicles": {
+        "Cars": "Autot",
+        "Buses": "Bussit",
+        "Trucks": "Kuorma-autot",
+        "Robots": "Robotit",
+        "e-scooter": "Sähköpotkulauta",
+        "Rickshaws": "Riksat",
+        "2-wheelers": "Kaksipyöräiset"
+      },
+      "digitalScreens": {
+        "digitalBillboards": "Digitaaliset Mainostaulut",
+        "Car Rooftoppers": "Auton katto mainokset",
+        "Van Digital Billboards": "Pakettiauto digitaalibilboardit",
+        "Backpacks": "Reppujen mainokset"
+      },
+      "Mobile Ads": "Mobiilimainokset",
+      "Static Billboards": "Staattiset mainostaulut",
+      "Vehicle Ads": "Ajoneuvomainokset",
+      "Digital Screens": "Digitaaliset näytöt"
+    },
+    "map": {
+      "map": "Kartta",
+      "basic": "Perus",
+      "heat": "Lämpökartta",
+      "live": "Live"
+    }
+  }
+  
