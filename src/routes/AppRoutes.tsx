@@ -1,7 +1,7 @@
 // AppRoutes.tsx
 import { Route, Routes } from "react-router-dom";
 import HighLight from "../app/Highlight/HighLight";
-import Home from "../app/Home/Home";
+// import Home from "../app/Home/Home";
 import Reports from "../app/Reports/pages/Reports";
 import Signup from "../app/Signup/Signup";
 
@@ -16,7 +16,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Signup />} />
-      <Route
+      {/* <Route
         path="/home"
         element={
           <ProtectedRoute>
@@ -25,7 +25,7 @@ const AppRoutes = () => {
             </Layout>
           </ProtectedRoute>
         }
-      />
+      /> */}
       <Route
         path="/highlight"
         element={
