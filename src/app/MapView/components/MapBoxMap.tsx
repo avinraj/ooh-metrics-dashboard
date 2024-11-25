@@ -43,8 +43,6 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
       if (!grouped[location.vin]) {
         grouped[location.vin] = {
           vin: location.vin,
-          coordinates: [location.longitude, location.latitude],
-          bearing: Number(location.bearing),
           coordinates2: [],
         };
       }
@@ -53,6 +51,8 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
         lat: location.latitude,
         lon: location.longitude,
         bearing: Number(location.bearing),
+        speed: location.speed,
+        time: location.time,
       });
     });
 
@@ -75,12 +75,17 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
         type: "Feature",
         geometry: {
           type: "Point",
-          coordinates: [car.coordinates2[arrIndex].lon, car.coordinates2[arrIndex].lat],
+          coordinates: [
+            car.coordinates2[arrIndex].lon,
+            car.coordinates2[arrIndex].lat,
+          ],
         },
         properties: {
           id: car.vin,
           vin: car.vin,
           bearing: car.coordinates2[arrIndex].bearing,
+          speed: car.coordinates2[arrIndex].speed,
+          time: car.coordinates2[arrIndex].time,
         },
       }));
     return { type: "FeatureCollection", features };
@@ -175,6 +180,31 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
         },
       });
     }
+
+    // Add click event listener to show VIN and speed in a popup
+    map.on("click", "live-layer", (e) => {
+      const features = map.queryRenderedFeatures(e.point, {
+        layers: ["live-layer"],
+      });
+      if (features.length > 0) {
+        const feature: any = features[0];
+        const vin = feature.properties.vin;
+        const speed = feature.properties.speed;
+
+        // Create and display the popup with VIN and speed
+        new mapboxgl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(
+            `
+           <div style="text-align: center; color: yellow; font-weight: bolder; font-size: large;">
+          ${vin}
+          </div>
+          <strong>Speed:</strong> ${speed} mph
+        `
+          )
+          .addTo(map);
+      }
+    });
 
     const updateCarCoordinates = () => {
       arrIndex = arrIndex + 3;
