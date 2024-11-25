@@ -1,13 +1,4 @@
-import {
-  Box,
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, FormControl, Grid, InputLabel, MenuItem, Select, Typography, useTheme } from "@mui/material";
 import React from "react";
 import DateRangePicker from "./DateRangePicker";
 import { useTranslation } from "react-i18next";
@@ -37,13 +28,11 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   const { t } = useTranslation();
 
   return (
-    <Grid container spacing={3} alignItems="center">
+    <Grid container spacing={3} alignItems="center" justifyContent={"center"}>
       {/* Campaign Select */}
       <Grid item xs={12} sm={6} md={2} order={1}>
         <FormControl fullWidth>
-          <InputLabel sx={{ color: theme.palette.text.primary }}>
-            {t("filterPanel.campaign")}
-          </InputLabel>
+          <InputLabel sx={{ color: theme.palette.text.primary }}>{t("filterPanel.campaign")}</InputLabel>
           <Select
             size="small"
             value={selectedCampaign}
@@ -67,18 +56,13 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
         md={3}
         order={{ xs: 3, md: 2 }} // Date picker comes after vehicle select on mobile (xs), before on desktop (md)
       >
-        <DateRangePicker
-          defaultDateRange={dateRange}
-          onDateRangeChange={onDateRangeSelect}
-        />
+        <DateRangePicker defaultDateRange={dateRange} onDateRangeChange={onDateRangeSelect} />
       </Grid>
 
       {/* Vehicle Select */}
       <Grid item xs={12} sm={6} md={2} order={{ xs: 2, md: 3 }}>
         <FormControl fullWidth>
-          <InputLabel sx={{ color: theme.palette.text.primary }}>
-            {t("filterPanel.vehicle")}
-          </InputLabel>
+          <InputLabel sx={{ color: theme.palette.text.primary }}>{t("filterPanel.vehicle")}</InputLabel>
           <Select
             size="small"
             value={selectedVehicle}
@@ -110,9 +94,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
             maxWidth: "fit-content",
           }}
         >
-          <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>
-            {t("filterPanel.show")}
-          </Typography>
+          <Typography sx={{ fontWeight: "bold", fontSize: "20px" }}>{t("filterPanel.show")}</Typography>
         </Box>
       </Grid>
     </Grid>

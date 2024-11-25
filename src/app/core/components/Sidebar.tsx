@@ -16,14 +16,14 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import carLogo from "../../../assets/car-removebg-preview.png";
-import eye from "../../../assets/eye.png";
-import footstep from "../../../assets/footsteps.png";
-import location from "../../../assets/location.png";
-import markerIcon from "../../../assets/marker.png";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { IoEyeOutline } from "react-icons/io5";
+import { FaHighlighter } from "react-icons/fa";
+import { IoFootsteps } from "react-icons/io5";
 import logo from "../../../assets/oohlogo.png";
-
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import StorageService from "../services/storage.serive";
+
 import AdType from "./AdType";
 
 const Sidebar: React.FC = () => {
@@ -32,7 +32,11 @@ const Sidebar: React.FC = () => {
   const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<string>("Ad Type");
+  const [selectedItem, setSelectedItem] = useState<string>("Highlight");
+  const [selectedAdType, setSelectedAdType] = useState<{ label: string; icon: JSX.Element | null }>({
+    label: "Cars",
+    icon: <DirectionsCarIcon />,
+  });
 
   const { t, i18n } = useTranslation();
   const defaultLang = storageService.get("local", "i18nextLng", false);
@@ -48,15 +52,11 @@ const Sidebar: React.FC = () => {
   };
 
   const menuItems = [
-    // { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "" },
-    { label: t("sideBar.highlight"), action: "Highlight", image: markerIcon, path: "/highlight" },
-    { label: t("sideBar.reports"), action: "Reports", image: eye, path: "/reports" },
-
-    { label: t("sideBar.mapView"), action: "Map View", image: location, path: "/map-view" },
-    { label: t("sideBar.cars"), action: "Cars", image: carLogo, path: "/cars" },
-    { label: t("sideBar.attribution"), action: "Attribution", image: footstep, path: "/attribution" },
-    // { label:t("sideBar.deviceIds"), action: "Device IDs", path: "/device-ids" },
-    // { label:t("sideBar.logout"), action: "Log out", path: "/logout" },
+    { label: t("sideBar.highlight"), action: "Highlight", icon: <FaHighlighter />, path: "/highlight" },
+    { label: t("sideBar.reports"), action: "Reports", icon: <IoEyeOutline />, path: "/reports" },
+    { label: t("sideBar.mapView"), action: "Map View", icon: <FaMapMarkerAlt />, path: "/map-view" },
+    { label: selectedAdType.label, action: "Cars", icon: selectedAdType.icon, path: "/cars" },
+    { label: t("sideBar.attribution"), action: "Attribution", icon: <IoFootsteps />, path: "/attribution" },
   ];
 
   const handleItemClick = (item: { action: string; path: string }) => {
@@ -67,6 +67,10 @@ const Sidebar: React.FC = () => {
 
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
+  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null }) => {
+    console.log("Selected Ad Type:", adType);
+    setSelectedAdType(adType);
+  };
   return (
     <>
       {isMobile && (
@@ -135,7 +139,7 @@ const Sidebar: React.FC = () => {
         </Box>
         <List sx={{ padding: 2 }}>
           <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
-            <AdType onOpenSwitchModal={() => console.log("Modal opened")} />
+            <AdType onOpenSwitchModal={() => console.log("Modal opened")} onSelectAdType={handleAdTypeSelect} />
           </Box>
           {menuItems.map((item) => (
             <React.Fragment key={item.label}>
@@ -154,8 +158,11 @@ const Sidebar: React.FC = () => {
                     fontSize: "20px",
                   }}
                 >
-                  {item.image && (
-                    <img src={item.image} alt={item.label} style={{ width: 25, height: 25, marginRight: 10 }} />
+                  {item.icon ? (
+                    <Box sx={{ display: "flex", alignItems: "center", marginRight: 2 }}>{item.icon}</Box>
+                  ) : (
+                    ""
+                    // <img src={item.image} alt={item.label} style={{ width: 25, height: 25, marginRight: 10 }} />
                   )}
                   <ListItemText
                     sx={{
