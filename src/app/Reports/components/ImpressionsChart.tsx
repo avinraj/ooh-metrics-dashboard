@@ -72,7 +72,7 @@ const ImpressionsChart = () => {
         ],
       };
 
-      const options = {
+      const options: any = {
         responsive: true,
         plugins: {
           legend: {
@@ -102,9 +102,23 @@ const ImpressionsChart = () => {
               color: theme.palette.text.primary,
             },
             grid: {
-              color: "#333333",
+              display: false
+              // color: "#333333",
             },
           },
+        },
+        animations: {
+          y: {
+            easing: 'easeInOutElastic',
+            from: (ctx: any) => {
+              if (ctx.type === 'data') {
+                if (ctx.mode === 'default' && !ctx.dropped) {
+                  ctx.dropped = true;
+                  return 0;
+                }
+              }
+            }
+          }
         },
       };
 

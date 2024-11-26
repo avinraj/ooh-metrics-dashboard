@@ -72,5 +72,13 @@
     "basic": "기본",
     "heat": "히트맵",
     "live": "실시간"
+  },
+  "audience": {
+    "audience": "청중",
+    "clicksByGender": "성별별 클릭 수",
+    "clicksByDevice": "기기별 클릭 수",
+    "clicksByAge": "연령별 클릭 수",
+    "clicksBySource": "소스별 클릭 수",
+    "ctrBySec": "초당 CTR"
   }
 }

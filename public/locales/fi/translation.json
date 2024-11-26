@@ -72,6 +72,14 @@
       "basic": "Perus",
       "heat": "Lämpökartta",
       "live": "Live"
+    },
+    "audience": {
+      "audience": "Yleisö",
+      "clicksByGender": "Klikkaukset sukupuolen mukaan",
+      "clicksByDevice": "Klikkaukset laitteen mukaan",
+      "clicksByAge": "Klikkaukset iän mukaan",
+      "clicksBySource": "Klikkaukset lähteen mukaan",
+      "ctrBySec": "CTR sekunnin mukaan"
     }
   }
   

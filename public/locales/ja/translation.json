@@ -72,6 +72,14 @@
       "basic": "基本",
       "heat": "ヒートマップ",
       "live": "ライブ"
+    },
+    "audience": {
+      "audience": "オーディエンス",
+      "clicksByGender": "性別別のクリック",
+      "clicksByDevice": "デバイス別のクリック",
+      "clicksByAge": "年齢別のクリック",
+      "clicksBySource": "ソース別のクリック",
+      "ctrBySec": "秒ごとのCTR"
     }
   }
   

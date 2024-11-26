@@ -72,6 +72,14 @@
       "basic": "De base",
       "heat": "Carte thermique",
       "live": "En direct"
+    },
+    "audience": {
+      "audience": "Audience",
+      "clicksByGender": "Clics par sexe",
+      "clicksByDevice": "Clics par appareil",
+      "clicksByAge": "Clics par âge",
+      "clicksBySource": "Clics par source",
+      "ctrBySec": "CTR par seconde"
     }
   }
   

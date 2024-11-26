@@ -72,6 +72,14 @@
       "basic": "Основной",
       "heat": "Тепловая карта",
       "live": "В реальном времени"
+    },
+    "audience": {
+      "audience": "Аудитория",
+      "clicksByGender": "Клики по полу",
+      "clicksByDevice": "Клики по устройствам",
+      "clicksByAge": "Клики по возрасту",
+      "clicksBySource": "Клики по источникам",
+      "ctrBySec": "CTR по секундам"
     }
   }
   

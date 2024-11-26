@@ -72,6 +72,14 @@
       "basic": "基础",
       "heat": "热力图",
       "live": "实时"
+    },
+    "audience": {
+      "audience": "受众",
+      "clicksByGender": "按性别点击",
+      "clicksByDevice": "按设备点击",
+      "clicksByAge": "按年龄点击",
+      "clicksBySource": "按来源点击",
+      "ctrBySec": "每秒点击率"
     }
   }
   

@@ -73,5 +73,13 @@
     "basic": "Básico",
     "heat": "Calor",
     "live": "En vivo"
-  }
+  },
+  "audience": {
+      "audience": "Audiencia",
+      "clicksByGender": "Clics por género",
+      "clicksByDevice": "Clics por dispositivo",
+      "clicksByAge": "Clics por edad",
+      "clicksBySource": "Clics por fuente",
+      "ctrBySec": "CTR por SEC"
+    }
 }

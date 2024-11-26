@@ -1,5 +1,5 @@
 import { Brightness4, Brightness7 } from "@mui/icons-material";
-import { Box, CssBaseline, IconButton, ThemeProvider } from "@mui/material";
+import { Box, CssBaseline, IconButton, ThemeProvider, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
@@ -12,7 +12,9 @@ import { languages } from "./i18n/languages";
 function App() {
   const storageService = new StorageService();
   const [mode, setMode] = useState<"light" | "dark">("light");
-  const customTheme = getTheme(mode);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); 
+  const customTheme = getTheme(mode, isMobile);
   const { i18n } = useTranslation();
 
   useEffect(() => {

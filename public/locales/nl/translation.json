@@ -72,5 +72,13 @@
     "basic": "Basis",
     "heat": "Hittekaart",
     "live": "Live"
+  },
+  "audience": {
+    "audience": "Publiek",
+    "clicksByGender": "Kliks per geslacht",
+    "clicksByDevice": "Kliks per apparaat",
+    "clicksByAge": "Kliks per leeftijd",
+    "clicksBySource": "Kliks per bron",
+    "ctrBySec": "CTR per seconde"
   }
 }

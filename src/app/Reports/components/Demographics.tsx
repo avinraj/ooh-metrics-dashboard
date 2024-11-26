@@ -65,27 +65,41 @@ const Demographics = () => {
       responsive: true,
       plugins: {
         legend: {
-          labels: {
-            color: theme.palette.text.primary,
-          },
-          position:
-            chartType === "bar" ||
-            chartType === "horizontalBar" ||
-            chartType === "line"
-              ? "top"
-              : "left", // Position legend on the left for doughnut charts
+          display: false
+          // labels: {
+          //   color: theme.palette.text.primary,
+          // },
+          // position:
+          //   chartType === "bar" ||
+          //   chartType === "horizontalBar" ||
+          //   chartType === "line"
+          //     ? "top"
+          //     : "left", // Position legend on the left for doughnut charts
         },
+      },
+      animations: {
+        y: {
+          easing: 'easeInOutElastic',
+          from: (ctx: any) => {
+            if (ctx.type === 'data') {
+              if (ctx.mode === 'default' && !ctx.dropped) {
+                ctx.dropped = true;
+                return 0;
+              }
+            }
+          }
+        }
       },
     };
 
-    if (chartType === "bar" || chartType === "horizontalBar") {
+    if (chartType === "bar" || chartType === "horizontalBar" || chartType === "line") {
       chartOptions.scales = {
         x: {
-          grid: { color: theme.palette.grey[500] },
+          grid: { display: false },
           ticks: { color: theme.palette.text.primary },
         },
         y: {
-          grid: { color: theme.palette.grey[500] },
+          grid: { display: false },
           ticks: { color: theme.palette.text.primary },
           beginAtZero: true,
         },
@@ -177,6 +191,7 @@ const Demographics = () => {
                       borderStyle: "solid",
                       borderWidth: "1px",
                       borderRadius: "10px",
+                      height: "100%"
                     }}
                   >
                     <Typography variant="h6" color="text.primary" gutterBottom>

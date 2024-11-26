@@ -73,5 +73,13 @@
     "basic": "أساسي",
     "heat": "حرارة",
     "live": "مباشر"
-  }
+  },
+  "audience": {
+      "audience": "الجمهور",
+      "clicksByGender": "النقرات حسب الجنس",
+      "clicksByDevice": "النقرات حسب الجهاز",
+      "clicksByAge": "النقرات حسب العمر",
+      "clicksBySource": "النقرات حسب المصدر",
+      "ctrBySec": "النسبة بالنقر لكل ثانية"
+    }
 }

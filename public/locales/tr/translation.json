@@ -72,6 +72,14 @@
       "basic": "Temel",
       "heat": "Isı Haritası",
       "live": "Canlı"
+    },
+    "audience": {
+      "audience": "Hedef Kitle",
+      "clicksByGender": "Cinsiyete Göre Tıklamalar",
+      "clicksByDevice": "Cihaza Göre Tıklamalar",
+      "clicksByAge": "Yaşa Göre Tıklamalar",
+      "clicksBySource": "Kaynağa Göre Tıklamalar",
+      "ctrBySec": "Saniye Başına TO"
     }
   }
   

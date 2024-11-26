@@ -72,6 +72,14 @@
       "basic": "Podstawowa",
       "heat": "Mapa cieplna",
       "live": "Na żywo"
+    },
+    "audience": {
+      "audience": "Odbiorcy",
+      "clicksByGender": "Kliknięcia według płci",
+      "clicksByDevice": "Kliknięcia według urządzenia",
+      "clicksByAge": "Kliknięcia według wieku",
+      "clicksBySource": "Kliknięcia według źródła",
+      "ctrBySec": "CTR według sekundy"
     }
   }
   
