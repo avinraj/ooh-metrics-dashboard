@@ -27,7 +27,7 @@ const HighLight = () => {
         <Grid item xs={12}>
           <Box mt={7}>
             <Typography variant="h3">
-              <Box sx={{ display: "inline-block", padding: "0 8px" }}>Highlight</Box>
+              <Box sx={{ display: "inline-block", padding: "0 8px" }}>{t("highlights.highlight")}</Box>
             </Typography>
           </Box>
         </Grid>

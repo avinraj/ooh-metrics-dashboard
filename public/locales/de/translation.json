@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "Willkommen"
+      "welcome": "Willkommen",
+      "highlight":"Höhepunkte"
+    },
+    "cars":{
+      "cars":"Autos",
+      "grid view":"Rasteransicht",
+      "table view":"Tabellenansicht",
+      "photo list":"Fotoliste"
     },
     "adtype": {
       "vehicles": {
