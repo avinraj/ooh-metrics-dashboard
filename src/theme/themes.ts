@@ -7,6 +7,7 @@ const getTheme = (mode: 'light' | 'dark'): Theme => {
       primary: {
         main: "#FFFF00", // Yellow for primary elements
         contrastText: "#000000", // Black text on yellow background
+        dark:  mode === 'dark' ? "#000000" : "#FFFF00" 
       },
       secondary: {
         main: mode === 'dark' ? "#000000" : "#eeeeee", // Light grey

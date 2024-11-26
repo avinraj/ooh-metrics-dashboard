@@ -1,3 +1,13 @@
 body {
   font-family: 'Lexend', sans-serif;
 }
+.mapboxgl-popup {
+  padding: 10px;
+  border-radius: 5px;
+}
+.mapboxgl-popup-tip {
+  border-top-color: #a3a983 !important;
+}
+.mapboxgl-popup-content{
+  background-color: #a3a983;
+}
