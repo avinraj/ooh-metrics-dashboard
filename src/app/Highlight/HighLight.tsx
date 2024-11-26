@@ -15,18 +15,18 @@ const HighLight = () => {
         item
         xs={12}
         sx={{
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.palette.primary.dark,
           width: "100%",
           height: "100vh",
           padding: 1,
         }}
       >
         <Grid item xs={12}>
-          <Typography variant="h3"> {t("highlights.welcome")}, Zoho</Typography>
+          <Typography variant="h3" color={theme.palette.text.primary}> {t("highlights.welcome")}, Zoho</Typography>
         </Grid>
         <Grid item xs={12}>
           <Box mt={7}>
-            <Typography variant="h3">
+            <Typography variant="h3" color={theme.palette.text.primary}>
               <Box sx={{ display: "inline-block", padding: "0 8px" }}>Highlight</Box>
             </Typography>
           </Box>
@@ -52,7 +52,7 @@ const HighLight = () => {
           ].map((item, index) => (
             <Grid item xs={12} sm={3} key={index}>
               <Card sx={{ backgroundColor: "#DEDEDE", padding: 2, textAlign: "center" }}>
-                <Typography variant="h4" fontWeight={"bold"}>
+                <Typography variant="h4" fontWeight={"bold"} color={theme.palette.primary.contrastText}>
                   {item.value}
                 </Typography>
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mt: 2 }}>
@@ -61,14 +61,13 @@ const HighLight = () => {
                 <Box
                   sx={{
                     backgroundColor: theme.palette.primary.main,
-
                     mt: 2,
                     border: "1px solid black",
                     borderRadius: 3,
                     padding: "4px 8px",
                   }}
                 >
-                  <Typography variant="h6">
+                  <Typography variant="h6" color={theme.palette.primary.contrastText}>
                     <b>{item.label}</b>
                   </Typography>
                 </Box>
