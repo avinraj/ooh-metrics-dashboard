@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "Bienvenue"
+      "welcome": "Bienvenue",
+      "highlight":"Mise en évidence"
+    },
+    "cars":{
+      "cars":"Voitures",
+      "grid view":"Vue en grille",
+      "table view":"Vue en tableau",
+      "photo list":"Liste de photos"
     },
     "adtype": {
       "vehicles": {
@@ -72,6 +79,14 @@
       "basic": "De base",
       "heat": "Carte thermique",
       "live": "En direct"
+    },
+    "audience": {
+      "audience": "Audience",
+      "clicksByGender": "Clics par sexe",
+      "clicksByDevice": "Clics par appareil",
+      "clicksByAge": "Clics par âge",
+      "clicksBySource": "Clics par source",
+      "ctrBySec": "CTR par seconde"
     }
   }
   

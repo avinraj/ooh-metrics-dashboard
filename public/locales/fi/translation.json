@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "Tervetuloa"
+      "welcome": "Tervetuloa",
+      "highlight":"Korostus"
+    },
+    "cars":{
+      "cars":"Autot",
+      "grid view":"Tervetuloa ruudukkonäkymään",
+      "table view":"Tervetuloa taulukkonäkymään",
+      "photo list":" Tervetuloa valokuvaluetteloon"
     },
     "adtype": {
       "vehicles": {
@@ -72,6 +79,14 @@
       "basic": "Perus",
       "heat": "Lämpökartta",
       "live": "Live"
+    },
+    "audience": {
+      "audience": "Yleisö",
+      "clicksByGender": "Klikkaukset sukupuolen mukaan",
+      "clicksByDevice": "Klikkaukset laitteen mukaan",
+      "clicksByAge": "Klikkaukset iän mukaan",
+      "clicksBySource": "Klikkaukset lähteen mukaan",
+      "ctrBySec": "CTR sekunnin mukaan"
     }
   }
   

@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "Hoş Geldiniz"
+      "welcome": "Hoş Geldiniz",
+      "highlight":"Öne Çıkanlar"
+    },
+    "cars":{
+      "cars":"Arabalar",
+      "grid view":" Izgara Görünümü",
+      "table view":"Tablo Görünümü",
+      "photo list":" Fotoğraf Listesi "
     },
     "adtype": {
       "vehicles": {
@@ -72,6 +79,14 @@
       "basic": "Temel",
       "heat": "Isı Haritası",
       "live": "Canlı"
+    },
+    "audience": {
+      "audience": "Hedef Kitle",
+      "clicksByGender": "Cinsiyete Göre Tıklamalar",
+      "clicksByDevice": "Cihaza Göre Tıklamalar",
+      "clicksByAge": "Yaşa Göre Tıklamalar",
+      "clicksBySource": "Kaynağa Göre Tıklamalar",
+      "ctrBySec": "Saniye Başına TO"
     }
   }
   

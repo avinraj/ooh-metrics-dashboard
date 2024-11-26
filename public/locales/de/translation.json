@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "Willkommen"
+      "welcome": "Willkommen",
+      "highlight":"Höhepunkte"
+    },
+    "cars":{
+      "cars":"Autos",
+      "grid view":"Rasteransicht",
+      "table view":"Tabellenansicht",
+      "photo list":"Fotoliste"
     },
     "adtype": {
       "vehicles": {
@@ -72,6 +79,14 @@
       "basic": "Basis",
       "heat": "Hitzekarte",
       "live": "Live"
+    },
+    "audience": {
+      "audience": "Zielgruppe",
+      "clicksByGender": "Klicks nach Geschlecht",
+      "clicksByDevice": "Klicks nach Gerät",
+      "clicksByAge": "Klicks nach Alter",
+      "clicksBySource": "Klicks nach Quelle",
+      "ctrBySec": "CTR nach Sekunde"
     }
   }
   

@@ -44,8 +44,15 @@
     }
   },
   "highlights": {
-    "welcome": "환영합니다"
+    "welcome": "환영합니다",
+    "highlight":"하이라이트"
   },
+  "cars":{
+      "cars":"차량",
+      "grid view":"그리드 보기",
+      "table view":"테이블 보기",
+      "photo list":"사진 목록"
+    },
   "adtype": {
     "vehicles": {
       "Cars": "차",
@@ -72,5 +79,13 @@
     "basic": "기본",
     "heat": "히트맵",
     "live": "실시간"
+  },
+  "audience": {
+    "audience": "청중",
+    "clicksByGender": "성별별 클릭 수",
+    "clicksByDevice": "기기별 클릭 수",
+    "clicksByAge": "연령별 클릭 수",
+    "clicksBySource": "소스별 클릭 수",
+    "ctrBySec": "초당 CTR"
   }
 }

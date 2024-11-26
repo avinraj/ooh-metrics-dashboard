@@ -1,0 +1,108 @@
+[
+    {
+      "PROFILE_INDEX": 1,
+      "DEVICE_COUNT": 910,
+      "category": "age",
+      "group": "<18",
+      "percent": 31.44
+    },
+    {
+      "PROFILE_INDEX": 2,
+      "DEVICE_COUNT": 270,
+      "category": "age",
+      "group": "18-24",
+      "percent": 9.33
+    },
+    {
+      "PROFILE_INDEX": 3,
+      "DEVICE_COUNT": 430,
+      "category": "age",
+      "group": "25-34",
+      "percent": 15.33
+    },
+    {
+      "PROFILE_INDEX": 4,
+      "DEVICE_COUNT": 500,
+      "category": "age",
+      "group": "35-44",
+      "percent": 17.22
+    },
+    {
+      "PROFILE_INDEX": 5,
+      "DEVICE_COUNT": 650,
+      "category": "age",
+      "group": "45-54",
+      "percent": 22.11
+    },
+    {
+      "PROFILE_INDEX": 6,
+      "DEVICE_COUNT": 120,
+      "category": "age",
+      "group": "55+",
+      "percent": 4.57
+    },
+    {
+      "PROFILE_INDEX": 7,
+      "DEVICE_COUNT": 600,
+      "category": "gender",
+      "group": "Male",
+      "percent": 52.8
+    },
+    {
+      "PROFILE_INDEX": 8,
+      "DEVICE_COUNT": 540,
+      "category": "gender",
+      "group": "Female",
+      "percent": 47.2
+    },
+    {
+      "PROFILE_INDEX": 9,
+      "DEVICE_COUNT": 800,
+      "category": "device",
+      "group": "Android",
+      "percent": 62.3
+    },
+    {
+      "PROFILE_INDEX": 10,
+      "DEVICE_COUNT": 480,
+      "category": "device",
+      "group": "iOS",
+      "percent": 37.7
+    },
+    {
+      "PROFILE_INDEX": 11,
+      "DEVICE_COUNT": 900,
+      "category": "source",
+      "group": "Site",
+      "percent": 75.0
+    },
+    {
+      "PROFILE_INDEX": 12,
+      "DEVICE_COUNT": 300,
+      "category": "source",
+      "group": "App",
+      "percent": 25.0
+    },
+    {
+      "PROFILE_INDEX": 13,
+      "DEVICE_COUNT": 1000,
+      "category": "sec",
+      "group": "CTR 0-10 sec",
+      "percent": 45.5
+    },
+    {
+      "PROFILE_INDEX": 14,
+      "DEVICE_COUNT": 850,
+      "category": "sec",
+      "group": "CTR 11-20 sec",
+      "percent": 33.0
+    },
+    {
+      "PROFILE_INDEX": 15,
+      "DEVICE_COUNT": 500,
+      "category": "sec",
+      "group": "CTR 21-30 sec",
+      "percent": 21.5
+    }
+  ]
+  

@@ -81,7 +81,8 @@ const AffinitiesChart = ({ data }: AffinitiesChartProps) => {
               color: theme.palette.text.primary,
             },
             grid: {
-              color: "#333333",
+              display: false,
+              // color: "#333333",
             },
           },
           y: {
@@ -90,6 +91,19 @@ const AffinitiesChart = ({ data }: AffinitiesChartProps) => {
             },
             grid: {
               display: false,
+            },
+          },
+        },
+        animations: {
+          y: {
+            easing: "easeInOutElastic",
+            from: (ctx: any) => {
+              if (ctx.type === "data") {
+                if (ctx.mode === "default" && !ctx.dropped) {
+                  ctx.dropped = true;
+                  return 0;
+                }
+              }
             },
           },
         },

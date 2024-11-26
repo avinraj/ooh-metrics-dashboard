@@ -80,9 +80,9 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
           sx={{
             fontWeight: "bold",
             textAlign: "start",
-            fontSize: isSelected ? "20px" : "13px",
+            fontSize: "13px",
             color: "black",
-            backgroundColor: "transparent",
+            backgroundColor: isSelected ? theme.palette.primary.main : "transparent",
             padding: "8px 0",
             textTransform: "none",
             width: "100%",

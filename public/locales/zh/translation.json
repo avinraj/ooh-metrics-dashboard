@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "欢迎"
+      "welcome": "欢迎",
+      "highlight":"亮点"
+    },
+    "cars":{
+      "cars":"汽车",
+      "grid view":"  网格视图",
+      "table view":"表格视图 ",
+      "photo list":" 照片列表"
     },
     "adtype": {
       "vehicles": {
@@ -72,6 +79,14 @@
       "basic": "基础",
       "heat": "热力图",
       "live": "实时"
+    },
+    "audience": {
+      "audience": "受众",
+      "clicksByGender": "按性别点击",
+      "clicksByDevice": "按设备点击",
+      "clicksByAge": "按年龄点击",
+      "clicksBySource": "按来源点击",
+      "ctrBySec": "每秒点击率"
     }
   }
   

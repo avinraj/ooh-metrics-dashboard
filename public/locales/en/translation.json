@@ -44,9 +44,15 @@
     }
   },
   "highlights": {
-    "welcome": "Welcome"
+    "welcome": "Welcome",
+    "highlight":"Highlight"
   },
-
+"cars":{
+  "cars":"cars",
+  "grid view":"grid view",
+  "table view":"table view",
+  "photo list":"photo list"
+},
   "adtype": {
     "vehicles": {
       "Cars": "Cars",
@@ -73,5 +79,13 @@
     "basic": "Basic",
     "heat": "Heat",
     "live": "Live"
+  },
+  "audience": {
+    "audience": "Audience",
+    "clicksByGender": "Clicks by Gender",
+    "clicksByDevice": "Clicks by Divice",
+    "clicksByAge": "Clicks by Age",
+    "clicksBySource": "Clicks by Source",
+    "ctrBySec": "CTR by SEC"
   }
 }

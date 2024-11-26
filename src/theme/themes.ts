@@ -1,12 +1,13 @@
 import { createTheme, Theme } from "@mui/material/styles";
 
-const getTheme = (mode: 'light' | 'dark'): Theme => {
+const getTheme = (mode: 'light' | 'dark',isMobile: boolean): Theme => {
   return createTheme({
-    typography: { h3: { color: mode === 'dark' ? "#2f2f2f" : "#000000", } },
+    typography: { h3: { color: mode === 'dark' ? "#2f2f2f" : "#000000", fontSize: isMobile ? "20px" : "48px"} },
     palette: {
       primary: {
         main: "#FFFF00", // Yellow for primary elements
         contrastText: "#000000", // Black text on yellow background
+        dark:  mode === 'dark' ? "#000000" : "#FFFF00" 
       },
       secondary: {
         main: mode === 'dark' ? "#000000" : "#eeeeee", // Light grey

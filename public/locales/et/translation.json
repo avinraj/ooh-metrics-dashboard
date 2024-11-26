@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "Tere tulemast"
+      "welcome": "Tere tulemast",
+      "highlight":"Esiletõstetud"
+    },
+    "cars":{
+      "cars":"Autod",
+      "grid view":"Võrguvaade",
+      "table view":"Tabelivaade",
+      "photo list":"Fotonimekiri"
     },
     "adtype": {
       "vehicles": {
@@ -72,6 +79,14 @@
       "basic": "Põhi",
       "heat": "Küttes kaart",
       "live": "Otse"
+    },
+    "audience": {
+      "audience": "Publik",
+      "clicksByGender": "Klikid soo järgi",
+      "clicksByDevice": "Klikid seadme järgi",
+      "clicksByAge": "Klikid vanuse järgi",
+      "clicksBySource": "Klikid allika järgi",
+      "ctrBySec": "CTR sekundi järgi"
     }
   }
   

@@ -44,7 +44,14 @@
     }
   },
   "highlights": {
-    "welcome": "Bienvenido"
+    "welcome": "Bienvenido",
+    "highlight":"Destacar"
+  },
+  "cars":{
+    "cars":"Autos",
+    "grid view":"Vista de cuadrícula",
+    "table view":"Vista de tabla",
+    "phot list":"Lista de fotos"
   },
 
   "adtype": {
@@ -73,5 +80,13 @@
     "basic": "Básico",
     "heat": "Calor",
     "live": "En vivo"
-  }
+  },
+  "audience": {
+      "audience": "Audiencia",
+      "clicksByGender": "Clics por género",
+      "clicksByDevice": "Clics por dispositivo",
+      "clicksByAge": "Clics por edad",
+      "clicksBySource": "Clics por fuente",
+      "ctrBySec": "CTR por SEC"
+    }
 }

@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "ようこそ"
+      "welcome": "ようこそ",
+      "highlight":"ハイライト"
+    },
+    "cars":{
+      "cars":"車",
+      "grid view":"グリッドビュ",
+      "table view":"テーブルビュ",
+      "photo list":"写真リスト"
     },
     "adtype": {
       "vehicles": {
@@ -72,6 +79,14 @@
       "basic": "基本",
       "heat": "ヒートマップ",
       "live": "ライブ"
+    },
+    "audience": {
+      "audience": "オーディエンス",
+      "clicksByGender": "性別別のクリック",
+      "clicksByDevice": "デバイス別のクリック",
+      "clicksByAge": "年齢別のクリック",
+      "clicksBySource": "ソース別のクリック",
+      "ctrBySec": "秒ごとのCTR"
     }
   }
   
