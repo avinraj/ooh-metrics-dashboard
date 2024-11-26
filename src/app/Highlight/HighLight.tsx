@@ -22,12 +22,15 @@ const HighLight = () => {
         }}
       >
         <Grid item xs={12}>
-          <Typography variant="h3" color={theme.palette.text.primary}> {t("highlights.welcome")}, Zoho</Typography>
+          <Typography variant="h3" color={theme.palette.text.primary}>
+            {" "}
+            {t("highlights.welcome")}, Zoho
+          </Typography>
         </Grid>
         <Grid item xs={12}>
           <Box mt={7}>
-            <Typography variant="h3" color={theme.palette.text.primary}>
-              <Box sx={{ display: "inline-block", padding: "0 8px" }}>Highlight</Box>
+            <Typography variant="h3">
+              <Box sx={{ display: "inline-block", padding: "0 8px" }}>{t("highlights.highlight")}</Box>
             </Typography>
           </Box>
         </Grid>

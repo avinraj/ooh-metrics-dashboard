@@ -44,8 +44,15 @@
     }
   },
   "highlights": {
-    "welcome": "Welkom"
+    "welcome": "Welkom",
+    "highlight":"Hoogtepunten"
   },
+"cars":{
+      "cars":"Auto's",
+      "grid view":"Rasterweergave",
+      "table view":"Tabelweergave",
+      "photo list":"Fotolijst"
+    },
   "adtype": {
     "vehicles": {
       "Cars": "Auto's",

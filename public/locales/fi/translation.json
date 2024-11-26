@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "Tervetuloa"
+      "welcome": "Tervetuloa",
+      "highlight":"Korostus"
+    },
+    "cars":{
+      "cars":"Autot",
+      "grid view":"Tervetuloa ruudukkonäkymään",
+      "table view":"Tervetuloa taulukkonäkymään",
+      "photo list":" Tervetuloa valokuvaluetteloon"
     },
     "adtype": {
       "vehicles": {

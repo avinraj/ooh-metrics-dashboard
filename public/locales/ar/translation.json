@@ -44,7 +44,8 @@
     }
   },
   "highlights": {
-    "welcome": "مرحبًا"
+    "welcome": "مرحبًا",
+    "highlight":"أهم ما يميز"
   },
   "adtype": {
     "vehicles": {
@@ -73,6 +74,12 @@
     "basic": "أساسي",
     "heat": "حرارة",
     "live": "مباشر"
+  },
+  "cars":{
+    "cars":"السيارات",
+    "grid view":"عرض الشبكة",
+    "table view":"عرض الجدول",
+    "photo list":"قائمة الصور"
   },
   "audience": {
       "audience": "الجمهور",

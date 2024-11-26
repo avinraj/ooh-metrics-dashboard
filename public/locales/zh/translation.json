@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "欢迎"
+      "welcome": "欢迎",
+      "highlight":"亮点"
+    },
+    "cars":{
+      "cars":"汽车",
+      "grid view":"  网格视图",
+      "table view":"表格视图 ",
+      "photo list":" 照片列表"
     },
     "adtype": {
       "vehicles": {

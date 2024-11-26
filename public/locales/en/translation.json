@@ -44,9 +44,15 @@
     }
   },
   "highlights": {
-    "welcome": "Welcome"
+    "welcome": "Welcome",
+    "highlight":"Highlight"
   },
-
+"cars":{
+  "cars":"cars",
+  "grid view":"grid view",
+  "table view":"table view",
+  "photo list":"photo list"
+},
   "adtype": {
     "vehicles": {
       "Cars": "Cars",

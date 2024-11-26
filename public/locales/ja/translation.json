@@ -44,7 +44,14 @@
       }
     },
     "highlights": {
-      "welcome": "ようこそ"
+      "welcome": "ようこそ",
+      "highlight":"ハイライト"
+    },
+    "cars":{
+      "cars":"車",
+      "grid view":"グリッドビュ",
+      "table view":"テーブルビュ",
+      "photo list":"写真リスト"
     },
     "adtype": {
       "vehicles": {
