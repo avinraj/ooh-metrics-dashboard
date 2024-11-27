@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import impressionsData from "../../../Data/impressions.json";
 import ImpressionsTable from "./ImpressionsTable";
 
-const buttonStyles = {
+export const buttonStyles = {
   padding: 5,
   minWidth: "60px",
   border: "black",
@@ -102,23 +102,23 @@ const ImpressionsChart = () => {
               color: theme.palette.text.primary,
             },
             grid: {
-              display: false
+              display: false,
               // color: "#333333",
             },
           },
         },
         animations: {
           y: {
-            easing: 'easeInOutElastic',
+            easing: "easeInOutElastic",
             from: (ctx: any) => {
-              if (ctx.type === 'data') {
-                if (ctx.mode === 'default' && !ctx.dropped) {
+              if (ctx.type === "data") {
+                if (ctx.mode === "default" && !ctx.dropped) {
                   ctx.dropped = true;
                   return 0;
                 }
               }
-            }
-          }
+            },
+          },
         },
       };
 

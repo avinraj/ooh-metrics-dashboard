@@ -41,6 +41,34 @@
       },
       "affinities": {
         "affinities": "関心"
+      },
+      "appsOrWebsites": {
+        "appsOrWebsites": "アプリ / ウェブサイト",
+        "byAppOrWebsites": "アプリ / ウェブサイト別"
+      },
+      "dayAndHour": {
+        "dayAndHour": "日と時間",
+        "byDayAndHour": "日と時間別",
+        "dayChart": "日別グラフ",
+        "hourChart": "時間別グラフ"
+      },
+      "browser": {
+        "browser": "ブラウザ",
+        "byBrowser": "ブラウザ別"
+      },
+      "operatingSystem": {
+        "OS": "OS",
+        "byOperatingSystem": "OS別"
+      },
+      "telecomOperator": {
+        "telecomOperator": "通信事業者",
+        "byTelecomOperator": "通信事業者別"
+      },
+      "creatives": {
+        "creatives": "クリエイティブ",
+        "byCreatives": "クリエイティブ別",
+        "creativesChart": "クリエイティブチャート",
+        "sizeChart": "サイズチャート"
       }
     },
     "highlights": {

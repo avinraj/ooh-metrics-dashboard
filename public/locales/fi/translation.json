@@ -1,92 +1,119 @@
 {
-    "sideBar": {
-      "adType": "Mainostyyppi",
-      "highlight": "Korostus",
-      "reports": "Raportit",
-      "audience": "Yleisö",
-      "mapView": "Karttanäkymä",
-      "cars": "Autot",
-      "attribution": "Attribuutio",
-      "deviceIds": "Laitteen tunnukset",
-      "logout": "Kirjaudu ulos"
-    },
-    "filterPanel": {
-      "campaign": "Kampanja",
-      "selectDateRange": "Valitse päivämääräväli",
+  "sideBar": {
+    "adType": "Mainostyyppi",
+    "highlight": "Korostus",
+    "reports": "Raportit",
+    "audience": "Yleisö",
+    "mapView": "Karttanäkymä",
+    "cars": "Autot",
+    "attribution": "Attribuutio",
+    "deviceIds": "Laitteen tunnukset",
+    "logout": "Kirjaudu ulos"
+  },
+  "filterPanel": {
+    "campaign": "Kampanja",
+    "selectDateRange": "Valitse päivämääräväli",
+    "vehicle": "Ajoneuvo",
+    "show": "Näytä"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "Näytöt",
+      "date": "Päivämäärä",
       "vehicle": "Ajoneuvo",
-      "show": "Näytä"
+      "chart": "Kaavio",
+      "table": "Taulukko",
+      "impressionsPerMile": "Näytöt mailia kohti",
+      "miles": "Mailit",
+      "avg": "Keskimäärin"
     },
-    "reports": {
-      "impressions": {
-        "impressions": "Näytöt",
-        "date": "Päivämäärä",
-        "vehicle": "Ajoneuvo",
-        "chart": "Kaavio",
-        "table": "Taulukko",
-        "impressionsPerMile": "Näytöt mailia kohti",
-        "miles": "Mailit",
-        "avg": "Keskimäärin"
-      },
-      "demographics": {
-        "demographics": "Demografia",
-        "age": "Ikä",
-        "education": "Koulutus",
-        "income": "Tulo",
-        "ethnicity": "Etnisyys",
-        "chartType": "Kaaviotyyppi",
-        "verticalBar": "Pystysuora pylväs",
-        "horizontalBar": "Vaakasuora pylväs",
-        "doughnutChart": "Donitsikaavio",
-        "lineChart": "Viivakaavio"
-      },
-      "affinities": {
-        "affinities": "Mieltymykset"
-      }
+    "demographics": {
+      "demographics": "Demografia",
+      "age": "Ikä",
+      "education": "Koulutus",
+      "income": "Tulo",
+      "ethnicity": "Etnisyys",
+      "chartType": "Kaaviotyyppi",
+      "verticalBar": "Pystysuora pylväs",
+      "horizontalBar": "Vaakasuora pylväs",
+      "doughnutChart": "Donitsikaavio",
+      "lineChart": "Viivakaavio"
     },
-    "highlights": {
-      "welcome": "Tervetuloa",
-      "highlight":"Korostus"
+    "affinities": {
+      "affinities": "Mieltymykset"
     },
-    "cars":{
-      "cars":"Autot",
-      "grid view":"Tervetuloa ruudukkonäkymään",
-      "table view":"Tervetuloa taulukkonäkymään",
-      "photo list":" Tervetuloa valokuvaluetteloon"
+    "appsOrWebsites": {
+      "appsOrWebsites": "Sovellukset / Verkkosivustot",
+      "byAppOrWebsites": "Sovellusten / Verkkosivustojen mukaan"
     },
-    "adtype": {
-      "vehicles": {
-        "Cars": "Autot",
-        "Buses": "Bussit",
-        "Trucks": "Kuorma-autot",
-        "Robots": "Robotit",
-        "e-scooter": "Sähköpotkulauta",
-        "Rickshaws": "Riksat",
-        "2-wheelers": "Kaksipyöräiset"
-      },
-      "digitalScreens": {
-        "digitalBillboards": "Digitaaliset Mainostaulut",
-        "Car Rooftoppers": "Auton katto mainokset",
-        "Van Digital Billboards": "Pakettiauto digitaalibilboardit",
-        "Backpacks": "Reppujen mainokset"
-      },
-      "Mobile Ads": "Mobiilimainokset",
-      "Static Billboards": "Staattiset mainostaulut",
-      "Vehicle Ads": "Ajoneuvomainokset",
-      "Digital Screens": "Digitaaliset näytöt"
+    "dayAndHour": {
+      "dayAndHour": "Päivä ja Tunti",
+      "byDayAndHour": "Päivän ja tunnin mukaan",
+      "dayChart": "Päiväkaavion",
+      "hourChart": "Tuntikaavio"
     },
-    "map": {
-      "map": "Kartta",
-      "basic": "Perus",
-      "heat": "Lämpökartta",
-      "live": "Live"
+    "browser": {
+      "browser": "Selaimen",
+      "byBrowser": "Selaimen mukaan"
     },
-    "audience": {
-      "audience": "Yleisö",
-      "clicksByGender": "Klikkaukset sukupuolen mukaan",
-      "clicksByDevice": "Klikkaukset laitteen mukaan",
-      "clicksByAge": "Klikkaukset iän mukaan",
-      "clicksBySource": "Klikkaukset lähteen mukaan",
-      "ctrBySec": "CTR sekunnin mukaan"
+    "operatingSystem": {
+      "OS": "Käyttöjärjestelmä",
+      "byOperatingSystem": "Käyttöjärjestelmän mukaan"
+    },
+    "telecomOperator": {
+      "telecomOperator": "Teleoperaattori",
+      "byTelecomOperator": "Teleoperaattorin mukaan"
+    },
+    "creatives": {
+      "creatives": "Luovaa",
+      "byCreatives": "Luovuuden mukaan",
+      "creativesChart": "Luovuuden kaavio",
+      "sizeChart": "Koon kaavio"
     }
+  },
+  "highlights": {
+    "welcome": "Tervetuloa",
+    "highlight": "Korostus"
+  },
+  "cars": {
+    "cars": "Autot",
+    "grid view": "Tervetuloa ruudukkonäkymään",
+    "table view": "Tervetuloa taulukkonäkymään",
+    "photo list": " Tervetuloa valokuvaluetteloon"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "Autot",
+      "Buses": "Bussit",
+      "Trucks": "Kuorma-autot",
+      "Robots": "Robotit",
+      "e-scooter": "Sähköpotkulauta",
+      "Rickshaws": "Riksat",
+      "2-wheelers": "Kaksipyöräiset"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "Digitaaliset Mainostaulut",
+      "Car Rooftoppers": "Auton katto mainokset",
+      "Van Digital Billboards": "Pakettiauto digitaalibilboardit",
+      "Backpacks": "Reppujen mainokset"
+    },
+    "Mobile Ads": "Mobiilimainokset",
+    "Static Billboards": "Staattiset mainostaulut",
+    "Vehicle Ads": "Ajoneuvomainokset",
+    "Digital Screens": "Digitaaliset näytöt"
+  },
+  "map": {
+    "map": "Kartta",
+    "basic": "Perus",
+    "heat": "Lämpökartta",
+    "live": "Live"
+  },
+  "audience": {
+    "audience": "Yleisö",
+    "clicksByGender": "Klikkaukset sukupuolen mukaan",
+    "clicksByDevice": "Klikkaukset laitteen mukaan",
+    "clicksByAge": "Klikkaukset iän mukaan",
+    "clicksBySource": "Klikkaukset lähteen mukaan",
+    "ctrBySec": "CTR sekunnin mukaan"
   }
-  
+}

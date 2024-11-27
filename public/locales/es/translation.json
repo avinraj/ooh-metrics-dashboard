@@ -41,17 +41,45 @@
     },
     "affinities": {
       "affinities": "Afiliaciones"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "Aplicaciones / Sitios Web",
+      "byAppOrWebsites": "Por Aplicaciones / Sitios Web"
+    },
+    "dayAndHour": {
+      "dayAndHour": "Día y Hora",
+      "byDayAndHour": "Por Día y Hora",
+      "dayChart": "Gráfico Diario",
+      "hourChart": "Gráfico Horario"
+    },
+    "browser": {
+      "browser": "Navegador",
+      "byBrowser": "Por Navegador"
+    },
+    "operatingSystem": {
+      "OS": "SO",
+      "byOperatingSystem": "Por Sistema Operativo"
+    },
+    "telecomOperator": {
+      "telecomOperator": "Operador de Telecomunicaciones",
+      "byTelecomOperator": "Por Operador de Telecomunicaciones"
+    },
+    "creatives": {
+      "creatives": "Creativos",
+      "byCreatives": "Por Creativos",
+      "creativesChart": "Gráfico de Creativos",
+      "sizeChart": "Gráfico de Tamaños"
     }
   },
   "highlights": {
     "welcome": "Bienvenido",
-    "highlight":"Destacar"
+    "highlight": "Destacar"
   },
-  "cars":{
-    "cars":"Autos",
-    "grid view":"Vista de cuadrícula",
-    "table view":"Vista de tabla",
-    "phot list":"Lista de fotos"
+  "cars": {
+    "cars": "Autos",
+    "grid view": "Vista de cuadrícula",
+    "table view": "Vista de tabla",
+    "phot list": "Lista de fotos"
   },
 
   "adtype": {
@@ -82,11 +110,11 @@
     "live": "En vivo"
   },
   "audience": {
-      "audience": "Audiencia",
-      "clicksByGender": "Clics por género",
-      "clicksByDevice": "Clics por dispositivo",
-      "clicksByAge": "Clics por edad",
-      "clicksBySource": "Clics por fuente",
-      "ctrBySec": "CTR por SEC"
-    }
+    "audience": "Audiencia",
+    "clicksByGender": "Clics por género",
+    "clicksByDevice": "Clics por dispositivo",
+    "clicksByAge": "Clics por edad",
+    "clicksBySource": "Clics por fuente",
+    "ctrBySec": "CTR por SEC"
+  }
 }

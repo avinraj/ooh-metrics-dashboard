@@ -41,6 +41,34 @@
     },
     "affinities": {
       "affinities": "الاهتمامات"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "التطبيقات / المواقع",
+      "byAppOrWebsites": "حسب التطبيقات / المواقع"
+    },
+    "dayAndHour": {
+      "dayAndHour": "اليوم والساعة",
+      "byDayAndHour": "حسب اليوم والساعة",
+      "dayChart": "رسم بياني ليومي",
+      "hourChart": "رسم بياني للساعة"
+    },
+    "browser": {
+      "browser": "المتصفح",
+      "byBrowser": "حسب المتصفح"
+    },
+    "operatingSystem": {
+      "OS": "نظام التشغيل",
+      "byOperatingSystem": "حسب نظام التشغيل"
+    },
+    "telecomOperator": {
+      "telecomOperator": "مزود الاتصالات",
+      "byTelecomOperator": "حسب مزود الاتصالات"
+    },
+    "creatives": {
+      "creatives": "الإبداعات",
+      "byCreatives": "حسب الإبداعات",
+      "creativesChart": "رسم بياني للإبداعات",
+      "sizeChart": "رسم بياني للأحجام"
     }
   },
   "highlights": {

@@ -12,6 +12,7 @@ import Cars from "../app/Cars/pages/Cars";
 import MapView from "../app/MapView/pages/MapView";
 import Attribution from "../app/Attribution/pages/Attribution";
 import Audience from "../app/Reports/pages/Audience";
+import MobileAdReports from "../app/Reports/pages/MobileAdReports";
 
 const AppRoutes = () => {
   return (
@@ -43,6 +44,16 @@ const AppRoutes = () => {
           <ProtectedRoute>
             <Layout>
               <Reports />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+       <Route
+        path="/mobile-ad-reports"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <MobileAdReports />
             </Layout>
           </ProtectedRoute>
         }

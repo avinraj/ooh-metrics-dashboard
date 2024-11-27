@@ -41,6 +41,34 @@
       },
       "affinities": {
         "affinities": "Affinitäten"
+      },
+      "appsOrWebsites": {
+        "appsOrWebsites": "Apps / Websites",
+        "byAppOrWebsites": "Nach Apps / Websites"
+      },
+      "dayAndHour": {
+        "dayAndHour": "Tag und Stunde",
+        "byDayAndHour": "Nach Tag und Stunde",
+        "dayChart": "Tagesdiagramm",
+        "hourChart": "Stundendiagramm"
+      },
+      "browser": {
+        "browser": "Browser",
+        "byBrowser": "Nach Browser"
+      },
+      "operatingSystem": {
+        "OS": "Betriebssystem",
+        "byOperatingSystem": "Nach Betriebssystem"
+      },
+      "telecomOperator": {
+        "telecomOperator": "Telekommunikationsanbieter",
+        "byTelecomOperator": "Nach Telekommunikationsanbieter"
+      },
+      "creatives": {
+        "creatives": "Kreative",
+        "byCreatives": "Nach Kreativen",
+        "creativesChart": "Kreative Diagramm",
+        "sizeChart": "Größen Diagramm"
       }
     },
     "highlights": {

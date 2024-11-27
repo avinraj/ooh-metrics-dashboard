@@ -6,7 +6,7 @@ import data from "../../../Data/audience.json";
 import laptopImag from "../../../assets/laptop-img-2.png";
 import phoneImg from "../../../assets/phone-img-2.png";
 
-export const DeviceChart = ({ androidCount, iosCount }: any) => {
+export const DeviceChart = ({ phoneCount, laptopCount }: any) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -42,7 +42,7 @@ export const DeviceChart = ({ androidCount, iosCount }: any) => {
               fontSize: isMobile ? "10px" : "20px",
             }}
           >
-            {androidCount}
+            {phoneCount ? phoneCount : 0}%
           </Typography>
         </Box>
       </Grid>
@@ -77,7 +77,7 @@ export const DeviceChart = ({ androidCount, iosCount }: any) => {
               fontSize: isMobile ? "10px" : "20px",
             }}
           >
-            {iosCount}
+            {laptopCount ? laptopCount : 0}%
           </Typography>
         </Box>
       </Grid>
@@ -105,21 +105,22 @@ const Audience = () => {
 
   const createChart = (category: string, chartRef: any, chartType: any) => {
     const categoryData = data.filter((item) => item.category === category);
-
-    // Group by label (group) and sum DEVICE_COUNT
+  
+    // Group by label (group) and sum values
     const groupedData = categoryData.reduce((acc: any, item: any) => {
+      const value = ["gender", "age"].includes(category) ? item.percent : item.DEVICE_COUNT;
       if (acc[item.group]) {
-        acc[item.group] += item.DEVICE_COUNT;
+        acc[item.group] += value;
       } else {
-        acc[item.group] = item.DEVICE_COUNT;
+        acc[item.group] = value;
       }
       return acc;
     }, {});
-
-    // Extract the grouped labels and counts
+  
+    // Extract the grouped labels and values
     const labels = Object.keys(groupedData);
-    const counts = Object.values(groupedData);
-
+    const values = Object.values(groupedData);
+  
     // Define different shades of yellow for doughnut chart
     const yellowShades = [
       "#FFEB3B", // Light Yellow
@@ -128,13 +129,23 @@ const Audience = () => {
       "#FF5722", // Deep Orange
       "#FFD600", // Bright Yellow
     ];
-
+  
     // Set up chart options
     const chartOptions: any = {
       responsive: true,
       plugins: {
         legend: {
           display: false,
+        },
+        tooltip: {
+          callbacks: {
+            label: (tooltipItem: any) => {
+              const dataset = tooltipItem.dataset.data[tooltipItem.dataIndex];
+              return ["gender", "age"].includes(category)
+                ? `${tooltipItem.label}: ${dataset}%`
+                : `${tooltipItem.label}: ${dataset}`;
+            },
+          },
         },
       },
       animations: {
@@ -151,22 +162,30 @@ const Audience = () => {
         },
       },
     };
-
+  
     if (chartType === "bar" || chartType === "horizontalBar") {
+      const isPercentageChart = ["gender", "age"].includes(category);
+    
       chartOptions.scales = {
         x: {
           grid: { display: false },
           ticks: { color: theme.palette.text.primary },
+          ...(chartType === "horizontalBar" && isPercentageChart && {
+            max: 100, // Ensure percentage charts don't exceed 100
+          }),
         },
         y: {
           grid: { display: false },
           ticks: { color: theme.palette.text.primary },
           beginAtZero: true,
+          ...(chartType !== "horizontalBar" && isPercentageChart && {
+            max: 100, // Set y-axis max to 100 for percentages
+          }),
         },
       };
       chartOptions.indexAxis = chartType === "horizontalBar" ? "y" : "x";
     }
-
+  
     // Return the chart with yellow colors for doughnut chart
     return new Chart(chartRef.current, {
       type: chartType !== "horizontalBar" ? chartType : "bar",
@@ -175,7 +194,7 @@ const Audience = () => {
         datasets: [
           {
             label: `${category}`,
-            data: counts,
+            data: values,
             backgroundColor:
               chartType === "doughnut"
                 ? yellowShades
@@ -186,6 +205,7 @@ const Audience = () => {
       options: chartOptions,
     });
   };
+  
 
   useEffect(() => {
     // Create charts for all categories with their respective chart type
@@ -214,9 +234,7 @@ const Audience = () => {
             marginBlock: "25px",
           }}
         >
-          <Typography variant="h3">
-            {t("audience.audience")}
-          </Typography>
+          <Typography variant="h3">{t("audience.audience")}</Typography>
         </Box>
         <div
           style={{
@@ -231,11 +249,27 @@ const Audience = () => {
             style={{ margin: "0px", width: "100%" }}
           >
             {[
-              { label: "Clicks by Gender", value: "gender", translateKey:  "clicksByGender" },
-              { label: "Clicks by Device", value: "device", translateKey:  "clicksByDevice"  },
-              { label: "Clicks by Age", value: "age", translateKey:  "clicksByAge"  },
-              { label: "Clicks by Source", value: "source", translateKey:  "clicksBySource"  },
-              { label: "CTR by SEC", value: "sec", translateKey:  "ctrBySec"  },
+              {
+                label: "Clicks by Gender",
+                value: "gender",
+                translateKey: "clicksByGender",
+              },
+              {
+                label: "Clicks by Device",
+                value: "device",
+                translateKey: "clicksByDevice",
+              },
+              {
+                label: "Clicks by Age",
+                value: "age",
+                translateKey: "clicksByAge",
+              },
+              {
+                label: "Clicks by Source",
+                value: "source",
+                translateKey: "clicksBySource",
+              },
+              { label: "CTR by SEC", value: "sec", translateKey: "ctrBySec" },
             ].map((category, index) => (
               <Grid
                 item
@@ -266,7 +300,7 @@ const Audience = () => {
                       style={{ maxHeight: "250px", minHeight: "250px" }}
                     ></canvas>
                   ) : (
-                    <DeviceChart androidCount={564} iosCount={754} />
+                    <DeviceChart phoneCount={35} laptopCount={65} />
                   )}
                 </Box>
               </Grid>
