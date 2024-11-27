@@ -1,6 +1,7 @@
-import { useTheme } from "@mui/material";
+import { useMediaQuery, useTheme } from "@mui/material";
 import Chart from "chart.js/auto";
 import { useEffect, useRef } from "react";
+import { truncateLabel } from "./mobile-ad/utils/chartUtils";
 
 interface DataItem {
   group: string;
@@ -14,6 +15,7 @@ interface AffinitiesChartProps {
 const AffinitiesChart = ({ data }: AffinitiesChartProps) => {
   const theme = useTheme();
   const chartRef = useRef<HTMLCanvasElement | null>(null);
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const processData = () => {
     const groupedData = data.reduce((acc: Record<string, number>, item) => {
@@ -79,6 +81,9 @@ const AffinitiesChart = ({ data }: AffinitiesChartProps) => {
             beginAtZero: true,
             ticks: {
               color: theme.palette.text.primary,
+              callback: function (value: any) {
+                return isMobile ? truncateLabel(value, 3) : value;
+              },
             },
             grid: {
               display: false,
@@ -88,6 +93,10 @@ const AffinitiesChart = ({ data }: AffinitiesChartProps) => {
           y: {
             ticks: {
               color: theme.palette.text.primary,
+              callback: function (value: any) {
+                const label = labels[value as number];
+                return isMobile ? truncateLabel(label, 3) : label;
+              },
             },
             grid: {
               display: false,

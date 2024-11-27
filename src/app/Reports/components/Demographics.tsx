@@ -6,16 +6,19 @@ import {
   MenuItem,
   Select,
   Typography,
+  useMediaQuery,
   useTheme,
 } from "@mui/material";
 import Chart from "chart.js/auto";
 import { useEffect, useRef, useState } from "react";
 import data from "../../../Data/demographics.json";
 import { useTranslation } from "react-i18next";
+import { truncateLabel } from "./mobile-ad/utils/chartUtils";
 
 const Demographics = () => {
   const { t } = useTranslation();
-  const theme = useTheme(); // Use the theme from ImpressionsChart
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const chartRefs: any = {
     age: useRef(null),
     education: useRef(null),
@@ -65,7 +68,7 @@ const Demographics = () => {
       responsive: true,
       plugins: {
         legend: {
-          display: false
+          display: false,
           // labels: {
           //   color: theme.palette.text.primary,
           // },
@@ -79,28 +82,46 @@ const Demographics = () => {
       },
       animations: {
         y: {
-          easing: 'easeInOutElastic',
+          easing: "easeInOutElastic",
           from: (ctx: any) => {
-            if (ctx.type === 'data') {
-              if (ctx.mode === 'default' && !ctx.dropped) {
+            if (ctx.type === "data") {
+              if (ctx.mode === "default" && !ctx.dropped) {
                 ctx.dropped = true;
                 return 0;
               }
             }
-          }
-        }
+          },
+        },
       },
     };
 
-    if (chartType === "bar" || chartType === "horizontalBar" || chartType === "line") {
+    if (
+      chartType === "bar" ||
+      chartType === "horizontalBar" ||
+      chartType === "line"
+    ) {
       chartOptions.scales = {
         x: {
           grid: { display: false },
-          ticks: { color: theme.palette.text.primary },
+          ticks: {
+            color: theme.palette.text.primary,
+            callback: function (value: any) {
+              const label =
+                chartType === "horizontalBar" ? value : labels[value as number];
+              return isMobile ? truncateLabel(label, 3) : label;
+            },
+          },
         },
         y: {
           grid: { display: false },
-          ticks: { color: theme.palette.text.primary },
+          ticks: {
+            color: theme.palette.text.primary,
+            callback: function (value: any) {
+              let val =
+                chartType === "horizontalBar" ? labels[value as number] : value;
+              return isMobile ? truncateLabel(val, 3) : val;
+            },
+          },
           beginAtZero: true,
         },
       };
@@ -162,7 +183,7 @@ const Demographics = () => {
           }}
         >
           <Typography variant="h3">
-          {t("reports.demographics.demographics")}
+            {t("reports.demographics.demographics")}
           </Typography>
         </Box>
         <div
@@ -171,7 +192,12 @@ const Demographics = () => {
             borderRadius: "8px",
           }}
         >
-          <Grid container spacing={2} justifyContent="space-evenly" style={{ margin: "0px", width: "100%" }}>
+          <Grid
+            container
+            spacing={2}
+            justifyContent="space-evenly"
+            style={{ margin: "0px", width: "100%" }}
+          >
             {["Age", "Education", "Income", "Ethnicity"].map(
               (category, index) => (
                 <Grid
@@ -182,7 +208,7 @@ const Demographics = () => {
                   style={{
                     paddingLeft: "0px",
                     paddingBottom: "16px",
-                    paddingTop: index < 2 ? "16px": "0px"
+                    paddingTop: index < 2 ? "16px" : "0px",
                   }}
                 >
                   <Box
@@ -191,7 +217,7 @@ const Demographics = () => {
                       borderStyle: "solid",
                       borderWidth: "1px",
                       borderRadius: "10px",
-                      height: "100%"
+                      height: "100%",
                     }}
                   >
                     <Typography variant="h6" color="text.primary" gutterBottom>

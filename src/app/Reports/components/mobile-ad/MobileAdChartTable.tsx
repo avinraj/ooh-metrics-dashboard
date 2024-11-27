@@ -1,4 +1,4 @@
-import { Button, useTheme } from "@mui/material";
+import { Button, useMediaQuery, useTheme } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -42,6 +42,8 @@ const MobileAdChartTable = ({
 }: MobileAdChartTableProps) => {
   const theme = useTheme();
   const chartRef = useRef<HTMLCanvasElement | null>(null);
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const [activeGroup, setActiveGroup] = useState(buttons[0]?.value || "Chart");
 
   const getButtonStyle = (isActive: boolean) => ({
@@ -51,6 +53,7 @@ const MobileAdChartTable = ({
       : theme.palette.secondary.main,
     fontWeight: isActive ? "bold" : "normal",
     color: theme.palette.text.primary,
+    fontSize: isMobile ? "10px" : "15px",
   });
 
   useEffect(() => {

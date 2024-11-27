@@ -3,8 +3,11 @@
 import { ChartOptions } from "chart.js";
 
 // Helper function to truncate label for mobile views
-export const truncateLabel = (label: string, maxLength: number) =>
-    label.length > maxLength ? `${label.slice(0, maxLength)}...` : label;
+export const truncateLabel = (label: string | number | undefined, maxLength: number) => {
+    const labelString = label != null ? String(label) : '';
+
+    return labelString.length > maxLength ? `${labelString.slice(0, maxLength)}...` : labelString;
+};
 
 export const mobileAdChartDataAndOptions = (
     chartData: {
@@ -76,6 +79,9 @@ export const mobileAdChartDataAndOptions = (
                 beginAtZero: true,
                 ticks: {
                     color: theme.palette.text.primary,
+                    callback: function (value: any) {
+                        return isMobile ? truncateLabel(value, 3) : value;
+                    },
                 },
                 grid: {
                     display: false,

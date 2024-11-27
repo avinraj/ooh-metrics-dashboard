@@ -1,4 +1,4 @@
-import { Button, useTheme } from "@mui/material";
+import { Button, useMediaQuery, useTheme } from "@mui/material";
 import Chart from "chart.js/auto";
 import moment from "moment";
 import { useEffect, useRef, useState } from "react";
@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import impressionsData from "../../../Data/impressions.json";
 import ImpressionsTable from "./ImpressionsTable";
+import { truncateLabel } from "./mobile-ad/utils/chartUtils";
 
 export const buttonStyles = {
   padding: 5,
@@ -14,11 +15,14 @@ export const buttonStyles = {
   borderStyle: "groove",
   borderWidth: "thin",
   borderRadius: "0px",
+  height: "fit-content",
 };
 
 const ImpressionsChart = () => {
   const theme = useTheme();
   const { t } = useTranslation();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const chartRef = useRef<HTMLCanvasElement | null>(null);
   const [groupBy, setGroupBy] = useState<"date" | "vehicle">("date");
   const [activeGroup1, setActiveGroup1] = useState("Date");
@@ -91,6 +95,10 @@ const ImpressionsChart = () => {
               color: theme.palette.text.primary,
               maxRotation: 90,
               minRotation: 45,
+              callback: function (value: any) {
+                const label = labels[value as number];
+                return isMobile ? truncateLabel(label, 3) : label;
+              },
             },
             grid: {
               display: false,
@@ -100,6 +108,9 @@ const ImpressionsChart = () => {
             beginAtZero: true,
             ticks: {
               color: theme.palette.text.primary,
+              callback: function (value: any) {
+                return isMobile ? truncateLabel(value, 3) : value;
+              },
             },
             grid: {
               display: false,
@@ -141,6 +152,7 @@ const ImpressionsChart = () => {
       : theme.palette.secondary.main,
     fontWeight: isActive ? "bold" : "normal",
     color: theme.palette.text.primary,
+    fontSize: isMobile ? "10px" : "15px",
   });
 
   return (
@@ -155,7 +167,7 @@ const ImpressionsChart = () => {
         style={{
           position: "absolute",
           top: "5px",
-          right: 10,
+          right: isMobile ? 3 : 10,
           zIndex: 10,
           display: "flex",
           margin: "10px",
@@ -164,7 +176,11 @@ const ImpressionsChart = () => {
           width: "95%",
         }}
       >
-        <div>Other contents</div>
+        <div>
+          <span style={{ display: isMobile ? "none" : "flex" }}>
+            Other contents
+          </span>
+        </div>
         <div style={{ display: "flex" }}>
           <div style={{ display: "flex", marginRight: "10px" }}>
             <Button

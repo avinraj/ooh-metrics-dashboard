@@ -26,6 +26,7 @@ const DayAndHourChart = () => {
     fontWeight: isActive ? "bold" : "normal",
     color: theme.palette.text.primary,
     maxHeight: "fit-content",
+    fontSize: isMobile ? "10px" : "15px",
   });
 
   const tableColumns = Object.keys(byDayAndHour[0])
