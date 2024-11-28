@@ -183,7 +183,7 @@ const TwoWheerlers = () => {
             marginTop: 3,
           }}
         >
-          <Typography variant="h3">E-Scooter</Typography>
+          <Typography variant="h3">2-Wheelers</Typography>
         </Box>
 
         <Box alignItems="center" display="flex">

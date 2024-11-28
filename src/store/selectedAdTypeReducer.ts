@@ -3,6 +3,7 @@ import * as actionTypes from './actions';
 interface AdTypeOption {
   label: string;
   icon: JSX.Element | null;
+  value: string;
 }
 
 interface SelectedAdTypeState {

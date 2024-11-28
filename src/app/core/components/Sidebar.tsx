@@ -16,20 +16,14 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { IoEyeOutline } from "react-icons/io5";
-import { FaHighlighter } from "react-icons/fa";
-import { IoFootsteps } from "react-icons/io5";
-import logo from "../../../assets/oohlogo.png";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import AssessmentIcon from "@mui/icons-material/Assessment";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import ElectricScooterIcon from "@mui/icons-material/ElectricScooter";
-import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
-import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
-import { useDispatch } from "react-redux";
+import { FaHighlighter, FaMapMarkerAlt } from "react-icons/fa";
+import { IoEyeOutline, IoFootsteps } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
+import logo from "../../../assets/oohlogo.png";
 import { languages } from "../../../i18n/languages";
-import { SET_SELECTED_MENU } from "../../../store/actions";
+import { SET_SELECTED_ADTYPE, SET_SELECTED_MENU } from "../../../store/actions";
 import StorageService from "../services/storage.serive";
 
 import AdType from "./AdType";
@@ -49,13 +43,7 @@ const Sidebar: React.FC = () => {
   const { t, i18n } = useTranslation();
   const defaultLang = storageService.get("local", "i18nextLng", false);
   const [language, setLanguage] = useState(defaultLang ? defaultLang : "en");
-  const options = [
-    { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon />, path: "/cars" },
-    { label: t("adtype.vehicles.Buses"), icon: <DirectionsBusIcon />, path: "/buses" },
-    { label: t("adtype.vehicles.Trucks"), icon: <LocalShippingIcon />, path: "/trucks" },
-    { label: t("adtype.vehicles.e-scooter"), icon: <ElectricScooterIcon />, path: "/escooters" },
-    { label: t("adtype.vehicles.2-wheelers"), icon: <TwoWheelerIcon />, path: "/twowheelers" },
-  ];
+
   const handleLanguageChange = (event: any) => {
     const selectedLanguage = event.target.value as string;
     setLanguage(selectedLanguage);
@@ -64,19 +52,18 @@ const Sidebar: React.FC = () => {
     // Adjust RTL if Arabic is selected
     document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
   };
-  const selected = options.filter((item) => item.path === window.location.pathname);
 
-  const [selectedAdType, setSelectedAdType] = useState<{ label: string; icon: JSX.Element | null }>(selected[0]);
+  const {selectedAdType} = useSelector((state: any) => state?.selectedAdType);
 
   const menuItems = [
     { label: t("sideBar.highlight"), action: "Highlight", icon: <FaHighlighter />, path: "/highlight" },
     { label: t("sideBar.reports"), action: "Reports", icon: <AssessmentIcon />, path: "/reports" },
     { label: t("sideBar.mapView"), action: "Map View", icon: <FaMapMarkerAlt />, path: "/map-view" },
     {
-      label: selectedAdType.label,
-      action: "Cars",
-      icon: selectedAdType.icon,
-      path: selectedAdType.label === "cars" ? "/cars" : "/buses",
+      label: selectedAdType?.label,
+      action: "Vehicles",
+      icon: selectedAdType?.icon,
+      path: "/vehicles",
     },
     { label: t("sideBar.attribution"), action: "Attribution", icon: <IoFootsteps />, path: "/attribution" },
     // { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "" },
@@ -95,6 +82,10 @@ const Sidebar: React.FC = () => {
         selectedMenu: matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action,
       });
     }
+    dispatch({
+      type: SET_SELECTED_ADTYPE,
+      selectedAdType: { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon />, value: "cars" },
+    });
   }, []);
 
   const handleItemClick = (item: { action: string; path: string }) => {
@@ -109,9 +100,8 @@ const Sidebar: React.FC = () => {
 
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
-  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null }) => {
+  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null, value: string }) => {
     console.log("Selected Ad Type:", adType);
-    setSelectedAdType(adType);
   };
   return (
     <>
@@ -181,8 +171,8 @@ const Sidebar: React.FC = () => {
             ))}
           </Select>
         </Box>
-        <List sx={{ padding: 2 }}>
-          <Box sx={{ paddingTop: 1, paddingBottom: 1 }} key={"adType"}>
+        <List sx={{ padding: 2 }} key={"adType"}>
+          <Box sx={{ paddingTop: 1, paddingBottom: 1 }} >
             <AdType onSelectAdType={handleAdTypeSelect} onOpenSwitchModal={() => console.log("Modal opened")} />
           </Box>
           {menuItems.map((item) =>
