@@ -18,6 +18,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import AssessmentIcon from "@mui/icons-material/Assessment";
+import GroupsIcon from "@mui/icons-material/Groups";
 import { FaHighlighter, FaMapMarkerAlt } from "react-icons/fa";
 import { IoEyeOutline, IoFootsteps } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
@@ -53,38 +54,97 @@ const Sidebar: React.FC = () => {
     document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
   };
 
-  const {selectedAdType} = useSelector((state: any) => state?.selectedAdType);
+  const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
 
-  const menuItems = [
-    { label: t("sideBar.highlight"), action: "Highlight", icon: <FaHighlighter />, path: "/highlight" },
-    { label: t("sideBar.reports"), action: "Reports", icon: <AssessmentIcon />, path: "/reports" },
-    { label: t("sideBar.mapView"), action: "Map View", icon: <FaMapMarkerAlt />, path: "/map-view" },
+  const [menuItems, setMenuItems] = useState([
     {
-      label: selectedAdType?.label,
-      action: "Vehicles",
-      icon: selectedAdType?.icon,
-      path: "/vehicles",
+      label: t("sideBar.highlight"),
+      action: "Highlight",
+      icon: <FaHighlighter />,
+      path: "/highlight",
     },
-    { label: t("sideBar.attribution"), action: "Attribution", icon: <IoFootsteps />, path: "/attribution" },
+    {
+      label: t("sideBar.reports"),
+      action: "Reports",
+      icon: <AssessmentIcon />,
+      path: "/reports",
+    },
+    {
+      label: t("sideBar.mapView"),
+      action: "Map View",
+      icon: <FaMapMarkerAlt />,
+      path: "/map-view",
+    },
+    {
+      label: t("sideBar.attribution"),
+      action: "Attribution",
+      icon: <IoFootsteps />,
+      path: "/attribution",
+    },
     // { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "" },
 
     // { label:t("sideBar.deviceIds"), action: "Device IDs", path: "/device-ids" },
     // { label:t("sideBar.logout"), action: "Log out", path: "/logout" },
-  ];
+  ]);
+
+  useEffect(() => {
+    const exists = menuItems.some((item) => item.action === "Audience");
+    if (!exists && selectedAdType?.value === "mobileAds") {
+      setMenuItems((prevItems) => {
+        const updatedItems = [...prevItems];
+        updatedItems.splice(4, 0, {
+          label: t("audience.audience"),
+          action: "Audience",
+          icon: <GroupsIcon />,
+          path: "/audience",
+        });
+        return updatedItems;
+      });
+    } else {
+      setMenuItems((prevItems) =>
+        prevItems.filter((item) => item.action !== "Audience")
+      );
+    }
+    setMenuItems((prevItems) => {
+      const updatedItems = prevItems.filter(
+        (item) => item.action !== "Vehicles"
+      );
+      updatedItems.splice(2, 0, {
+        label: selectedAdType?.label,
+        action: "Vehicles",
+        icon: selectedAdType?.icon,
+        path: "/vehicles",
+      });
+      return updatedItems;
+    });
+  }, [selectedAdType]);
 
   useEffect(() => {
     const currentPath = locationVal.pathname;
-    const matchingMenuItem = menuItems.find((item) => item.path === currentPath);
+    const matchingMenuItem = menuItems.find(
+      (item) => item.path === currentPath
+    );
     if (matchingMenuItem) {
-      setSelectedItem(matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action);
+      setSelectedItem(
+        matchingMenuItem.action === "Reports"
+          ? "impressions"
+          : matchingMenuItem.action
+      );
       dispatch({
         type: SET_SELECTED_MENU,
-        selectedMenu: matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action,
+        selectedMenu:
+          matchingMenuItem.action === "Reports"
+            ? "impressions"
+            : matchingMenuItem.action,
       });
     }
     dispatch({
       type: SET_SELECTED_ADTYPE,
-      selectedAdType: { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon />, value: "cars" },
+      selectedAdType: {
+        label: t("adtype.vehicles.Cars"),
+        icon: <DirectionsCarIcon />,
+        value: "cars",
+      },
     });
   }, []);
 
@@ -100,7 +160,11 @@ const Sidebar: React.FC = () => {
 
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
-  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null, value: string }) => {
+  const handleAdTypeSelect = (adType: {
+    label: string;
+    icon: JSX.Element | null;
+    value: string;
+  }) => {
     console.log("Selected Ad Type:", adType);
   };
   return (
@@ -150,8 +214,14 @@ const Sidebar: React.FC = () => {
               alignItems: "center",
             }}
           >
-            <img src={logo} alt="OOH Logo" style={{ marginRight: 10, height: "40px" }} />
-            <h2 style={{ color: theme.palette.primary.contrastText }}>OOHmetrics</h2>
+            <img
+              src={logo}
+              alt="OOH Logo"
+              style={{ marginRight: 10, height: "40px" }}
+            />
+            <h2 style={{ color: theme.palette.primary.contrastText }}>
+              OOHmetrics
+            </h2>
           </div>
 
           <Select
@@ -172,8 +242,11 @@ const Sidebar: React.FC = () => {
           </Select>
         </Box>
         <List sx={{ padding: 2 }} key={"adType"}>
-          <Box sx={{ paddingTop: 1, paddingBottom: 1 }} >
-            <AdType onSelectAdType={handleAdTypeSelect} onOpenSwitchModal={() => console.log("Modal opened")} />
+          <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
+            <AdType
+              onSelectAdType={handleAdTypeSelect}
+              onOpenSwitchModal={() => {}}
+            />
           </Box>
           {menuItems.map((item) =>
             item.action !== "Reports" ? (
@@ -183,21 +256,38 @@ const Sidebar: React.FC = () => {
                     onClick={() => handleItemClick(item)}
                     sx={{
                       backgroundColor:
-                        selectedItem === item.action ? theme.palette.primary.main : theme.palette.background.default,
+                        selectedItem === item.action
+                          ? theme.palette.primary.main
+                          : theme.palette.background.default,
                       "&:hover": {
                         backgroundColor: theme.palette.primary.light,
                       },
-                      border: selectedItem === item.action ? "1px solid transparent" : "1px solid #ccc",
+                      border:
+                        selectedItem === item.action
+                          ? "1px solid transparent"
+                          : "1px solid #ccc",
                       borderRadius: "2px",
                       marginBottom: "8px",
                       fontSize: "20px",
                     }}
                   >
-                    {item.icon && <Box sx={{ display: "flex", alignItems: "center", marginRight: 2 }}>{item.icon}</Box>}
+                    {item.icon && (
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          marginRight: 2,
+                        }}
+                      >
+                        {item.icon}
+                      </Box>
+                    )}
                     <ListItemText
                       sx={{
                         color:
-                          selectedItem === item.action ? theme.palette.primary.contrastText : theme.palette.text.primary,
+                          selectedItem === item.action
+                            ? theme.palette.primary.contrastText
+                            : theme.palette.text.primary,
                       }}
                       primary={item.label}
                     />
