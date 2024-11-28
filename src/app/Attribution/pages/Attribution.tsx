@@ -1,14 +1,16 @@
 import LinkIcon from "@mui/icons-material/Link";
 import PeopleIcon from "@mui/icons-material/People";
 import QrCodeIcon from "@mui/icons-material/QrCode";
-import { Box, Grid2, Typography, useTheme } from "@mui/material";
+import { Box, Grid, Typography, useTheme } from "@mui/material";
 import FilterPanel from "../../MapView/components/FilterPanel";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Attribution = () => {
   const theme = useTheme();
-  const [selectedCampaign, setSelectedCampaign] =
-    useState<string>("Campaign 1");
+  const { t } = useTranslation();
+
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("Campaign 1");
   const [selectedVehicle, setSelectedVehicle] = useState<string>("Car 1");
   const [dateRange, setDateRange] = useState<{
     startDate: Date;
@@ -21,8 +23,8 @@ const Attribution = () => {
   const campaigns = ["Campaign 1", "Campaign 2", "Campaign 3"];
   const vehicles = ["Car 1", "Car 2", "Car 3"];
   return (
-    <Grid2 container>
-      <Grid2 size={12} gap={3} display={"flex"} alignItems={"center"}>
+    <Grid container>
+      <Grid item xs={12} gap={3} display={"flex"} alignItems={"center"}>
         <FilterPanel
           campaigns={campaigns}
           vehicles={vehicles}
@@ -33,9 +35,10 @@ const Attribution = () => {
           onVehicleChange={setSelectedVehicle}
           onDateRangeSelect={setDateRange}
         />
-      </Grid2>
-      <Grid2
-        size={12}
+      </Grid>
+      <Grid
+        item
+        xs={12}
         display="flex"
         alignItems="center"
         padding={2}
@@ -51,16 +54,11 @@ const Attribution = () => {
             marginRight: 2,
           }}
         >
-          <Typography variant="h3">Attribution</Typography>
+          <Typography variant="h3">{t("attribution.attribution")}</Typography>
         </Box>
 
         {/* QR Code, Tracking URL, and Footfall Section with Icons */}
-        <Box
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          flexGrow={1}
-        >
+        <Box display="flex" justifyContent="space-between" alignItems="center" flexGrow={1}>
           <Box
             display="flex"
             alignItems="center"
@@ -89,17 +87,13 @@ const Attribution = () => {
             <Typography>Tracking URL</Typography>
           </Box>
 
-          <Box
-            display="flex"
-            alignItems="center"
-            sx={{ paddingX: 2, flex: 1, justifyContent: "center" }}
-          >
+          <Box display="flex" alignItems="center" sx={{ paddingX: 2, flex: 1, justifyContent: "center" }}>
             <PeopleIcon sx={{ marginRight: 1 }} />
             <Typography>Footfall</Typography>
           </Box>
         </Box>
-      </Grid2>
-    </Grid2>
+      </Grid>
+    </Grid>
   );
 };
 

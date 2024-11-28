@@ -79,6 +79,12 @@
       "basic": "Põhi",
       "heat": "Küttes kaart",
       "live": "Otse"
-    }
+    },
+    "attribution":{
+    "attribution":"Atribuutika",
+    "qrcode":"QR-kood",
+    "trackingurl":"Jälgimislink",
+    "footfall":"jalakäijate liiklus"
+  }
   }
   

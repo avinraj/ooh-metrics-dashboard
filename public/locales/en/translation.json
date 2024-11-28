@@ -79,5 +79,11 @@
     "basic": "Basic",
     "heat": "Heat",
     "live": "Live"
+  },
+  "attribution":{
+    "attribution":"Attribution",
+    "qrcode":"QR-Code",
+    "trackingurl":"Tracking-URL",
+    "footfall":"footfall"
   }
 }

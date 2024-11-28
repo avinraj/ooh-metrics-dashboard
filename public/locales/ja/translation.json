@@ -79,6 +79,12 @@
       "basic": "基本",
       "heat": "ヒートマップ",
       "live": "ライブ"
+    },
+    "attribution":{
+      "attribution":"帰属",
+      "qrcode":"QRコード ",
+      "trackingurl":"トラッキングURL ",
+      "footfall":"フットフォール"
     }
   }
   

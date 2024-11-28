@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Typography, useTheme } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
@@ -7,6 +7,14 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ElectricScooterIcon from "@mui/icons-material/ElectricScooter";
 import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
 import { useTranslation } from "react-i18next";
+import HikingIcon from "@mui/icons-material/Hiking";
+import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
+import AdUnitsIcon from "@mui/icons-material/AdUnits";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import { useDispatch } from "react-redux";
+import { SET_SELECTED_ADTYPE } from "../../../store/actions";
+import { useNavigate } from "react-router-dom";
+import TvIcon from "@mui/icons-material/Tv";
 
 interface AdTypeProps {
   onOpenSwitchModal: () => void;
@@ -16,12 +24,26 @@ interface AdTypeProps {
 const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) => {
   const theme = useTheme();
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [expanded, setExpanded] = useState<string | false>(false);
   const [expanded2, setExpanded2] = useState<string | false>(false);
-  const [selectedAdType, setSelectedAdType] = useState<{ label: string; icon: JSX.Element | null }>({
-    label: "Cars",
-    icon: <DirectionsCarIcon />,
-  });
+  const options = [
+    { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon />, path: "/cars" },
+    { label: t("adtype.vehicles.Buses"), icon: <DirectionsBusIcon />, path: "/buses" },
+    { label: t("adtype.vehicles.Trucks"), icon: <LocalShippingIcon />, path: "/trucks" },
+    { label: t("adtype.vehicles.e-scooter"), icon: <ElectricScooterIcon />, path: "/escooters" },
+    { label: t("adtype.vehicles.2-wheelers"), icon: <TwoWheelerIcon />, path: "/twowheelers" },
+  ];
+  const selectedItem = options.filter((item) => item.path === window.location.pathname);
+  const [selectedAdType, setSelectedAdType] = useState<{ label: string; icon: JSX.Element | null; path: string }>(
+    selectedItem[0]
+  );
+  useEffect(() => {
+    if (selectedAdType) {
+      dispatch({ type: SET_SELECTED_ADTYPE, selectedAdType: selectedAdType });
+    }
+  }, [selectedAdType, dispatch]);
 
   const handleAccordionChange = (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
     setExpanded(isExpanded ? panel : false);
@@ -31,52 +53,61 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
     setExpanded2(isExpanded ? panel : false);
   };
 
-  const handleButtonClick = (value: string, icon: JSX.Element | null) => {
+  const handleButtonClick = (value: string, icon: JSX.Element | null, path: string) => {
     const selectedAdType = { label: value, icon };
     onSelectAdType(selectedAdType); // Pass the selected ad type to the parent
     onOpenSwitchModal();
     setExpanded(false);
     setExpanded2(false);
-    setSelectedAdType({ label: value, icon });
+    setSelectedAdType({ label: value, icon, path });
+    dispatch({
+      type: SET_SELECTED_ADTYPE,
+      selectedAdType: selectedAdType,
+    });
+
+    // localStorage.setItem("adtype", selectedAdType.label);
+    navigate(path);
   };
 
   const adTypeConfig = [
     {
       title: t("adtype.Vehicle Ads"),
       options: [
-        { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon /> },
-        { label: t("adtype.vehicles.Buses"), icon: <DirectionsBusIcon /> },
-        { label: t("adtype.vehicles.Trucks"), icon: <LocalShippingIcon /> },
-        { label: t("adtype.vehicles.e-scooter"), icon: <ElectricScooterIcon /> },
-        { label: t("adtype.vehicles.2-wheelers"), icon: <TwoWheelerIcon /> },
+        { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon />, path: "/cars" },
+        { label: t("adtype.vehicles.Buses"), icon: <DirectionsBusIcon />, path: "/buses" },
+        { label: t("adtype.vehicles.Trucks"), icon: <LocalShippingIcon />, path: "/trucks" },
+        { label: t("adtype.vehicles.e-scooter"), icon: <ElectricScooterIcon />, path: "/escooters" },
+        { label: t("adtype.vehicles.2-wheelers"), icon: <TwoWheelerIcon />, path: "/twowheelers" },
       ],
     },
     {
       title: t("adtype.Digital Screens"),
       options: [
-        { label: t("adtype.digitalScreens.digitalBillboards"), icon: <DirectionsCarIcon /> },
-        { label: t("adtype.digitalScreens.Car Rooftoppers"), icon: <DirectionsCarIcon /> },
-        { label: t("adtype.digitalScreens.Van Digital Billboards"), icon: <LocalShippingIcon /> },
-        { label: t("adtype.digitalScreens.Backpacks"), icon: <LocalShippingIcon /> },
+        { label: t("adtype.digitalScreens.digitalBillboards"), icon: <TvIcon />, path: "" },
+        { label: t("adtype.digitalScreens.Car Rooftoppers"), icon: <LocalTaxiIcon />, path: "" },
+        { label: t("adtype.digitalScreens.Van Digital Billboards"), icon: <LocalShippingIcon />, path: "" },
+        { label: t("adtype.digitalScreens.Backpacks"), icon: <HikingIcon />, path: "" },
       ],
     },
     {
       title: t("adtype.Mobile Ads"),
       options: [],
+      icon: <AdUnitsIcon />,
     },
     {
       title: t("adtype.Static Billboards"),
       options: [],
+      icon: <LightbulbIcon />,
     },
   ];
-  const renderButton = (label: string, icon: JSX.Element | null) => {
+  const renderButton = (label: string, icon: JSX.Element | null, path: string) => {
     const isSelected = selectedAdType.label === label;
 
     return (
-      <>
+      <React.Fragment key={label}>
         <Button
           type="button"
-          onClick={() => handleButtonClick(label, icon)}
+          onClick={() => handleButtonClick(label, icon, path)}
           sx={{
             fontWeight: "bold",
             textAlign: "start",
@@ -98,7 +129,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
           {label}
         </Button>
         <Divider component="li" />
-      </>
+      </React.Fragment>
     );
   };
 
@@ -123,7 +154,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {adTypeConfig.map(({ title, options }) => (
+          {adTypeConfig.map(({ title, options, icon }) => (
             <Accordion
               key={title}
               elevation={0}
@@ -134,12 +165,23 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
               <AccordionSummary
                 expandIcon={options.length ? <ExpandMoreIcon sx={{ color: theme.palette.text.primary }} /> : null}
               >
-                <Typography variant="body1" sx={{ color: theme.palette.text.primary, fontSize: "15px" }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: theme.palette.text.primary,
+                    fontSize: "15px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {icon && <span style={{ marginRight: 8 }}>{icon}</span>}
                   {title}
                 </Typography>
               </AccordionSummary>
               {options.length > 0 && (
-                <AccordionDetails>{options.map(({ label, icon }) => renderButton(label, icon))}</AccordionDetails>
+                <AccordionDetails>
+                  {options.map(({ label, icon, path }) => renderButton(label, icon, path))}
+                </AccordionDetails>
               )}
             </Accordion>
           ))}

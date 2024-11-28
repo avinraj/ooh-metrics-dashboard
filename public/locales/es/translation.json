@@ -80,5 +80,11 @@
     "basic": "Básico",
     "heat": "Calor",
     "live": "En vivo"
+  },
+  "attribution":{
+    "attribution":"Atribución",
+    "qrcode":"Código QR",
+    "trackingurl":"URL de seguimiento",
+    "footfall":"Afluencia de personas"
   }
 }

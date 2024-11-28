@@ -80,5 +80,11 @@
     "grid view":"عرض الشبكة",
     "table view":"عرض الجدول",
     "photo list":"قائمة الصور"
+  },
+  "attribution":{
+    "attribution":"نسبة التحميل",
+    "qrcode":"رمز الاستجابة السريعة",
+    "trackingurl":"رابط التتبع",
+    "footfall":"عدد الزوار"
   }
 }

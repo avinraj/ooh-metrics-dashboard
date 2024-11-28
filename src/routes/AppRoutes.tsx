@@ -11,6 +11,10 @@ import AdPage from "../app/Adtype/AdPage";
 import Cars from "../app/Cars/pages/Cars";
 import MapView from "../app/MapView/pages/MapView";
 import Attribution from "../app/Attribution/pages/Attribution";
+import Buses from "../app/Cars/pages/Buses";
+import Trucks from "../app/Cars/pages/Trucks";
+import Escooters from "../app/Cars/pages/Escooters";
+import TwoWheerlers from "../app/Cars/pages/TwoWheelers";
 
 const AppRoutes = () => {
   return (
@@ -62,6 +66,46 @@ const AppRoutes = () => {
           <ProtectedRoute>
             <Layout>
               <Cars />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/buses"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Buses />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/trucks"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Trucks />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/escooters"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Escooters />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/twowheelers"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <TwoWheerlers />
             </Layout>
           </ProtectedRoute>
         }

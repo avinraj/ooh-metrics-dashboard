@@ -79,6 +79,12 @@
       "basic": "Podstawowa",
       "heat": "Mapa cieplna",
       "live": "Na żywo"
+    },
+    "attribution":{
+      "attribution":"Atrybucja",
+      "qrcode":"Kod QR ",
+      "trackingurl":"URL sledzenia",
+      "footfall":"Ruch pieszy "
     }
   }
   

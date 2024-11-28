@@ -79,6 +79,12 @@
       "basic": "Basis",
       "heat": "Hitzekarte",
       "live": "Live"
+    },
+    "attribution":{
+      "attribution":"Zuweisung",
+      "qrcode":"QR-Code",
+      "trackingurl":"Tracking-URL",
+      "footfall":"Fußverkehr"
     }
   }
   

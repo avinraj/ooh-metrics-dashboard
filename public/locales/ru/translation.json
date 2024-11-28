@@ -79,6 +79,12 @@
       "basic": "Основной",
       "heat": "Тепловая карта",
       "live": "В реальном времени"
+    },
+    "attribution":{
+      "attribution":"Атрибуция",
+      "qrcode":"QR-код",
+      "trackingurl":"trackingurl",
+      "footfall":"Пешеходный трафик "
     }
   }
   

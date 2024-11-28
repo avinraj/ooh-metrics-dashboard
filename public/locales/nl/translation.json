@@ -79,5 +79,11 @@
     "basic": "Basis",
     "heat": "Hittekaart",
     "live": "Live"
+  },
+  "attribution":{
+    "attribution":"Toewijzing",
+    "qrcode":"QR-code ",
+    "trackingurl":"Volg-URL ",
+    "footfall":"Voetgangersverkeer "
   }
 }
