@@ -41,6 +41,34 @@
       },
       "affinities": {
         "affinities": "Zainteresowania"
+      },
+      "appsOrWebsites": {
+        "appsOrWebsites": "Aplikacje / Strony internetowe",
+        "byAppOrWebsites": "Według aplikacji / stron internetowych"
+      },
+      "dayAndHour": {
+        "dayAndHour": "Dzień i godzina",
+        "byDayAndHour": "Według dnia i godziny",
+        "dayChart": "Wykres dzienny",
+        "hourChart": "Wykres godzinowy"
+      },
+      "browser": {
+        "browser": "Przeglądarka",
+        "byBrowser": "Według przeglądarki"
+      },
+      "operatingSystem": {
+        "OS": "System operacyjny",
+        "byOperatingSystem": "Według systemu operacyjnego"
+      },
+      "telecomOperator": {
+        "telecomOperator": "Operator telekomunikacyjny",
+        "byTelecomOperator": "Według operatora telekomunikacyjnego"
+      },
+      "creatives": {
+        "creatives": "Kreatywy",
+        "byCreatives": "Według kreatywów",
+        "creativesChart": "Wykres kreatywów",
+        "sizeChart": "Wykres rozmiarów"
       }
     },
     "highlights": {
@@ -79,6 +107,12 @@
       "basic": "Podstawowa",
       "heat": "Mapa cieplna",
       "live": "Na żywo"
+    },
+    "attribution":{
+      "attribution":"Atrybucja",
+      "qrcode":"Kod QR ",
+      "trackingurl":"URL sledzenia",
+      "footfall":"Ruch pieszy "
     },
     "audience": {
       "audience": "Odbiorcy",

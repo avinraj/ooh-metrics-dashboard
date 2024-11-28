@@ -41,18 +41,46 @@
     },
     "affinities": {
       "affinities": "관심사"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "앱 / 웹사이트",
+      "byAppOrWebsites": "앱 / 웹사이트별"
+    },
+    "dayAndHour": {
+      "dayAndHour": "날짜와 시간",
+      "byDayAndHour": "날짜와 시간별",
+      "dayChart": "일별 차트",
+      "hourChart": "시간별 차트"
+    },
+    "browser": {
+      "browser": "브라우저",
+      "byBrowser": "브라우저별"
+    },
+    "operatingSystem": {
+      "OS": "운영 체제",
+      "byOperatingSystem": "운영 체제별"
+    },
+    "telecomOperator": {
+      "telecomOperator": "통신 사업자",
+      "byTelecomOperator": "통신 사업자별"
+    },
+    "creatives": {
+      "creatives": "크리에이티브",
+      "byCreatives": "크리에이티브별",
+      "creativesChart": "크리에이티브 차트",
+      "sizeChart": "크기 차트"
     }
   },
   "highlights": {
     "welcome": "환영합니다",
-    "highlight":"하이라이트"
+    "highlight": "하이라이트"
   },
-  "cars":{
-      "cars":"차량",
-      "grid view":"그리드 보기",
-      "table view":"테이블 보기",
-      "photo list":"사진 목록"
-    },
+  "cars": {
+    "cars": "차량",
+    "grid view": "그리드 보기",
+    "table view": "테이블 보기",
+    "photo list": "사진 목록"
+  },
   "adtype": {
     "vehicles": {
       "Cars": "차",
@@ -79,6 +107,12 @@
     "basic": "기본",
     "heat": "히트맵",
     "live": "실시간"
+  },
+  "attribution":{
+    "attribution":"귀속",
+    "qrcode":"QR코드 ",
+    "trackingurl":"추적 URL ",
+    "footfall":"유동 인구 "
   },
   "audience": {
     "audience": "청중",

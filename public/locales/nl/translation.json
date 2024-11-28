@@ -41,6 +41,34 @@
     },
     "affinities": {
       "affinities": "Affiniteiten"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "Apps / Websites",
+      "byAppOrWebsites": "Per Apps / Websites"
+    },
+    "dayAndHour": {
+      "dayAndHour": "Dag en Uur",
+      "byDayAndHour": "Per Dag en Uur",
+      "dayChart": "Daggrafiek",
+      "hourChart": "Uurgrafiek"
+    },
+    "browser": {
+      "browser": "Browser",
+      "byBrowser": "Per Browser"
+    },
+    "operatingSystem": {
+      "OS": "OS",
+      "byOperatingSystem": "Per Besturingssysteem"
+    },
+    "telecomOperator": {
+      "telecomOperator": "Telecom Operator",
+      "byTelecomOperator": "Per Telecom Operator"
+    },
+    "creatives": {
+      "creatives": "Creatieven",
+      "byCreatives": "Per Creatieven",
+      "creativesChart": "Creatieven Grafiek",
+      "sizeChart": "Maat Grafiek"
     }
   },
   "highlights": {
@@ -79,6 +107,12 @@
     "basic": "Basis",
     "heat": "Hittekaart",
     "live": "Live"
+  },
+  "attribution":{
+    "attribution":"Toewijzing",
+    "qrcode":"QR-code ",
+    "trackingurl":"Volg-URL ",
+    "footfall":"Voetgangersverkeer "
   },
   "audience": {
     "audience": "Publiek",

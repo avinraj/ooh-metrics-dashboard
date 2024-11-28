@@ -41,18 +41,46 @@
     },
     "affinities": {
       "affinities": "Affinities"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "Apps / Websites",
+      "byAppsOrWebsites": "By Apps / Websites"
+    },
+    "dayAndHour": {
+      "dayAndHour": "Day and Hour",
+      "byDayAndHour": "By Day and Hour",
+      "dayChart": "Day Chart",
+      "hourChart": "Hour Chart"
+    },
+    "browser": {
+      "browser": "Browser",
+      "byBrowser": "By Browser"
+    },
+    "operatingSystem": {
+      "OS": "OS",
+      "byOperatingSystem": "By Operating System"
+    },
+    "telecomOperator": {
+      "telecomOperator": "Telecom Operator",
+      "byTelecomOperator": "By Telecom Operator"
+    },
+    "creatives": {
+      "creatives": "Creatives",
+      "byCreatives": "By Creatives",
+      "creativesChart": "Creatives chart",
+      "sizeChart": "Size chart"
     }
   },
   "highlights": {
     "welcome": "Welcome",
-    "highlight":"Highlight"
+    "highlight": "Highlight"
   },
-"cars":{
-  "cars":"cars",
-  "grid view":"grid view",
-  "table view":"table view",
-  "photo list":"photo list"
-},
+  "cars": {
+    "cars": "cars",
+    "grid view": "grid view",
+    "table view": "table view",
+    "photo list": "photo list"
+  },
   "adtype": {
     "vehicles": {
       "Cars": "Cars",
@@ -79,6 +107,12 @@
     "basic": "Basic",
     "heat": "Heat",
     "live": "Live"
+  },
+  "attribution":{
+    "attribution":"Attribution",
+    "qrcode":"QR-Code",
+    "trackingurl":"Tracking-URL",
+    "footfall":"footfall"
   },
   "audience": {
     "audience": "Audience",

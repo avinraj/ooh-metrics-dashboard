@@ -41,7 +41,35 @@
       },
       "affinities": {
         "affinities": "Affinités"
-      }
+      },
+      "appsOrWebsites": {
+        "appsOrWebsites": "Applications / Sites Web",
+        "byAppOrWebsites": "Par Applications / Sites Web"
+    },
+    "dayAndHour": {
+        "dayAndHour": "Jour et Heure",
+        "byDayAndHour": "Par Jour et Heure",
+        "dayChart": "Graphique Journalier",
+        "hourChart": "Graphique Horaire"
+    },
+    "browser": {
+        "browser": "Navigateur",
+        "byBrowser": "Par Navigateur"
+    },
+    "operatingSystem": {
+        "OS": "Système d'exploitation",
+        "byOperatingSystem": "Par Système d'exploitation"
+    },
+    "telecomOperator": {
+        "telecomOperator": "Opérateur de télécommunications",
+        "byTelecomOperator": "Par Opérateur de télécommunications"
+    },
+    "creatives": {
+        "creatives": "Créatifs",
+        "byCreatives": "Par Créatifs",
+        "creativesChart": "Graphique des Créatifs",
+        "sizeChart": "Graphique des Tailles"
+    }
     },
     "highlights": {
       "welcome": "Bienvenue",
@@ -79,6 +107,12 @@
       "basic": "De base",
       "heat": "Carte thermique",
       "live": "En direct"
+    },
+    "attribution":{
+      "attribution":"Attribution",
+      "qrcode":"Code QR",
+      "trackingurl":"URL de suivi",
+      "footfall":"Fréquentation"
     },
     "audience": {
       "audience": "Audience",

@@ -41,6 +41,34 @@
       },
       "affinities": {
         "affinities": "兴趣倾向"
+      },
+      "appsOrWebsites": {
+        "appsOrWebsites": "应用 / 网站",
+        "byAppOrWebsites": "按应用 / 网站"
+      },
+      "dayAndHour": {
+        "dayAndHour": "日期和小时",
+        "byDayAndHour": "按日期和小时",
+        "dayChart": "日期图表",
+        "hourChart": "小时图表"
+      },
+      "browser": {
+        "browser": "浏览器",
+        "byBrowser": "按浏览器"
+      },
+      "operatingSystem": {
+        "OS": "操作系统",
+        "byOperatingSystem": "按操作系统"
+      },
+      "telecomOperator": {
+        "telecomOperator": "电信运营商",
+        "byTelecomOperator": "按电信运营商"
+      },
+      "creatives": {
+        "creatives": "创意",
+        "byCreatives": "按创意",
+        "creativesChart": "创意图表",
+        "sizeChart": "大小图表"
       }
     },
     "highlights": {
@@ -79,6 +107,12 @@
       "basic": "基础",
       "heat": "热力图",
       "live": "实时"
+    },
+    "attribution":{
+      "attribution":"归因",
+      "qrcode":"二维码",
+      "trackingurl":"跟踪链接 ",
+      "footfall":"人流量 "
     },
     "audience": {
       "audience": "受众",

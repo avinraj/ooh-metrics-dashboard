@@ -41,6 +41,34 @@
       },
       "affinities": {
         "affinities": "İlgi Alanları"
+      },
+      "appsOrWebsites": {
+        "appsOrWebsites": "Uygulamalar / Web Siteleri",
+        "byAppOrWebsites": "Uygulamalara / Web Sitelerine Göre"
+      },
+      "dayAndHour": {
+        "dayAndHour": "Gün ve Saat",
+        "byDayAndHour": "Gün ve Saat Bazında",
+        "dayChart": "Günlük Grafik",
+        "hourChart": "Saatlik Grafik"
+      },
+      "browser": {
+        "browser": "Tarayıcı",
+        "byBrowser": "Tarayıcıya Göre"
+      },
+      "operatingSystem": {
+        "OS": "İşletim Sistemi",
+        "byOperatingSystem": "İşletim Sistemine Göre"
+      },
+      "telecomOperator": {
+        "telecomOperator": "Telekom Operatörü",
+        "byTelecomOperator": "Telekom Operatörüne Göre"
+      },
+      "creatives": {
+        "creatives": "Yaratıcılar",
+        "byCreatives": "Yaratıcılara Göre",
+        "creativesChart": "Yaratıcılar Grafiği",
+        "sizeChart": "Boyut Grafiği"
       }
     },
     "highlights": {
@@ -79,6 +107,12 @@
       "basic": "Temel",
       "heat": "Isı Haritası",
       "live": "Canlı"
+    },
+    "attribution":{
+      "attribution":"Atıf",
+      "qrcode":"QR Kodu",
+      "trackingurl":"İzleme URL'si",
+      "footfall":"Yaya trafiği "
     },
     "audience": {
       "audience": "Hedef Kitle",

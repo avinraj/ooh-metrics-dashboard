@@ -41,7 +41,35 @@
       },
       "affinities": {
         "affinities": "Склонности"
-      }
+      },
+      "appsOrWebsites": {
+        "appsOrWebsites": "Приложения / Вебсайты",
+        "byAppOrWebsites": "По приложениям / вебсайтам"
+    },
+    "dayAndHour": {
+        "dayAndHour": "День и Час",
+        "byDayAndHour": "По дню и часу",
+        "dayChart": "Дневная диаграмма",
+        "hourChart": "Часовая диаграмма"
+    },
+    "browser": {
+        "browser": "Браузер",
+        "byBrowser": "По браузеру"
+    },
+    "operatingSystem": {
+        "OS": "Операционная система",
+        "byOperatingSystem": "По операционной системе"
+    },
+    "telecomOperator": {
+        "telecomOperator": "Оператор связи",
+        "byTelecomOperator": "По оператору связи"
+    },
+    "creatives": {
+        "creatives": "Креативы",
+        "byCreatives": "По креативам",
+        "creativesChart": "График креативов",
+        "sizeChart": "График размеров"
+    }
     },
     "highlights": {
       "welcome": "Добро пожаловать",
@@ -79,6 +107,12 @@
       "basic": "Основной",
       "heat": "Тепловая карта",
       "live": "В реальном времени"
+    },
+    "attribution":{
+      "attribution":"Атрибуция",
+      "qrcode":"QR-код",
+      "trackingurl":"trackingurl",
+      "footfall":"Пешеходный трафик "
     },
     "audience": {
       "audience": "Аудитория",

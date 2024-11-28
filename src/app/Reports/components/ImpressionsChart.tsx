@@ -1,4 +1,4 @@
-import { Button, useTheme } from "@mui/material";
+import { Button, useMediaQuery, useTheme } from "@mui/material";
 import Chart from "chart.js/auto";
 import moment from "moment";
 import { useEffect, useRef, useState } from "react";
@@ -6,22 +6,28 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import impressionsData from "../../../Data/impressions.json";
 import ImpressionsTable from "./ImpressionsTable";
+import { truncateLabel } from "./mobile-ad/utils/chartUtils";
 
-const buttonStyles = {
+interface ImpressionsChartProps {
+  groupBy: "date" | "vehicle";
+}
+
+export const buttonStyles = {
   padding: 5,
   minWidth: "60px",
   border: "black",
   borderStyle: "groove",
   borderWidth: "thin",
   borderRadius: "0px",
+  height: "fit-content",
 };
 
-const ImpressionsChart = () => {
+const ImpressionsChart: React.FC<ImpressionsChartProps> = ({ groupBy }) => {
   const theme = useTheme();
   const { t } = useTranslation();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const chartRef = useRef<HTMLCanvasElement | null>(null);
-  const [groupBy, setGroupBy] = useState<"date" | "vehicle">("date");
-  const [activeGroup1, setActiveGroup1] = useState("Date");
   const [activeGroup2, setActiveGroup2] = useState("Chart");
 
   const processData = (groupBy: "date" | "vehicle") => {
@@ -91,6 +97,10 @@ const ImpressionsChart = () => {
               color: theme.palette.text.primary,
               maxRotation: 90,
               minRotation: 45,
+              callback: function (value: any) {
+                const label = labels[value as number];
+                return isMobile ? truncateLabel(label, 3) : label;
+              },
             },
             grid: {
               display: false,
@@ -100,25 +110,28 @@ const ImpressionsChart = () => {
             beginAtZero: true,
             ticks: {
               color: theme.palette.text.primary,
+              callback: function (value: any) {
+                return isMobile ? truncateLabel(value, 3) : value;
+              },
             },
             grid: {
-              display: false
+              display: false,
               // color: "#333333",
             },
           },
         },
         animations: {
           y: {
-            easing: 'easeInOutElastic',
+            easing: "easeInOutElastic",
             from: (ctx: any) => {
-              if (ctx.type === 'data') {
-                if (ctx.mode === 'default' && !ctx.dropped) {
+              if (ctx.type === "data") {
+                if (ctx.mode === "default" && !ctx.dropped) {
                   ctx.dropped = true;
                   return 0;
                 }
               }
-            }
-          }
+            },
+          },
         },
       };
 
@@ -141,6 +154,7 @@ const ImpressionsChart = () => {
       : theme.palette.secondary.main,
     fontWeight: isActive ? "bold" : "normal",
     color: theme.palette.text.primary,
+    fontSize: isMobile ? "10px" : "15px",
   });
 
   return (
@@ -155,7 +169,7 @@ const ImpressionsChart = () => {
         style={{
           position: "absolute",
           top: "5px",
-          right: 10,
+          right: isMobile ? 3 : 10,
           zIndex: 10,
           display: "flex",
           margin: "10px",
@@ -164,55 +178,31 @@ const ImpressionsChart = () => {
           width: "95%",
         }}
       >
-        <div>Other contents</div>
-        <div style={{ display: "flex" }}>
-          <div style={{ display: "flex", marginRight: "10px" }}>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              style={getButtonStyle(activeGroup1 === "Date")}
-              onClick={() => {
-                setActiveGroup1("Date");
-                setGroupBy("date");
-              }}
-            >
-              {t("reports.impressions.date")}
-            </Button>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              style={getButtonStyle(activeGroup1 === "Vehicle")}
-              onClick={() => {
-                setActiveGroup1("Vehicle");
-                setGroupBy("vehicle");
-              }}
-            >
-              {t("reports.impressions.vehicle")}
-            </Button>
-          </div>
+        <div>
+          <span style={{ display: isMobile ? "none" : "flex" }}>
+            Other contents
+          </span>
+        </div>
 
-          <div style={{ display: "flex" }}>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              style={getButtonStyle(activeGroup2 === "Chart")}
-              onClick={() => setActiveGroup2("Chart")}
-            >
-              {t("reports.impressions.chart")}
-            </Button>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              style={getButtonStyle(activeGroup2 === "Table")}
-              onClick={() => setActiveGroup2("Table")}
-            >
-              {t("reports.impressions.table")}
-            </Button>
-          </div>
+        <div style={{ display: "flex" }}>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            style={getButtonStyle(activeGroup2 === "Chart")}
+            onClick={() => setActiveGroup2("Chart")}
+          >
+            {t("reports.impressions.chart")}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            style={getButtonStyle(activeGroup2 === "Table")}
+            onClick={() => setActiveGroup2("Table")}
+          >
+            {t("reports.impressions.table")}
+          </Button>
         </div>
       </div>
       {activeGroup2 === "Chart" ? (
