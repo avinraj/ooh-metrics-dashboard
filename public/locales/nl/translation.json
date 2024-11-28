@@ -108,6 +108,12 @@
     "heat": "Hittekaart",
     "live": "Live"
   },
+  "attribution":{
+    "attribution":"Toewijzing",
+    "qrcode":"QR-code ",
+    "trackingurl":"Volg-URL ",
+    "footfall":"Voetgangersverkeer "
+  },
   "audience": {
     "audience": "Publiek",
     "clicksByGender": "Kliks per geslacht",

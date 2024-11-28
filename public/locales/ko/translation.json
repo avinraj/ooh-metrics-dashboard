@@ -108,6 +108,12 @@
     "heat": "히트맵",
     "live": "실시간"
   },
+  "attribution":{
+    "attribution":"귀속",
+    "qrcode":"QR코드 ",
+    "trackingurl":"추적 URL ",
+    "footfall":"유동 인구 "
+  },
   "audience": {
     "audience": "청중",
     "clicksByGender": "성별별 클릭 수",

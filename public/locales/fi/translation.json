@@ -107,6 +107,12 @@
     "basic": "Perus",
     "heat": "Lämpökartta",
     "live": "Live"
+    },
+    "attribution":{
+      "attribution":"Attribuutio",
+      "qrcode":"QR-koodi",
+      "trackingurl":"Seurantalinkki",
+      "footfall":"Jalkaliikenne"
   },
   "audience": {
     "audience": "Yleisö",

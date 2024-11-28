@@ -108,6 +108,12 @@
     "heat": "Heat",
     "live": "Live"
   },
+  "attribution":{
+    "attribution":"Attribution",
+    "qrcode":"QR-Code",
+    "trackingurl":"Tracking-URL",
+    "footfall":"footfall"
+  },
   "audience": {
     "audience": "Audience",
     "clicksByGender": "Clicks by Gender",

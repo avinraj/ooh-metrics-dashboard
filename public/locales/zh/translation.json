@@ -108,6 +108,12 @@
       "heat": "热力图",
       "live": "实时"
     },
+    "attribution":{
+      "attribution":"归因",
+      "qrcode":"二维码",
+      "trackingurl":"跟踪链接 ",
+      "footfall":"人流量 "
+    },
     "audience": {
       "audience": "受众",
       "clicksByGender": "按性别点击",

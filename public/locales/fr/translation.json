@@ -108,6 +108,12 @@
       "heat": "Carte thermique",
       "live": "En direct"
     },
+    "attribution":{
+      "attribution":"Attribution",
+      "qrcode":"Code QR",
+      "trackingurl":"URL de suivi",
+      "footfall":"Fréquentation"
+    },
     "audience": {
       "audience": "Audience",
       "clicksByGender": "Clics par sexe",

@@ -16,16 +16,14 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { IoEyeOutline } from "react-icons/io5";
-import { FaHighlighter } from "react-icons/fa";
-import { IoFootsteps } from "react-icons/io5";
-import logo from "../../../assets/oohlogo.png";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
-
-import { useDispatch } from "react-redux";
+import AssessmentIcon from "@mui/icons-material/Assessment";
+import { FaHighlighter, FaMapMarkerAlt } from "react-icons/fa";
+import { IoEyeOutline, IoFootsteps } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
+import logo from "../../../assets/oohlogo.png";
 import { languages } from "../../../i18n/languages";
-import { SET_SELECTED_MENU } from "../../../store/actions";
+import { SET_SELECTED_ADTYPE, SET_SELECTED_MENU } from "../../../store/actions";
 import StorageService from "../services/storage.serive";
 
 import AdType from "./AdType";
@@ -34,16 +32,13 @@ import ReportsAcc from "./Reports";
 const Sidebar: React.FC = () => {
   const locationVal = useLocation();
   const dispatch = useDispatch();
+
   const storageService = new StorageService();
   const theme = useTheme();
   const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string>("Highlight");
-  const [selectedAdType, setSelectedAdType] = useState<{ label: string; icon: JSX.Element | null }>({
-    label: "Cars",
-    icon: <DirectionsCarIcon />,
-  });
 
   const { t, i18n } = useTranslation();
   const defaultLang = storageService.get("local", "i18nextLng", false);
@@ -58,11 +53,18 @@ const Sidebar: React.FC = () => {
     document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
   };
 
+  const {selectedAdType} = useSelector((state: any) => state?.selectedAdType);
+
   const menuItems = [
     { label: t("sideBar.highlight"), action: "Highlight", icon: <FaHighlighter />, path: "/highlight" },
-    { label: t("sideBar.reports"), action: "Reports", icon: <IoEyeOutline />, path: "/reports" },
+    { label: t("sideBar.reports"), action: "Reports", icon: <AssessmentIcon />, path: "/reports" },
     { label: t("sideBar.mapView"), action: "Map View", icon: <FaMapMarkerAlt />, path: "/map-view" },
-    { label: selectedAdType.label, action: "Cars", icon: selectedAdType.icon, path: "/cars" },
+    {
+      label: selectedAdType?.label,
+      action: "Vehicles",
+      icon: selectedAdType?.icon,
+      path: "/vehicles",
+    },
     { label: t("sideBar.attribution"), action: "Attribution", icon: <IoFootsteps />, path: "/attribution" },
     // { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "" },
 
@@ -80,6 +82,10 @@ const Sidebar: React.FC = () => {
         selectedMenu: matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action,
       });
     }
+    dispatch({
+      type: SET_SELECTED_ADTYPE,
+      selectedAdType: { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon />, value: "cars" },
+    });
   }, []);
 
   const handleItemClick = (item: { action: string; path: string }) => {
@@ -94,9 +100,8 @@ const Sidebar: React.FC = () => {
 
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
-  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null }) => {
+  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null, value: string }) => {
     console.log("Selected Ad Type:", adType);
-    setSelectedAdType(adType);
   };
   return (
     <>
@@ -166,8 +171,8 @@ const Sidebar: React.FC = () => {
             ))}
           </Select>
         </Box>
-        <List sx={{ padding: 2 }}>
-          <Box sx={{ paddingTop: 1, paddingBottom: 1 }} key={"adType"}>
+        <List sx={{ padding: 2 }} key={"adType"}>
+          <Box sx={{ paddingTop: 1, paddingBottom: 1 }} >
             <AdType onSelectAdType={handleAdTypeSelect} onOpenSwitchModal={() => console.log("Modal opened")} />
           </Box>
           {menuItems.map((item) =>
@@ -188,12 +193,7 @@ const Sidebar: React.FC = () => {
                       fontSize: "20px",
                     }}
                   >
-                    {item.icon ? (
-                      <Box sx={{ display: "flex", alignItems: "center", marginRight: 2 }}>{item.icon}</Box>
-                    ) : (
-                      ""
-                      // <img src={item.image} alt={item.label} style={{ width: 25, height: 25, marginRight: 10 }} />
-                    )}
+                    {item.icon && <Box sx={{ display: "flex", alignItems: "center", marginRight: 2 }}>{item.icon}</Box>}
                     <ListItemText
                       sx={{
                         color:
@@ -207,6 +207,7 @@ const Sidebar: React.FC = () => {
             ) : (
               <Box sx={{ paddingBottom: 1 }} key={"Reports"}>
                 <ReportsAcc
+                  icon={<IoEyeOutline style={{ marginRight: 8 }} />} // Add the icon here
                   onOpenSwitchModal={(value) => {
                     handleItemClick({ action: value, path: "/reports" });
                   }}

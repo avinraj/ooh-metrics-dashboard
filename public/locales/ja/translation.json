@@ -108,6 +108,12 @@
       "heat": "ヒートマップ",
       "live": "ライブ"
     },
+    "attribution":{
+      "attribution":"帰属",
+      "qrcode":"QRコード ",
+      "trackingurl":"トラッキングURL ",
+      "footfall":"フットフォール"
+    },
     "audience": {
       "audience": "オーディエンス",
       "clicksByGender": "性別別のクリック",

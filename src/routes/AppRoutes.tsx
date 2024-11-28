@@ -1,16 +1,15 @@
 // AppRoutes.tsx
 import { Route, Routes } from "react-router-dom";
 import HighLight from "../app/Highlight/HighLight";
-// import Home from "../app/Home/Home";
 import Reports from "../app/Reports/pages/Reports";
 import Signup from "../app/Signup/Signup";
 
-import ProtectedRoute from "./ProtectedRoute";
-import Layout from "../layout/Layout";
 import AdPage from "../app/Adtype/AdPage";
-import Cars from "../app/Cars/pages/Cars";
-import MapView from "../app/MapView/pages/MapView";
 import Attribution from "../app/Attribution/pages/Attribution";
+import Vehicles from "../app/Cars/pages/Vehicles";
+import MapView from "../app/MapView/pages/MapView";
+import Layout from "../layout/Layout";
+import ProtectedRoute from "./ProtectedRoute";
 import Audience from "../app/Reports/pages/Audience";
 import MobileAdReports from "../app/Reports/pages/MobileAdReports";
 
@@ -18,16 +17,6 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Signup />} />
-      {/* <Route
-        path="/home"
-        element={
-          <ProtectedRoute>
-            <Layout>
-              <Home />
-            </Layout>
-          </ProtectedRoute>
-        }
-      /> */}
       <Route
         path="/highlight"
         element={
@@ -79,11 +68,11 @@ const AppRoutes = () => {
         }
       />
       <Route
-        path="/cars"
+        path="/vehicles"
         element={
           <ProtectedRoute>
             <Layout>
-              <Cars />
+              <Vehicles />
             </Layout>
           </ProtectedRoute>
         }

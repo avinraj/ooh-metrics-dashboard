@@ -29,7 +29,7 @@ const HighLight = () => {
         </Grid>
         <Grid item xs={12}>
           <Box mt={7}>
-            <Typography variant="h3">
+            <Typography variant="h3" color={theme.palette.text.primary}>
               <Box sx={{ display: "inline-block", padding: "0 8px" }}>{t("highlights.highlight")}</Box>
             </Typography>
           </Box>
@@ -63,14 +63,14 @@ const HighLight = () => {
                 </Box>
                 <Box
                   sx={{
-                    backgroundColor: theme.palette.primary.main,
+                    backgroundColor: theme.palette.primary.dark,
                     mt: 2,
                     border: "1px solid black",
                     borderRadius: 3,
                     padding: "4px 8px",
                   }}
                 >
-                  <Typography variant="h6" color={theme.palette.primary.contrastText}>
+                  <Typography variant="h6" color={theme.palette.text.primary}>
                     <b>{item.label}</b>
                   </Typography>
                 </Box>

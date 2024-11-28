@@ -108,6 +108,12 @@
       "heat": "Isı Haritası",
       "live": "Canlı"
     },
+    "attribution":{
+      "attribution":"Atıf",
+      "qrcode":"QR Kodu",
+      "trackingurl":"İzleme URL'si",
+      "footfall":"Yaya trafiği "
+    },
     "audience": {
       "audience": "Hedef Kitle",
       "clicksByGender": "Cinsiyete Göre Tıklamalar",
