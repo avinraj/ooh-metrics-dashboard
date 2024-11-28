@@ -8,6 +8,10 @@ import impressionsData from "../../../Data/impressions.json";
 import ImpressionsTable from "./ImpressionsTable";
 import { truncateLabel } from "./mobile-ad/utils/chartUtils";
 
+interface ImpressionsChartProps {
+  groupBy: "date" | "vehicle";
+}
+
 export const buttonStyles = {
   padding: 5,
   minWidth: "60px",
@@ -18,14 +22,12 @@ export const buttonStyles = {
   height: "fit-content",
 };
 
-const ImpressionsChart = () => {
+const ImpressionsChart: React.FC<ImpressionsChartProps> = ({ groupBy }) => {
   const theme = useTheme();
   const { t } = useTranslation();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const chartRef = useRef<HTMLCanvasElement | null>(null);
-  const [groupBy, setGroupBy] = useState<"date" | "vehicle">("date");
-  const [activeGroup1, setActiveGroup1] = useState("Date");
   const [activeGroup2, setActiveGroup2] = useState("Chart");
 
   const processData = (groupBy: "date" | "vehicle") => {
@@ -181,54 +183,26 @@ const ImpressionsChart = () => {
             Other contents
           </span>
         </div>
-        <div style={{ display: "flex" }}>
-          <div style={{ display: "flex", marginRight: "10px" }}>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              style={getButtonStyle(activeGroup1 === "Date")}
-              onClick={() => {
-                setActiveGroup1("Date");
-                setGroupBy("date");
-              }}
-            >
-              {t("reports.impressions.date")}
-            </Button>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              style={getButtonStyle(activeGroup1 === "Vehicle")}
-              onClick={() => {
-                setActiveGroup1("Vehicle");
-                setGroupBy("vehicle");
-              }}
-            >
-              {t("reports.impressions.vehicle")}
-            </Button>
-          </div>
 
-          <div style={{ display: "flex" }}>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              style={getButtonStyle(activeGroup2 === "Chart")}
-              onClick={() => setActiveGroup2("Chart")}
-            >
-              {t("reports.impressions.chart")}
-            </Button>
-            <Button
-              variant="contained"
-              color="primary"
-              disableElevation
-              style={getButtonStyle(activeGroup2 === "Table")}
-              onClick={() => setActiveGroup2("Table")}
-            >
-              {t("reports.impressions.table")}
-            </Button>
-          </div>
+        <div style={{ display: "flex" }}>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            style={getButtonStyle(activeGroup2 === "Chart")}
+            onClick={() => setActiveGroup2("Chart")}
+          >
+            {t("reports.impressions.chart")}
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            disableElevation
+            style={getButtonStyle(activeGroup2 === "Table")}
+            onClick={() => setActiveGroup2("Table")}
+          >
+            {t("reports.impressions.table")}
+          </Button>
         </div>
       </div>
       {activeGroup2 === "Chart" ? (
