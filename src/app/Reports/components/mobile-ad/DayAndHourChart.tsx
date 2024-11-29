@@ -93,7 +93,7 @@ const DayAndHourChart = () => {
   );
 
   return (
-    <div>
+    <div style={{height: "100%"}}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <Box
           sx={{

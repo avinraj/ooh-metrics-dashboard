@@ -64,7 +64,7 @@ const TelecomOperatorChart = () => {
   );
 
   return (
-    <div>
+    <div style={{height: "100%"}}>
       <Box
         sx={{
           backgroundColor: theme.palette.primary.main,
