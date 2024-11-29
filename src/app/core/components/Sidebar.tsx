@@ -17,7 +17,6 @@ import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import AssessmentIcon from "@mui/icons-material/Assessment";
-import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
@@ -26,12 +25,12 @@ import { IoFootsteps } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import logo from "../../../assets/oohlogo.png";
 import { languages } from "../../../i18n/languages";
-import { SET_SELECTED_ADTYPE, SET_SELECTED_MENU } from "../../../store/actions";
+import { SET_SELECTED_MENU } from "../../../store/actions";
 import StorageService from "../services/storage.serive";
 
 import AdType from "./AdType";
-import ReportsAcc from "./Reports";
 import ConfirmModal from "./ConfirmModel";
+import ReportsAcc from "./Reports";
 
 const Sidebar: React.FC = () => {
   const locationVal = useLocation();
@@ -56,7 +55,7 @@ const Sidebar: React.FC = () => {
 
     // Adjust RTL if Arabic is selected
     document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
-    window.location.reload()
+    window.location.reload();
   };
 
   const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
@@ -98,10 +97,11 @@ const Sidebar: React.FC = () => {
   ]);
 
   useEffect(() => {
-    const exists = menuItems.some((item) => item.action === "Audience");
-    if (!exists && selectedAdType?.value === "mobileAds") {
+    if (selectedAdType?.value === "mobileAds") {
       setMenuItems((prevItems) => {
-        const updatedItems = [...prevItems];
+        const updatedItems = [
+          ...prevItems.filter((item) => item.action !== "Audience"),
+        ];
         updatedItems.splice(4, 0, {
           label: t("audience.audience"),
           action: "Audience",
@@ -148,14 +148,6 @@ const Sidebar: React.FC = () => {
             : matchingMenuItem.action,
       });
     }
-    dispatch({
-      type: SET_SELECTED_ADTYPE,
-      selectedAdType: {
-        label: t("adtype.vehicles.Cars"),
-        icon: <DirectionsCarIcon />,
-        value: "cars",
-      },
-    });
   }, []);
 
   const handleItemClick = (item: { action: string; path: string }) => {
@@ -171,8 +163,8 @@ const Sidebar: React.FC = () => {
   };
 
   const onLogout = async () => {
-    await storageService.remove("local", "token");
-    navigate("/")
+    storageService.remove("local", "token");
+    navigate("/");
   };
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
@@ -293,6 +285,7 @@ const Sidebar: React.FC = () => {
                           display: "flex",
                           alignItems: "center",
                           marginRight: 2,
+                          height: '25px'
                         }}
                       >
                         {item.icon}
@@ -311,7 +304,7 @@ const Sidebar: React.FC = () => {
                 </ListItem>
               </React.Fragment>
             ) : (
-              <Box sx={{ paddingBottom: 1 }} key={"Reports"}>
+              <Box sx={{ paddingBottom: 1 }} key={item?.label}>
                 <ReportsAcc
                   icon={
                     <RemoveRedEyeOutlinedIcon style={{ marginRight: 13 }} />
