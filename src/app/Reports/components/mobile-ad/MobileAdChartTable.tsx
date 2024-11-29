@@ -86,6 +86,7 @@ const MobileAdChartTable = ({
         backgroundColor: theme.palette.secondary.main,
         borderRadius: "8px",
         position: "relative",
+        height: isMobile ? "auto" :"80%"
       }}
     >
       <div
@@ -117,12 +118,12 @@ const MobileAdChartTable = ({
         </div>
       </div>
       {activeGroup === "Chart" ? (
-        <div>
+        <div style={{height: "100%"}}>
           <canvas ref={chartRef} />
         </div>
       ) : (
-        <div style={{ paddingTop: "6%" }}>
-          <TableContainer style={{ borderTopStyle: "ridge" }}>
+        <div style={{ paddingTop: "6%", height: "100%" }}>
+          <TableContainer style={{ borderTopStyle: "ridge", height: "100%" }}>
             <Table>
               <TableHead>
                 <TableRow>

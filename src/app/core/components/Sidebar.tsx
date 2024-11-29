@@ -56,6 +56,7 @@ const Sidebar: React.FC = () => {
 
     // Adjust RTL if Arabic is selected
     document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
+    window.location.reload()
   };
 
   const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
