@@ -285,6 +285,7 @@ const Sidebar: React.FC = () => {
                           display: "flex",
                           alignItems: "center",
                           marginRight: 2,
+                          height: '25px'
                         }}
                       >
                         {item.icon}

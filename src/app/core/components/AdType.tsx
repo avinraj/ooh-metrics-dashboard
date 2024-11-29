@@ -81,27 +81,27 @@ const AdType: React.FC<AdTypeProps> = ({
       options: [
         {
           label: t("adtype.vehicles.Cars"),
-          icon: <DirectionsCarIcon />,
+          icon: <DirectionsCarIcon style={{width: "100%", height: "100%"}} />,
           value: "cars",
         },
         {
           label: t("adtype.vehicles.Buses"),
-          icon: <DirectionsBusIcon />,
+          icon: <DirectionsBusIcon style={{width: "100%", height: "100%"}} />,
           value: "buses",
         },
         {
           label: t("adtype.vehicles.Trucks"),
-          icon: <LocalShippingIcon />,
+          icon: <LocalShippingIcon style={{width: "100%", height: "100%"}} />,
           value: "trucks",
         },
         {
           label: t("adtype.vehicles.e-scooter"),
-          icon: <ElectricScooterIcon />,
+          icon: <ElectricScooterIcon style={{width: "100%", height: "100%"}} />,
           value: "escooters",
         },
         {
           label: t("adtype.vehicles.2-wheelers"),
-          icon: <TwoWheelerIcon />,
+          icon: <TwoWheelerIcon style={{width: "100%", height: "100%"}} />,
           value: "twowheelers",
         },
       ],
@@ -111,22 +111,22 @@ const AdType: React.FC<AdTypeProps> = ({
       options: [
         {
           label: t("adtype.digitalScreens.digitalBillboards"),
-          icon: <TvIcon />,
+          icon: <TvIcon style={{width: "100%", height: "100%"}} />,
           value: "digitalBillboards",
         },
         {
           label: t("adtype.digitalScreens.Car Rooftoppers"),
-          icon: <LocalTaxiIcon />,
+          icon: <LocalTaxiIcon style={{width: "100%", height: "100%"}} />,
           value: "carRooftoppers",
         },
         {
           label: t("adtype.digitalScreens.Van Digital Billboards"),
-          icon: <LocalShippingIcon />,
+          icon: <LocalShippingIcon style={{width: "100%", height: "100%"}} />,
           value: "digitalBillboards",
         },
         {
           label: t("adtype.digitalScreens.Backpacks"),
-          icon: <HikingIcon />,
+          icon: <HikingIcon style={{width: "100%", height: "100%"}} />,
           value: "backpacks",
         },
       ],
@@ -134,13 +134,13 @@ const AdType: React.FC<AdTypeProps> = ({
     {
       title: t("adtype.Mobile Ads"),
       options: [],
-      icon: <AdUnitsIcon />,
+      icon: <AdUnitsIcon style={{width: "100%", height: "100%"}} />,
       value: "mobileAds",
     },
     {
       title: t("adtype.Static Billboards"),
       options: [],
-      icon: <LightbulbIcon />,
+      icon: <LightbulbIcon style={{width: "100%", height: "100%"}} />,
       value: "statisBillboards",
     },
   ];
@@ -175,7 +175,7 @@ const AdType: React.FC<AdTypeProps> = ({
             },
           }}
         >
-          {icon && <span style={{ marginRight: 8 }}>{icon}</span>}
+          {icon && <span style={{ marginRight: 8,height: "25px" }}>{icon}</span>}
           {label}
         </Button>
         <Divider component="li" />
@@ -241,7 +241,7 @@ const AdType: React.FC<AdTypeProps> = ({
           <Typography
             sx={{ color: "black", display: "flex", alignItems: "center" }}
           >
-            {selectedAdType?.icon}
+            <span style={{ marginRight: 8, height: "25px" }}>{selectedAdType?.icon}</span>
             <span style={{ marginLeft: selectedAdType?.icon ? 8 : 0 }}>
               {selectedAdType?.label
                 ? selectedAdType.label && t("sideBar.adType")
@@ -281,7 +281,7 @@ const AdType: React.FC<AdTypeProps> = ({
                     alignItems: "center",
                   }}
                 >
-                  {icon && <span style={{ marginRight: 8 }}>{icon}</span>}
+                  {icon && <span style={{ marginRight: 8, height: "25px" }}>{icon}</span>}
                   {title}
                 </Typography>
               </AccordionSummary>
