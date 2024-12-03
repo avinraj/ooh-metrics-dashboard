@@ -20368,53 +20368,1918 @@
   ],
   "workspaces": [
     {
-      "name": "CoWork Cochin",
-      "coordinates": [76.2845, 9.9811],
+      "name": "11 cowork, Wakad - Bhosari BRTS Rd, Wakad Junction, Pune",
+      "coordinates": [73.783707, 18.593695],
       "type": "workspace"
     },
     {
-      "name": "WeWork Kochi",
-      "coordinates": [76.2857, 9.9312],
+      "name": "Aerocity (Workflow by Oyo), Aerocity, Delhi, Delhi",
+      "coordinates": [77.121154, 28.549797],
       "type": "workspace"
     },
     {
-      "name": "Spaces Kochi",
-      "coordinates": [76.2962, 9.9777],
+      "name": "Akshay Tech Park, ITPL, Whitefield, Bengaluru",
+      "coordinates": [77.722436, 12.979701],
       "type": "workspace"
     },
     {
-      "name": "Workafella",
-      "coordinates": [76.3053, 9.9749],
+      "name": "Ambience Mall (Awfis), Ambience Island, NH 48, Gurgaon, Gurgaon",
+      "coordinates": [77.09739055, 28.50251131],
       "type": "workspace"
     },
     {
-      "name": "Smartwork Co-Working",
-      "coordinates": [76.2975, 9.9321],
+      "name": "Anchors Coworking, Pan Card Club Rd, Baner, Pune",
+      "coordinates": [73.775607, 18.558433],
       "type": "workspace"
     },
     {
-      "name": "The Hive",
-      "coordinates": [76.2889, 9.9395],
+      "name": "Ataura Business Centre, KHB Colony, Koramangala, Bengaluru",
+      "coordinates": [77.615458, 12.935856],
       "type": "workspace"
     },
     {
-      "name": "Huddle Co-Working",
-      "coordinates": [76.2998, 9.9306],
+      "name": "Avior Corporate park, Mulund West, Central Mumbai, Mumbai",
+      "coordinates": [72.94148432, 19.17255486],
       "type": "workspace"
     },
     {
-      "name": "Regus Kochi",
-      "coordinates": [76.2815, 9.937],
+      "name": "AWFIS Acropolis Mall, Rajdanga Main Road, East Kolkata Twp, Kolkata",
+      "coordinates": [88.3933951, 22.5152476],
       "type": "workspace"
     },
     {
-      "name": "Startup Studios",
-      "coordinates": [76.3122, 9.9732],
+      "name": "AWFIS Chowringee, Chowringee Rd, Elgin, Kolkata",
+      "coordinates": [88.346148, 22.544838],
       "type": "workspace"
     },
     {
-      "name": "The Co-Work Place",
-      "coordinates": [76.2935, 9.9344],
+      "name": "AWFIS Eco Center, EM Block, Bidhannagar, Kolkata",
+      "coordinates": [88.42735, 22.576614],
+      "type": "workspace"
+    },
+    {
+      "name": "AWFIS Ecospace Rajarhat 2, Ecospace Business Park Premises, AA II, Rajarhat, Kolkata",
+      "coordinates": [88.487805, 22.587107],
+      "type": "workspace"
+    },
+    {
+      "name": "AWFIS GWS, Sector V, Bidhannagar, Kolkata",
+      "coordinates": [88.435434, 22.573418],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD DSL Abacus IT Park, Uppal, Secunderabad, Hyderabad",
+      "coordinates": [78.555569, 17.400036],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD Hitech City 1st, HITEC City, Hitech city, Hyderabad",
+      "coordinates": [78.371037, 17.451797],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD Hitech City 4th, Siddiq Nagar, HITEC City, Hyderabad",
+      "coordinates": [78.371037, 17.451817],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD Hitech City 6th, HITEC City, HITEC City, Hyderabad",
+      "coordinates": [78.370972, 17.451776],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD Oyster Complex, Begumpet, Begumpet, Hyderabad",
+      "coordinates": [78.456418, 17.430423],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD Prestige Phoenix, Begumpet, Begumpet, Hyderabad",
+      "coordinates": [78.457087, 17.437199],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD Rajapushpa Summit, Nanakramguda, Gachibowli, Hyderabad",
+      "coordinates": [78.339542, 17.423188],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD Sreshta Marvel, Kondapur, Kondapur, Hyderabad",
+      "coordinates": [78.363826, 17.446982],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis HYD Vasavi MPM mall, Ameerpet, Ameerpet, Hyderabad",
+      "coordinates": [78.44863917, 17.43308143],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Lorven Tiara HYD, Kondapur, Kothaguda Junction, Hyderabad",
+      "coordinates": [78.366565, 17.458914],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis MezMatrix, Chitoor Road, SOUTH, Kochi",
+      "coordinates": [76.28487, 9.976727],
+      "type": "workspace"
+    },
+    {
+      "name": "AWFIS Myscape Weave, Nanakaramguda, Nanakaramguda, Hyderabad",
+      "coordinates": [78.336414, 17.414565],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - ABIL, Baner, PMC 14, Pune",
+      "coordinates": [73.7730324, 18.556235],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - Elpro Mall, Magarpatta City, Chinchwad, Pune",
+      "coordinates": [73.78115, 18.628953],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - GK Mall, Pimple Saudagar, PCMC 28, Pune",
+      "coordinates": [73.7955613, 18.5966168],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - Godrej Eternia, Corporation Colony, Shivajinagar, Pune",
+      "coordinates": [73.852522, 18.533911],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - Nucleus Mall, Camp, PMC 7, Pune",
+      "coordinates": [73.8765929, 18.5216277],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - Que Spaces, Hadapsar, PMC 25, Pune",
+      "coordinates": [73.9310744, 18.5194418],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - Sterling Towers, Baner, PMC 13, Pune",
+      "coordinates": [73.7779184, 18.5537164],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - The Kode, Baner, PMC 13, Pune",
+      "coordinates": [73.7942277, 18.5517285],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Pune - Viman Nagar 2, Viman Nagar, PMC 3, Pune",
+      "coordinates": [73.9234078, 18.5641834],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space- Hebbal, Kempapura, Hebbal, Bengaluru",
+      "coordinates": [77.59535, 13.05172],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space- MG Road, MG Road, MG Road, Bengaluru",
+      "coordinates": [77.61407, 12.97328],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space- Mission Road, Mission RD, Rama Nagar, Bengaluru",
+      "coordinates": [77.590556, 12.962632],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space- Prestige Blue Chip-1, Adugodi, Kormangala, Bengaluru",
+      "coordinates": [77.60545, 12.93739],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space- Prestige Tech Park, Dr Puneeth Rajkumar Rd, Marathahalli Ring Road, Bengaluru",
+      "coordinates": [77.68906, 12.94038],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space- Residency Road, Ashok Nagar, Residency Road, Bengaluru",
+      "coordinates": [77.60591, 12.97204],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space- Soul Space, Varthur, Hobli, Bengaluru",
+      "coordinates": [77.69924, 12.95128],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space- St Mark's Road, Shantala Nagar, Ashok Nagar, Bengaluru",
+      "coordinates": [77.60054, 12.96957],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis Space-prestige dotcom, Shanthala Nagar, Ashok Nagar, Bengaluru",
+      "coordinates": [77.598717, 12.968653],
+      "type": "workspace"
+    },
+    {
+      "name": "AWFIS Space-RE11, Ambli, Ahmedabad, Ahmedabad",
+      "coordinates": [72.502814, 23.026504],
+      "type": "workspace"
+    },
+    {
+      "name": "AWFIS Technopolis, Sector V, Bidhannagar, Kolkata",
+      "coordinates": [88.43777449, 22.57972828],
+      "type": "workspace"
+    },
+    {
+      "name": "AWFIS- Residency Square, Shanthala Nagar, Richmond Town, Bengaluru",
+      "coordinates": [77.600314, 12.96582],
+      "type": "workspace"
+    },
+    {
+      "name": "AWFIS- Vajram Esteva, Devarabisanahalli, Varthur, Bengaluru",
+      "coordinates": [77.68628, 12.930465],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis-CHN / Bascon, T Nagar, North, Chennai",
+      "coordinates": [80.23473829, 13.03845558],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis-CHN / Gemini Circle, Nungambakkam, North, Chennai",
+      "coordinates": [80.2505009973279, 13.053960032009],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis-CHN / Guindy Sphero Towers, Guindy, South, Chennai",
+      "coordinates": [80.2017312126704, 13.0147957426166],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis-CHN / OMR, Perungudi, South, Chennai",
+      "coordinates": [80.24810091267, 12.9677012609338],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis-CHN / Prestige Cosmopolitan-I, Saidapet, South, Chennai",
+      "coordinates": [80.222822754999, 13.0120507978262],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis-CHN / Sierra, Sholinganallur, Seevaram, Chennai",
+      "coordinates": [80.244114, 12.955183],
+      "type": "workspace"
+    },
+    {
+      "name": "Awfis-Ginger, Jayadev Vihar, Nayapalli, Bhuvaneshwar",
+      "coordinates": [85.8230363423289, 20.3034565755376],
+      "type": "workspace"
+    },
+    {
+      "name": "AWFIS-SRB Tower, Patia, Bhubaneswar, Bhuvaneshwar",
+      "coordinates": [85.810686, 20.343155],
+      "type": "workspace"
+    },
+    {
+      "name": "Baithack Hirananadani, Hiranandani Estate, Mumbai, Mumbai",
+      "coordinates": [72.981644, 19.250985],
+      "type": "workspace"
+    },
+    {
+      "name": "BHIVE Workspace-  AKR Tech Park, 7th Mile Hosur Rd, Krishna Reddy Industrial Area, Bengaluru",
+      "coordinates": [77.639544, 12.892624],
+      "type": "workspace"
+    },
+    {
+      "name": "BHIVE Workspace- HSR Layout 27th Main, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.648258, 12.900828],
+      "type": "workspace"
+    },
+    {
+      "name": "BHIVE Workspace- HSR Sector 6 Service Road Unit  A, Sector 6, HSR Layout, Bengaluru",
+      "coordinates": [77.624769, 12.917844],
+      "type": "workspace"
+    },
+    {
+      "name": "BHIVE Workspace- Indiranagar, Shri Krishna Temple Rd, Indiranagar, Bengaluru",
+      "coordinates": [77.640488, 12.978919],
+      "type": "workspace"
+    },
+    {
+      "name": "BHIVE Workspace- Koramangala 5th Block, KHB Colony, Koramangala, Bengaluru",
+      "coordinates": [77.612304, 12.934749],
+      "type": "workspace"
+    },
+    {
+      "name": "BHIVE Workspace- MG Road, Trinity, MG ROAD, Bengaluru",
+      "coordinates": [77.614234, 12.973509],
+      "type": "workspace"
+    },
+    {
+      "name": "Blue Rose Ind P.C.S Ltd, Borivali East, Western Mumbai, Mumbai",
+      "coordinates": [72.864986, 19.219306],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart, Sanjay Nagar Main Road, Raj Mahal Vilas 2nd Stage, Bengaluru",
+      "coordinates": [77.57925856, 13.02796951],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart - Ballard Estate, Fort, South Bombay, Mumbai",
+      "coordinates": [72.838186, 18.934357],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart - Clover Hills Plaza, NIBM Rd, Mohammed Wadi, Pune",
+      "coordinates": [73.90172, 18.467419],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart - Colaba, Colaba, South Mumbai, Mumbai",
+      "coordinates": [72.822847, 18.915431],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart Arcadian, Koregaon Park, Dhole Patil Road, Pune",
+      "coordinates": [73.895734, 18.538947],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart Bavdhan, Bavdhan, Armament, Pune",
+      "coordinates": [73.779657, 18.510564],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart Pallod, Pallod Farms II, Baner, Pune",
+      "coordinates": [73.796054, 18.558884],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart Sai Empire, Baner RD, Baner, Pune",
+      "coordinates": [73.788042, 18.559646],
+      "type": "workspace"
+    },
+    {
+      "name": "Bootstart Varsha Park, Baner Rd, Baner, Pune",
+      "coordinates": [73.797904, 18.552638],
+      "type": "workspace"
+    },
+    {
+      "name": "BPTP Centra One (India Accelerator Coworking), Sector 61, Delhi, Delhi",
+      "coordinates": [77.093138, 28.415959],
+      "type": "workspace"
+    },
+    {
+      "name": "Bridge- Excel, Appareddipalya, Indiranagar, Bengaluru",
+      "coordinates": [77.63817, 12.971048],
+      "type": "workspace"
+    },
+    {
+      "name": "Bridge- Landmark, HAL 3rd Stage, Indiranagar, Bengaluru",
+      "coordinates": [77.6470612, 12.9788191],
+      "type": "workspace"
+    },
+    {
+      "name": "Bridge- Work 365 Space, Binnamangala, Indiranagar, Bengaluru",
+      "coordinates": [77.64424689, 12.97873259],
+      "type": "workspace"
+    },
+    {
+      "name": "BSB Capital ( (Redbrick offices), Sakal Nagar ,, Pune, Pune",
+      "coordinates": [73.81707, 18.547436],
+      "type": "workspace"
+    },
+    {
+      "name": "Bsel Tech Park, Vashi, Navi Mumbai, Mumbai",
+      "coordinates": [72.999709, 19.064712],
+      "type": "workspace"
+    },
+    {
+      "name": "Business Park (Unitech), South City I, Gurugram, Gurgaon",
+      "coordinates": [77.070288, 28.458201],
+      "type": "workspace"
+    },
+    {
+      "name": "Business Zone (Unitech), Sector 50, Gurugram, Gurgaon",
+      "coordinates": [77.072056, 28.413759],
+      "type": "workspace"
+    },
+    {
+      "name": "Carnival Capital, Western Express Highway, Mumbai, Mumbai",
+      "coordinates": [72.856411, 19.15038],
+      "type": "workspace"
+    },
+    {
+      "name": "Chennai Kulfi, chromepet, south, Chennai",
+      "coordinates": [80.14789734, 12.9409166],
+      "type": "workspace"
+    },
+    {
+      "name": "CIE OFFICE SPACE, Ground Floor, Vindhya C4, IIIT-H Campus, Gachibowli, Telangana 500032, Gachibowli, Hyderabad",
+      "coordinates": [78.34999, 17.44616],
+      "type": "workspace"
+    },
+    {
+      "name": "City Vista, Kharadi, PMC 5, Pune",
+      "coordinates": [73.9448264, 18.5613519],
+      "type": "workspace"
+    },
+    {
+      "name": "Commercial Tower 2 (Unitech), Greenwood City, Gurugram, Gurgaon",
+      "coordinates": [77.059761, 28.44415],
+      "type": "workspace"
+    },
+    {
+      "name": "CP (Awfis), Cannaught Place, New Delhi, Delhi",
+      "coordinates": [77.222087, 28.634251],
+      "type": "workspace"
+    },
+    {
+      "name": "CP Regal (Workflow by OYO), Connaught Place, Delhi, Delhi",
+      "coordinates": [77.213914, 28.630673],
+      "type": "workspace"
+    },
+    {
+      "name": "CP2 (Workflow by OYO), Connaught Place, Delhi, Delhi",
+      "coordinates": [77.213914, 28.630673],
+      "type": "workspace"
+    },
+    {
+      "name": "Credence, Thite nagar, Kharadi, Pune",
+      "coordinates": [73.93821, 18.547373],
+      "type": "workspace"
+    },
+    {
+      "name": "Cyber Park (Unitech), Durga Colony, Gurugram, Gurgaon",
+      "coordinates": [77.056084, 28.443366],
+      "type": "workspace"
+    },
+    {
+      "name": "Deekay tech Park, Turbhe, Navi Mumbai, Mumbai",
+      "coordinates": [73.026778, 19.07373],
+      "type": "workspace"
+    },
+    {
+      "name": "eCradle Coworking space, Sector 7 HSR, HSR Layout, Bengaluru",
+      "coordinates": [77.63264, 12.909866],
+      "type": "workspace"
+    },
+    {
+      "name": "Elemental, Financial District, Hyderabad, Hyderabad",
+      "coordinates": [78.343545, 17.41344],
+      "type": "workspace"
+    },
+    {
+      "name": "Emaar Colonnade, Sector 66, Gurugram, Delhi",
+      "coordinates": [77.056604, 28.406205],
+      "type": "workspace"
+    },
+    {
+      "name": "Etherea - Coworking Space, Sector 90, Noida, Noida",
+      "coordinates": [77.408527, 28.513225],
+      "type": "workspace"
+    },
+    {
+      "name": "Everest Nirwana, Turbhe, Navi Mumbai, Mumbai",
+      "coordinates": [73.02787, 19.07194],
+      "type": "workspace"
+    },
+    {
+      "name": "Express Trade Towers 2(York Tech Pvt Ltd), Sector 132, Noida, Noida",
+      "coordinates": [77.37937, 28.51494],
+      "type": "workspace"
+    },
+    {
+      "name": "Fitness Kingdom Golds, Koperkhairen, Navi Mumbai, Mumbai",
+      "coordinates": [73.00526482, 19.09540243],
+      "type": "workspace"
+    },
+    {
+      "name": "Fitness Kingdom Platinum, Kharghar, Navi Mumbai, Mumbai",
+      "coordinates": [73.06993593, 19.04710851],
+      "type": "workspace"
+    },
+    {
+      "name": "GALLERIA OWNERS ASSOCIATION (DLF Galleria), Block AF 8, Newtown, Kolkata",
+      "coordinates": [88.46050313, 22.58174287],
+      "type": "workspace"
+    },
+    {
+      "name": "Gateway Tower (Unitech), Sikanderpur, Gurugram, Gurgaon",
+      "coordinates": [77.103895, 28.48133],
+      "type": "workspace"
+    },
+    {
+      "name": "GCR (Workflow by OYO), Sector 53, Gurugram, Gurgaon",
+      "coordinates": [77.101399, 28.432929],
+      "type": "workspace"
+    },
+    {
+      "name": "GCR- 2 (Awfis), Sector 53, Gurgaon, Gurgaon",
+      "coordinates": [77.097752, 28.443814],
+      "type": "workspace"
+    },
+    {
+      "name": "Global Business Park (Unitech), Sikanderpur, Gurugram, Gurgaon",
+      "coordinates": [77.102029, 28.481244],
+      "type": "workspace"
+    },
+    {
+      "name": "Golden Square, Vittal Mallya Rd, MG road, Bengaluru",
+      "coordinates": [77.594816, 12.970964],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube - Orchid, Shastrinagar, Yerawada, Pune",
+      "coordinates": [73.891296, 18.552907],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube - Unity Towers, Balewadi, Baner, Pune",
+      "coordinates": [73.781601, 18.564876],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube Echo, TNHB Colony, Indira Nagar, Coimbatore",
+      "coordinates": [77.040172, 11.039918],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube Helios, Kadabeesanahalli, Bengaluru, Bengaluru",
+      "coordinates": [77.690382, 12.938849],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube Pearl, P Janardhan Reddy Nagar, Gachibowli, Hyderabad",
+      "coordinates": [78.363111, 17.447823],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Alpha, Kadubeesanahalli, Marathahalli, Bengaluru",
+      "coordinates": [77.69562, 12.939411],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- AMR Tower A, AMR Tech Park Internal Rd, Hongasandra, Bengaluru",
+      "coordinates": [77.627973, 12.898567],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Arcade, Bannerghatta Main Rd, BTM Layout, Bengaluru",
+      "coordinates": [77.59868, 12.924451],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Ascent, KHB Block, Koramangala, Bengaluru",
+      "coordinates": [77.621876, 12.934952],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Ashford, Mahatyagi Laksmidevi Rd, Koramangala, Bengaluru",
+      "coordinates": [77.630405, 12.928783],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Aura, Central Silk Board Junction, Bommanahalli, Bengaluru",
+      "coordinates": [77.629573, 12.900765],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube- Brigade Square, Halasuru ,, Someshwarpura, Bengaluru",
+      "coordinates": [77.626354, 12.973671],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Celestia, SBI Colony, Koramangala, Bengaluru",
+      "coordinates": [77.630544, 12.925127],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Coral, DOS Colony, Jeevan Bima Nagar, Bengaluru",
+      "coordinates": [77.652064, 12.967551],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube- Crystal, Church St, Church St, Bengaluru",
+      "coordinates": [77.606261, 12.975003],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Delta, Agara Village, HSR Layout, Bengaluru",
+      "coordinates": [77.635604, 12.916914],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Edge, Bellandur, Bellandur, Bengaluru",
+      "coordinates": [77.666929, 12.922241],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Epsilon, Domlur, Kasaba Hobli, Bengaluru",
+      "coordinates": [77.639101, 12.956485],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- ETA, Outer Ring Road, Dodanekundi, Bengaluru",
+      "coordinates": [77.691755, 12.980949],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Fore, Ambedkar Nagar, Chikkabellandur, Bengaluru",
+      "coordinates": [77.707887, 12.900553],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Gamma, Kadubeesanahalli, Marathahalli, Bengaluru",
+      "coordinates": [77.697347, 12.941897],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Golf View, 3rd Cross Rd, Rustam Bagh Layou, Bengaluru",
+      "coordinates": [77.647389, 12.952259],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube- Grandeur, Shanthala Nagar, Ashok Nagar, Bengaluru",
+      "coordinates": [77.598341, 12.972773],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Grape Garden, KHB Colony, Koramangala, Bengaluru",
+      "coordinates": [77.618914, 12.937012],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Hexa, Sector 6, HSR Layout, Bengaluru",
+      "coordinates": [77.632601, 12.914363],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- HM Vibha, Chikku Lakshmaiah Layout, Adugodi, Bengaluru",
+      "coordinates": [77.608687, 12.936063],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Lakeside, Green Glen Layout, Bellandur, Bengaluru",
+      "coordinates": [77.668996, 12.923939],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Lexington, Tavarekere, S.G. Palya, Bengaluru",
+      "coordinates": [77.607699, 12.930663],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube- Logos, MG Road, Ashok Nagar, Bengaluru",
+      "coordinates": [77.617684, 12.972849],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Marriott, Jogappa Layout, Nagavara, Bengaluru",
+      "coordinates": [77.606705, 13.042658],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Mini Forest, Dollar Layout, J. P. Nagar, Bengaluru",
+      "coordinates": [77.59707, 12.907332],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Octagon, 80 Feet Rd, Koramangala, Bengaluru",
+      "coordinates": [77.627304, 12.933956],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Omega, BEML Layout, Brookefield, Bengaluru",
+      "coordinates": [77.714013, 12.959608],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Opal, Eshwara Layout, Indiranagar, Bengaluru",
+      "coordinates": [77.633777, 12.977128],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Opus, Kodigehalli Main Rd, Sanjeevini Nagar, Bengaluru",
+      "coordinates": [77.59207553, 13.05716617],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Orion, Agara Village, HSR Layout, Bengaluru",
+      "coordinates": [77.646094, 12.904075],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Park, HAL Old Airport Rd, Domlur, Bengaluru",
+      "coordinates": [77.633629, 12.960889],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube- Penta, Shanthala Nagar, Richmond Town, Bengaluru",
+      "coordinates": [77.603721, 12.966189],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Plaza, Kaveri Nagar, Murgesh Pallya, Bengaluru",
+      "coordinates": [77.653911, 12.957303],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Sigma, SBI Colony, Koramangala, Bengaluru",
+      "coordinates": [77.628983, 12.925388],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- South Island, R K Colony, J. P. Nagar, Bengaluru",
+      "coordinates": [77.585988, 12.911994],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- South Mile, Vijayarangam Layout, Jayanagar, Bengaluru",
+      "coordinates": [77.573395, 12.936559],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- South Summitt, Vijayarangam Layout, Jayanagar, Bengaluru",
+      "coordinates": [77.574735, 12.936564],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Sunshine, KHB Colony, Koramangala, Bengaluru",
+      "coordinates": [77.618774, 12.936235],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- The Leela, HAL 2nd Stage, Kodihalli, Bengaluru",
+      "coordinates": [77.646045, 12.960105],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Townhub, H Colony, Indiranagar, Bengaluru",
+      "coordinates": [77.638388, 12.980101],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Zeta, Kailkondrahalli village, Varthur, Bengaluru",
+      "coordinates": [77.677316, 12.914472],
+      "type": "workspace"
+    },
+    {
+      "name": "Indiqube- Zip, SBI Colony, Koramangala, Bengaluru",
+      "coordinates": [77.630022, 12.924975],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube-Ocean, SIDCO Industrial Estate, Guindy, Chennai",
+      "coordinates": [80.209682, 13.012606],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube-OMR-Vantage, Kandhanchavadi, Perungudi, Chennai",
+      "coordinates": [80.248052, 12.966397],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube-Palmyra, Thiru Vi Ka Industrial Estate, Saidapet, Chennai",
+      "coordinates": [80.20836, 13.024059],
+      "type": "workspace"
+    },
+    {
+      "name": "IndiQube-Viceroy, Sardar Patel Rd, Guindy, Chennai",
+      "coordinates": [80.22403, 13.010718],
+      "type": "workspace"
+    },
+    {
+      "name": "Innov8 CLC Tower (Workflow by OYO), Sector 44, Gurugram, Gurgaon",
+      "coordinates": [77.07525645, 28.44929205],
+      "type": "workspace"
+    },
+    {
+      "name": "IRIS Tech Park (India Accelerator Coworking), Badshahpur Sohna Rd Hwy,, Delhi, Delhi",
+      "coordinates": [77.037959, 28.418942],
+      "type": "workspace"
+    },
+    {
+      "name": "Kaledonia, Andheri East, Mumbai, Mumbai",
+      "coordinates": [72.847249, 19.113753],
+      "type": "workspace"
+    },
+    {
+      "name": "Kalpataru Prime - Rebrick offices, Wagle Industrial Estate, Estat, Bengaluru, Mumbai",
+      "coordinates": [72.956536, 19.197375],
+      "type": "workspace"
+    },
+    {
+      "name": "Kane Plaza, Malad West, Western Mumbai, Mumbai",
+      "coordinates": [72.834331, 19.178434],
+      "type": "workspace"
+    },
+    {
+      "name": "LODHA iThink - Rebrick offices, Chirak Naga, Mumbai, Mumbai",
+      "coordinates": [72.971481, 19.211388],
+      "type": "workspace"
+    },
+    {
+      "name": "Mantri Commercio, Agrahara, Bellandur, Bengaluru",
+      "coordinates": [77.68371869, 12.93269691],
+      "type": "workspace"
+    },
+    {
+      "name": "Maruthi Mansion, Cunningham Rd, Vasanth Nagar, Bengaluru",
+      "coordinates": [77.59512745, 12.98680776],
+      "type": "workspace"
+    },
+    {
+      "name": "Maruthi Platinum, Cunningham Rd, Vasanth Nagar, Bengaluru",
+      "coordinates": [77.71536158, 12.9595082],
+      "type": "workspace"
+    },
+    {
+      "name": "Mayfield Towers, Wakadewadi, Shivajinagar, Pune",
+      "coordinates": [73.851036, 18.536848],
+      "type": "workspace"
+    },
+    {
+      "name": "Meenakshi Tech Park-43 Inch Pods, Gachibowli, Hyderabad, Telangana, Hyderabad",
+      "coordinates": [78.369926, 17.44379],
+      "type": "workspace"
+    },
+    {
+      "name": "Meenakshi Tech park-55 Inch Pods, Gachibowli, Hyderabad, Hyderabad",
+      "coordinates": [78.369468, 17.443562],
+      "type": "workspace"
+    },
+    {
+      "name": "Meenakshi Tech Park-Inside Elevator-24 Inch, Gachibowli, Hyderabad, Hyderabad",
+      "coordinates": [78.369926, 17.44379],
+      "type": "workspace"
+    },
+    {
+      "name": "MGF Metropolis Mall (India Accelerator Coworking), Sector 25, Bengaluru, Gurgaon",
+      "coordinates": [77.080309, 28.481225],
+      "type": "workspace"
+    },
+    {
+      "name": "Millenia Business Park 2, Anna Salai, Chennai, Chennai",
+      "coordinates": [80.263925, 13.06364],
+      "type": "workspace"
+    },
+    {
+      "name": "Mohan Co op 1 (Awfis), Badarpur, New Delhi, Delhi",
+      "coordinates": [77.290043, 28.526133],
+      "type": "workspace"
+    },
+    {
+      "name": "Mohan Co op 2 (Awfis), Badarpur, New Delhi, Delhi",
+      "coordinates": [77.290226, 28.526067],
+      "type": "workspace"
+    },
+    {
+      "name": "MSR Novel Park, Marathahalli, Bengaluru, Bengaluru",
+      "coordinates": [77.699891, 12.956939],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Adani, Bandra East, Western Mumbai, Mumbai",
+      "coordinates": [72.8595969539757, 19.0650915561825],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Airoil, Airoli, Airoli, Mumbai",
+      "coordinates": [72.999936, 19.170026],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-BKC, Bandra East, Western Mumbai, Mumbai",
+      "coordinates": [72.8682589539757, 19.0622750730634],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Cyberone, Vashi, Navi Mumbai, Mumbai",
+      "coordinates": [72.9932662767071, 19.0685030749733],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Kalpataru, Waghale Industrial Estate, Thane, Mumbai",
+      "coordinates": [72.956587, 19.196884],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Lokhandwala, Andheri West, Western Mumbai, Mumbai",
+      "coordinates": [72.8258936539757, 19.138233442353],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Qpark, Ghansoli, Navi Mumbai, Mumbai",
+      "coordinates": [73.0096997423623, 19.1298463596193],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Ruby, Dadar West, South Bombay, Mumbai",
+      "coordinates": [72.842372, 19.024285],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Schindler, Ghatkopar West, Central Mumbai, Mumbai",
+      "coordinates": [72.914153, 19.099361],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Skyline, Andheri East, Western Mumbai, Mumbai",
+      "coordinates": [72.8814356920486, 19.1064758593329],
+      "type": "workspace"
+    },
+    {
+      "name": "Mumbai-Vaman Centre, Andheri East, Western Mumbai, Mumbai",
+      "coordinates": [72.8822431, 19.1125518713633],
+      "type": "workspace"
+    },
+    {
+      "name": "Netlink Digital Solution India Pvt. Ltd., cheyyur, South, Chennai",
+      "coordinates": [80.15406519, 12.62407896],
+      "type": "workspace"
+    },
+    {
+      "name": "Nirmal Corporate Centre CSL, Mulund, Mumbai, Mumbai",
+      "coordinates": [72.937536, 19.165392],
+      "type": "workspace"
+    },
+    {
+      "name": "Nirmal Corporate Centre CSL (Inside Elevator), Mulund West, Mumbai, Mumbai",
+      "coordinates": [72.937534, 19.165392],
+      "type": "workspace"
+    },
+    {
+      "name": "Novel Tech Park, Hosur Rd, Kudlu Gate, Bengaluru",
+      "coordinates": [77.638911, 12.891464],
+      "type": "workspace"
+    },
+    {
+      "name": "NSl Arena, Uppal, Hyderabad, Hyderabad",
+      "coordinates": [78.546431, 17.402703],
+      "type": "workspace"
+    },
+    {
+      "name": "NSL Centrum Mall, KPHB colony, Hyderabad, Hyderabad",
+      "coordinates": [78.393227, 17.483446],
+      "type": "workspace"
+    },
+    {
+      "name": "NSL ICON, Banjara Hills, Hyderabad, Hyderabad",
+      "coordinates": [78.43603204, 17.41188431],
+      "type": "workspace"
+    },
+    {
+      "name": "NTR Pride, HITEC City, Hyderabad, Hyderabad",
+      "coordinates": [78.372801, 17.455715],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - Cessna Business Park, Kadubeesanahalli, Marathahalli, Bengaluru",
+      "coordinates": [77.6931169, 12.93272789],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - Concept Tech Park, Udyog Vihar, Gurugram, Gurgaon",
+      "coordinates": [77.076699, 28.498602],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - Exora Business Park, Kadubeesanahalli, Marathahalli, Bengaluru",
+      "coordinates": [77.68874, 12.942239],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - Kosmo One, Sri Venkateswara Nagar, Kolathur, Chennai",
+      "coordinates": [80.16317861, 13.09234722],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - ONE BKC, Bandra East, Western Mumbai, Mumbai",
+      "coordinates": [72.862897, 19.060238],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - One International Center, Prabhadevi, South Mumbai, Mumbai",
+      "coordinates": [72.833134, 19.010373],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - One Qube, Sector 18, Gurugram, Gurgaon",
+      "coordinates": [77.07490414, 28.48594002],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - One World Center, Lower Parel, Western Mumbai, Mumbai",
+      "coordinates": [72.83005, 19.006617],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - Prestige One Trade Tower, Palace Rd, Sampangiram Nagar, Bengaluru",
+      "coordinates": [77.5876193, 12.98595448],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus - Prima Bay, Powai, Central Mumbai, Mumbai",
+      "coordinates": [72.891113, 19.123997],
+      "type": "workspace"
+    },
+    {
+      "name": "Nucleus-OIC-P4 LED-Indoor Screen, Prabhadevi, South Mumbai, Mumbai",
+      "coordinates": [72.833134, 19.010373],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA- BRIO, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.642872, 12.919789],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA- ELAN, 80 Feet Rd, Koramangala, Bengaluru",
+      "coordinates": [77.627933, 12.933671],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA- Gusto, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.630335, 12.915825],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA- Pulse, Ulsoor Rd, Halasuru, Bengaluru",
+      "coordinates": [77.617345, 12.97488],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA- Roses, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.63404, 12.912737],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA- Spurce, Kaverappa Layout,, Kadubeesanahalli, Bengaluru",
+      "coordinates": [77.69111, 12.936511],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA- TRANQUIL, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.630141, 12.910346],
+      "type": "workspace"
+    },
+    {
+      "name": "Obeya- Verve, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.630259, 12.914367],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA- VIBES, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.645215, 12.912046],
+      "type": "workspace"
+    },
+    {
+      "name": "OBEYA-Milan, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.629985, 12.91402],
+      "type": "workspace"
+    },
+    {
+      "name": "Old Fort Saket (Workflow by OYO), Pushp Vihar, Delhi, Delhi",
+      "coordinates": [77.2162008, 28.52902915],
+      "type": "workspace"
+    },
+    {
+      "name": "Olympia Cyberspace, Guindy, Chennai, Chennai",
+      "coordinates": [80.215422, 13.016522],
+      "type": "workspace"
+    },
+    {
+      "name": "Omnia (Awfis), Sector 4, Delhi, Delhi",
+      "coordinates": [77.323302, 28.582133],
+      "type": "workspace"
+    },
+    {
+      "name": "One World Centre - Rebrick offices, Saidham Nagar,, Bengaluru, Mumbai",
+      "coordinates": [72.832466, 19.006551],
+      "type": "workspace"
+    },
+    {
+      "name": "OYO / Innov8 Suman Business Park, Kalyani Nagar, Kalyani Nagar, Pune",
+      "coordinates": [73.9067271, 18.54604066],
+      "type": "workspace"
+    },
+    {
+      "name": "OYO Workspace, HITEC City, Madhapur, Hyderabad",
+      "coordinates": [78.373513, 17.456728],
+      "type": "workspace"
+    },
+    {
+      "name": "OYO Workspace - Ahmedabad, Shyamal Crossroad, Jodhpur Village, Ahmedabad",
+      "coordinates": [72.529779, 23.012931],
+      "type": "workspace"
+    },
+    {
+      "name": "OYO Workspace - Solitaire, Andheri East, Western Mumbai, Mumbai",
+      "coordinates": [72.858143, 19.111763],
+      "type": "workspace"
+    },
+    {
+      "name": "OYO Workspace - Time Square, Andheri East, Western Mumbai, Mumbai",
+      "coordinates": [72.88348, 19.108052],
+      "type": "workspace"
+    },
+    {
+      "name": "Paras Trinity (Awfis), Sector-63, Gurgaon, Gurgaon",
+      "coordinates": [77.091767, 28.401274],
+      "type": "workspace"
+    },
+    {
+      "name": "Pavillion Mall (Redbrick offices), Shivajinagar,, Bengaluru, Pune",
+      "coordinates": [73.829621, 18.533972],
+      "type": "workspace"
+    },
+    {
+      "name": "PBP Balewadi High Street (Redbrick offices), Baner - Balewadi Rd, Pune, Pune",
+      "coordinates": [73.773389, 18.572332],
+      "type": "workspace"
+    },
+    {
+      "name": "Peninsula Business Park, Lower Parel, Mumbai, Mumbai",
+      "coordinates": [72.829209, 18.998769],
+      "type": "workspace"
+    },
+    {
+      "name": "Phoenix IVY, Navanirman Nagar Colony, Film Nagar, Hyderabad",
+      "coordinates": [78.41098793, 17.42055418],
+      "type": "workspace"
+    },
+    {
+      "name": "Prestige Zackria Metropolitan, Anna Salai, Chennai, Chennai",
+      "coordinates": [80.263925, 13.063643],
+      "type": "workspace"
+    },
+    {
+      "name": "qualita Salon anad nagar, Anand Nagar,, Mumbai, Mumbai",
+      "coordinates": [72.970324, 19.265965],
+      "type": "workspace"
+    },
+    {
+      "name": "Quest office, Ashok Nagar, Bengaluru, Bengaluru",
+      "coordinates": [77.614458, 12.976427],
+      "type": "workspace"
+    },
+    {
+      "name": "Qutab 2 (Awfis), Qutub Institutional Area, New Delhi, Delhi",
+      "coordinates": [77.187324, 28.536894],
+      "type": "workspace"
+    },
+    {
+      "name": "Raheja 2A, HITEC City, Hyderabad, Hyderabad",
+      "coordinates": [78.380675, 17.444994],
+      "type": "workspace"
+    },
+    {
+      "name": "Raheja Mindspace IT Park, Madhapur, Madhapur, Hyderabad",
+      "coordinates": [78.384728, 17.438325],
+      "type": "workspace"
+    },
+    {
+      "name": "Raheja Mindspace IT Park, Kalwa TTC Industrial Area, Airoli, Mumbai",
+      "coordinates": [73.000731, 19.162157],
+      "type": "workspace"
+    },
+    {
+      "name": "Raheja Towers, Yellapa chetty Layout, Mahatma Gandhi Road, Bengaluru",
+      "coordinates": [77.613763, 12.973103],
+      "type": "workspace"
+    },
+    {
+      "name": "Redbrick office- Prestige Etamin, Kadabeesanahalli, Bengaluru, Bengaluru",
+      "coordinates": [77.690932, 12.941647],
+      "type": "workspace"
+    },
+    {
+      "name": "Redbrick office- Prestige Tristar, Halasuru, Bengaluru, Bengaluru",
+      "coordinates": [77.615809, 12.976769],
+      "type": "workspace"
+    },
+    {
+      "name": "Rupa Renaissance - Rebrick offices, MIDC Industrial Area, Mumbai, Mumbai",
+      "coordinates": [73.027476, 19.063309],
+      "type": "workspace"
+    },
+    {
+      "name": "Rustomjee Eaze Zone Mall, Malad East, Western Mumbai, Mumbai",
+      "coordinates": [72.8419546, 19.174534],
+      "type": "workspace"
+    },
+    {
+      "name": "RV Saket (Workflow by OYO), Pushp Vihar, Delhi, Delhi",
+      "coordinates": [77.217587, 28.52783],
+      "type": "workspace"
+    },
+    {
+      "name": "Sattva Octave, Madhapur, Hyderabad, Hyderabad",
+      "coordinates": [78.382078, 17.434263],
+      "type": "workspace"
+    },
+    {
+      "name": "Sattva Orwell, HITEC City, Hyderabad, Hyderabad",
+      "coordinates": [78.381389, 17.432752],
+      "type": "workspace"
+    },
+    {
+      "name": "Sector 126 (Qbicals Coworking), Sector 126, Noida, Delhi",
+      "coordinates": [77.341644, 28.540822],
+      "type": "workspace"
+    },
+    {
+      "name": "Sector 63 (Qbicals Coworking), Sector 63, Noida, Noida",
+      "coordinates": [77.377604, 28.626246],
+      "type": "workspace"
+    },
+    {
+      "name": "Shankar Hospital, Raghuvanahalli, Yelahanka, Bengaluru",
+      "coordinates": [77.535707, 12.875336],
+      "type": "workspace"
+    },
+    {
+      "name": "Sierra Cartel, Sector 4, HSR Layout, Bengaluru",
+      "coordinates": [77.63567712, 12.90985987],
+      "type": "workspace"
+    },
+    {
+      "name": "Signature Tower (Unitech), Saini Khera Village, Gurugram, Gurgaon",
+      "coordinates": [77.058055, 28.466612],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Amar Madhuban Tech Park, undefined, undefined, Pune",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Amar Pristine 81, undefined, undefined, Pune",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Amar Sadanand Tech Park, undefined, undefined, Pune",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Amar Tech Center, undefined, undefined, Pune",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Arihant Verge, undefined, undefined, Chennai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Arihant Verge POD, undefined, undefined, Chennai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Aurobindo Galaxy, undefined, undefined, Hyderabad",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Bharati Vilas, undefined, undefined, Chennai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks DSR Techno Cube POD, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Fleet House, undefined, undefined, Mumbai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Global Technology Park POD, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Golden Millenium, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Golden Millenium POD, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Kochar Globe, undefined, undefined, Chennai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Kochar Globe POD, undefined, undefined, Chennai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks M Agile, undefined, undefined, Pune",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Marisoft C, undefined, undefined, Pune",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Olympia National Tower, undefined, undefined, Chennai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Olympia national tower POD, undefined, undefined, Chennai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Paradigm, undefined, undefined, Mumbai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Prestige Polygon, undefined, undefined, Chennai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Prestige Zeenath, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Prestige Zeenath POD, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Purva Summit, undefined, undefined, Hyderabad",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Sargod Imperial, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Sargod Imperial POD, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Sirius Building, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Sirius Building POD, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Summer Court, undefined, undefined, Pune",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Summer Court POD, undefined, undefined, Pune",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks The Cube, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks The Cube POD, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Smartworks Times Square Building, undefined, undefined, Mumbai",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "Startuphuts- Unit 1, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.649855, 12.909928],
+      "type": "workspace"
+    },
+    {
+      "name": "Startuphuts- Unit 3, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.649722, 12.908298],
+      "type": "workspace"
+    },
+    {
+      "name": "Startuphuts- Unit 4, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.65159438, 12.91163138],
+      "type": "workspace"
+    },
+    {
+      "name": "Startuphuts- Unit 6, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.649813, 12.910282],
+      "type": "workspace"
+    },
+    {
+      "name": "Startuphuts- Unit 7, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.65215147, 12.91287469],
+      "type": "workspace"
+    },
+    {
+      "name": "Startuphuts- Unit 8, jakkasandra, Koramangala, Bengaluru",
+      "coordinates": [77.635436, 12.925574],
+      "type": "workspace"
+    },
+    {
+      "name": "Suncity (Awfis), Sector 65, Gurugram, Gurgaon",
+      "coordinates": [77.070567, 28.408963],
+      "type": "workspace"
+    },
+    {
+      "name": "Symbyont Smart Space Aurobindo Orbit, HITEC City, Hyderabad, Hyderabad",
+      "coordinates": [78.316243, 17.434784],
+      "type": "workspace"
+    },
+    {
+      "name": "Symbyont Smart Space Dallas Centre, HITEC City, Hyderabad, Telangana, Hyderabad",
+      "coordinates": [78.378452, 17.433302],
+      "type": "workspace"
+    },
+    {
+      "name": "Symbyont Smart Space RajaPushpa Summit, Financial District, Hyderabad, Hyderabad",
+      "coordinates": [78.339205, 17.42308],
+      "type": "workspace"
+    },
+    {
+      "name": "Symphony IT Park - Rebrick offices, Chadivali, Mumbai, Mumbai",
+      "coordinates": [72.893413, 19.116011],
+      "type": "workspace"
+    },
+    {
+      "name": "T-HUB, Serilingamaplly, Madhapur, Hyderabad",
+      "coordinates": [78.375993, 17.433858],
+      "type": "workspace"
+    },
+    {
+      "name": "Tex Centre - Rebrick offices, Yadav Nagar, Mumbai, Mumbai",
+      "coordinates": [72.892769, 19.111521],
+      "type": "workspace"
+    },
+    {
+      "name": "The HUB, Infantry Rd, Atturu, Bengaluru",
+      "coordinates": [77.604825, 12.979623],
+      "type": "workspace"
+    },
+    {
+      "name": "The Iconic Corenthum (India Accelerator Coworking), Sector 62, Noida, Noida",
+      "coordinates": [77.373694, 28.627609],
+      "type": "workspace"
+    },
+    {
+      "name": "The Landmark CHS, Kharghar, Navi mumbai, Mumbai",
+      "coordinates": [73.06618353, 19.03380567],
+      "type": "workspace"
+    },
+    {
+      "name": "The Powerpoint Coworking Space, Balewadi, PMC 12, Pune",
+      "coordinates": [73.769685, 18.57042],
+      "type": "workspace"
+    },
+    {
+      "name": "The Summit Business Park Premises, Andheri, East, Mumbai",
+      "coordinates": [72.857413, 19.116499],
+      "type": "workspace"
+    },
+    {
+      "name": "The Venture Studios, Sector 6, HSR Layout, Bengaluru",
+      "coordinates": [77.629525, 12.916073],
+      "type": "workspace"
+    },
+    {
+      "name": "The Western edge 2, Borivali East, Western Mumbai, Mumbai",
+      "coordinates": [72.86361, 19.218667],
+      "type": "workspace"
+    },
+    {
+      "name": "Trade Center (Unitech), Sector 43, Gurugram, Gurgaon",
+      "coordinates": [77.076964, 28.458889],
+      "type": "workspace"
+    },
+    {
+      "name": "Unitech Cyber Park - 1 (Awfis), Durga Colony, Sector-40, Gurgaon, Gurgaon",
+      "coordinates": [77.05591247, 28.43998463],
+      "type": "workspace"
+    },
+    {
+      "name": "Unitech Cyber Park - 2 (Awfis), Durga Colony, Sector-40, Gurgaon, Gurgaon",
+      "coordinates": [77.057911, 28.444673],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 1086, 18th Cross Rd, HSR Layout, Bengaluru",
+      "coordinates": [77.636394, 12.911829],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 1090/A, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.639346, 12.911818],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 1090/C, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.641535, 12.911818],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 1133, HAL 2nd Stage, Indiranagar, Bengaluru",
+      "coordinates": [77.639397, 12.969626],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 145, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.63217376, 12.9147163],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 1498, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.64502874, 12.91840384],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 1515, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.642829, 12.915891],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 1608, Agrahara Village, HSR Layout, Bengaluru",
+      "coordinates": [77.643517, 12.919645],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 1781, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.642689, 12.915044],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 22, 80 Feet Rd, Koramangala, Bengaluru",
+      "coordinates": [77.63196741, 12.93240838],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 2907, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.643934, 12.909051],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 2908, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.643857, 12.909099],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 316, Sector 6, HSR Layout, Bengaluru",
+      "coordinates": [77.631109, 12.914657],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 334, Hoysala Nagar, Indiranagar, Bengaluru",
+      "coordinates": [77.63690181, 12.97903251],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 591, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.637245, 12.909162],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 6/A, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.64416068, 12.90803822],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 65, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.63635137, 12.91307261],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 72, Doddanekundi, Marathahalli, Bengaluru",
+      "coordinates": [77.70079827, 12.97002182],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 761, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.642547, 12.910093],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 762, Parangi Palaya, HSR Layout, Bengaluru",
+      "coordinates": [77.642568, 12.91036],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- 97, HSR Layout, HSR Layout, Bengaluru",
+      "coordinates": [77.63967148, 12.91241052],
+      "type": "workspace"
+    },
+    {
+      "name": "Urban Vault- Head Quarters, Sector 4, HSR Layout, Bengaluru",
+      "coordinates": [77.642635, 12.912731],
+      "type": "workspace"
+    },
+    {
+      "name": "Vatika (IndiQube), Suncity, Gurugram, Gurgaon",
+      "coordinates": [77.104839, 28.43836],
+      "type": "workspace"
+    },
+    {
+      "name": "Vatika triangle (India Acclerator Coworking), Sushant Lok Phase I, Bengaluru, Gurgaon",
+      "coordinates": [77.08334, 28.479536],
+      "type": "workspace"
+    },
+    {
+      "name": "Westgate Business (India Accelerator Coworking), Makarba, Ahmedabad, Ahmedabad",
+      "coordinates": [72.498748, 22.998076],
+      "type": "workspace"
+    },
+    {
+      "name": "Wework - Berger one, Sector 16B, Noida, Noida",
+      "coordinates": [77.308773, 28.574123],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - BKC, Bandra East, Western Mumbai, Mumbai",
+      "coordinates": [72.865118, 19.058211],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Blue One Square, Udyog Vihar, Gurugram HR, Gurgaon",
+      "coordinates": [77.0849825, 28.4955196],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Cherry Hills, Challaghatta ,, Bengaluru, Bengaluru",
+      "coordinates": [77.64174, 12.950215],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Chromium, Andheri East, Western Mumbai, Mumbai",
+      "coordinates": [72.89091, 19.12561],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - EGL, Challaghatta, Bengaluru, Bengaluru",
+      "coordinates": [77.6372957, 12.9513124],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Eldeco, Malviya Nagar, Malviya Nagar, Delhi",
+      "coordinates": [77.205414, 28.528833],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Eleven West, Baner, Pan Card Club Rd, Pune",
+      "coordinates": [73.78379, 18.556555],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Embassy One, Ganganagar ,, Bengaluru, Bengaluru",
+      "coordinates": [77.584282, 13.01945],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Embassy Quest, Ashok Nagar, Bengaluru, Bengaluru",
+      "coordinates": [77.6138096, 12.9688239],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - ETV, Bellandur, Bengaluru, Bengaluru",
+      "coordinates": [77.6924802, 12.9339438],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Express Tower, Nariman Point, South Mumbai, Mumbai",
+      "coordinates": [72.820095, 18.928171],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Forum, Cybercity, Gurugram HR, Gurgaon",
+      "coordinates": [77.0919037, 28.4968821],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Futura, Magarpatta city, Hadapsar, Pune",
+      "coordinates": [73.9323362, 18.5203598],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Jupiter, Kadubeesanahalli ,, Bengaluru, Bengaluru",
+      "coordinates": [77.694712, 12.942367],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Krishe Emerald, Kondapur, Hyderabad, Telangana, Hyderabad",
+      "coordinates": [78.368352, 17.4583957],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - MindSpace, Madhapur, Hyderabad, Telangana, Hyderabad",
+      "coordinates": [78.380878, 17.441494],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Nesco IT Park, Goregaon East, Western Mumbai, Mumbai",
+      "coordinates": [72.85571, 19.15261],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Oberoi Commerz, Goregaon East, Western Mumbai, Mumbai",
+      "coordinates": [72.860234, 19.170326],
+      "type": "workspace"
+    },
+    {
+      "name": "Wework - Olympia, SIDCO Industrial Estate, Guindy, Chennai",
+      "coordinates": [80.212731, 13.016286],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Prestige Atlanta, Koramangala, Bengaluru, Bengaluru",
+      "coordinates": [77.6328922, 12.9289492],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Prestige Central, Shivaji Nagar, Bengaluru, Bengaluru",
+      "coordinates": [77.6031022, 12.9808307],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Prestige Cube, Adugodi, Bengaluru, Bengaluru",
+      "coordinates": [77.6109681, 12.9364947],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Princeville, Domlur ,, Bengaluru, Bengaluru",
+      "coordinates": [77.643253, 12.949568],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Raheja Platinum, Andheri East, Western Mumbai, Mumbai",
+      "coordinates": [72.885331, 19.108947],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Raheja Woods, Kalyani Nagar, Kalyani Nagar, Pune",
+      "coordinates": [73.895698, 18.546136],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Rajapushpa Summit, Manikonda Jagir, Hyderabad, Telangana, Hyderabad",
+      "coordinates": [78.3390326, 17.4231761],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Redwood, undefined, undefined, Bengaluru",
+      "coordinates": [0, 0],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - RMZ Latitude, Byatarayanapura, Bengaluru, Bengaluru",
+      "coordinates": [77.5943045, 13.0563952],
+      "type": "workspace"
+    },
+    {
+      "name": "Wework - RMZ Spire, Silpa Gram Craft Village, HITEC City, Hyderabad",
+      "coordinates": [78.382421, 17.433408],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Roshni Th, Chinnapanna Halli, Bengaluru, Bengaluru",
+      "coordinates": [77.7022426245667, 12.9639508502788],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Roshni Th, Chinnapanna Halli, Bengaluru, Bengaluru",
+      "coordinates": [77.7022426245667, 12.9639508502788],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Roshni Th, Chinnapanna Halli, Bengaluru, Bengaluru",
+      "coordinates": [77.7022426245667, 12.9639508502788],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Roshni Th, Chinnapanna Halli, Bengaluru, Bengaluru",
+      "coordinates": [77.7022426245667, 12.9639508502788],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Salarpuria Magnificia, Mahadevapura, Bengaluru, Bengaluru",
+      "coordinates": [77.6689762, 12.9962293],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Salarpuria Symbiosis, Arekere Village, Bengaluru, Bengaluru",
+      "coordinates": [77.5975708, 12.8870839],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Spectrum, Malad West, Western Mumbai, Mumbai",
+      "coordinates": [72.83541, 19.17971],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Sunriver, Domlur ,, Bengaluru, Bengaluru",
+      "coordinates": [77.640938, 12.951322],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - The Galaxy, Ashok Nagar, Bengaluru, Bengaluru",
+      "coordinates": [77.5920645, 12.9635882],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - The Pavilion, Church St, Ashok Nagar, Bengaluru, Bengaluru",
+      "coordinates": [77.6070588, 12.9745477],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Vaishnavi Signature, Bellandur, Bengaluru, Bengaluru",
+      "coordinates": [77.6748513, 12.925505],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Vaswani Chambers, Worli, South Mumbai, Mumbai",
+      "coordinates": [72.821374, 19.012185],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - VI John, Udyog Vihar, JOHN TOWER PHASE-3, Gurgaon",
+      "coordinates": [77.0886508, 28.5057185],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Vijay Diamond, Andheri East, Western Mumbai, Mumbai",
+      "coordinates": [72.86921, 19.11741],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Vikhroil 247, Vikhroli West, Central Mumbai, Mumbai",
+      "coordinates": [72.926717, 19.120332],
+      "type": "workspace"
+    },
+    {
+      "name": "WeWork - Zenia, Hiranandani Estate, Thane, Mumbai",
+      "coordinates": [72.981585, 19.254816],
+      "type": "workspace"
+    },
+    {
+      "name": "Workflo By OYO - Innov8 Millenia, Perungudi, Chennai, Chennai",
+      "coordinates": [80.244002, 12.97439],
+      "type": "workspace"
+    },
+    {
+      "name": "WorkFlo by OYO / Ranka, Krishna Reddy Industrial Estate, Dooravani Nagar, Bengaluru",
+      "coordinates": [77.666951, 12.99769],
+      "type": "workspace"
+    },
+    {
+      "name": "Workflow by OYO - Greeta Towers, Rajiv Gandhi Salai, Perungudi, Chennai",
+      "coordinates": [80.245152, 12.956102],
+      "type": "workspace"
+    },
+    {
+      "name": "Workflow by OYO - Guindy Chennai, Guindy Industrial Estate, Guindy, Chennai",
+      "coordinates": [80.19981473, 13.01575402],
+      "type": "workspace"
+    },
+    {
+      "name": "Workflow By OYO | Icon Tower, Baner, Baner, Pune",
+      "coordinates": [73.771582, 18.565308],
+      "type": "workspace"
+    },
+    {
+      "name": "Workflow by OYO | Pride Accord, Baner Rd, Baner, Pune",
+      "coordinates": [73.794728, 18.555282],
+      "type": "workspace"
+    },
+    {
+      "name": "WORKHOME-Coworking Space, Koramangala, Koramangala, Bengaluru",
+      "coordinates": [77.620841, 12.935169],
+      "type": "workspace"
+    },
+    {
+      "name": "WTC Kharadi(Redbrick offices), Kharadi, Bengaluru, Pune",
+      "coordinates": [0, 0],
       "type": "workspace"
     }
   ],
