@@ -1,126 +1,157 @@
 {
-    "sideBar": {
-      "adType": "広告タイプ",
-      "highlight": "ハイライト",
-      "reports": "レポート",
-      "audience": "オーディエンス",
-      "mapView": "マップビュー",
-      "cars": "車",
-      "attribution": "帰属",
-      "deviceIds": "デバイスID",
-      "logout": "ログアウト"
-    },
-    "filterPanel": {
-      "campaign": "キャンペーン",
-      "selectDateRange": "日付範囲を選択",
+  "sideBar": {
+    "adType": "広告タイプ",
+    "highlight": "ハイライト",
+    "reports": "レポート",
+    "audience": "オーディエンス",
+    "mapView": "マップビュー",
+    "cars": "車",
+    "attribution": "帰属",
+    "deviceIds": "デバイスID",
+    "logout": "ログアウト"
+  },
+  "filterPanel": {
+    "campaign": "キャンペーン",
+    "selectDateRange": "日付範囲を選択",
+    "vehicle": "車両",
+    "show": "表示"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "インプレッション",
+      "date": "日付",
       "vehicle": "車両",
-      "show": "表示"
+      "chart": "チャート",
+      "table": "テーブル",
+      "impressionsPerMile": "マイルごとのインプレッション",
+      "miles": "マイル",
+      "avg": "平均"
     },
-    "reports": {
-      "impressions": {
-        "impressions": "インプレッション",
-        "date": "日付",
-        "vehicle": "車両",
-        "chart": "チャート",
-        "table": "テーブル",
-        "impressionsPerMile": "マイルごとのインプレッション",
-        "miles": "マイル",
-        "avg": "平均"
-      },
-      "demographics": {
-        "demographics": "人口統計",
-        "age": "年齢",
-        "education": "教育",
-        "income": "収入",
-        "ethnicity": "民族",
-        "chartType": "チャートタイプ",
-        "verticalBar": "縦棒グラフ",
-        "horizontalBar": "横棒グラフ",
-        "doughnutChart": "ドーナツチャート",
-        "lineChart": "折れ線グラフ"
-      },
-      "affinities": {
-        "affinities": "関心"
-      },
-      "appsOrWebsites": {
-        "appsOrWebsites": "アプリ / ウェブサイト",
-        "byAppOrWebsites": "アプリ / ウェブサイト別"
-      },
-      "dayAndHour": {
-        "dayAndHour": "日と時間",
-        "byDayAndHour": "日と時間別",
-        "dayChart": "日別グラフ",
-        "hourChart": "時間別グラフ"
-      },
-      "browser": {
-        "browser": "ブラウザ",
-        "byBrowser": "ブラウザ別"
-      },
-      "operatingSystem": {
-        "OS": "OS",
-        "byOperatingSystem": "OS別"
-      },
-      "telecomOperator": {
-        "telecomOperator": "通信事業者",
-        "byTelecomOperator": "通信事業者別"
-      },
-      "creatives": {
-        "creatives": "クリエイティブ",
-        "byCreatives": "クリエイティブ別",
-        "creativesChart": "クリエイティブチャート",
-        "sizeChart": "サイズチャート"
-      }
+    "demographics": {
+      "demographics": "人口統計",
+      "age": "年齢",
+      "education": "教育",
+      "income": "収入",
+      "ethnicity": "民族",
+      "chartType": "チャートタイプ",
+      "verticalBar": "縦棒グラフ",
+      "horizontalBar": "横棒グラフ",
+      "doughnutChart": "ドーナツチャート",
+      "lineChart": "折れ線グラフ"
     },
-    "highlights": {
-      "welcome": "ようこそ",
-      "highlight":"ハイライト"
+    "affinities": {
+      "affinities": "関心"
     },
-    "cars":{
-      "cars":"車",
-      "grid view":"グリッドビュ",
-      "table view":"テーブルビュ",
-      "photo list":"写真リスト"
+    "appsOrWebsites": {
+      "appsOrWebsites": "アプリ / ウェブサイト",
+      "byAppOrWebsites": "アプリ / ウェブサイト別"
     },
-    "adtype": {
-      "vehicles": {
-        "Cars": "車",
-        "Buses": "バス",
-        "Trucks": "トラック",
-        "Robots": "ロボット",
-        "e-scooter": "電動スクーター",
-        "Rickshaws": "人力車",
-        "2-wheelers": "二輪車"
-      },
-      "digitalScreens": {
-        "digitalBillboards": "デジタル看板",
-        "Car Rooftoppers": "車の屋根広告",
-        "Van Digital Billboards": "バンのデジタル広告",
-        "Backpacks": "バックパック広告"
-      },
-      "Mobile Ads": "モバイル広告",
-      "Static Billboards": "静的広告板",
-      "Vehicle Ads": "車両広告",
-      "Digital Screens": "デジタルスクリーン"
+    "dayAndHour": {
+      "dayAndHour": "日と時間",
+      "byDayAndHour": "日と時間別",
+      "dayChart": "日別グラフ",
+      "hourChart": "時間別グラフ"
     },
-    "map": {
-      "map": "地図",
-      "basic": "基本",
-      "heat": "ヒートマップ",
-      "live": "ライブ"
+    "browser": {
+      "browser": "ブラウザ",
+      "byBrowser": "ブラウザ別"
     },
-    "attribution":{
-      "attribution":"帰属",
-      "qrcode":"QRコード ",
-      "trackingurl":"トラッキングURL ",
-      "footfall":"フットフォール"
+    "operatingSystem": {
+      "OS": "OS",
+      "byOperatingSystem": "OS別"
     },
-    "audience": {
-      "audience": "オーディエンス",
-      "clicksByGender": "性別別のクリック",
-      "clicksByDevice": "デバイス別のクリック",
-      "clicksByAge": "年齢別のクリック",
-      "clicksBySource": "ソース別のクリック",
-      "ctrBySec": "秒ごとのCTR"
+    "telecomOperator": {
+      "telecomOperator": "通信事業者",
+      "byTelecomOperator": "通信事業者別"
+    },
+    "creatives": {
+      "creatives": "クリエイティブ",
+      "byCreatives": "クリエイティブ別",
+      "creativesChart": "クリエイティブチャート",
+      "sizeChart": "サイズチャート"
     }
+  },
+  "highlights": {
+    "welcome": "ようこそ",
+    "highlight": "ハイライト"
+  },
+  "cars": {
+    "cars": "車",
+    "grid view": "グリッドビュ",
+    "table view": "テーブルビュ",
+    "photo list": "写真リスト"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "車",
+      "Buses": "バス",
+      "Trucks": "トラック",
+      "Robots": "ロボット",
+      "e-scooter": "電動スクーター",
+      "Rickshaws": "人力車",
+      "2-wheelers": "二輪車"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "デジタル看板",
+      "Car Rooftoppers": "車の屋根広告",
+      "Van Digital Billboards": "バンのデジタル広告",
+      "Backpacks": "バックパック広告"
+    },
+    "Mobile Ads": "モバイル広告",
+    "Static Billboards": "静的広告板",
+    "Vehicle Ads": "車両広告",
+    "Digital Screens": "デジタルスクリーン"
+  },
+  "map": {
+    "map": "地図",
+    "basic": "基本",
+    "heat": "ヒートマップ",
+    "live": "ライブ"
+  },
+  "attribution": {
+    "attribution": "帰属",
+    "qrcode": "QRコード ",
+    "trackingurl": "トラッキングURL ",
+    "footfall": "フットフォール",
+    "analytics": {
+      "attributionAnalytics": "アトリビューション分析",
+      "attributionLiftIndex": "アトリビューションリフト指数",
+      "exposed": "露出",
+      "control": "コントロール",
+      "exposedAudience": "露出したオーディエンス",
+      "attributedFootfall": "アトリビューションによるフットフォール",
+      "footfallRate": "フットフォール率",
+      "controlAudience": "コントロールオーディエンス",
+      "attributedFootfallNote": "アトリビューションによるフットフォールは、Nearプラットフォームで見られたフットフォールのサブセットを指します。",
+      "controlFootfallNote": "コントロールフットフォールは、Nearプラットフォームで見られたフットフォールのサブセットを指します。",
+      "attributedByDay": "曜日別アトリビューションによるフットフォール",
+      "controlByDay": "曜日別コントロールフットフォール",
+      "attributedByHour": "時間別アトリビューションによるフットフォール",
+      "controlByHour": "時間別コントロールフットフォール",
+      "peopleInsights": "人々の洞察",
+      "devices": "デバイス",
+      "gender": "性別",
+      "ageGroup": "年齢層",
+      "segments": "セグメント",
+      "female": "女性",
+      "male": "男性"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "高度なアトリビューション洞察",
+      "leadTimeVisit": "訪問までのリードタイム",
+      "exposureVisit": "露出から訪問までの期間",
+      "topStores": "アトリビューションによるフットフォールで上位の店舗",
+      "topHomeLocations": "アトリビューションによるフットフォールで上位のホームロケーション",
+      "storeName": "店舗名",
+      "homeLocations": "ホームロケーション"
+    }
+  },
+  "audience": {
+    "audience": "オーディエンス",
+    "clicksByGender": "性別別のクリック",
+    "clicksByDevice": "デバイス別のクリック",
+    "clicksByAge": "年齢別のクリック",
+    "clicksBySource": "ソース別のクリック",
+    "ctrBySec": "秒ごとのCTR"
   }
-  
+}

@@ -64,9 +64,7 @@ const DayAndHourChart = () => {
     );
 
     // Sorting by clicks in descending order
-    const sortedData = Object.entries(groupedData).sort(
-      (a, b) => b[1].clicks - a[1].clicks
-    );
+    const sortedData = Object.entries(groupedData)
 
     // Extracting labels and data points
     return {

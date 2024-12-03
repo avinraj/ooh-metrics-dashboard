@@ -1,126 +1,157 @@
 {
-    "sideBar": {
-      "adType": "Typ reklamy",
-      "highlight": "Najważniejsze",
-      "reports": "Raporty",
-      "audience": "Odbiorcy",
-      "mapView": "Widok mapy",
-      "cars": "Samochody",
-      "attribution": "Atrybucja",
-      "deviceIds": "Identyfikatory urządzeń",
-      "logout": "Wyloguj się"
-    },
-    "filterPanel": {
-      "campaign": "Kampania",
-      "selectDateRange": "Wybierz zakres dat",
+  "sideBar": {
+    "adType": "Typ reklamy",
+    "highlight": "Najważniejsze",
+    "reports": "Raporty",
+    "audience": "Odbiorcy",
+    "mapView": "Widok mapy",
+    "cars": "Samochody",
+    "attribution": "Atrybucja",
+    "deviceIds": "Identyfikatory urządzeń",
+    "logout": "Wyloguj się"
+  },
+  "filterPanel": {
+    "campaign": "Kampania",
+    "selectDateRange": "Wybierz zakres dat",
+    "vehicle": "Pojazd",
+    "show": "Pokaż"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "Wyświetlenia",
+      "date": "Data",
       "vehicle": "Pojazd",
-      "show": "Pokaż"
+      "chart": "Wykres",
+      "table": "Tabela",
+      "impressionsPerMile": "Wyświetlenia na milę",
+      "miles": "Mile",
+      "avg": "Średnio"
     },
-    "reports": {
-      "impressions": {
-        "impressions": "Wyświetlenia",
-        "date": "Data",
-        "vehicle": "Pojazd",
-        "chart": "Wykres",
-        "table": "Tabela",
-        "impressionsPerMile": "Wyświetlenia na milę",
-        "miles": "Mile",
-        "avg": "Średnio"
-      },
-      "demographics": {
-        "demographics": "Demografia",
-        "age": "Wiek",
-        "education": "Edukacja",
-        "income": "Dochód",
-        "ethnicity": "Grupa etniczna",
-        "chartType": "Typ wykresu",
-        "verticalBar": "Słupkowy pionowy",
-        "horizontalBar": "Słupkowy poziomy",
-        "doughnutChart": "Wykres pierścieniowy",
-        "lineChart": "Wykres liniowy"
-      },
-      "affinities": {
-        "affinities": "Zainteresowania"
-      },
-      "appsOrWebsites": {
-        "appsOrWebsites": "Aplikacje / Strony internetowe",
-        "byAppOrWebsites": "Według aplikacji / stron internetowych"
-      },
-      "dayAndHour": {
-        "dayAndHour": "Dzień i godzina",
-        "byDayAndHour": "Według dnia i godziny",
-        "dayChart": "Wykres dzienny",
-        "hourChart": "Wykres godzinowy"
-      },
-      "browser": {
-        "browser": "Przeglądarka",
-        "byBrowser": "Według przeglądarki"
-      },
-      "operatingSystem": {
-        "OS": "System operacyjny",
-        "byOperatingSystem": "Według systemu operacyjnego"
-      },
-      "telecomOperator": {
-        "telecomOperator": "Operator telekomunikacyjny",
-        "byTelecomOperator": "Według operatora telekomunikacyjnego"
-      },
-      "creatives": {
-        "creatives": "Kreatywy",
-        "byCreatives": "Według kreatywów",
-        "creativesChart": "Wykres kreatywów",
-        "sizeChart": "Wykres rozmiarów"
-      }
+    "demographics": {
+      "demographics": "Demografia",
+      "age": "Wiek",
+      "education": "Edukacja",
+      "income": "Dochód",
+      "ethnicity": "Grupa etniczna",
+      "chartType": "Typ wykresu",
+      "verticalBar": "Słupkowy pionowy",
+      "horizontalBar": "Słupkowy poziomy",
+      "doughnutChart": "Wykres pierścieniowy",
+      "lineChart": "Wykres liniowy"
     },
-    "highlights": {
-      "welcome": "Witamy",
-      "highlight":"Najważniejsze"
+    "affinities": {
+      "affinities": "Zainteresowania"
     },
-    "cars":{
-      "cars":"Samochody",
-      "grid view":" Widok siatki",
-      "table view":"Widok tabeli",
-      "photo list":"Lista zdjęć"
+    "appsOrWebsites": {
+      "appsOrWebsites": "Aplikacje / Strony internetowe",
+      "byAppOrWebsites": "Według aplikacji / stron internetowych"
     },
-    "adtype": {
-      "vehicles": {
-        "Cars": "Samochody",
-        "Buses": "Autobusy",
-        "Trucks": "Ciężarówki",
-        "Robots": "Roboty",
-        "e-scooter": "E-hulajnoga",
-        "Rickshaws": "Riksze",
-        "2-wheelers": "Pojazdy dwukołowe"
-      },
-      "digitalScreens": {
-        "digitalBillboards": "Cyfrowe Billboardy",
-        "Car Rooftoppers": "Reklamy na dachach aut",
-        "Van Digital Billboards": "Cyfrowe bilbordy na furgonetkach",
-        "Backpacks": "Reklamy na plecakach"
-      },
-      "Mobile Ads": "Reklamy mobilne",
-      "Static Billboards": "Stacjonarne bilbordy",
-      "Vehicle Ads": "Reklamy na pojazdach",
-      "Digital Screens": "Cyfrowe ekrany"
+    "dayAndHour": {
+      "dayAndHour": "Dzień i godzina",
+      "byDayAndHour": "Według dnia i godziny",
+      "dayChart": "Wykres dzienny",
+      "hourChart": "Wykres godzinowy"
     },
-    "map": {
-      "map": "Mapa",
-      "basic": "Podstawowa",
-      "heat": "Mapa cieplna",
-      "live": "Na żywo"
+    "browser": {
+      "browser": "Przeglądarka",
+      "byBrowser": "Według przeglądarki"
     },
-    "attribution":{
-      "attribution":"Atrybucja",
-      "qrcode":"Kod QR ",
-      "trackingurl":"URL sledzenia",
-      "footfall":"Ruch pieszy "
+    "operatingSystem": {
+      "OS": "System operacyjny",
+      "byOperatingSystem": "Według systemu operacyjnego"
     },
-    "audience": {
-      "audience": "Odbiorcy",
-      "clicksByGender": "Kliknięcia według płci",
-      "clicksByDevice": "Kliknięcia według urządzenia",
-      "clicksByAge": "Kliknięcia według wieku",
-      "clicksBySource": "Kliknięcia według źródła",
-      "ctrBySec": "CTR według sekundy"
+    "telecomOperator": {
+      "telecomOperator": "Operator telekomunikacyjny",
+      "byTelecomOperator": "Według operatora telekomunikacyjnego"
+    },
+    "creatives": {
+      "creatives": "Kreatywy",
+      "byCreatives": "Według kreatywów",
+      "creativesChart": "Wykres kreatywów",
+      "sizeChart": "Wykres rozmiarów"
     }
+  },
+  "highlights": {
+    "welcome": "Witamy",
+    "highlight": "Najważniejsze"
+  },
+  "cars": {
+    "cars": "Samochody",
+    "grid view": " Widok siatki",
+    "table view": "Widok tabeli",
+    "photo list": "Lista zdjęć"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "Samochody",
+      "Buses": "Autobusy",
+      "Trucks": "Ciężarówki",
+      "Robots": "Roboty",
+      "e-scooter": "E-hulajnoga",
+      "Rickshaws": "Riksze",
+      "2-wheelers": "Pojazdy dwukołowe"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "Cyfrowe Billboardy",
+      "Car Rooftoppers": "Reklamy na dachach aut",
+      "Van Digital Billboards": "Cyfrowe bilbordy na furgonetkach",
+      "Backpacks": "Reklamy na plecakach"
+    },
+    "Mobile Ads": "Reklamy mobilne",
+    "Static Billboards": "Stacjonarne bilbordy",
+    "Vehicle Ads": "Reklamy na pojazdach",
+    "Digital Screens": "Cyfrowe ekrany"
+  },
+  "map": {
+    "map": "Mapa",
+    "basic": "Podstawowa",
+    "heat": "Mapa cieplna",
+    "live": "Na żywo"
+  },
+  "attribution": {
+    "attribution": "Atrybucja",
+    "qrcode": "Kod QR ",
+    "trackingurl": "URL sledzenia",
+    "footfall": "Ruch pieszy ",
+    "analytics": {
+      "attributionAnalytics": "Analiza atrybucji",
+      "attributionLiftIndex": "Wskaźnik wzrostu atrybucji",
+      "exposed": "Wystawione",
+      "control": "Kontrola",
+      "exposedAudience": "Wystawiona publiczność",
+      "attributedFootfall": "Atrybuowany ruch pieszy",
+      "footfallRate": "Wskaźnik ruchu pieszego",
+      "controlAudience": "Publiczność kontrolna",
+      "attributedFootfallNote": "Atrybuowany ruch pieszy odnosi się do podzbioru ruchu pieszego widocznego na platformie Near.",
+      "controlFootfallNote": "Ruch pieszy kontrolny odnosi się do podzbioru ruchu pieszego widocznego na platformie Near.",
+      "attributedByDay": "Atrybuowany ruch pieszy według dnia tygodnia",
+      "controlByDay": "Ruch pieszy kontrolny według dnia tygodnia",
+      "attributedByHour": "Atrybuowany ruch pieszy według godziny",
+      "controlByHour": "Ruch pieszy kontrolny według godziny",
+      "peopleInsights": "Wgląd w ludzi",
+      "devices": "Urządzenia",
+      "gender": "Płeć",
+      "ageGroup": "Grupa wiekowa",
+      "segments": "Segmenty",
+      "female": "Kobieta",
+      "male": "Mężczyzna"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "Zaawansowane wglądy w atrybucję",
+      "leadTimeVisit": "Czas oczekiwania na wizytę",
+      "exposureVisit": "Ekspozycja do wizyty",
+      "topStores": "Top sklepy według atrybuowanego ruchu pieszego",
+      "topHomeLocations": "Top lokalizacje domów według atrybuowanego ruchu pieszego",
+      "storeName": "Nazwa sklepu",
+      "homeLocations": "Lokalizacje domów"
+    }
+  },
+  "audience": {
+    "audience": "Odbiorcy",
+    "clicksByGender": "Kliknięcia według płci",
+    "clicksByDevice": "Kliknięcia według urządzenia",
+    "clicksByAge": "Kliknięcia według wieku",
+    "clicksBySource": "Kliknięcia według źródła",
+    "ctrBySec": "CTR według sekundy"
   }
-  
+}

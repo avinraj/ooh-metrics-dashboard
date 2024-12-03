@@ -107,12 +107,44 @@
     "basic": "Perus",
     "heat": "Lämpökartta",
     "live": "Live"
+  },
+  "attribution": {
+    "attribution": "Attribuutio",
+    "qrcode": "QR-koodi",
+    "trackingurl": "Seurantalinkki",
+    "footfall": "Jalkaliikenne",
+    "analytics": {
+      "attributionAnalytics": "Attribuution analytiikka",
+      "attributionLiftIndex": "Attribuution nosteindeksi",
+      "exposed": "Altistunut",
+      "control": "Kontrolli",
+      "exposedAudience": "Altistunut yleisö",
+      "attributedFootfall": "Attribuoidut kävijät",
+      "footfallRate": "Kävijämääräprosentti",
+      "controlAudience": "Kontrolliryhmän yleisö",
+      "attributedFootfallNote": "Attribuoidut kävijämäärät viittaavat Near-alustalla nähtyjen kävijöiden osajoukkoon.",
+      "controlFootfallNote": "Kontrolliryhmän kävijämäärät viittaavat Near-alustalla nähtyjen kävijöiden osajoukkoon.",
+      "attributedByDay": "Attribuoidut kävijät viikonpäivittäin",
+      "controlByDay": "Kontrolliryhmän kävijät viikonpäivittäin",
+      "attributedByHour": "Attribuoidut kävijät tunneittain",
+      "controlByHour": "Kontrolliryhmän kävijät tunneittain",
+      "peopleInsights": "Ihmisistä saadut oivallukset",
+      "devices": "Laitteet",
+      "gender": "Sukupuoli",
+      "ageGroup": "Ikäryhmä",
+      "segments": "Segmentit",
+      "female": "Nainen",
+      "male": "Mies"
     },
-    "attribution":{
-      "attribution":"Attribuutio",
-      "qrcode":"QR-koodi",
-      "trackingurl":"Seurantalinkki",
-      "footfall":"Jalkaliikenne"
+    "advanced": {
+      "advancedAttributionInsights": "Edistyneet attribuution oivallukset",
+      "leadTimeVisit": "Johtoaika vierailuun",
+      "exposureVisit": "Altistuminen ja vierailu",
+      "topStores": "Parhaat myymälät attribuoitujen kävijöiden mukaan",
+      "topHomeLocations": "Parhaat kotipaikat attribuution perusteella",
+      "storeName": "Myymälän nimi",
+      "homeLocations": "Kotipaikat"
+    }
   },
   "audience": {
     "audience": "Yleisö",
