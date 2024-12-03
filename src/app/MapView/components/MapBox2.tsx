@@ -218,8 +218,8 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/dark-v10",
-      center: [76.2673, 9.9312],
-      zoom: 13,
+      center: [78.9629, 20.5937], // Center of India
+      zoom: 4,
     });
 
     mapRef.current = map;
