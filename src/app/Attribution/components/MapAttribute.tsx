@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import React, { useEffect, useRef } from "react";
@@ -31,6 +32,7 @@ const geoJsonData: any = {
 
 const MapAttribute: React.FC = () => {
   const mapContainer = useRef(null);
+  const theme = useTheme()
 
   // Initialize the map
   useEffect(() => {
@@ -64,7 +66,7 @@ const MapAttribute: React.FC = () => {
           "circle-color": [
             "step",
             ["get", "point_count"],
-            "#51bbd6",
+            theme.palette.primary.main,
             10,
             "#f28cb1",
             30,
@@ -94,7 +96,7 @@ const MapAttribute: React.FC = () => {
         source: "earthquakes",
         filter: ["!", ["has", "point_count"]],
         paint: {
-          "circle-color": "#11b4da",
+          "circle-color": theme.palette.primary.main,
           "circle-radius": 8,
           "circle-stroke-width": 1,
           "circle-stroke-color": "#fff",
