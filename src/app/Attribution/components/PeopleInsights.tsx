@@ -15,11 +15,13 @@ import {
   Legend,
   Tooltip,
 } from "chart.js";
+import { useTranslation } from "react-i18next";
 
 // Register required components for Chart.js
 Chart.register(DoughnutController, ArcElement, Tooltip, Legend);
 
 const PeopleInsights: React.FC = () => {
+  const { t } = useTranslation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -54,7 +56,7 @@ const PeopleInsights: React.FC = () => {
                 color="grey"
                 gutterBottom
               >
-                Devices
+                {t("attribution.analytics.devices")}
               </Typography>
               <Box
                 sx={{
@@ -96,12 +98,12 @@ const PeopleInsights: React.FC = () => {
                   color="grey"
                   gutterBottom
                 >
-                  Gender
+                  {t("attribution.analytics.gender")}
                 </Typography>
               </Grid>
               <Grid item xs={6}>
                 <ProgressCircle
-                  label="Female"
+                  label={t("attribution.analytics.female")}
                   value={femalePercentage}
                   color="primary" // You can change the color if needed
                 />
@@ -109,7 +111,7 @@ const PeopleInsights: React.FC = () => {
               <Grid item xs={6}>
                 {" "}
                 <ProgressCircle
-                  label="Male"
+                  label={t("attribution.analytics.male")}
                   value={malePercentage}
                   color="#FFC107" // You can change the color if needed
                 />
@@ -139,7 +141,7 @@ const PeopleInsights: React.FC = () => {
                   color="grey"
                   gutterBottom
                 >
-                  Age Group
+                  {t("attribution.analytics.ageGroup")}
                 </Typography>
               </Grid>
 
@@ -204,7 +206,7 @@ const PeopleInsights: React.FC = () => {
                   color="grey"
                   gutterBottom
                 >
-                  Segments
+                  {t("attribution.analytics.segments")}
                 </Typography>
               </Grid>
               <Grid item xs={12}>

@@ -1,126 +1,157 @@
 {
-    "sideBar": {
-      "adType": "Тип рекламы",
-      "highlight": "Основное",
-      "reports": "Отчеты",
-      "audience": "Аудитория",
-      "mapView": "Вид карты",
-      "cars": "Автомобили",
-      "attribution": "Атрибуция",
-      "deviceIds": "ID устройств",
-      "logout": "Выйти"
-    },
-    "filterPanel": {
-      "campaign": "Кампания",
-      "selectDateRange": "Выберите диапазон дат",
+  "sideBar": {
+    "adType": "Тип рекламы",
+    "highlight": "Основное",
+    "reports": "Отчеты",
+    "audience": "Аудитория",
+    "mapView": "Вид карты",
+    "cars": "Автомобили",
+    "attribution": "Атрибуция",
+    "deviceIds": "ID устройств",
+    "logout": "Выйти"
+  },
+  "filterPanel": {
+    "campaign": "Кампания",
+    "selectDateRange": "Выберите диапазон дат",
+    "vehicle": "Транспортное средство",
+    "show": "Показать"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "Показы",
+      "date": "Дата",
       "vehicle": "Транспортное средство",
-      "show": "Показать"
+      "chart": "График",
+      "table": "Таблица",
+      "impressionsPerMile": "Показы на милю",
+      "miles": "Мили",
+      "avg": "Среднее"
     },
-    "reports": {
-      "impressions": {
-        "impressions": "Показы",
-        "date": "Дата",
-        "vehicle": "Транспортное средство",
-        "chart": "График",
-        "table": "Таблица",
-        "impressionsPerMile": "Показы на милю",
-        "miles": "Мили",
-        "avg": "Среднее"
-      },
-      "demographics": {
-        "demographics": "Демография",
-        "age": "Возраст",
-        "education": "Образование",
-        "income": "Доход",
-        "ethnicity": "Этничность",
-        "chartType": "Тип графика",
-        "verticalBar": "Вертикальная гистограмма",
-        "horizontalBar": "Горизонтальная гистограмма",
-        "doughnutChart": "Кольцевая диаграмма",
-        "lineChart": "Линейный график"
-      },
-      "affinities": {
-        "affinities": "Склонности"
-      },
-      "appsOrWebsites": {
-        "appsOrWebsites": "Приложения / Вебсайты",
-        "byAppOrWebsites": "По приложениям / вебсайтам"
+    "demographics": {
+      "demographics": "Демография",
+      "age": "Возраст",
+      "education": "Образование",
+      "income": "Доход",
+      "ethnicity": "Этничность",
+      "chartType": "Тип графика",
+      "verticalBar": "Вертикальная гистограмма",
+      "horizontalBar": "Горизонтальная гистограмма",
+      "doughnutChart": "Кольцевая диаграмма",
+      "lineChart": "Линейный график"
+    },
+    "affinities": {
+      "affinities": "Склонности"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "Приложения / Вебсайты",
+      "byAppOrWebsites": "По приложениям / вебсайтам"
     },
     "dayAndHour": {
-        "dayAndHour": "День и Час",
-        "byDayAndHour": "По дню и часу",
-        "dayChart": "Дневная диаграмма",
-        "hourChart": "Часовая диаграмма"
+      "dayAndHour": "День и Час",
+      "byDayAndHour": "По дню и часу",
+      "dayChart": "Дневная диаграмма",
+      "hourChart": "Часовая диаграмма"
     },
     "browser": {
-        "browser": "Браузер",
-        "byBrowser": "По браузеру"
+      "browser": "Браузер",
+      "byBrowser": "По браузеру"
     },
     "operatingSystem": {
-        "OS": "Операционная система",
-        "byOperatingSystem": "По операционной системе"
+      "OS": "Операционная система",
+      "byOperatingSystem": "По операционной системе"
     },
     "telecomOperator": {
-        "telecomOperator": "Оператор связи",
-        "byTelecomOperator": "По оператору связи"
+      "telecomOperator": "Оператор связи",
+      "byTelecomOperator": "По оператору связи"
     },
     "creatives": {
-        "creatives": "Креативы",
-        "byCreatives": "По креативам",
-        "creativesChart": "График креативов",
-        "sizeChart": "График размеров"
+      "creatives": "Креативы",
+      "byCreatives": "По креативам",
+      "creativesChart": "График креативов",
+      "sizeChart": "График размеров"
     }
+  },
+  "highlights": {
+    "welcome": "Добро пожаловать",
+    "highlight": "Основное"
+  },
+  "cars": {
+    "cars": "Автомобили",
+    "grid view": " Добро пожаловать в вид сетки",
+    "table view": "Добро пожаловать в вид таблицы",
+    "photo list": "Добро пожаловать в список фотографий "
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "Автомобили",
+      "Buses": "Автобусы",
+      "Trucks": "Грузовики",
+      "Robots": "Роботы",
+      "e-scooter": "Электросамокат",
+      "Rickshaws": "Рикши",
+      "2-wheelers": "Двухколесные"
     },
-    "highlights": {
-      "welcome": "Добро пожаловать",
-      "highlight":"Основное"
+    "digitalScreens": {
+      "digitalBillboards": "Цифровые Билборды",
+      "Car Rooftoppers": "Рекламные панели на крышах машин",
+      "Van Digital Billboards": "Цифровые рекламные щиты на фургонах",
+      "Backpacks": "Рекламные рюкзаки"
     },
-    "cars":{
-      "cars":"Автомобили",
-      "grid view":" Добро пожаловать в вид сетки",
-      "table view":"Добро пожаловать в вид таблицы",
-      "photo list":"Добро пожаловать в список фотографий "
+    "Mobile Ads": "Мобильная реклама",
+    "Static Billboards": "Статические рекламные щиты",
+    "Vehicle Ads": "Реклама на транспортных средствах",
+    "Digital Screens": "Цифровые экраны"
+  },
+  "map": {
+    "map": "Карта",
+    "basic": "Основной",
+    "heat": "Тепловая карта",
+    "live": "В реальном времени"
+  },
+  "attribution": {
+    "attribution": "Атрибуция",
+    "qrcode": "QR-код",
+    "trackingurl": "trackingurl",
+    "footfall": "Пешеходный трафик ",
+    "analytics": {
+      "attributionAnalytics": "Аналитика атрибуции",
+      "attributionLiftIndex": "Индекс роста атрибуции",
+      "exposed": "Подвержены",
+      "control": "Контроль",
+      "exposedAudience": "Подверженная аудитория",
+      "attributedFootfall": "Атрибутированный пешеходный трафик",
+      "footfallRate": "Коэффициент пешеходного трафика",
+      "controlAudience": "Контрольная аудитория",
+      "attributedFootfallNote": "Атрибутированный пешеходный трафик относится к подмножеству пешеходного трафика, наблюдаемого на платформе Near.",
+      "controlFootfallNote": "Контрольный пешеходный трафик относится к подмножеству пешеходного трафика, наблюдаемого на платформе Near.",
+      "attributedByDay": "Атрибутированный пешеходный трафик по дням недели",
+      "controlByDay": "Контрольный пешеходный трафик по дням недели",
+      "attributedByHour": "Атрибутированный пешеходный трафик по часам",
+      "controlByHour": "Контрольный пешеходный трафик по часам",
+      "peopleInsights": "Инсайты о людях",
+      "devices": "Устройства",
+      "gender": "Пол",
+      "ageGroup": "Возрастная группа",
+      "segments": "Сегменты",
+      "female": "Женщина",
+      "male": "Мужчина"
     },
-    "adtype": {
-      "vehicles": {
-        "Cars": "Автомобили",
-        "Buses": "Автобусы",
-        "Trucks": "Грузовики",
-        "Robots": "Роботы",
-        "e-scooter": "Электросамокат",
-        "Rickshaws": "Рикши",
-        "2-wheelers": "Двухколесные"
-      },
-      "digitalScreens": {
-        "digitalBillboards": "Цифровые Билборды",
-        "Car Rooftoppers": "Рекламные панели на крышах машин",
-        "Van Digital Billboards": "Цифровые рекламные щиты на фургонах",
-        "Backpacks": "Рекламные рюкзаки"
-      },
-      "Mobile Ads": "Мобильная реклама",
-      "Static Billboards": "Статические рекламные щиты",
-      "Vehicle Ads": "Реклама на транспортных средствах",
-      "Digital Screens": "Цифровые экраны"
-    },
-    "map": {
-      "map": "Карта",
-      "basic": "Основной",
-      "heat": "Тепловая карта",
-      "live": "В реальном времени"
-    },
-    "attribution":{
-      "attribution":"Атрибуция",
-      "qrcode":"QR-код",
-      "trackingurl":"trackingurl",
-      "footfall":"Пешеходный трафик "
-    },
-    "audience": {
-      "audience": "Аудитория",
-      "clicksByGender": "Клики по полу",
-      "clicksByDevice": "Клики по устройствам",
-      "clicksByAge": "Клики по возрасту",
-      "clicksBySource": "Клики по источникам",
-      "ctrBySec": "CTR по секундам"
+    "advanced": {
+      "advancedAttributionInsights": "Продвинутые инсайты по атрибуции",
+      "leadTimeVisit": "Время до визита",
+      "exposureVisit": "Экспозиция до визита",
+      "topStores": "Топ магазинов по атрибутированному пешеходному трафику",
+      "topHomeLocations": "Топ домашних локаций по атрибутированному пешеходному трафику",
+      "storeName": "Название магазина",
+      "homeLocations": "Домашние локации"
     }
+  },
+  "audience": {
+    "audience": "Аудитория",
+    "clicksByGender": "Клики по полу",
+    "clicksByDevice": "Клики по устройствам",
+    "clicksByAge": "Клики по возрасту",
+    "clicksBySource": "Клики по источникам",
+    "ctrBySec": "CTR по секундам"
   }
-  
+}

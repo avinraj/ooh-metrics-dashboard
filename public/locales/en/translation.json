@@ -132,7 +132,9 @@
       "devices": "Devices",
       "gender": "Gender",
       "ageGroup": "Age Group",
-      "segments": "Segments"
+      "segments": "Segments",
+      "female": "Female",
+      "male": "Male"
     },
     "advanced": {
       "advancedAttributionInsights": "Advanced Attribution Insights",

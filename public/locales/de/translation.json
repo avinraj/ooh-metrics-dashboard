@@ -1,126 +1,157 @@
 {
-    "sideBar": {
-      "adType": "Anzeigentyp",
-      "highlight": "Höhepunkte",
-      "reports": "Berichte",
-      "audience": "Zielgruppe",
-      "mapView": "Kartenansicht",
-      "cars": "Autos",
-      "attribution": "Zuweisung",
-      "deviceIds": "Geräte-IDs",
-      "logout": "Abmelden"
-    },
-    "filterPanel": {
-      "campaign": "Kampagne",
-      "selectDateRange": "Datumsbereich auswählen",
+  "sideBar": {
+    "adType": "Anzeigentyp",
+    "highlight": "Höhepunkte",
+    "reports": "Berichte",
+    "audience": "Zielgruppe",
+    "mapView": "Kartenansicht",
+    "cars": "Autos",
+    "attribution": "Zuweisung",
+    "deviceIds": "Geräte-IDs",
+    "logout": "Abmelden"
+  },
+  "filterPanel": {
+    "campaign": "Kampagne",
+    "selectDateRange": "Datumsbereich auswählen",
+    "vehicle": "Fahrzeug",
+    "show": "Anzeigen"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "Impressionen",
+      "date": "Datum",
       "vehicle": "Fahrzeug",
-      "show": "Anzeigen"
+      "chart": "Diagramm",
+      "table": "Tabelle",
+      "impressionsPerMile": "Impressionen pro Meile",
+      "miles": "Meilen",
+      "avg": "Durchschnitt"
     },
-    "reports": {
-      "impressions": {
-        "impressions": "Impressionen",
-        "date": "Datum",
-        "vehicle": "Fahrzeug",
-        "chart": "Diagramm",
-        "table": "Tabelle",
-        "impressionsPerMile": "Impressionen pro Meile",
-        "miles": "Meilen",
-        "avg": "Durchschnitt"
-      },
-      "demographics": {
-        "demographics": "Demografie",
-        "age": "Alter",
-        "education": "Bildung",
-        "income": "Einkommen",
-        "ethnicity": "Ethnizität",
-        "chartType": "Diagrammtyp",
-        "verticalBar": "Vertikales Balkendiagramm",
-        "horizontalBar": "Horizontales Balkendiagramm",
-        "doughnutChart": "Kreisdiagramm",
-        "lineChart": "Liniendiagramm"
-      },
-      "affinities": {
-        "affinities": "Affinitäten"
-      },
-      "appsOrWebsites": {
-        "appsOrWebsites": "Apps / Websites",
-        "byAppOrWebsites": "Nach Apps / Websites"
-      },
-      "dayAndHour": {
-        "dayAndHour": "Tag und Stunde",
-        "byDayAndHour": "Nach Tag und Stunde",
-        "dayChart": "Tagesdiagramm",
-        "hourChart": "Stundendiagramm"
-      },
-      "browser": {
-        "browser": "Browser",
-        "byBrowser": "Nach Browser"
-      },
-      "operatingSystem": {
-        "OS": "Betriebssystem",
-        "byOperatingSystem": "Nach Betriebssystem"
-      },
-      "telecomOperator": {
-        "telecomOperator": "Telekommunikationsanbieter",
-        "byTelecomOperator": "Nach Telekommunikationsanbieter"
-      },
-      "creatives": {
-        "creatives": "Kreative",
-        "byCreatives": "Nach Kreativen",
-        "creativesChart": "Kreative Diagramm",
-        "sizeChart": "Größen Diagramm"
-      }
+    "demographics": {
+      "demographics": "Demografie",
+      "age": "Alter",
+      "education": "Bildung",
+      "income": "Einkommen",
+      "ethnicity": "Ethnizität",
+      "chartType": "Diagrammtyp",
+      "verticalBar": "Vertikales Balkendiagramm",
+      "horizontalBar": "Horizontales Balkendiagramm",
+      "doughnutChart": "Kreisdiagramm",
+      "lineChart": "Liniendiagramm"
     },
-    "highlights": {
-      "welcome": "Willkommen",
-      "highlight":"Höhepunkte"
+    "affinities": {
+      "affinities": "Affinitäten"
     },
-    "cars":{
-      "cars":"Autos",
-      "grid view":"Rasteransicht",
-      "table view":"Tabellenansicht",
-      "photo list":"Fotoliste"
+    "appsOrWebsites": {
+      "appsOrWebsites": "Apps / Websites",
+      "byAppOrWebsites": "Nach Apps / Websites"
     },
-    "adtype": {
-      "vehicles": {
-        "Cars": "Autos",
-        "Buses": "Busse",
-        "Trucks": "Lkw",
-        "Robots": "Roboter",
-        "e-scooter": "E-Scooter",
-        "Rickshaws": "Rikschas",
-        "2-wheelers": "Zweiräder"
-      },
-      "digitalScreens": {
-        "digitalBillboards": "Digitale Werbetafeln",
-        "Car Rooftoppers": "Auto-Dachwerbung",
-        "Van Digital Billboards": "Van Digitale Werbetafeln",
-        "Backpacks": "Rucksäcke"
-      },
-      "Mobile Ads": "Mobile Werbung",
-      "Static Billboards": "Statische Werbetafeln",
-      "Vehicle Ads": "Fahrzeugwerbung",
-      "Digital Screens": "Digitale Bildschirme"
+    "dayAndHour": {
+      "dayAndHour": "Tag und Stunde",
+      "byDayAndHour": "Nach Tag und Stunde",
+      "dayChart": "Tagesdiagramm",
+      "hourChart": "Stundendiagramm"
     },
-    "map": {
-      "map": "Karte",
-      "basic": "Basis",
-      "heat": "Hitzekarte",
-      "live": "Live"
+    "browser": {
+      "browser": "Browser",
+      "byBrowser": "Nach Browser"
     },
-    "attribution":{
-      "attribution":"Zuweisung",
-      "qrcode":"QR-Code",
-      "trackingurl":"Tracking-URL",
-      "footfall":"Fußverkehr"
+    "operatingSystem": {
+      "OS": "Betriebssystem",
+      "byOperatingSystem": "Nach Betriebssystem"
     },
-    "audience": {
-      "audience": "Zielgruppe",
-      "clicksByGender": "Klicks nach Geschlecht",
-      "clicksByDevice": "Klicks nach Gerät",
-      "clicksByAge": "Klicks nach Alter",
-      "clicksBySource": "Klicks nach Quelle",
-      "ctrBySec": "CTR nach Sekunde"
+    "telecomOperator": {
+      "telecomOperator": "Telekommunikationsanbieter",
+      "byTelecomOperator": "Nach Telekommunikationsanbieter"
+    },
+    "creatives": {
+      "creatives": "Kreative",
+      "byCreatives": "Nach Kreativen",
+      "creativesChart": "Kreative Diagramm",
+      "sizeChart": "Größen Diagramm"
     }
+  },
+  "highlights": {
+    "welcome": "Willkommen",
+    "highlight": "Höhepunkte"
+  },
+  "cars": {
+    "cars": "Autos",
+    "grid view": "Rasteransicht",
+    "table view": "Tabellenansicht",
+    "photo list": "Fotoliste"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "Autos",
+      "Buses": "Busse",
+      "Trucks": "Lkw",
+      "Robots": "Roboter",
+      "e-scooter": "E-Scooter",
+      "Rickshaws": "Rikschas",
+      "2-wheelers": "Zweiräder"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "Digitale Werbetafeln",
+      "Car Rooftoppers": "Auto-Dachwerbung",
+      "Van Digital Billboards": "Van Digitale Werbetafeln",
+      "Backpacks": "Rucksäcke"
+    },
+    "Mobile Ads": "Mobile Werbung",
+    "Static Billboards": "Statische Werbetafeln",
+    "Vehicle Ads": "Fahrzeugwerbung",
+    "Digital Screens": "Digitale Bildschirme"
+  },
+  "map": {
+    "map": "Karte",
+    "basic": "Basis",
+    "heat": "Hitzekarte",
+    "live": "Live"
+  },
+  "attribution": {
+    "attribution": "Zuweisung",
+    "qrcode": "QR-Code",
+    "trackingurl": "Tracking-URL",
+    "footfall": "Fußverkehr",
+    "analytics": {
+      "attributionAnalytics": "Zuordnungsanalytik",
+      "attributionLiftIndex": "Zuordnungs-Lift-Index",
+      "exposed": "Ausgesetzt",
+      "control": "Kontrolle",
+      "exposedAudience": "Ausgesetztes Publikum",
+      "attributedFootfall": "Zugeordnete Besucherzahlen",
+      "footfallRate": "Besucherrate",
+      "controlAudience": "Kontrollpublikum",
+      "attributedFootfallNote": "Zugeordnete Besucherzahlen beziehen sich auf die Teilmenge der Besucherzahlen, die auf der Near-Plattform angezeigt werden.",
+      "controlFootfallNote": "Kontrollierte Besucherzahlen beziehen sich auf die Teilmenge der Besucherzahlen, die auf der Near-Plattform angezeigt werden.",
+      "attributedByDay": "Zugeordnete Besucherzahlen nach Wochentag",
+      "controlByDay": "Kontrollierte Besucherzahlen nach Wochentag",
+      "attributedByHour": "Zugeordnete Besucherzahlen nach Stunde",
+      "controlByHour": "Kontrollierte Besucherzahlen nach Stunde",
+      "peopleInsights": "Einblicke in Menschen",
+      "devices": "Geräte",
+      "gender": "Geschlecht",
+      "ageGroup": "Altersgruppe",
+      "segments": "Segmente",
+      "female": "Weiblich",
+      "male": "Männlich"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "Erweiterte Zuordnungs-Einblicke",
+      "leadTimeVisit": "Vorlaufzeit für Besuche",
+      "exposureVisit": "Exposition bis zum Besuch",
+      "topStores": "Top-Geschäfte nach zugeordneten Besucherzahlen",
+      "topHomeLocations": "Top-Heimstandorte nach Zuordnung",
+      "storeName": "Geschäftsname",
+      "homeLocations": "Heimstandorte"
+    }
+  },
+  "audience": {
+    "audience": "Zielgruppe",
+    "clicksByGender": "Klicks nach Geschlecht",
+    "clicksByDevice": "Klicks nach Gerät",
+    "clicksByAge": "Klicks nach Alter",
+    "clicksBySource": "Klicks nach Quelle",
+    "ctrBySec": "CTR nach Sekunde"
   }
-  
+}

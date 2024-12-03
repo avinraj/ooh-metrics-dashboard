@@ -73,7 +73,7 @@
   },
   "highlights": {
     "welcome": "مرحبًا",
-    "highlight":"أهم ما يميز"
+    "highlight": "أهم ما يميز"
   },
   "adtype": {
     "vehicles": {
@@ -103,24 +103,56 @@
     "heat": "حرارة",
     "live": "مباشر"
   },
-  "cars":{
-    "cars":"السيارات",
-    "grid view":"عرض الشبكة",
-    "table view":"عرض الجدول",
-    "photo list":"قائمة الصور"
+  "cars": {
+    "cars": "السيارات",
+    "grid view": "عرض الشبكة",
+    "table view": "عرض الجدول",
+    "photo list": "قائمة الصور"
   },
-  "attribution":{
-    "attribution":"نسبة التحميل",
-    "qrcode":"رمز الاستجابة السريعة",
-    "trackingurl":"رابط التتبع",
-    "footfall":"عدد الزوار"
+  "attribution": {
+    "attribution": "نسبة التحميل",
+    "qrcode": "رمز الاستجابة السريعة",
+    "trackingurl": "رابط التتبع",
+    "footfall": "عدد الزوار",
+    "analytics": {
+      "attributionAnalytics": "تحليلات الإسناد",
+      "attributionLiftIndex": "مؤشر رفع الإسناد",
+      "exposed": "تعرض",
+      "control": "تحكم",
+      "exposedAudience": "الجمهور المعرض",
+      "attributedFootfall": "عدد الزوار المنسوب",
+      "footfallRate": "معدل عدد الزوار",
+      "controlAudience": "جمهور التحكم",
+      "attributedFootfallNote": "يشير عدد الزوار المنسوب إلى مجموعة فرعية من عدد الزوار الذين شوهدوا في منصة Near.",
+      "controlFootfallNote": "يشير عدد الزوار للتحكم إلى مجموعة فرعية من عدد الزوار الذين شوهدوا في منصة Near.",
+      "attributedByDay": "عدد الزوار المنسوب حسب أيام الأسبوع",
+      "controlByDay": "عدد الزوار للتحكم حسب أيام الأسبوع",
+      "attributedByHour": "عدد الزوار المنسوب حسب الساعة",
+      "controlByHour": "عدد الزوار للتحكم حسب الساعة",
+      "peopleInsights": "رؤى حول الأشخاص",
+      "devices": "الأجهزة",
+      "gender": "الجنس",
+      "ageGroup": "الفئة العمرية",
+      "segments": "الشرائح",
+      "female": "أنثى",
+      "male": "ذكر"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "رؤى الإسناد المتقدمة",
+      "leadTimeVisit": "الوقت المسبق للزيارة",
+      "exposureVisit": "التعرض للزيارة",
+      "topStores": "أفضل المتاجر حسب عدد الزوار المنسوب",
+      "topHomeLocations": "أفضل المواقع المنزلية المنسوبة",
+      "storeName": "اسم المتجر",
+      "homeLocations": "المواقع المنزلية"
+    }
   },
   "audience": {
-      "audience": "الجمهور",
-      "clicksByGender": "النقرات حسب الجنس",
-      "clicksByDevice": "النقرات حسب الجهاز",
-      "clicksByAge": "النقرات حسب العمر",
-      "clicksBySource": "النقرات حسب المصدر",
-      "ctrBySec": "النسبة بالنقر لكل ثانية"
-    }
+    "audience": "الجمهور",
+    "clicksByGender": "النقرات حسب الجنس",
+    "clicksByDevice": "النقرات حسب الجهاز",
+    "clicksByAge": "النقرات حسب العمر",
+    "clicksBySource": "النقرات حسب المصدر",
+    "ctrBySec": "النسبة بالنقر لكل ثانية"
+  }
 }
