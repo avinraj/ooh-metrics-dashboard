@@ -12,11 +12,13 @@ import MobileAdReports from "../app/Reports/pages/MobileAdReports";
 import ReportsMain from "../app/Reports/pages/ReportsMain";
 import Layout from "../layout/Layout";
 import ProtectedRoute from "./ProtectedRoute";
+import MapViewInventory from "../app/MapView/pages/MapViewInventory";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Signup />} />
+      <Route path="/inventories" element={<MapViewInventory />} />
       <Route
         path="/highlight"
         element={

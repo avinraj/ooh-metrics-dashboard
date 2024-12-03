@@ -1,0 +1,211 @@
+{
+    "apartments": [
+      {
+        "name": "Lulu Mall Apartments",
+        "coordinates": [76.9827, 10.0355],
+        "type": "apartment"
+      },
+      {
+        "name": "Alpine Park Apartments",
+        "coordinates": [76.2953, 10.0119],
+        "type": "apartment"
+      },
+      {
+        "name": "The Residency Apartments",
+        "coordinates": [76.6347, 9.935],
+        "type": "apartment"
+      },
+      {
+        "name": "Casa Rio Apartments",
+        "coordinates": [76.2412, 10.0131],
+        "type": "apartment"
+      },
+      {
+        "name": "Brigade Caladium",
+        "coordinates": [76.2876, 9.9375],
+        "type": "apartment"
+      },
+      {
+        "name": "Indira Residency",
+        "coordinates": [76.348, 9.9854],
+        "type": "apartment"
+      },
+      {
+        "name": "Villas at Munnar",
+        "coordinates": [77.066, 10.0939],
+        "type": "apartment"
+      },
+      {
+        "name": "Ocean View Apartments",
+        "coordinates": [76.2647, 9.9333],
+        "type": "apartment"
+      },
+      {
+        "name": "Skyline Apartments",
+        "coordinates": [76.3058, 9.9673],
+        "type": "apartment"
+      },
+      {
+        "name": "Urban Heights",
+        "coordinates": [76.2911, 9.9579],
+        "type": "apartment"
+      }
+    ],
+    "workspaces": [
+      {
+        "name": "CoWork Cochin",
+        "coordinates": [76.2845, 9.9811],
+        "type": "workspace"
+      },
+      {
+        "name": "WeWork Kochi",
+        "coordinates": [76.2857, 9.9312],
+        "type": "workspace"
+      },
+      {
+        "name": "Spaces Kochi",
+        "coordinates": [76.2962, 9.9777],
+        "type": "workspace"
+      },
+      {
+        "name": "Workafella",
+        "coordinates": [76.3053, 9.9749],
+        "type": "workspace"
+      },
+      {
+        "name": "Smartwork Co-Working",
+        "coordinates": [76.2975, 9.9321],
+        "type": "workspace"
+      },
+      {
+        "name": "The Hive",
+        "coordinates": [76.2889, 9.9395],
+        "type": "workspace"
+      },
+      {
+        "name": "Huddle Co-Working",
+        "coordinates": [76.2998, 9.9306],
+        "type": "workspace"
+      },
+      {
+        "name": "Regus Kochi",
+        "coordinates": [76.2815, 9.937],
+        "type": "workspace"
+      },
+      {
+        "name": "Startup Studios",
+        "coordinates": [76.3122, 9.9732],
+        "type": "workspace"
+      },
+      {
+        "name": "The Co-Work Place",
+        "coordinates": [76.2935, 9.9344],
+        "type": "workspace"
+      }
+    ],
+    "fitness": [
+      {
+        "name": "Gold's Gym Kochi",
+        "coordinates": [76.2852, 9.9376],
+        "type": "fitness"
+      },
+      {
+        "name": "Talwalkars Gym",
+        "coordinates": [76.318, 9.9815],
+        "type": "fitness"
+      },
+      {
+        "name": "Anytime Fitness",
+        "coordinates": [76.3672, 9.9744],
+        "type": "fitness"
+      },
+      {
+        "name": "Fitness One",
+        "coordinates": [76.2758, 9.9602],
+        "type": "fitness"
+      },
+      {
+        "name": "Snap Fitness Kochi",
+        "coordinates": [76.2968, 9.9608],
+        "type": "fitness"
+      },
+      {
+        "name": "Bodybuilding Gym",
+        "coordinates": [76.2922, 9.9317],
+        "type": "fitness"
+      },
+      {
+        "name": "The Bodyworks Fitness",
+        "coordinates": [76.3195, 9.9371],
+        "type": "fitness"
+      },
+      {
+        "name": "Oxygen Fitness",
+        "coordinates": [76.287, 9.9285],
+        "type": "fitness"
+      },
+      {
+        "name": "Kochi Fitness Center",
+        "coordinates": [76.3112, 9.9773],
+        "type": "fitness"
+      },
+      {
+        "name": "The Fitness Zone",
+        "coordinates": [76.2859, 9.9348],
+        "type": "fitness"
+      }
+    ],
+    "cinema_theatres": [
+      {
+        "name": "Sree Theatres",
+        "coordinates": [76.2809, 9.9314],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "PVR Cinemas",
+        "coordinates": [76.2824, 9.9318],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "Cinepolis Kochi",
+        "coordinates": [76.3062, 9.987],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "Lulu Cinemas",
+        "coordinates": [76.9821, 10.0349],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "Wallace Theatre",
+        "coordinates": [76.2714, 9.9646],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "EVM Cinemas",
+        "coordinates": [76.3102, 9.9923],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "Carnival Cinemas",
+        "coordinates": [76.3211, 9.9447],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "Satyam Cinemas",
+        "coordinates": [76.2925, 9.9633],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "Q Cinemas",
+        "coordinates": [76.2999, 9.9864],
+        "type": "cinema_theatre"
+      },
+      {
+        "name": "Kochi Cineplex",
+        "coordinates": [76.2783, 9.9277],
+        "type": "cinema_theatre"
+      }
+    ]
+  }
+  
