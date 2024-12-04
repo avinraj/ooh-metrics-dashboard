@@ -25,9 +25,9 @@ interface MapFilterOptionsProps {
 const MapFilterOptions: React.FC<MapFilterOptionsProps> = ({
   categories,
   selectedCategories,
-  brands,
-  selectedBrands,
-  onBrandsChange,
+  // brands,
+  // selectedBrands,
+  // onBrandsChange,
   onCategoryChange,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,15 +46,15 @@ const MapFilterOptions: React.FC<MapFilterOptionsProps> = ({
       onCategoryChange(selectedValues);
     }
   };
-  const handleBrandSelectionChange = (event: any) => {
-    const selectedValues = event?.target?.value as string[];
-    console.log(selectedValues);
-    if (selectedValues.includes("allBrands")) {
-      onBrandsChange(brands);
-    } else {
-      onBrandsChange(selectedValues);
-    }
-  };
+  // const handleBrandSelectionChange = (event: any) => {
+  //   const selectedValues = event?.target?.value as string[];
+  //   console.log(selectedValues);
+  //   if (selectedValues.includes("allBrands")) {
+  //     onBrandsChange(brands);
+  //   } else {
+  //     onBrandsChange(selectedValues);
+  //   }
+  // };
 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -92,7 +92,7 @@ const MapFilterOptions: React.FC<MapFilterOptionsProps> = ({
               ))}
             </Select>
           </FormControl>
-          <FormControl sx={{marginLeft: isMobile ? "0px": '10px',marginTop: isMobile ? "5px": '0px'}}>
+          {/* <FormControl sx={{marginLeft: isMobile ? "0px": '10px',marginTop: isMobile ? "5px": '0px'}}>
             <Select
               size="small"
               multiple
@@ -116,7 +116,7 @@ const MapFilterOptions: React.FC<MapFilterOptionsProps> = ({
                 </MenuItem>
               ))}
             </Select>
-          </FormControl>
+          </FormControl> */}
         </div>
       </Collapse>
       <Tooltip title="Filter">
