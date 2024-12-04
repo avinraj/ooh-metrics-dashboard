@@ -6,7 +6,7 @@ const MapViewInventory = () => {
   const [layerType] = useState<any>("point");
 
   return (
-    <Grid2 container display="block" sx={{ margin: "10px" }}>
+    <Grid2 container display="block" >
       <Grid2 size={12}>
         <Mapbox2 layerType={layerType} />
       </Grid2>
