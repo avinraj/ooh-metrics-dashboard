@@ -6,16 +6,21 @@ import {
   Checkbox,
   ListItemText,
   useTheme,
+  Box,
+  Grid,
+  useMediaQuery,
 } from "@mui/material";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
-// import ApartmentIcon from "@mui/icons-material/Apartment";
-// import WorkspacesIcon from "@mui/icons-material/Workspaces";
-// import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
-// import TheatersIcon from "@mui/icons-material/Theaters";
+
+import theatre from "../../../assets/theatre.png";
+import fitness from "../../../assets/fitness.png";
+import apartment from "../../../assets/apartments.png";
+import workspace from "../../../assets/workspace.png";
 
 import data from "../../../Data/mapData.json";
+import MapSearchBox from "./MapSearchBox";
 
 // Your location data
 const locationData: any = data;
@@ -32,10 +37,12 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     "workspaces",
     "fitness",
     "cinema_theatres",
-  ]); // Changed to an array
+  ]);
   const [loading, setLoading] = useState(true);
+  const [markers, setMarkers] = useState<mapboxgl.Marker[]>([]);
   const theme = useTheme();
   const primaryColor = theme.palette.primary.main;
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   mapboxgl.accessToken =
     "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA"; // Replace with your Mapbox access token
@@ -55,37 +62,40 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
 
       // Create the popup content using HTML, from Material UI components
       const htmlContent = `
-          <div>
+          <div style="display: grid">
+          <div> ${getLocationIcon(locationType)}</div>
             <strong>${locationName}</strong>
-            <div style="font-size: 12px; color: #555;">
-              <p>Location Type: ${capitalizeAndFormat(locationType)}</p>
-            </div>
           </div>
         `;
 
-      new mapboxgl.Popup()
+        const popup: any = new mapboxgl.Popup({ closeOnClick: true, focusAfterOpen: true })
         .setLngLat(e.lngLat)
         .setHTML(htmlContent)
         .addTo(mapRef.current!);
+  
+      // Ensure popup close button doesn't inherit aria-hidden
+      const closeButton = popup.getElement().querySelector('.mapboxgl-popup-close-button');
+      if (closeButton) {
+        closeButton.removeAttribute('aria-hidden');
+      }
+  
     }
   };
 
-  //   const getLocationIcon = (type: string) => {
-  //     switch (type) {
-  //       case "apartment":
-  //         return <ApartmentIcon style={{ fontSize: 24, color: primaryColor }} />;
-  //       case "workspace":
-  //         return <WorkspacesIcon style={{ fontSize: 24, color: primaryColor }} />;
-  //       case "fitness":
-  //         return (
-  //           <FitnessCenterIcon style={{ fontSize: 24, color: primaryColor }} />
-  //         );
-  //       case "cinema_theatre":
-  //         return <TheatersIcon style={{ fontSize: 24, color: primaryColor }} />;
-  //       default:
-  //         return null;
-  //     }
-  //   };
+  const getLocationIcon = (type: string) => {
+    switch (type) {
+      case "apartment":
+        return `<img src=${apartment} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case "workspace":
+        return `<img src=${workspace} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case "fitness":
+        return `<img src=${fitness} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case "cinema_theatre":
+        return `<img src=${theatre} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      default:
+        return null;
+    }
+  };
 
   const createHeatLayer = (map: mapboxgl.Map) => {
     if (!map.getLayer("heatmap-layer")) {
@@ -239,6 +249,33 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
         createClusterLayer(map); // Add the cluster layer when showing points
       }
 
+      // Zoom to cluster on click
+      map.on("click", "cluster-circle-layer", (e: any) => {
+        const features: any = map.queryRenderedFeatures(e.point, {
+          layers: ["cluster-circle-layer"],
+        });
+
+        if (features && features.length > 0) {
+          const clusterId = features[0].properties.cluster_id;
+          const clusterSource = map.getSource(
+            "data-points"
+          ) as mapboxgl.GeoJSONSource;
+
+          clusterSource.getClusterExpansionZoom(clusterId, (err, zoom: any) => {
+            if (err) {
+              console.error("Error getting cluster expansion zoom:", err);
+              return;
+            }
+
+            map.easeTo({
+              center: features[0].geometry.coordinates as mapboxgl.LngLatLike,
+              zoom: zoom,
+              duration: 1000,
+            });
+          });
+        }
+      });
+
       map.on("click", handlePointClick);
     });
 
@@ -294,6 +331,36 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
       .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize first letter of each word
   };
 
+  const handleLocationSelect = ({
+    longitude,
+    latitude,
+  }: {
+    longitude: number;
+    latitude: number;
+  }) => {
+    if (mapRef.current) {
+      mapRef.current.flyTo({
+        center: [longitude, latitude],
+        zoom: 12,
+      });
+
+      const marker = new mapboxgl.Marker()
+        .setLngLat([longitude, latitude])
+        .addTo(mapRef.current);
+
+      // Track the new marker in state
+      setMarkers((prevMarkers) => [...prevMarkers, marker]);
+    }
+  };
+
+  const clearMarkers = () => {
+    // Remove all markers by iterating over them and calling remove()
+    markers.forEach((marker) => marker.remove());
+
+    // Clear the state as well
+    setMarkers([]);
+  };
+
   return (
     <div style={{ position: "relative" }}>
       {loading && (
@@ -301,53 +368,91 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
           sx={{ position: "absolute", zIndex: 2, top: "50%", right: "50%" }}
         />
       )}
-      <FormControl
+      <Grid
+        container
+        spacing={1}
         style={{
           position: "absolute",
           zIndex: 2,
-          top: "10px",
-          right: "10px",
-          background: "white",
-          borderRadius: "5px",
+          padding: "10px",
         }}
       >
-        <Select
-          size="small"
-          multiple
-          value={selectedLocation}
-          onChange={handleSelectionChange}
-          renderValue={(selected) =>
-            selected.length === 4
-              ? "All Inventories"
-              : selected.map(capitalizeAndFormat).join(", ")
-          }
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            display: "flex",
+            justifyContent: "start",
+            height: "fit-content",
+          }}
         >
-          <MenuItem value="all">
-            <Checkbox
-              checked={selectedLocation.length === 4} // All selected if 4 items are selected
-              onClick={() =>
-                setSelectedLocation(
-                  selectedLocation.length === 4
-                    ? []
-                    : ["apartments", "workspaces", "fitness", "cinema_theatres"]
-                )
-              }
+          <Box sx={{ width: isMobile ? "100%" : "50%" }}>
+            <MapSearchBox
+              onLocationSelect={handleLocationSelect}
+              onClear={clearMarkers}
             />
-            <ListItemText primary={capitalizeAndFormat("all")} />
-          </MenuItem>
-          {["apartments", "workspaces", "fitness", "cinema_theatres"].map(
-            (item) => (
-              <MenuItem key={item} value={item}>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ display: "flex", justifyContent: "end", height: "fit-content" }}
+        >
+          <FormControl
+            style={{
+              background: "white",
+              borderRadius: "5px",
+            }}
+          >
+            <Select
+              size="small"
+              multiple
+              value={selectedLocation}
+              onChange={handleSelectionChange}
+              renderValue={(selected) =>
+                selected.length === 4
+                  ? "All Inventories"
+                  : selected.map(capitalizeAndFormat).join(", ")
+              }
+            >
+              <MenuItem value="all">
                 <Checkbox
-                  checked={selectedLocation.includes(item)}
-                  onClick={(e: any) => handleItemClick(item, e.target.checked)}
+                  checked={selectedLocation.length === 4} // All selected if 4 items are selected
+                  onClick={() =>
+                    setSelectedLocation(
+                      selectedLocation.length === 4
+                        ? []
+                        : [
+                            "apartments",
+                            "workspaces",
+                            "fitness",
+                            "cinema_theatres",
+                          ]
+                    )
+                  }
                 />
-                <ListItemText primary={capitalizeAndFormat(item)} />
+                <ListItemText primary={capitalizeAndFormat("all")} />
               </MenuItem>
-            )
-          )}
-        </Select>
-      </FormControl>
+              {["apartments", "workspaces", "fitness", "cinema_theatres"].map(
+                (item) => (
+                  <MenuItem key={item} value={item}>
+                    <Checkbox
+                      checked={selectedLocation.includes(item)}
+                      onClick={(e: any) =>
+                        handleItemClick(item, e.target.checked)
+                      }
+                    />
+                    <ListItemText primary={capitalizeAndFormat(item)} />
+                  </MenuItem>
+                )
+              )}
+            </Select>
+          </FormControl>
+        </Grid>
+      </Grid>
+
       <div
         ref={mapContainerRef}
         style={{ height: "550px", width: "100%" }}

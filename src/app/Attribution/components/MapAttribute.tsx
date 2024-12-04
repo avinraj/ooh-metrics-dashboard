@@ -32,7 +32,7 @@ const geoJsonData: any = {
 
 const MapAttribute: React.FC = () => {
   const mapContainer = useRef(null);
-  const theme = useTheme()
+  const theme = useTheme();
 
   // Initialize the map
   useEffect(() => {
@@ -101,6 +101,40 @@ const MapAttribute: React.FC = () => {
           "circle-stroke-width": 1,
           "circle-stroke-color": "#fff",
         },
+      });
+
+      // Zoom in on cluster click
+      newMap.on("click", "clusters", (e: any) => {
+        const features: any = newMap.queryRenderedFeatures(e.point, {
+          layers: ["clusters"],
+        });
+
+        if (!features.length) return;
+
+        const clusterId = features[0]?.properties?.cluster_id;
+
+        const clusterSource = newMap.getSource(
+            "earthquakes"
+          ) as mapboxgl.GeoJSONSource;
+
+          clusterSource.getClusterExpansionZoom(clusterId, (err, zoom: any) => {
+          if (err) return;
+
+          newMap.easeTo({
+            center: features[0]?.geometry?.coordinates,
+            zoom: zoom,
+          });
+        });
+      });
+
+      // Change the cursor to a pointer when hovering over a cluster
+      newMap.on("mouseenter", "clusters", () => {
+        newMap.getCanvas().style.cursor = "pointer";
+      });
+
+      // Reset the cursor when leaving a cluster
+      newMap.on("mouseleave", "clusters", () => {
+        newMap.getCanvas().style.cursor = "";
       });
     });
 
