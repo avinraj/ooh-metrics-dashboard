@@ -32,9 +32,10 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
   ]);
 
   const [selectedBrands, setSelectedBrands] = useState<string[]>([
-    "burger_king",
+    // "burger_king",
   ]);
-  const brands = ["burger_king"];
+  // const brands = ["burger_king"];
+  const brands: any[] = []
   const categories = ["apartments", "workspaces", "fitness", "cinema_theatres"];
   const [loading, setLoading] = useState(true);
   const [markers, setMarkers] = useState<mapboxgl.Marker[]>([]);
