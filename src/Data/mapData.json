@@ -3496,8 +3496,8 @@
       "type": "apartment"
     },
     {
-      "name": "primarks cygnus apartment, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "primarks cygnus apartment, Hyderabad",
+      "coordinates": [78.30540415028659, 17.454537914996727],
       "type": "apartment"
     },
     {
@@ -3651,8 +3651,8 @@
       "type": "apartment"
     },
     {
-      "name": "DIAMOND OAK B, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "DIAMOND OAK B, Hyderabad",
+      "coordinates": [78.31666251350731, 17.477402355106143],
       "type": "apartment"
     },
     {
@@ -3681,58 +3681,58 @@
       "type": "apartment"
     },
     {
-      "name": "The Lawnz Sivaa Shakthi (inside elevator), undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "The Lawnz Sivaa Shakthi (inside elevator), Hyderabad",
+      "coordinates": [78.3364884779721, 17.3949482434887],
       "type": "apartment"
     },
     {
-      "name": "Fortune Heights, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Fortune Heights, Hyderabad",
+      "coordinates": [78.34671736563028, 17.495423436519143],
       "type": "apartment"
     },
     {
-      "name": "Siddharth Niravana, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Siddharth Niravana, Hyderabad",
+      "coordinates": [78.37152116748113, 17.546627502611706],
       "type": "apartment"
     },
     {
-      "name": "Niharika interlake, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Niharika interlake, Hyderabad",
+      "coordinates": [78.37513153679265, 17.4191550303735],
       "type": "apartment"
     },
     {
-      "name": "SNEHA APARTMENTS, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "SNEHA APARTMENTS, Hyderabad",
+      "coordinates": [78.48224575213807, 17.52822724368815],
       "type": "apartment"
     },
     {
-      "name": "LAKSHMI MERIDIAN RESIDENTS, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "LAKSHMI MERIDIAN RESIDENTS, Hyderabad",
+      "coordinates": [78.36892545028606, 17.433271040083696],
       "type": "apartment"
     },
     {
-      "name": "ORCHID Block, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "ORCHID Block, Hyderabad",
+      "coordinates": [78.35511889446583, 17.491398133615622],
       "type": "apartment"
     },
     {
-      "name": "Primark High View, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Primark High View, Hyderabad",
+      "coordinates": [78.37396742329928, 17.40547426005139],
       "type": "apartment"
     },
     {
-      "name": "Sunyuga elegance, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sunyuga elegance, Hyderabad",
+      "coordinates": [78.47650612330342, 17.567454225010806],
       "type": "apartment"
     },
     {
-      "name": "Srinivasa Anandam, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Srinivasa Anandam, Hyderabad",
+      "coordinates": [78.31494099261613, 17.488100010580357],
       "type": "apartment"
     },
     {
-      "name": "Sai's Signature, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sai's Signature, Hyderabad",
+      "coordinates": [78.37176470795926, 17.50748642496124],
       "type": "apartment"
     },
     {
@@ -4081,8 +4081,8 @@
       "type": "apartment"
     },
     {
-      "name": "MVV & MK PARK, undefined, Vishakapatnam",
-      "coordinates": [0, 0],
+      "name": "MVV & MK PARK, Vishakapatnam",
+      "coordinates": [83.16614607912848, 17.697257734727188],
       "type": "apartment"
     },
     {
@@ -8347,7 +8347,7 @@
     },
     {
       "name": "Atmosphere Ph-1, Co-Operative Housing Society Limited (Inside Elevator), Central Mumbai, Mumbai",
-      "coordinates": [0, 0],
+      "coordinates": [72.9473693368393, 19.15873251259887],
       "type": "apartment"
     },
     {
@@ -8436,13 +8436,13 @@
       "type": "apartment"
     },
     {
-      "name": "Shreeji Villa (Inside Elevator), undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Shreeji Villa (Inside Elevator), Mumbai",
+      "coordinates": [72.84545039456653, 19.036821170233985],
       "type": "apartment"
     },
     {
-      "name": "Marina enclave cd chsl, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Marina enclave cd chsl, Mumbai",
+      "coordinates": [72.81512738286851, 19.202483297529973],
       "type": "apartment"
     },
     {
@@ -8466,8 +8466,8 @@
       "type": "apartment"
     },
     {
-      "name": "Raj Kamal co-operative housings society Ltd., undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Raj Kamal co-operative housings society Ltd., Mumbai",
+      "coordinates": [72.82050772070563, 19.13214457347313],
       "type": "apartment"
     },
     {
@@ -8476,8 +8476,8 @@
       "type": "apartment"
     },
     {
-      "name": "Rustomjee Central park (Inside Elevator), undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Rustomjee Central park (Inside Elevator), Mumbai",
+      "coordinates": [72.86073873683814, 19.114675428277685],
       "type": "apartment"
     },
     {
@@ -8486,8 +8486,8 @@
       "type": "apartment"
     },
     {
-      "name": "DEEPTI SHAKTI MUKTI CO-OPRATIVE HOUSING SOCIETY LIMITED, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "DEEPTI SHAKTI MUKTI CO-OPRATIVE HOUSING SOCIETY LIMITED, Mumbai",
+      "coordinates": [72.81035506382482, 19.138092799524127],
       "type": "apartment"
     },
     {
@@ -8511,8 +8511,8 @@
       "type": "apartment"
     },
     {
-      "name": "K.N. KRANTI CHSL, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "K.N. KRANTI CHSL, Mumbai",
+      "coordinates": [72.87944791026119, 19.07547498574598],
       "type": "apartment"
     },
     {
@@ -8521,48 +8521,43 @@
       "type": "apartment"
     },
     {
-      "name": "Piramal Rivanta Rohin CHSL, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Piramal Rivanta Rohin CHSL, Mumbai",
+      "coordinates": [72.93461809266125, 19.166636464430457],
       "type": "apartment"
     },
     {
-      "name": "Press Enclave Aashiyana CHSL, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Press Enclave Aashiyana CHSL, Mumbai",
+      "coordinates": [72.87454070985007, 19.043475398840553],
       "type": "apartment"
     },
     {
-      "name": "Shubhlaxmi Chsl (Inside Elevator), undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Parija ChsL, Mumbai",
+      "coordinates": [72.83793994908461, 19.0702602099437],
       "type": "apartment"
     },
     {
-      "name": "Parija ChsL, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Muthaliya Residecy CHSL, Mumbai",
+      "coordinates": [72.83961597916326, 18.989029846995024],
       "type": "apartment"
     },
     {
-      "name": "Muthaliya Residecy CHSL, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Lourdes Heritage (Inside Elevator), Mumbai",
+      "coordinates": [72.83769748101871, 19.195937328353335],
       "type": "apartment"
     },
     {
-      "name": "Lourdes Heritage (Inside Elevator), undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Marina enclave ef chsl, Mumbai",
+      "coordinates": [72.81512738286851, 19.202483297529973],
       "type": "apartment"
     },
     {
-      "name": "Marina enclave ef chsl, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Saki Heritage A&B Wing Chsl, Mumbai",
+      "coordinates": [72.88921486152094, 19.10937553880916],
       "type": "apartment"
     },
     {
-      "name": "Saki Heritage A&B Wing Chsl, undefined, Mumbai",
-      "coordinates": [0, 0],
-      "type": "apartment"
-    },
-    {
-      "name": "Marina enclave cd chsl (Inside Elevator), undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Marina enclave cd chsl (Inside Elevator), Mumbai",
+      "coordinates": [72.81512738286851, 19.202483297529973],
       "type": "apartment"
     },
     {
@@ -9486,8 +9481,8 @@
       "type": "apartment"
     },
     {
-      "name": "Ganpati Apartment (Inside Elevator), undefined, Gurgaon",
-      "coordinates": [0, 0],
+      "name": "Ganpati Apartment (Inside Elevator), Gurgaon",
+      "coordinates": [77.0956049515072, 28.427475913080105],
       "type": "apartment"
     },
     {
@@ -9966,8 +9961,8 @@
       "type": "apartment"
     },
     {
-      "name": "Parshvnath Panorma Apartment (Inside Elevator), undefined, Greater Noida",
-      "coordinates": [0, 0],
+      "name": "Parshvnath Panorma Apartment (Inside Elevator), Greater Noida",
+      "coordinates": [77.52303680833644, 28.459981185646473],
       "type": "apartment"
     },
     {
@@ -10236,8 +10231,8 @@
       "type": "apartment"
     },
     {
-      "name": "PEARL HEIGHT APARTMENT, undefined, Ghaziabad",
-      "coordinates": [0, 0],
+      "name": "PEARL HEIGHT APARTMENT, Ghaziabad",
+      "coordinates": [77.34968018135865, 28.651716923087182],
       "type": "apartment"
     },
     {
@@ -13236,8 +13231,8 @@
       "type": "apartment"
     },
     {
-      "name": "Aryan Opulence, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Aryan Opulence, Bengaluru",
+      "coordinates": [77.50918482320195, 12.904294087088134],
       "type": "apartment"
     },
     {
@@ -13261,8 +13256,8 @@
       "type": "apartment"
     },
     {
-      "name": "BM Magnolia Park, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "BM Magnolia Park, Bengaluru",
+      "coordinates": [77.76493762505277, 12.96977362839682],
       "type": "apartment"
     },
     {
@@ -13296,8 +13291,8 @@
       "type": "apartment"
     },
     {
-      "name": "Sree Adithya Elegant, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Sree Adithya Elegant, Bengaluru",
+      "coordinates": [77.72379525203965, 13.015116245335907],
       "type": "apartment"
     },
     {
@@ -13306,23 +13301,23 @@
       "type": "apartment"
     },
     {
-      "name": "United Blossom, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "United Blossom, Bengaluru",
+      "coordinates": [77.74732149621813, 13.026994563588527],
       "type": "apartment"
     },
     {
-      "name": "CJN SAI FORTUNE, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "CJN SAI FORTUNE, Bengaluru",
+      "coordinates": [77.7780894501911, 13.071867857927062],
       "type": "apartment"
     },
     {
-      "name": "Suriti - The Auspicious, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Suriti - The Auspicious, Bengaluru",
+      "coordinates": [77.54856704834037, 13.012724567130393],
       "type": "apartment"
     },
     {
-      "name": "ARATT FELICITA APARTMENT OWNERS ASSOCIATION, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "ARATT FELICITA APARTMENT OWNERS ASSOCIATION, Bengaluru",
+      "coordinates": [77.62440333669439, 12.86714996000426],
       "type": "apartment"
     },
     {
@@ -14731,13 +14726,13 @@
       "type": "apartment"
     },
     {
-      "name": "Appaswamy Splendour, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Appaswamy Splendour, Chennai",
+      "coordinates": [80.22655080785889, 12.876125022889951],
       "type": "apartment"
     },
     {
-      "name": "Alliance Orchid Springs - Hibiscus, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Alliance Orchid Springs - Hibiscus, Chennai",
+      "coordinates": [80.19339053642608, 13.126804679611238],
       "type": "apartment"
     },
     {
@@ -16971,43 +16966,43 @@
       "type": "apartment"
     },
     {
-      "name": "Rohan ananta C (inside elevator), undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Rohan ananta C (inside elevator), Pune",
+      "coordinates": [73.74570877915303, 18.620798157922213],
       "type": "apartment"
     },
     {
-      "name": "KALPATARU EXQUISITE WING-2 (inside elevator), undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "KALPATARU EXQUISITE WING-2 (inside elevator), Pune",
+      "coordinates": [73.76419959634475, 18.601366628732094],
       "type": "apartment"
     },
     {
-      "name": "AUSTIN COUNTY CO OPERATIVE HOUSING SOCIETY LTD, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "AUSTIN COUNTY CO OPERATIVE HOUSING SOCIETY LTD, Pune",
+      "coordinates": [73.75217522518076, 18.61438382885978],
       "type": "apartment"
     },
     {
-      "name": "Nyati Elan South, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Nyati Elan South, Pune",
+      "coordinates": [74.00132997915212, 18.587081620943533],
       "type": "apartment"
     },
     {
-      "name": "Akshay Classic, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Akshay Classic, Pune",
+      "coordinates": [73.80793281893561, 18.6006207682734],
       "type": "apartment"
     },
     {
-      "name": "Apostrophe Next, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Apostrophe Next, Pune",
+      "coordinates": [73.76321683682391, 18.602870231198732],
       "type": "apartment"
     },
     {
-      "name": "Mont vert sevillle, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Mont vert sevillle, Pune",
+      "coordinates": [73.7671912926457, 18.60285520680312],
       "type": "apartment"
     },
     {
-      "name": "Horizon at Wakad, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Horizon at Wakad, Pune",
+      "coordinates": [73.7589625233309, 18.60413840565231],
       "type": "apartment"
     },
     {
@@ -17623,11 +17618,6 @@
     {
       "name": "Altius Association of Apartment Owners, Tangra, Kolkata",
       "coordinates": [88.38674627, 22.54762911],
-      "type": "apartment"
-    },
-    {
-      "name": "undefined, undefined, Kolkata",
-      "coordinates": [null, 0],
       "type": "apartment"
     },
     {
@@ -18431,8 +18421,8 @@
       "type": "apartment"
     },
     {
-      "name": "The Rajyash Reyansh, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "The Rajyash Reyansh, Ahmedabad",
+      "coordinates": [72.54646285812404, 22.992060203718633],
       "type": "apartment"
     },
     {
@@ -18461,48 +18451,48 @@
       "type": "apartment"
     },
     {
-      "name": "Best Residency, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "Best Residency, Ahmedabad",
+      "coordinates": [72.50815487928824, 22.986929209726238],
       "type": "apartment"
     },
     {
-      "name": "Ratnadeep flora, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "Ratnadeep flora, Ahmedabad",
+      "coordinates": [72.56536053696311, 23.08992416636055],
       "type": "apartment"
     },
     {
-      "name": "Eden S To X, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "Eden S To X, Ahmedabad",
+      "coordinates": [72.55500419463536, 23.117352856627278],
       "type": "apartment"
     },
     {
-      "name": "The basil skyline, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "The basil skyline, Ahmedabad",
+      "coordinates": [72.56043620812895, 23.13468869876014],
       "type": "apartment"
     },
     {
-      "name": "Rajyash Reeva, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "Rajyash Reeva, Ahmedabad",
+      "coordinates": [72.54854663880934, 22.993207443412402],
       "type": "apartment"
     },
     {
-      "name": "SHLOK ELANZA, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "SHLOK ELANZA, Ahmedabad",
+      "coordinates": [72.53616697929216, 23.102420300412692],
       "type": "apartment"
     },
     {
-      "name": "Swasthi, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "Swasthi, Ahmedabad",
+      "coordinates": [72.47684586579724, 23.046500257557714],
       "type": "apartment"
     },
     {
-      "name": "Tilak Arise, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "Tilak Arise, Ahmedabad",
+      "coordinates": [72.60498375230925, 23.193993653682913],
       "type": "apartment"
     },
     {
-      "name": "Tatsat life, undefined, Ahmedabad",
-      "coordinates": [0, 0],
+      "name": "Tatsat life, Ahmedabad",
+      "coordinates": [72.53675832162227, 23.142006083000165],
       "type": "apartment"
     },
     {
@@ -18697,32 +18687,32 @@
     },
     {
       "name": "Bishnupriya Apartment, nayapali, Bhuvaneshwar",
-      "coordinates": [0, 20.29915],
+      "coordinates": [ 85.81381669454393,20.299258869046124],
       "type": "apartment"
     },
     {
       "name": "Saptarshi Apartment, patia, Bhuvaneshwar",
-      "coordinates": [0, 20.35057],
+      "coordinates": [ 85.82509843687423,20.350528642226656],
       "type": "apartment"
     },
     {
       "name": "Regal Dove, Patia, Bhuvaneshwar",
-      "coordinates": [0, 20.35173],
+      "coordinates": [ 85.83335380618901,20.351713954221083],
       "type": "apartment"
     },
     {
-      "name": "DHAULI HERITAGE RESIDENTIAL WELFARE ASSOCIATION TRUST, undefined, Bhuvaneshwar",
+      "name": "DHAULI HERITAGE RESIDENTIAL WELFARE ASSOCIATION TRUST, Bhuvaneshwar",
       "coordinates": [85.80764, 20.21557],
       "type": "apartment"
     },
     {
-      "name": "Shree Omm Mansion, undefined, Bhuvaneshwar",
+      "name": "Shree Omm Mansion, Bhuvaneshwar",
       "coordinates": [85.86269, 20.27914],
       "type": "apartment"
     },
     {
-      "name": "NBCC IMPERIA RESIDENTS WELFARE ASSOCIATION, undefined, Bhuvaneshwar",
-      "coordinates": [0, 0],
+      "name": "NBCC IMPERIA RESIDENTS WELFARE ASSOCIATION, Bhuvaneshwar",
+      "coordinates": [85.82794386625474, 20.31725203738057],
       "type": "apartment"
     },
     {
@@ -19121,28 +19111,28 @@
       "type": "apartment"
     },
     {
-      "name": "Icon Apartment, undefined, Lucknow",
-      "coordinates": [0, 0],
+      "name": "Icon Apartment, Lucknow",
+      "coordinates": [80.89461662362166, 26.807675035036127],
       "type": "apartment"
     },
     {
-      "name": "Kiara Residency, undefined, Lucknow",
-      "coordinates": [0, 0],
+      "name": "Kiara Residency, Lucknow",
+      "coordinates": [81.01619263710175, 26.778420797947533],
       "type": "apartment"
     },
     {
-      "name": "Gangotri Enclave, undefined, Lucknow",
-      "coordinates": [0, 0],
+      "name": "Gangotri Enclave, Lucknow",
+      "coordinates": [80.98730765059449, 26.769512745564246],
       "type": "apartment"
     },
     {
-      "name": "Saryu Enclave, undefined, Lucknow",
-      "coordinates": [0, 0],
+      "name": "Saryu Enclave, Lucknow",
+      "coordinates": [80.99323540826549, 26.763181685297297],
       "type": "apartment"
     },
     {
-      "name": "Sunbreeze Apartment 1, undefined, Lucknow",
-      "coordinates": [0, 0],
+      "name": "Sunbreeze Apartment 1, Lucknow",
+      "coordinates": [81.0582669156254, 26.885089876589117],
       "type": "apartment"
     },
     {
@@ -19491,7 +19481,7 @@
       "type": "apartment"
     },
     {
-      "name": "Nithya C Block, undefined, Tirupati",
+      "name": "Nithya C Block, Tirupati",
       "coordinates": [79.42086463, 13.61721296],
       "type": "apartment"
     },
@@ -19846,18 +19836,18 @@
       "type": "apartment"
     },
     {
-      "name": "TRIMURTY ARIANA MUTUAL WELFARE SOCIETY, undefined, Jaipur",
-      "coordinates": [0, 0],
+      "name": "TRIMURTY ARIANA MUTUAL WELFARE SOCIETY, Jaipur",
+      "coordinates": [75.86355512176225, 26.85512552711243],
       "type": "apartment"
     },
     {
-      "name": "GOVINDAM JAISINGHPURA RESIDENTS WELFARE ASSOCIATION, undefined, Jaipur",
-      "coordinates": [0, 0],
+      "name": "GOVINDAM JAISINGHPURA RESIDENTS WELFARE ASSOCIATION, Jaipur",
+      "coordinates": [75.77744022750213, 26.882148164647496],
       "type": "apartment"
     },
     {
-      "name": "THE MAHIMA NIRVANA, undefined, Jaipur",
-      "coordinates": [0, 0],
+      "name": "THE MAHIMA NIRVANA, Jaipur",
+      "coordinates": [75.67346999477607, 26.85260476003845],
       "type": "apartment"
     },
     {
@@ -20001,23 +19991,23 @@
       "type": "apartment"
     },
     {
-      "name": "Times Luxuria, undefined, Surat",
-      "coordinates": [0, 0],
+      "name": "Times Luxuria, Surat",
+      "coordinates": [72.77151766573398, 21.1326110682664],
       "type": "apartment"
     },
     {
-      "name": "Pioneer Belina, undefined, Surat",
-      "coordinates": [0, 0],
+      "name": "Pioneer Belina, Surat",
+      "coordinates": [72.80167520991222, 21.1332097862771],
       "type": "apartment"
     },
     {
-      "name": "Oliva Heights, undefined, Surat",
-      "coordinates": [0, 0],
+      "name": "Oliva Heights, Surat",
+      "coordinates": [72.80136648107677, 21.135211451861572],
       "type": "apartment"
     },
     {
-      "name": "Fortuna Heights, undefined, Surat",
-      "coordinates": [0, 0],
+      "name": "Fortuna Heights, Surat",
+      "coordinates": [72.80449088639213, 21.143562978356567],
       "type": "apartment"
     },
     {
@@ -20146,18 +20136,18 @@
       "type": "apartment"
     },
     {
-      "name": "HEALTHY HOMES RESIDENTS ASSOCIATION, undefined, Indore",
-      "coordinates": [0, 0],
+      "name": "HEALTHY HOMES RESIDENTS ASSOCIATION, Indore",
+      "coordinates": [75.81334756578715, 22.752094201320595],
       "type": "apartment"
     },
     {
-      "name": "TULIP GARDEN CONDOMINIUM,, undefined, Indore",
-      "coordinates": [0, 0],
+      "name": "TULIP GARDEN CONDOMINIUM,, Indore",
+      "coordinates": [75.91449882160755, 22.71382281798173],
       "type": "apartment"
     },
     {
-      "name": "SHREE SHYAM REGENCY,, undefined, Indore",
-      "coordinates": [0, 0],
+      "name": "SHREE SHYAM REGENCY,, Indore",
+      "coordinates": [75.82588788112724, 22.678195863015997],
       "type": "apartment"
     },
     {
@@ -20326,13 +20316,13 @@
       "type": "apartment"
     },
     {
-      "name": "Sukhdham, undefined, Kanpur",
-      "coordinates": [0, 0],
+      "name": "Sukhdham, Kanpur",
+      "coordinates": [80.31867127823126, 26.496898512286577],
       "type": "apartment"
     },
     {
-      "name": "Radhey Apartment, undefined, Kanpur",
-      "coordinates": [0, 0],
+      "name": "Radhey Apartment, Kanpur",
+      "coordinates": [80.316267679249, 26.487633089887094],
       "type": "apartment"
     },
     {
@@ -20341,18 +20331,18 @@
       "type": "apartment"
     },
     {
-      "name": "ROYALE ESTATE APARTMENT OWNERS ASSOCIATION, undefined, Mohali",
-      "coordinates": [0, 0],
+      "name": "ROYALE ESTATE APARTMENT OWNERS ASSOCIATION, Mohali",
+      "coordinates": [76.83407658331873, 30.69448022423687],
       "type": "apartment"
     },
     {
-      "name": "SPANGLE HEIGHTS APRTMENTS OWNER ASSOCIATION, undefined, Mohali",
-      "coordinates": [0, 0],
+      "name": "SPANGLE HEIGHTS APRTMENTS OWNER ASSOCIATION, Mohali",
+      "coordinates": [76.83945879494195, 30.660498341587083],
       "type": "apartment"
     },
     {
-      "name": "SBP HOMES EXTENTION 3 C/O MS HOSPITALITY MANAGEMENT, undefined, Mohali",
-      "coordinates": [0, 0],
+      "name": "SBP HOMES EXTENTION 3 C/O MS HOSPITALITY MANAGEMENT, Mohali",
+      "coordinates": [76.67290367091495, 30.729989731640863],
       "type": "apartment"
     },
     {
@@ -20361,8 +20351,8 @@
       "type": "apartment"
     },
     {
-      "name": "GULMOHAR TRENDS HOUSE OWNERS WELFARE ASSOCIATION, undefined, Mohali",
-      "coordinates": [0, 0],
+      "name": "GULMOHAR TRENDS HOUSE OWNERS WELFARE ASSOCIATION, Mohali",
+      "coordinates": [76.83858135076329, 30.65172911163133],
       "type": "apartment"
     }
   ],
@@ -21608,168 +21598,128 @@
       "type": "workspace"
     },
     {
-      "name": "Smartworks Amar Madhuban Tech Park, undefined, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Smartworks Amar Madhuban Tech Park, Pune",
+      "coordinates": [73.77345450236452, 18.55123302814822],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Amar Pristine 81, undefined, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Smartworks Amar Pristine 81, Pune",
+      "coordinates": [73.91349605216466, 18.535851651144053],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Amar Sadanand Tech Park, undefined, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Smartworks Amar Sadanand Tech Park, Pune",
+      "coordinates": [73.76741925216555, 18.568078608329795],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Amar Tech Center, undefined, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Smartworks Amar Tech Center, Pune",
+      "coordinates": [73.90705498100087, 18.557264818652357],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Arihant Verge, undefined, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Arihant Verge, Chennai",
+      "coordinates": [80.24948965203883, 12.969795714316092],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Arihant Verge POD, undefined, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Aurobindo Galaxy, Hyderabad",
+      "coordinates": [78.37577170795751, 17.436827364220502],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Aurobindo Galaxy, undefined, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Smartworks Bharati Vilas, Chennai",
+      "coordinates": [ 80.20722365203981,13.025191384874034],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Bharati Vilas, undefined, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Smartworks DSR Techno Cube POD, Bengaluru",
+      "coordinates": [ 77.71620860786032,12.955432334854152],
       "type": "workspace"
     },
     {
-      "name": "Smartworks DSR Techno Cube POD, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Smartworks Fleet House, Mumbai",
+      "coordinates": [72.87904410615275,19.10874830811811],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Fleet House, undefined, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Global Technology Park POD, Bengaluru",
+      "coordinates": [77.67974502320236,12.923710628701171],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Global Technology Park POD, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Smartworks Golden Millenium, Bengaluru",
+      "coordinates": [ 77.59376879436783,12.990937709448671],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Golden Millenium, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Smartworks Kochar Globe, Chennai",
+      "coordinates": [ 80.20197240786129,13.0142310992735],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Golden Millenium POD, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Smartworks M Agile, Pune",
+      "coordinates": [ 73.77671386565831,18.55590056450034],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Kochar Globe, undefined, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Marisoft C, Pune",
+      "coordinates": [ 73.90689627545186,18.54625100082725],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Kochar Globe POD, undefined, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Olympia National Tower, Chennai",
+      "coordinates": [ 80.21093886368303,13.010176142219304],
       "type": "workspace"
     },
     {
-      "name": "Smartworks M Agile, undefined, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Smartworks Paradigm, Mumbai",
+      "coordinates": [72.83267713683995,19.180544080776194],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Marisoft C, undefined, undefined, Pune",
-      "coordinates": [0, 0],
+      "name": "Smartworks Prestige Polygon, Chennai",
+      "coordinates": [ 80.24416787902601,13.032941841683677],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Olympia National Tower, undefined, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Prestige Zeenath, Bengaluru",
+      "coordinates": [ 77.59547125018916,12.966216558863934],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Olympia national tower POD, undefined, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Purva Summit, Hyderabad",
+      "coordinates": [ 78.37038903679353,17.45374405081999],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Paradigm, undefined, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Sargod Imperial, Bengaluru",
+      "coordinates": [ 77.60573493854584, 12.971697533334822],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Prestige Polygon, undefined, undefined, Chennai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Sirius Building, Bengaluru",
+      "coordinates": [ 77.59384485018956,12.990371964123534],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Prestige Zeenath, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Smartworks Summer Court, Pune",
+      "coordinates": [ 73.92919909449287,18.519256647987856],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Prestige Zeenath POD, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "Smartworks The Cube, Bengaluru",
+      "coordinates": [77.61360486156106,13.043991449299476],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Purva Summit, undefined, undefined, Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Smartworks The Cube POD, Bengaluru",
+      "coordinates": [77.61360486156106,13.043991449299476],
       "type": "workspace"
     },
     {
-      "name": "Smartworks Sargod Imperial, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
-      "type": "workspace"
-    },
-    {
-      "name": "Smartworks Sargod Imperial POD, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
-      "type": "workspace"
-    },
-    {
-      "name": "Smartworks Sirius Building, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
-      "type": "workspace"
-    },
-    {
-      "name": "Smartworks Sirius Building POD, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
-      "type": "workspace"
-    },
-    {
-      "name": "Smartworks Summer Court, undefined, undefined, Pune",
-      "coordinates": [0, 0],
-      "type": "workspace"
-    },
-    {
-      "name": "Smartworks Summer Court POD, undefined, undefined, Pune",
-      "coordinates": [0, 0],
-      "type": "workspace"
-    },
-    {
-      "name": "Smartworks The Cube, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
-      "type": "workspace"
-    },
-    {
-      "name": "Smartworks The Cube POD, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
-      "type": "workspace"
-    },
-    {
-      "name": "Smartworks Times Square Building, undefined, undefined, Mumbai",
-      "coordinates": [0, 0],
+      "name": "Smartworks Times Square Building, Mumbai",
+      "coordinates": [72.88355759635887,19.1083116000347],
       "type": "workspace"
     },
     {
@@ -22148,8 +22098,8 @@
       "type": "workspace"
     },
     {
-      "name": "WeWork - Redwood, undefined, undefined, Bengaluru",
-      "coordinates": [0, 0],
+      "name": "WeWork - Redwood, Bengaluru",
+      "coordinates": [ 77.6201379366976,13.048987371359077],
       "type": "workspace"
     },
     {
@@ -22279,7 +22229,7 @@
     },
     {
       "name": "WTC Kharadi(Redbrick offices), Kharadi, Bengaluru, Pune",
-      "coordinates": [0, 0],
+      "coordinates": [ 73.94802812332944,18.550717382098483],
       "type": "workspace"
     }
   ],
@@ -22430,83 +22380,83 @@
       "type": "fitness"
     },
     {
-      "name": "JP CINEMAS P4 panel (18(W) *10 ft (H) ) , , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "JP CINEMAS P4 panel (18(W) *10 ft (H) ) , Hyderabad",
+      "coordinates": [ 78.33443965213719,17.49535859694964],
       "type": "fitness"
     },
     {
-      "name": "JP CINEMAS ( 55 inches ), , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "JP CINEMAS ( 55 inches ) , Hyderabad",
+      "coordinates": [ 78.33443965213719,17.49535859694964],
       "type": "fitness"
     },
     {
-      "name": "Sharath City Mall - Food Court, , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sharath City Mall - Food Court, Hyderabad",
+      "coordinates": [ 78.36400976377969,17.457567792837914],
       "type": "fitness"
     },
     {
-      "name": "Sharath City Mall - 55inches POD, , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sharath City Mall - 55inches POD , Hyderabad",
+      "coordinates": [ 78.36400976377969,17.457567792837914],
       "type": "fitness"
     },
     {
-      "name": "Sharath City Mall - Vertical, , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sharath City Mall - Vertical, Hyderabad",
+      "coordinates": [ 78.36400976377969,17.457567792837914],
       "type": "fitness"
     },
     {
-      "name": "Sharath City Mall - Entrance, , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sharath City Mall - Entrance, Hyderabad",
+      "coordinates": [ 78.36400976377969,17.457567792837914],
       "type": "fitness"
     },
     {
-      "name": "Sharath City Mall - Cylindrical, , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sharath City Mall - Cylindrical, Hyderabad",
+      "coordinates": [ 78.36400976377969,17.457567792837914],
       "type": "fitness"
     },
     {
-      "name": "Ashoka Mall \"55inches\", , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Ashoka Mall \"55inches\", Hyderabad",
+      "coordinates": [ 78.41769935028722,17.479637402814383],
       "type": "fitness"
     },
     {
       "name": "AMB CINEMAS - Large LED, , Hyderabad",
-      "coordinates": [0, 0],
+      "coordinates": [78.36325359446496,17.457989180218913],
       "type": "fitness"
     },
     {
       "name": "AMB CINEMAS - Vertical, , Hyderabad",
-      "coordinates": [0, 0],
+      "coordinates": [78.36325359446496,17.457989180218913],
       "type": "fitness"
     },
     {
       "name": "AMB CINEMAS - Video Walls, , Hyderabad",
-      "coordinates": [0, 0],
+      "coordinates": [78.36325359446496,17.457989180218913],
       "type": "fitness"
     },
     {
-      "name": "Ashoka Mall \"12(W) *7 ft (H)\", , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Ashoka Mall \"12(W) *7 ft (H)\", Hyderabad",
+      "coordinates": [ 78.4174594458259,17.479337430568854],
       "type": "fitness"
     },
     {
-      "name": "Ashoka Mall \"4(W) *7 ft (H)\", , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Ashoka Mall \"4(W) *7 ft (H)\", Hyderabad",
+      "coordinates": [ 78.4174594458259,17.479337430568854],
       "type": "fitness"
     },
     {
-      "name": "Sharath City Mall - Square Pillar, , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sharath City Mall - Square Pillar , Hyderabad",
+      "coordinates": [78.36389565028668,17.457779407195176],
       "type": "fitness"
     },
     {
-      "name": "Sharath City Mall - Escalator, , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "Sharath City Mall - Escalator, Hyderabad",
+      "coordinates": [78.36389565028668,17.457779407195176],
       "type": "fitness"
     },
     {
-      "name": "JP Cinemas 2(W)X18(H), , Hyderabad",
-      "coordinates": [0, 0],
+      "name": "JP Cinemas 2(W)X18(H),Hyderabad",
+      "coordinates": [ 78.33441819446588,17.495389294548822],
       "type": "fitness"
     },
     {
