@@ -1,25 +1,17 @@
-import {
-  CircularProgress,
-  FormControl,
-  MenuItem,
-  Select,
-  Checkbox,
-  ListItemText,
-  useTheme,
-  Box,
-  Grid,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, CircularProgress, Grid, useTheme } from "@mui/material";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
 
-import theatre from "../../../assets/theatre.png";
-import fitness from "../../../assets/fitness.png";
+// import logo from "../../../assets/oohlogo.png";
 import apartment from "../../../assets/apartments.png";
+import fitness from "../../../assets/fitness.png";
+import theatre from "../../../assets/theatre.png";
 import workspace from "../../../assets/workspace.png";
+import store from "../../../assets/store.png"
 
 import data from "../../../Data/mapData.json";
+import MapFilterOptions from "./MapFilterOptions";
 import MapSearchBox from "./MapSearchBox";
 
 // Your location data
@@ -38,11 +30,16 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     "fitness",
     "cinema_theatres",
   ]);
+
+  const [selectedBrands, setSelectedBrands] = useState<string[]>([
+    "burger_king",
+  ]);
+  const brands = ["burger_king"];
+  const categories = ["apartments", "workspaces", "fitness", "cinema_theatres"];
   const [loading, setLoading] = useState(true);
   const [markers, setMarkers] = useState<mapboxgl.Marker[]>([]);
   const theme = useTheme();
   const primaryColor = theme.palette.primary.main;
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   mapboxgl.accessToken =
     "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA"; // Replace with your Mapbox access token
@@ -68,17 +65,21 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
           </div>
         `;
 
-        const popup: any = new mapboxgl.Popup({ closeOnClick: true, focusAfterOpen: true })
+      const popup: any = new mapboxgl.Popup({
+        closeOnClick: true,
+        focusAfterOpen: true,
+      })
         .setLngLat(e.lngLat)
         .setHTML(htmlContent)
         .addTo(mapRef.current!);
-  
+
       // Ensure popup close button doesn't inherit aria-hidden
-      const closeButton = popup.getElement().querySelector('.mapboxgl-popup-close-button');
+      const closeButton = popup
+        .getElement()
+        .querySelector(".mapboxgl-popup-close-button");
       if (closeButton) {
-        closeButton.removeAttribute('aria-hidden');
+        closeButton.removeAttribute("aria-hidden");
       }
-  
     }
   };
 
@@ -92,6 +93,8 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
         return `<img src=${fitness} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       case "cinema_theatre":
         return `<img src=${theatre} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+        case "store":
+        return `<img src=${store} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       default:
         return null;
     }
@@ -235,7 +238,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     mapRef.current = map;
 
     map.on("load", () => {
-      const filteredData = filterLocationData(selectedLocation);
+      const filteredData = filterLocationData(selectedLocation, selectedBrands);
 
       if (!map.getSource("data-points")) {
         map.addSource("data-points", createClusteredSource(filteredData));
@@ -285,50 +288,41 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
         mapRef.current = null;
       }
     };
-  }, [layerType, selectedLocation]); // Re-render when layer type or selected locations change
+  }, [layerType, selectedLocation, selectedBrands]);
 
-  // Handle change for selection
-  const handleSelectionChange = (event: any) => {
-    const selectedValues = event?.target?.value as string[];
+  const filterLocationData = (
+    categoriesData: string[],
+    brandsData: string[]
+  ) => {
+    let filteredLocations: any[] = [];
 
-    if (selectedValues.includes("all") || !selectedValues?.length) {
-      setSelectedLocation([
-        "apartments",
-        "workspaces",
-        "fitness",
-        "cinema_theatres",
-      ]);
+    // Filter by category
+    if (categoriesData.length > 0 && !categoriesData.includes("all")) {
+      filteredLocations = categoriesData.flatMap(
+        (category) => locationData[category] || []
+      );
     } else {
-      setSelectedLocation(selectedValues);
+      //filteredLocations = categories.flatMap((category) => locationData[category])
+      // filteredLocations = [
+      //   ...locationData.apartments,
+      //   ...locationData.workspaces,
+      //   ...locationData.fitness,
+      //   ...locationData.cinema_theatres,
+      // ];
     }
-  };
 
-  const filterLocationData = (categories: string[]) => {
-    if (categories.length > 0 && !categories.includes("all")) {
-      return categories.flatMap((category) => locationData[category] || []);
+    let brandsFiltered: any[] = [];
+
+    if (brandsData.length > 0 && !brandsData.includes("allBrands")) {
+      brandsFiltered = brandsData.flatMap((brand) => locationData[brand] || []);
+    } else {
+      //brandsFiltered = brands.flatMap((brand) => locationData[brand])
+      // brandsFiltered = [...locationData.burger_king];
     }
-    return [
-      ...locationData.apartments,
-      ...locationData.workspaces,
-      ...locationData.fitness,
-      ...locationData.cinema_theatres,
-    ]; // Combine all categories if no specific one is selected
-  };
 
-  const handleItemClick = (item: string, checked: boolean) => {
-    setSelectedLocation((prevSelected) => {
-      if (checked) {
-        return [...prevSelected, item];
-      } else {
-        return prevSelected.filter((selectedItem) => selectedItem !== item);
-      }
-    });
-  };
+    const combinedFilteredData = [...filteredLocations, ...brandsFiltered];
 
-  const capitalizeAndFormat = (text: string) => {
-    return text
-      .replace(/_/g, " ") // Replace underscores with spaces
-      .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize first letter of each word
+    return combinedFilteredData;
   };
 
   const handleLocationSelect = ({
@@ -361,8 +355,16 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     setMarkers([]);
   };
 
+  const handleCategoryChange = (selected: string[]) => {
+    setSelectedLocation(selected);
+  };
+
+  const handleBrandChange = (selected: string[]) => {
+    setSelectedBrands(selected);
+  };
+
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", margin: "10px" }}>
       {loading && (
         <CircularProgress
           sx={{ position: "absolute", zIndex: 2, top: "50%", right: "50%" }}
@@ -387,7 +389,39 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
             height: "fit-content",
           }}
         >
-          <Box sx={{ width: isMobile ? "100%" : "50%" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "10px",
+            }}
+          >
+            {/* <img
+                src={logo}
+                alt="OOH Logo"
+                style={{ marginRight: 10, height: "40px" }}
+              /> */}
+            <h2
+              style={{
+                color: "white",
+                margin: "4px",
+              }}
+            >
+              OOHmetrics
+            </h2>
+          </div>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md
+          sx={{
+            display: "flex",
+            justifyContent: "end",
+            height: "fit-content",
+          }}
+        >
+          <Box sx={{ width: "100%" }}>
             <MapSearchBox
               onLocationSelect={handleLocationSelect}
               onClear={clearMarkers}
@@ -397,59 +431,21 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
         <Grid
           item
           xs={12}
-          md={6}
-          sx={{ display: "flex", justifyContent: "end", height: "fit-content" }}
+          md="auto"
+          sx={{
+            display: "flex",
+            justifyContent: "end",
+            height: "fit-content",
+          }}
         >
-          <FormControl
-            style={{
-              background: "white",
-              borderRadius: "5px",
-            }}
-          >
-            <Select
-              size="small"
-              multiple
-              value={selectedLocation}
-              onChange={handleSelectionChange}
-              renderValue={(selected) =>
-                selected.length === 4
-                  ? "All Inventories"
-                  : selected.map(capitalizeAndFormat).join(", ")
-              }
-            >
-              <MenuItem value="all">
-                <Checkbox
-                  checked={selectedLocation.length === 4} // All selected if 4 items are selected
-                  onClick={() =>
-                    setSelectedLocation(
-                      selectedLocation.length === 4
-                        ? []
-                        : [
-                            "apartments",
-                            "workspaces",
-                            "fitness",
-                            "cinema_theatres",
-                          ]
-                    )
-                  }
-                />
-                <ListItemText primary={capitalizeAndFormat("all")} />
-              </MenuItem>
-              {["apartments", "workspaces", "fitness", "cinema_theatres"].map(
-                (item) => (
-                  <MenuItem key={item} value={item}>
-                    <Checkbox
-                      checked={selectedLocation.includes(item)}
-                      onClick={(e: any) =>
-                        handleItemClick(item, e.target.checked)
-                      }
-                    />
-                    <ListItemText primary={capitalizeAndFormat(item)} />
-                  </MenuItem>
-                )
-              )}
-            </Select>
-          </FormControl>
+          <MapFilterOptions
+            categories={categories}
+            brands={brands}
+            selectedCategories={selectedLocation}
+            selectedBrands={selectedBrands}
+            onCategoryChange={handleCategoryChange}
+            onBrandsChange={handleBrandChange}
+          />
         </Grid>
       </Grid>
 

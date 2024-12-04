@@ -19,10 +19,7 @@ interface MapSearchBoxProps {
   onClear: () => void;
 }
 
-const MapSearchBox: React.FC<MapSearchBoxProps> = ({
-  onLocationSelect,
-  onClear,
-}) => {
+const MapSearchBox: React.FC<MapSearchBoxProps> = ({ onLocationSelect, onClear }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<any[]>([]);
 
@@ -31,20 +28,14 @@ const MapSearchBox: React.FC<MapSearchBoxProps> = ({
     if (!searchQuery.trim()) return;
 
     try {
-      const response = await axios.get(
-        `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-          searchQuery
-        )}.json`,
-        {
-          params: {
-            access_token:
-              "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA",
-            limit: 100,
-          },
-        }
-      );
+      const response = await axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
+        params: {
+          address: searchQuery,
+          key: "AIzaSyDGwYJTHOK-BEPkJXOfjUQoFGgav_WYDNk"
+        },
+      });
 
-      setSearchResults(response.data.features || []);
+      setSearchResults(response.data.results || []);
     } catch (error) {
       console.error("Error fetching search results:", error);
     }
@@ -56,11 +47,7 @@ const MapSearchBox: React.FC<MapSearchBoxProps> = ({
     onClear();
   };
 
-  const handleLocationSelect = (
-    longitude: number,
-    latitude: number,
-    text: string
-  ) => {
+  const handleLocationSelect = (longitude: number, latitude: number, text: string) => {
     onLocationSelect({ longitude, latitude });
     setSearchQuery(text);
     setSearchResults([]);
@@ -122,12 +109,12 @@ const MapSearchBox: React.FC<MapSearchBoxProps> = ({
             {searchResults.map((result, index) => (
               <>
                 <ListItem
-                  key={index}
+                  key={result.place_id}
                   onClick={() =>
                     handleLocationSelect(
-                      result.center[0],
-                      result.center[1],
-                      result.place_name
+                      result.geometry.location.lng,
+                      result.geometry.location.lat,
+                      result.formatted_address
                     )
                   }
                   sx={{
@@ -135,11 +122,9 @@ const MapSearchBox: React.FC<MapSearchBoxProps> = ({
                     "&:hover": { backgroundColor: "#f0f0f0" },
                   }}
                 >
-                  <ListItemText primary={result.place_name} />
+                  <ListItemText primary={result.formatted_address} />
                 </ListItem>
-                {searchResults?.length === index + 1 ? null : (
-                  <Divider component="li" />
-                )}
+                {searchResults.length === index + 1 ? null : <Divider component="li" />}
               </>
             ))}
           </List>
