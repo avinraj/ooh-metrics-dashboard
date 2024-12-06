@@ -1,7 +1,7 @@
 import { Box, Grid2 } from "@mui/material";
 import { useState } from "react";
 
-import Mapbox2 from "../components/MapBox2";
+import Mapbox2 from "../components/InventoryMap";
 
 const MapViewInventory = () => {
   const [layerType] = useState<any>("point");

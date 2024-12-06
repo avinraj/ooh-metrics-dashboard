@@ -1,7 +1,9 @@
-import { useTheme } from "@mui/material";
+import { Grid, useTheme } from "@mui/material";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { constants } from "../../core/data/constants";
+import MapStylePicker from "../../MapView/components/MapStylePicker";
 
 // Array of cities with coordinates
 const cities = [
@@ -34,14 +36,15 @@ const MapAttribute: React.FC = () => {
   const mapContainer = useRef(null);
   const theme = useTheme();
 
+  const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/dark-v10");
+
   // Initialize the map
   useEffect(() => {
-    mapboxgl.accessToken =
-      "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA";
+    mapboxgl.accessToken = constants.mapboxToken;
 
     const newMap = new mapboxgl.Map({
       container: mapContainer.current!,
-      style: "mapbox://styles/mapbox/dark-v10",
+      style: mapStyle,
       center: [78.9629, 20.5937], // Center of India
       zoom: 4,
     });
@@ -114,10 +117,10 @@ const MapAttribute: React.FC = () => {
         const clusterId = features[0]?.properties?.cluster_id;
 
         const clusterSource = newMap.getSource(
-            "earthquakes"
-          ) as mapboxgl.GeoJSONSource;
+          "earthquakes"
+        ) as mapboxgl.GeoJSONSource;
 
-          clusterSource.getClusterExpansionZoom(clusterId, (err, zoom: any) => {
+        clusterSource.getClusterExpansionZoom(clusterId, (err, zoom: any) => {
           if (err) return;
 
           newMap.easeTo({
@@ -140,9 +143,27 @@ const MapAttribute: React.FC = () => {
 
     // Cleanup map on component unmount
     return () => newMap.remove();
-  }, []);
+  }, [mapStyle]);
 
-  return <div ref={mapContainer} style={{ width: "100%", height: "50vh" }} />;
+  return (
+    <div style={{ position: "relative"}}>
+       <Grid
+        container
+        spacing={1}
+        style={{
+          position: "absolute",
+          zIndex: 2,
+          padding: "10px",
+          bottom: "40px"
+        }}
+      >
+        <Grid item>
+          <MapStylePicker selectedMapStyle={mapStyle} onStyleChange={(value: string) => {setMapStyle(value)}} />
+        </Grid>
+      </Grid>
+      <div ref={mapContainer} style={{ width: "100%", height: "50vh" }} />;
+    </div>
+  );
 };
 
 export default MapAttribute;

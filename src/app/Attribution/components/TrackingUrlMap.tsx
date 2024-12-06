@@ -1,9 +1,11 @@
 import { Box, FormControlLabel, Switch } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
-import yellowMarker from "../../../assets/yellow_marker.png";
+import { useEffect, useRef, useState } from "react";
 import orangeMarker from "../../../assets/orange_marker.png";
+import yellowMarker from "../../../assets/yellow_marker.png";
 import trackingData from "../../../Data/trackingUrl.json"; // Import JSON data
+import { constants } from "../../core/data/constants";
+import MapStylePicker from "../../MapView/components/MapStylePicker";
 
 const TrackingUrlMap: React.FC = () => {
   const mapContainer = useRef(null);
@@ -11,14 +13,14 @@ const TrackingUrlMap: React.FC = () => {
   const markersRef = useRef<mapboxgl.Marker[]>([]); // Track markers
   const [dynamicData, setDynamicData] = useState(trackingData);
   const [isGeneratingMarkers, setIsGeneratingMarkers] = useState(true); // State for marker generation
+  const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/dark-v10");
 
   useEffect(() => {
-    mapboxgl.accessToken =
-      "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA";
+    mapboxgl.accessToken = constants.mapboxToken;
 
     const map = new mapboxgl.Map({
       container: mapContainer.current!,
-      style: "mapbox://styles/mapbox/dark-v10",
+      style: mapStyle,
       center: [78.9629, 20.5937],
       zoom: 4,
     });
@@ -32,7 +34,7 @@ const TrackingUrlMap: React.FC = () => {
       markersRef.current.forEach((marker) => marker.remove());
       map.remove();
     };
-  }, []);
+  }, [mapStyle]);
 
   // Function to add markers
   const addMarkers = (data: any[], map: mapboxgl.Map) => {
@@ -201,7 +203,7 @@ const TrackingUrlMap: React.FC = () => {
   }, [dynamicData]);
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <div style={{ display: "flex", justifyContent: "end" }}>
         <Box sx={{ position: "absolute", zIndex: 1, color: "White" }}>
           <FormControlLabel
@@ -217,7 +219,14 @@ const TrackingUrlMap: React.FC = () => {
           />
         </Box>
       </div>
-
+      <Box sx={{ position: "absolute", zIndex: 1, bottom: "25px" }}>
+        <MapStylePicker
+          selectedMapStyle={mapStyle}
+          onStyleChange={(value: string) => {
+            setMapStyle(value);
+          }}
+        />
+      </Box>
       <div ref={mapContainer} style={{ width: "100%", height: "50vh" }} />
     </div>
   );

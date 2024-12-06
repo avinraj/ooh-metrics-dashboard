@@ -198,7 +198,7 @@ const Sidebar: React.FC = () => {
         open={!isMobile || menuOpen}
         onClose={toggleDrawer}
         sx={{
-          width: isMobile ? 0 : "18%",
+          width: isMobile || language === 'ar' ? 0 : "18%",
           flexShrink: 0,
           "& .MuiDrawer-paper": {
             width: isMobile ? "70%" : "18%",
