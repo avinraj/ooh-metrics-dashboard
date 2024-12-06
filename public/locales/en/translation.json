@@ -100,7 +100,9 @@
     "Mobile Ads": "Mobile Ads",
     "Static Billboards": "Static Billboards",
     "Vehicle Ads": "Vehicle Ads",
-    "Digital Screens": "Digital Screens"
+    "Digital Screens": "Digital Screens",
+    "Cinema Theater":"Cinema Theater"
+
   },
   "map": {
     "map": "Map",

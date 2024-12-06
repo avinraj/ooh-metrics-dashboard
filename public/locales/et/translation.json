@@ -7,6 +7,7 @@
     "mapView": "Kaardi vaade",
     "cars": "Autod",
     "attribution": "Atribuutika",
+   
     "deviceIds": "Seadme ID-d",
     "logout": "Logi välja"
   },
@@ -100,7 +101,8 @@
     "Mobile Ads": "Mobiilireklaamid",
     "Static Billboards": "Staatiilised reklaampostid",
     "Vehicle Ads": "Sõiduki reklaamid",
-    "Digital Screens": "Digitaalsed ekraanid"
+    "Digital Screens": "Digitaalsed ekraanid",
+    "Cinema Theater":"kinoteater"
   },
   "map": {
     "map": "Kaart",

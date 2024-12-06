@@ -7,6 +7,7 @@
       "mapView": "Kartenansicht",
       "cars": "Autos",
       "attribution": "Zuweisung",
+      
       "deviceIds": "Geräte-IDs",
       "logout": "Abmelden"
     },
@@ -100,7 +101,8 @@
       "Mobile Ads": "Mobile Werbung",
       "Static Billboards": "Statische Werbetafeln",
       "Vehicle Ads": "Fahrzeugwerbung",
-      "Digital Screens": "Digitale Bildschirme"
+      "Digital Screens": "Digitale Bildschirme",
+      "Cinema Theater":"Kinotheater"
     },
     "map": {
       "map": "Karte",

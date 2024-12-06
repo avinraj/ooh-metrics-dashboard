@@ -53,7 +53,7 @@ const Sidebar: React.FC = () => {
     document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
   };
 
-  const {selectedAdType} = useSelector((state: any) => state?.selectedAdType);
+  const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
 
   const menuItems = [
     { label: t("sideBar.highlight"), action: "Highlight", icon: <FaHighlighter />, path: "/highlight" },
@@ -100,7 +100,7 @@ const Sidebar: React.FC = () => {
 
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
-  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null, value: string }) => {
+  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null; value: string }) => {
     console.log("Selected Ad Type:", adType);
   };
   return (
@@ -172,7 +172,7 @@ const Sidebar: React.FC = () => {
           </Select>
         </Box>
         <List sx={{ padding: 2 }} key={"adType"}>
-          <Box sx={{ paddingTop: 1, paddingBottom: 1 }} >
+          <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
             <AdType onSelectAdType={handleAdTypeSelect} onOpenSwitchModal={() => console.log("Modal opened")} />
           </Box>
           {menuItems.map((item) =>

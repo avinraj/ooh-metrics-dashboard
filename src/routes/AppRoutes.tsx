@@ -12,7 +12,7 @@ import Layout from "../layout/Layout";
 import ProtectedRoute from "./ProtectedRoute";
 import Audience from "../app/Reports/pages/Audience";
 import MobileAdReports from "../app/Reports/pages/MobileAdReports";
-
+import "../App.css";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -37,7 +37,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-       <Route
+      <Route
         path="/mobile-ad-reports"
         element={
           <ProtectedRoute>
@@ -47,7 +47,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-        <Route
+      <Route
         path="/audience"
         element={
           <ProtectedRoute>

@@ -4,11 +4,15 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import ElectricScooterIcon from "@mui/icons-material/ElectricScooter";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import HikingIcon from "@mui/icons-material/Hiking";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import rickshawIcon from "../../../assets/auto-rickshaw.svg";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
 import TvIcon from "@mui/icons-material/Tv";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
 import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
+import FilterFramesIcon from "@mui/icons-material/FilterFrames";
+import MovieIcon from "@mui/icons-material/Movie";
+import { LuPopcorn } from "react-icons/lu";
 import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -17,7 +21,7 @@ import { SET_SELECTED_ADTYPE } from "../../../store/actions";
 
 interface AdTypeProps {
   onOpenSwitchModal: () => void;
-  onSelectAdType: (adType: { label: string; icon: JSX.Element | null, value: string }) => void;
+  onSelectAdType: (adType: { label: string; icon: JSX.Element | null; value: string }) => void;
 }
 
 const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) => {
@@ -61,6 +65,12 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
         { label: t("adtype.vehicles.Trucks"), icon: <LocalShippingIcon />, value: "trucks" },
         { label: t("adtype.vehicles.e-scooter"), icon: <ElectricScooterIcon />, value: "escooters" },
         { label: t("adtype.vehicles.2-wheelers"), icon: <TwoWheelerIcon />, value: "twowheelers" },
+        {
+          label: t("adtype.vehicles.Rickshaws"),
+          icon: <img src={rickshawIcon} alt="Rickshaw Icon" style={{ width: 24, height: 24 }} />,
+          value: "rickshaws",
+        },
+        { label: t("adtype.vehicles.Robots"), icon: <SmartToyIcon />, value: "robots" },
       ],
     },
     {
@@ -68,7 +78,11 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
       options: [
         { label: t("adtype.digitalScreens.digitalBillboards"), icon: <TvIcon />, value: "digitalBillboards" },
         { label: t("adtype.digitalScreens.Car Rooftoppers"), icon: <LocalTaxiIcon />, value: "carRooftoppers" },
-        { label: t("adtype.digitalScreens.Van Digital Billboards"), icon: <LocalShippingIcon />, value: "digitalBillboards" },
+        {
+          label: t("adtype.digitalScreens.Van Digital Billboards"),
+          icon: <LocalShippingIcon />,
+          value: "vanBillboards",
+        },
         { label: t("adtype.digitalScreens.Backpacks"), icon: <HikingIcon />, value: "backpacks" },
       ],
     },
@@ -76,13 +90,19 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
       title: t("adtype.Mobile Ads"),
       options: [],
       icon: <AdUnitsIcon />,
-      value: "mobileAds"
+      value: "mobileAds",
+    },
+    {
+      title: t("adtype.Cinema Theater"),
+      options: [],
+      icon: <MovieIcon />,
+      value: "mobileAds",
     },
     {
       title: t("adtype.Static Billboards"),
       options: [],
-      icon: <LightbulbIcon />,
-      value: "statisBillboards"
+      icon: <FilterFramesIcon />,
+      value: "staticBillboards",
     },
   ];
   const renderButton = (label: string, icon: JSX.Element | null, value: string) => {
@@ -148,7 +168,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
               sx={{ backgroundColor: theme.palette.secondary.main }}
             >
               <AccordionSummary
-               onClick={() => !options?.length ? handleButtonClick(title, icon, value) : null}
+                onClick={() => (!options?.length ? handleButtonClick(title, icon, value) : null)}
                 expandIcon={options.length ? <ExpandMoreIcon sx={{ color: theme.palette.text.primary }} /> : null}
               >
                 <Typography
