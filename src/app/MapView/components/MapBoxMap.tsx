@@ -8,6 +8,7 @@ import location2 from "../../../Data/location/location2.json";
 import location3 from "../../../Data/location/location3.json";
 import location4 from "../../../Data/location/location4.json";
 import location5 from "../../../Data/location/location5.json";
+import { constants } from "../../core/data/constants";
 
 interface MapboxMapProps {
   layerType: "heat" | "point" | "live";
@@ -23,9 +24,7 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
   const [loading, setLoading] = useState(true);
   let arrIndex = 0;
 
-  mapboxgl.accessToken =
-    "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA";
-
+  mapboxgl.accessToken = constants.mapboxToken;
   // Combine location data and group by VIN
   const locationData = [
     ...location1,

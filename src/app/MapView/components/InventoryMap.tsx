@@ -19,6 +19,8 @@ import data from "../../../Data/mapData.json";
 import InventoryTotal from "./InventoryTotal";
 import MapFilterOptions from "./MapFilterOptions";
 import MapSearchBox from "./MapSearchBox";
+import MapStylePicker from "./MapStylePicker";
+import { constants } from "../../core/data/constants";
 
 // Your location data
 const locationData: any = data;
@@ -32,6 +34,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
 
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
+  const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/dark-v10");
   const [selectedLocation, setSelectedLocation] = useState<string[]>([
     "apartments",
     "workspaces",
@@ -49,9 +52,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
   const [markers, setMarkers] = useState<mapboxgl.Marker[]>([]);
   const primaryColor = theme.palette.primary.main;
 
-  mapboxgl.accessToken =
-    "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA"; // Replace with your Mapbox access token
-
+  mapboxgl.accessToken = constants.mapboxToken;
   // Function to handle point click event and show popup
   const handlePointClick = (e: mapboxgl.MapMouseEvent) => {
     const features = mapRef.current?.queryRenderedFeatures(e.point, {
@@ -238,7 +239,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
 
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: "mapbox://styles/mapbox/dark-v10",
+      style: mapStyle,
       center: [78.9629, 20.5937], // Center of India
       zoom: 4,
     });
@@ -296,7 +297,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
         mapRef.current = null;
       }
     };
-  }, [layerType, selectedLocation, selectedBrands]);
+  }, [layerType, selectedLocation, selectedBrands, mapStyle]);
 
   const filterLocationData = (
     categoriesData: string[],
@@ -479,6 +480,20 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
             onCategoryChange={handleCategoryChange}
             onBrandsChange={handleBrandChange}
           />
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        spacing={1}
+        style={{
+          position: "absolute",
+          zIndex: 2,
+          padding: "10px",
+          bottom: "10px"
+        }}
+      >
+        <Grid item>
+          <MapStylePicker selectedMapStyle={mapStyle} onStyleChange={(value: string) => {setMapStyle(value)}} />
         </Grid>
       </Grid>
       <div

@@ -2,6 +2,7 @@ import { useTheme } from "@mui/material";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import React, { useEffect, useRef } from "react";
+import { constants } from "../../core/data/constants";
 
 // Array of cities with coordinates
 const cities = [
@@ -36,8 +37,7 @@ const MapAttribute: React.FC = () => {
 
   // Initialize the map
   useEffect(() => {
-    mapboxgl.accessToken =
-      "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA";
+    mapboxgl.accessToken = constants.mapboxToken;
 
     const newMap = new mapboxgl.Map({
       container: mapContainer.current!,

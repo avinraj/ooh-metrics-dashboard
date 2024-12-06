@@ -4,6 +4,7 @@ import mapboxgl from "mapbox-gl";
 import yellowMarker from "../../../assets/yellow_marker.png";
 import orangeMarker from "../../../assets/orange_marker.png";
 import trackingData from "../../../Data/trackingUrl.json"; // Import JSON data
+import { constants } from "../../core/data/constants";
 
 const TrackingUrlMap: React.FC = () => {
   const mapContainer = useRef(null);
@@ -13,8 +14,7 @@ const TrackingUrlMap: React.FC = () => {
   const [isGeneratingMarkers, setIsGeneratingMarkers] = useState(true); // State for marker generation
 
   useEffect(() => {
-    mapboxgl.accessToken =
-      "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA";
+    mapboxgl.accessToken = constants.mapboxToken;
 
     const map = new mapboxgl.Map({
       container: mapContainer.current!,
