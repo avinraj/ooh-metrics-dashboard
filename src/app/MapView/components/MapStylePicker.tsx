@@ -84,7 +84,7 @@ const MapStylePicker: React.FC<MapStylePickerProps> = ({
             flexDirection: "row",
             gap: "10px",
             overflowX: "auto",
-            width: isMobile ? "300px" : "auto",
+            width: isMobile ? "280px" : "auto",
           }}
         >
           {mapStyles.map((style) => (
