@@ -33,7 +33,7 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <Router>
-        <Box sx={{ position: "relative", height: "100vh" }}>
+        <Box sx={{ position: "relative", height: "auto" }}>
           <AppRoutes />
           <IconButton
             sx={{

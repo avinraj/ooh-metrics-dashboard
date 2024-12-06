@@ -1,4 +1,9 @@
-import { Box, CircularProgress, Grid, useTheme } from "@mui/material";
+import {
+  Box,
+  CircularProgress,
+  Grid,
+  useTheme
+} from "@mui/material";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
@@ -6,11 +11,12 @@ import { useEffect, useRef, useState } from "react";
 // import logo from "../../../assets/oohlogo.png";
 import apartment from "../../../assets/apartments.png";
 import fitness from "../../../assets/fitness.png";
+import store from "../../../assets/store.png";
 import theatre from "../../../assets/theatre.png";
 import workspace from "../../../assets/workspace.png";
-import store from "../../../assets/store.png"
 
 import data from "../../../Data/mapData.json";
+import InventoryTotal from "./InventoryTotal";
 import MapFilterOptions from "./MapFilterOptions";
 import MapSearchBox from "./MapSearchBox";
 
@@ -22,6 +28,8 @@ interface MapboxMapProps {
 }
 
 const Mapbox2 = ({ layerType }: MapboxMapProps) => {
+  const theme = useTheme();
+
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const [selectedLocation, setSelectedLocation] = useState<string[]>([
@@ -35,11 +43,10 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     // "burger_king",
   ]);
   // const brands = ["burger_king"];
-  const brands: any[] = []
+  const brands: any[] = [];
   const categories = ["apartments", "workspaces", "fitness", "cinema_theatres"];
   const [loading, setLoading] = useState(true);
   const [markers, setMarkers] = useState<mapboxgl.Marker[]>([]);
-  const theme = useTheme();
   const primaryColor = theme.palette.primary.main;
 
   mapboxgl.accessToken =
@@ -94,7 +101,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
         return `<img src=${fitness} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       case "cinema_theatre":
         return `<img src=${theatre} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
-        case "store":
+      case "store":
         return `<img src=${store} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       default:
         return null;
@@ -365,7 +372,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
   };
 
   return (
-    <div style={{ position: "relative", margin: "10px" }}>
+    <div style={{ position: "relative", height: "100vh" }}>
       {loading && (
         <CircularProgress
           sx={{ position: "absolute", zIndex: 2, top: "50%", right: "50%" }}
@@ -383,35 +390,60 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
         <Grid
           item
           xs={12}
-          md={6}
+          md={7}
           sx={{
             display: "flex",
             justifyContent: "start",
             height: "fit-content",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "10px",
-            }}
-          >
-            {/* <img
+          <Grid container spacing={1}>
+            <Grid
+              item
+              xs={12}
+              md={3}
+              sx={{
+                display: "flex",
+                justifyContent: "start",
+                height: "fit-content",
+              }}
+            >
+              {/* <img
                 src={logo}
                 alt="OOH Logo"
                 style={{ marginRight: 10, height: "40px" }}
               /> */}
-            <h2
-              style={{
-                color: "white",
-                margin: "4px",
+              <h2
+                style={{
+                  color: "white",
+                  margin: "4px",
+                }}
+              >
+                OOHmetrics
+              </h2>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md
+              sx={{
+                display: "flex",
+                justifyContent: "start",
+                height: "fit-content",
               }}
             >
-              OOHmetrics
-            </h2>
-          </div>
+              <InventoryTotal
+                data={categories.map((category) => {
+                  return {
+                    type: category,
+                    count: locationData[category]?.length,
+                  };
+                })}
+              />
+            </Grid>
+          </Grid>
         </Grid>
+
         <Grid
           item
           xs={12}
@@ -449,10 +481,9 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
           />
         </Grid>
       </Grid>
-
       <div
         ref={mapContainerRef}
-        style={{ height: "550px", width: "100%" }}
+        style={{ height: "100%", width: "100%" }}
       ></div>
     </div>
   );
