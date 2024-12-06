@@ -18,7 +18,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Signup />} />
-      <Route path="/inventories" element={<MapViewInventory />} />
+      <Route path="/inventory" element={<MapViewInventory />} />
       <Route
         path="/highlight"
         element={

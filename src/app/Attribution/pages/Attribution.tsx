@@ -11,9 +11,9 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import FilterPanel from "../../MapView/components/FilterPanel";
 import FootfallReport from "../components/FootfallReport";
 import { buttonStyles } from "../../Reports/components/ImpressionsChart";
+import TrackingUrl from "../components/TrackingUrl";
 
 const Attribution = () => {
   const theme = useTheme();
@@ -39,23 +39,6 @@ const Attribution = () => {
 
   return (
     <Grid container>
-      {/* Filter Panel */}
-      <Grid item xs={12} display="flex" alignItems="center" gap={3}>
-        <FilterPanel
-          campaigns={["Campaign 1", "Campaign 2", "Campaign 3"]}
-          vehicles={["Car 1", "Car 2", "Car 3"]}
-          selectedCampaign={"Campaign 1"}
-          selectedVehicle={"Car 1"}
-          dateRange={{
-            startDate: new Date(new Date().setDate(1)),
-            endDate: new Date(),
-          }}
-          onCampaignChange={() => {}}
-          onVehicleChange={() => {}}
-          onDateRangeSelect={() => {}}
-        />
-      </Grid>
-
       <div
         style={{
           display: isMobile ? "grid" : "flex",
@@ -112,7 +95,11 @@ const Attribution = () => {
         </div>
       </div>
 
-      {selectedOption === "footfall" ? <FootfallReport /> : null}
+      {selectedOption === "trackingUrl" ? (
+        <TrackingUrl />
+      ) : selectedOption === "footfall" ? (
+        <FootfallReport />
+      ) : null}
     </Grid>
   );
 };
