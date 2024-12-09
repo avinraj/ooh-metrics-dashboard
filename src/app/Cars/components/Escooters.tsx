@@ -1,20 +1,5 @@
-import {
-  Box,
-  Button,
-  Grid,
-  Typography,
-  useMediaQuery,
-  useTheme,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
-import gridIcon from "../../../assets/carsection1.jpg";
-import wagonr from "../../../assets/wagonr.webp";
-import ecosport from "../../../assets/ecosport.avif";
+import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+
 import { useState } from "react";
 import FilterPanel from "../../MapView/components/FilterPanel";
 import { CiGrid41 } from "react-icons/ci";

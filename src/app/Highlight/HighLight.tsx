@@ -1,12 +1,11 @@
 import { Box, Card, Grid, Typography, useTheme } from "@mui/material";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
+import car from "../../assets/images__1_-removebg-preview copy.png";
 import adIcon from "../../assets/addIcon.png";
 import impression from "../../assets/impressions.png";
 import AdsClickIcon from "@mui/icons-material/AdsClick";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import ctr from "../../assets/ctr.png";
+import meter from "../../assets/speed-meter-outline-512.webp";
 import autoIcon from "../../assets/auto-rickshaw.svg";
 import HikingIcon from "@mui/icons-material/Hiking";
 import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";

@@ -8,6 +8,8 @@ import rickshawIcon from "../../../assets/auto-rickshaw.svg";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
 import TvIcon from "@mui/icons-material/Tv";
+import MovieIcon from "@mui/icons-material/Movie";
+import FilterFramesIcon from "@mui/icons-material/FilterFrames";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
 import { Accordion, AccordionDetails, AccordionSummary, Button, Divider, Typography, useTheme } from "@mui/material";
@@ -19,7 +21,7 @@ import StorageService from "../services/storage.serive";
 
 interface AdTypeProps {
   onOpenSwitchModal: () => void;
-  onSelectAdType: (adType: { label: string; icon: JSX.Element | null; value: string }) => void;
+
   onSelectAdType: (adType: { label: string; icon: JSX.Element | null; value: string }) => void;
 }
 
@@ -89,6 +91,16 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
           icon: <TwoWheelerIcon style={{ width: "100%", height: "100%" }} />,
           value: "twowheelers",
         },
+        {
+          label: t("adtype.vehicles.autorickshaw"),
+          icon: <img src={rickshawIcon} alt="Rickshaw Icon" style={{ width: "120%", height: "120%" }} />,
+          value: "autorickshaw",
+        },
+        {
+          label: t("adtype.vehicles.robots"),
+          icon: <SmartToyIcon style={{ width: "100%", height: "100%" }} />,
+          value: "robots",
+        },
       ],
     },
     {
@@ -125,8 +137,14 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
     {
       title: t("adtype.Static Billboards"),
       options: [],
-      icon: <LightbulbIcon style={{ width: "100%", height: "100%" }} />,
+      icon: <FilterFramesIcon style={{ width: "100%", height: "100%" }} />,
       value: "statisBillboards",
+    },
+    {
+      title: t("adtype.Cinema Theater"),
+      options: [],
+      icon: <MovieIcon style={{ width: "100%", height: "100%" }} />,
+      value: "cinemaTheaters",
     },
   ];
   const renderButton = (label: string, icon: JSX.Element | null, value: string) => {
@@ -229,8 +247,6 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
               sx={{ backgroundColor: theme.palette.secondary.main }}
             >
               <AccordionSummary
-                onClick={() => (!options?.length ? handleButtonClick(title, icon, value) : null)}
-                expandIcon={options.length ? <ExpandMoreIcon sx={{ color: theme.palette.text.primary }} /> : null}
                 onClick={() => (!options?.length ? handleButtonClick(title, icon, value) : null)}
                 expandIcon={options.length ? <ExpandMoreIcon sx={{ color: theme.palette.text.primary }} /> : null}
               >
