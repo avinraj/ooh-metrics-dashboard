@@ -105,10 +105,12 @@ const Audience = () => {
 
   const createChart = (category: string, chartRef: any, chartType: any) => {
     const categoryData = data.filter((item) => item.category === category);
-  
+
     // Group by label (group) and sum values
     const groupedData = categoryData.reduce((acc: any, item: any) => {
-      const value = ["gender", "age"].includes(category) ? item.percent : item.DEVICE_COUNT;
+      const value = ["gender", "age"].includes(category)
+        ? item.percent
+        : item.DEVICE_COUNT;
       if (acc[item.group]) {
         acc[item.group] += value;
       } else {
@@ -116,11 +118,11 @@ const Audience = () => {
       }
       return acc;
     }, {});
-  
+
     // Extract the grouped labels and values
     const labels = Object.keys(groupedData);
     const values = Object.values(groupedData);
-  
+
     // Define different shades of yellow for doughnut chart
     const yellowShades = [
       "#FFEB3B", // Light Yellow
@@ -129,13 +131,22 @@ const Audience = () => {
       "#FF5722", // Deep Orange
       "#FFD600", // Bright Yellow
     ];
-  
+
     // Set up chart options
     const chartOptions: any = {
       responsive: true,
       plugins: {
         legend: {
-          display: false,
+          display: chartType === "doughnut" ? true : false,
+        },
+        datalabels: {
+          display: chartType === "doughnut",
+          formatter: (value: number) => `${value}%`,
+          color: "#fff", // Label color
+          font: {
+            weight: "bold",
+            size: 14,
+          },
         },
         tooltip: {
           callbacks: {
@@ -162,30 +173,32 @@ const Audience = () => {
         },
       },
     };
-  
+
     if (chartType === "bar" || chartType === "horizontalBar") {
       const isPercentageChart = ["gender", "age"].includes(category);
-    
+
       chartOptions.scales = {
         x: {
           grid: { display: false },
           ticks: { color: theme.palette.text.primary },
-          ...(chartType === "horizontalBar" && isPercentageChart && {
-            max: 100, // Ensure percentage charts don't exceed 100
-          }),
+          ...(chartType === "horizontalBar" &&
+            isPercentageChart && {
+              max: 100, // Ensure percentage charts don't exceed 100
+            }),
         },
         y: {
           grid: { display: false },
           ticks: { color: theme.palette.text.primary },
           beginAtZero: true,
-          ...(chartType !== "horizontalBar" && isPercentageChart && {
-            max: 100, // Set y-axis max to 100 for percentages
-          }),
+          ...(chartType !== "horizontalBar" &&
+            isPercentageChart && {
+              max: 100, // Set y-axis max to 100 for percentages
+            }),
         },
       };
       chartOptions.indexAxis = chartType === "horizontalBar" ? "y" : "x";
     }
-  
+
     // Return the chart with yellow colors for doughnut chart
     return new Chart(chartRef.current, {
       type: chartType !== "horizontalBar" ? chartType : "bar",
@@ -205,7 +218,6 @@ const Audience = () => {
       options: chartOptions,
     });
   };
-  
 
   useEffect(() => {
     // Create charts for all categories with their respective chart type

@@ -1,128 +1,157 @@
 {
-    "sideBar": {
-      "adType": "Reklam Türü",
-      "highlight": "Öne Çıkanlar",
-      "reports": "Raporlar",
-      "audience": "Hedef Kitle",
-      "mapView": "Harita Görünümü",
-      "cars": "Arabalar",
-      "attribution": "Atıf",
-     
-      "deviceIds": "Cihaz Kimlikleri",
-      "logout": "Çıkış Yap"
-    },
-    "filterPanel": {
-      "campaign": "Kampanya",
-      "selectDateRange": "Tarih Aralığı Seç",
+  "sideBar": {
+    "adType": "Reklam Türü",
+    "highlight": "Öne Çıkanlar",
+    "reports": "Raporlar",
+    "audience": "Hedef Kitle",
+    "mapView": "Harita Görünümü",
+    "cars": "Arabalar",
+    "attribution": "Atıf",
+    "deviceIds": "Cihaz Kimlikleri",
+    "logout": "Çıkış Yap"
+  },
+  "filterPanel": {
+    "campaign": "Kampanya",
+    "selectDateRange": "Tarih Aralığı Seç",
+    "vehicle": "Araç",
+    "show": "Göster"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "Gösterimler",
+      "date": "Tarih",
       "vehicle": "Araç",
-      "show": "Göster"
+      "chart": "Grafik",
+      "table": "Tablo",
+      "impressionsPerMile": "Mil Başına Gösterim",
+      "miles": "Mil",
+      "avg": "Ortalama"
     },
-    "reports": {
-      "impressions": {
-        "impressions": "Gösterimler",
-        "date": "Tarih",
-        "vehicle": "Araç",
-        "chart": "Grafik",
-        "table": "Tablo",
-        "impressionsPerMile": "Mil Başına Gösterim",
-        "miles": "Mil",
-        "avg": "Ortalama"
-      },
-      "demographics": {
-        "demographics": "Demografi",
-        "age": "Yaş",
-        "education": "Eğitim",
-        "income": "Gelir",
-        "ethnicity": "Etnik Köken",
-        "chartType": "Grafik Türü",
-        "verticalBar": "Dikey Çubuk",
-        "horizontalBar": "Yatay Çubuk",
-        "doughnutChart": "Halka Grafik",
-        "lineChart": "Çizgi Grafik"
-      },
-      "affinities": {
-        "affinities": "İlgi Alanları"
-      },
-      "appsOrWebsites": {
-        "appsOrWebsites": "Uygulamalar / Web Siteleri",
-        "byAppOrWebsites": "Uygulamalara / Web Sitelerine Göre"
-      },
-      "dayAndHour": {
-        "dayAndHour": "Gün ve Saat",
-        "byDayAndHour": "Gün ve Saat Bazında",
-        "dayChart": "Günlük Grafik",
-        "hourChart": "Saatlik Grafik"
-      },
-      "browser": {
-        "browser": "Tarayıcı",
-        "byBrowser": "Tarayıcıya Göre"
-      },
-      "operatingSystem": {
-        "OS": "İşletim Sistemi",
-        "byOperatingSystem": "İşletim Sistemine Göre"
-      },
-      "telecomOperator": {
-        "telecomOperator": "Telekom Operatörü",
-        "byTelecomOperator": "Telekom Operatörüne Göre"
-      },
-      "creatives": {
-        "creatives": "Yaratıcılar",
-        "byCreatives": "Yaratıcılara Göre",
-        "creativesChart": "Yaratıcılar Grafiği",
-        "sizeChart": "Boyut Grafiği"
-      }
+    "demographics": {
+      "demographics": "Demografi",
+      "age": "Yaş",
+      "education": "Eğitim",
+      "income": "Gelir",
+      "ethnicity": "Etnik Köken",
+      "chartType": "Grafik Türü",
+      "verticalBar": "Dikey Çubuk",
+      "horizontalBar": "Yatay Çubuk",
+      "doughnutChart": "Halka Grafik",
+      "lineChart": "Çizgi Grafik"
     },
-    "highlights": {
-      "welcome": "Hoş Geldiniz",
-      "highlight":"Öne Çıkanlar"
+    "affinities": {
+      "affinities": "İlgi Alanları"
     },
-    "cars":{
-      "cars":"Arabalar",
-      "grid view":" Izgara Görünümü",
-      "table view":"Tablo Görünümü",
-      "photo list":" Fotoğraf Listesi "
+    "appsOrWebsites": {
+      "appsOrWebsites": "Uygulamalar / Web Siteleri",
+      "byAppOrWebsites": "Uygulamalara / Web Sitelerine Göre"
     },
-    "adtype": {
-      "vehicles": {
-        "Cars": "Arabalar",
-        "Buses": "Otobüsler",
-        "Trucks": "Kamyonlar",
-        "Robots": "Robotlar",
-        "e-scooter": "Elektrikli Scooter",
-        "Rickshaws": "Beciktaşlar",
-        "2-wheelers": "İki Tekerlekli Araçlar"
-      },
-      "digitalScreens": {
-        "digitalBillboards": "Dijital Reklam Panoları",
-        "Car Rooftoppers": "Araba Çatı Reklamları",
-        "Van Digital Billboards": "Minibüs Dijital Reklam Panoları",
-        "Backpacks": "Sırt Çantası Reklamları"
-      },
-      "Mobile Ads": "Mobil Reklamlar",
-      "Static Billboards": "Statik Reklam Panoları",
-      "Vehicle Ads": "Araç Reklamları",
-      "Digital Screens": "Dijital Ekranlar",
-      "Cinema Theater":"sinema"
+    "dayAndHour": {
+      "dayAndHour": "Gün ve Saat",
+      "byDayAndHour": "Gün ve Saat Bazında",
+      "dayChart": "Günlük Grafik",
+      "hourChart": "Saatlik Grafik"
     },
-    "map": {
-      "map": "Harita",
-      "basic": "Temel",
-      "heat": "Isı Haritası",
-      "live": "Canlı"
+    "browser": {
+      "browser": "Tarayıcı",
+      "byBrowser": "Tarayıcıya Göre"
     },
-    "attribution":{
-      "attribution":"Atıf",
-      "qrcode":"QR Kodu",
-      "trackingurl":"İzleme URL'si",
-      "footfall":"Yaya trafiği "
+    "operatingSystem": {
+      "OS": "İşletim Sistemi",
+      "byOperatingSystem": "İşletim Sistemine Göre"
     },
-    "audience": {
-      "audience": "Hedef Kitle",
-      "clicksByGender": "Cinsiyete Göre Tıklamalar",
-      "clicksByDevice": "Cihaza Göre Tıklamalar",
-      "clicksByAge": "Yaşa Göre Tıklamalar",
-      "clicksBySource": "Kaynağa Göre Tıklamalar",
-      "ctrBySec": "Saniye Başına TO"
+    "telecomOperator": {
+      "telecomOperator": "Telekom Operatörü",
+      "byTelecomOperator": "Telekom Operatörüne Göre"
+    },
+    "creatives": {
+      "creatives": "Yaratıcılar",
+      "byCreatives": "Yaratıcılara Göre",
+      "creativesChart": "Yaratıcılar Grafiği",
+      "sizeChart": "Boyut Grafiği"
     }
+  },
+  "highlights": {
+    "welcome": "Hoş Geldiniz",
+    "highlight": "Öne Çıkanlar"
+  },
+  "cars": {
+    "cars": "Arabalar",
+    "grid view": " Izgara Görünümü",
+    "table view": "Tablo Görünümü",
+    "photo list": " Fotoğraf Listesi "
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "Arabalar",
+      "Buses": "Otobüsler",
+      "Trucks": "Kamyonlar",
+      "Robots": "Robotlar",
+      "e-scooter": "Elektrikli Scooter",
+      "Rickshaws": "Beciktaşlar",
+      "2-wheelers": "İki Tekerlekli Araçlar"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "Dijital Reklam Panoları",
+      "Car Rooftoppers": "Araba Çatı Reklamları",
+      "Van Digital Billboards": "Minibüs Dijital Reklam Panoları",
+      "Backpacks": "Sırt Çantası Reklamları"
+    },
+    "Mobile Ads": "Mobil Reklamlar",
+    "Static Billboards": "Statik Reklam Panoları",
+    "Vehicle Ads": "Araç Reklamları",
+    "Digital Screens": "Dijital Ekranlar"
+  },
+  "map": {
+    "map": "Harita",
+    "basic": "Temel",
+    "heat": "Isı Haritası",
+    "live": "Canlı"
+  },
+  "attribution": {
+    "attribution": "Atıf",
+    "qrcode": "QR Kodu",
+    "trackingurl": "İzleme URL'si",
+    "footfall": "Yaya trafiği ",
+    "analytics": {
+      "attributionAnalytics": "Atıf Analitiği",
+      "attributionLiftIndex": "Atıf Yükselme İndeksi",
+      "exposed": "Maruz Kalınmış",
+      "control": "Kontrol",
+      "exposedAudience": "Maruz Kalınmış Hedef Kitle",
+      "attributedFootfall": "Atfedilen Yaya Trafiği",
+      "footfallRate": "Yaya Trafiği Oranı",
+      "controlAudience": "Kontrol Hedef Kitlesi",
+      "attributedFootfallNote": "Atfedilen yaya trafiği, Near platformunda görülen yaya trafiğinin alt kümesini ifade eder.",
+      "controlFootfallNote": "Kontrol yaya trafiği, Near platformunda görülen yaya trafiğinin alt kümesini ifade eder.",
+      "attributedByDay": "Atfedilen Yaya Trafiği Haftanın Gününe Göre",
+      "controlByDay": "Kontrol Yaya Trafiği Haftanın Gününe Göre",
+      "attributedByHour": "Atfedilen Yaya Trafiği Saat Bazında",
+      "controlByHour": "Kontrol Yaya Trafiği Saat Bazında",
+      "peopleInsights": "İnsan İstatistikleri",
+      "devices": "Cihazlar",
+      "gender": "Cinsiyet",
+      "ageGroup": "Yaş Grubu",
+      "segments": "Segmentler",
+      "female": "Kadın",
+      "male": "Erkek"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "Gelişmiş Atıf İstatistikleri",
+      "leadTimeVisit": "Ziyarete Giden Zaman",
+      "exposureVisit": "Maruz Kalma ile Ziyaret",
+      "topStores": "Atfedilen Yaya Trafiği ile En İyi Mağazalar",
+      "topHomeLocations": "Atfedilen Yaya Trafiği ile En İyi Ev Lokasyonları",
+      "storeName": "Mağaza Adı",
+      "homeLocations": "Ev Lokasyonları"
+    }
+  },
+  "audience": {
+    "audience": "Hedef Kitle",
+    "clicksByGender": "Cinsiyete Göre Tıklamalar",
+    "clicksByDevice": "Cihaza Göre Tıklamalar",
+    "clicksByAge": "Yaşa Göre Tıklamalar",
+    "clicksBySource": "Kaynağa Göre Tıklamalar",
+    "ctrBySec": "Saniye Başına TO"
   }
-  
+}

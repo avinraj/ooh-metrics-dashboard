@@ -74,14 +74,14 @@
   },
   "highlights": {
     "welcome": "Welkom",
-    "highlight":"Hoogtepunten"
+    "highlight": "Hoogtepunten"
   },
-"cars":{
-      "cars":"Auto's",
-      "grid view":"Rasterweergave",
-      "table view":"Tabelweergave",
-      "photo list":"Fotolijst"
-    },
+  "cars": {
+    "cars": "Auto's",
+    "grid view": "Rasterweergave",
+    "table view": "Tabelweergave",
+    "photo list": "Fotolijst"
+  },
   "adtype": {
     "vehicles": {
       "Cars": "Auto's",
@@ -110,11 +110,43 @@
     "heat": "Hittekaart",
     "live": "Live"
   },
-  "attribution":{
-    "attribution":"Toewijzing",
-    "qrcode":"QR-code ",
-    "trackingurl":"Volg-URL ",
-    "footfall":"Voetgangersverkeer "
+  "attribution": {
+    "attribution": "Toewijzing",
+    "qrcode": "QR-code ",
+    "trackingurl": "Volg-URL ",
+    "footfall": "Voetgangersverkeer ",
+    "analytics": {
+      "attributionAnalytics": "Attributieanalyse",
+      "attributionLiftIndex": "Attributie Lift Index",
+      "exposed": "Blootgesteld",
+      "control": "Controle",
+      "exposedAudience": "Blootgestelde doelgroep",
+      "attributedFootfall": "Toegewezen voetverkeer",
+      "footfallRate": "Voetverkeerspercentage",
+      "controlAudience": "Controle doelgroep",
+      "attributedFootfallNote": "Toegewezen voetverkeer verwijst naar de subset van voetverkeer gezien op het Near-platform.",
+      "controlFootfallNote": "Controle voetverkeer verwijst naar de subset van voetverkeer gezien op het Near-platform.",
+      "attributedByDay": "Toegewezen voetverkeer per dag van de week",
+      "controlByDay": "Controle voetverkeer per dag van de week",
+      "attributedByHour": "Toegewezen voetverkeer per uur",
+      "controlByHour": "Controle voetverkeer per uur",
+      "peopleInsights": "Menseninzichten",
+      "devices": "Apparaten",
+      "gender": "Geslacht",
+      "ageGroup": "Leeftijdsgroep",
+      "segments": "Segmenten",
+      "female": "Vrouw",
+      "male": "Man"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "Geavanceerde attributie-inzichten",
+      "leadTimeVisit": "Leadtijd naar bezoek",
+      "exposureVisit": "Expositie naar bezoek",
+      "topStores": "Topwinkels op basis van toegewezen voetverkeer",
+      "topHomeLocations": "Toplocaties van huis op basis van toegewezen voetverkeer",
+      "storeName": "Winkelnaam",
+      "homeLocations": "Thuislocaties"
+    }
   },
   "audience": {
     "audience": "Publiek",

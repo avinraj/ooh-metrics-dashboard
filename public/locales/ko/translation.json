@@ -110,11 +110,43 @@
     "heat": "히트맵",
     "live": "실시간"
   },
-  "attribution":{
-    "attribution":"귀속",
-    "qrcode":"QR코드 ",
-    "trackingurl":"추적 URL ",
-    "footfall":"유동 인구 "
+  "attribution": {
+    "attribution": "귀속",
+    "qrcode": "QR코드 ",
+    "trackingurl": "추적 URL ",
+    "footfall": "유동 인구 ",
+    "analytics": {
+      "attributionAnalytics": "귀속 분석",
+      "attributionLiftIndex": "귀속 상승 지수",
+      "exposed": "노출",
+      "control": "통제",
+      "exposedAudience": "노출된 대상",
+      "attributedFootfall": "귀속된 발걸음",
+      "footfallRate": "발걸음 비율",
+      "controlAudience": "통제된 대상",
+      "attributedFootfallNote": "귀속된 발걸음은 Near 플랫폼에서 본 발걸음의 하위 집합을 의미합니다.",
+      "controlFootfallNote": "통제된 발걸음은 Near 플랫폼에서 본 발걸음의 하위 집합을 의미합니다.",
+      "attributedByDay": "요일별 귀속된 발걸음",
+      "controlByDay": "요일별 통제된 발걸음",
+      "attributedByHour": "시간별 귀속된 발걸음",
+      "controlByHour": "시간별 통제된 발걸음",
+      "peopleInsights": "사람들에 대한 통찰",
+      "devices": "기기",
+      "gender": "성별",
+      "ageGroup": "연령대",
+      "segments": "세그먼트",
+      "female": "여성",
+      "male": "남성"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "고급 귀속 통찰",
+      "leadTimeVisit": "방문까지의 리드 타임",
+      "exposureVisit": "노출 후 방문",
+      "topStores": "귀속된 발걸음에 의한 상위 매장",
+      "topHomeLocations": "귀속된 발걸음에 의한 상위 홈 위치",
+      "storeName": "매장 이름",
+      "homeLocations": "홈 위치"
+    }
   },
   "audience": {
     "audience": "청중",

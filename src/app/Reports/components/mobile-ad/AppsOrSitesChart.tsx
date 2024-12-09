@@ -64,7 +64,7 @@ const AppsOrSiteChart = () => {
   );
 
   return (
-    <div>
+    <div style={{height: "100%"}}>
       <Box
         sx={{
           backgroundColor: theme.palette.primary.main,
@@ -73,7 +73,7 @@ const AppsOrSiteChart = () => {
           marginBlock: "25px",
         }}
       >
-        <Typography variant="h3">{t("reports.appsOrWebsites.byAppsOrWebsites")}</Typography>
+        <Typography variant="h3">{t("reports.appsOrWebsites.byAppOrWebsites")}</Typography>
       </Box>
       <MobileAdChartTable
         tableData={clickData}

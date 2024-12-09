@@ -1,6 +1,7 @@
 import { Box, Card, Grid, Typography, useTheme } from "@mui/material";
-import car from "../../assets/images__1_-removebg-preview.png";
-import meter from "../../assets/speed-meter-outline-512.webp";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import adIcon from "../../assets/addIcon.png";
 import impression from "../../assets/impressions.png";
 import AdsClickIcon from "@mui/icons-material/AdsClick";

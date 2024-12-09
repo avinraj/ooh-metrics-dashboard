@@ -1,22 +1,24 @@
 // AppRoutes.tsx
 import { Route, Routes } from "react-router-dom";
 import HighLight from "../app/Highlight/HighLight";
-import Reports from "../app/Reports/pages/Reports";
 import Signup from "../app/Signup/Signup";
 
 import AdPage from "../app/Adtype/AdPage";
 import Attribution from "../app/Attribution/pages/Attribution";
 import Vehicles from "../app/Cars/pages/Vehicles";
 import MapView from "../app/MapView/pages/MapView";
-import Layout from "../layout/Layout";
-import ProtectedRoute from "./ProtectedRoute";
 import Audience from "../app/Reports/pages/Audience";
 import MobileAdReports from "../app/Reports/pages/MobileAdReports";
-import "../App.css";
+import ReportsMain from "../app/Reports/pages/ReportsMain";
+import Layout from "../layout/Layout";
+import ProtectedRoute from "./ProtectedRoute";
+import MapViewInventory from "../app/MapView/pages/MapViewInventory";
+
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Signup />} />
+      <Route path="/inventory" element={<MapViewInventory />} />
       <Route
         path="/highlight"
         element={
@@ -32,7 +34,7 @@ const AppRoutes = () => {
         element={
           <ProtectedRoute>
             <Layout>
-              <Reports />
+              <ReportsMain />
             </Layout>
           </ProtectedRoute>
         }

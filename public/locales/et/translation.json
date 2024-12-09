@@ -110,6 +110,44 @@
     "heat": "Küttes kaart",
     "live": "Otse"
   },
+  "attribution": {
+    "attribution": "Omistamine",
+    "qrcode": "QR-kood",
+    "trackingurl": "Jälgimislink",
+    "footfall": "Külastuste arv",
+    "analytics": {
+      "attributionAnalytics": "Omistamise analüüs",
+      "attributionLiftIndex": "Omistamise tõusuindeks",
+      "exposed": "Kuvatud",
+      "control": "Kontroll",
+      "exposedAudience": "Kuvatud publik",
+      "attributedFootfall": "Omistatud külastuste arv",
+      "footfallRate": "Külastuste määr",
+      "controlAudience": "Kontrollgrupi publik",
+      "attributedFootfallNote": "Omistatud külastuste arv viitab Near platvormil nähtud külastuste alamhulgale.",
+      "controlFootfallNote": "Kontrollgrupi külastuste arv viitab Near platvormil nähtud külastuste alamhulgale.",
+      "attributedByDay": "Omistatud külastused nädalapäevade lõikes",
+      "controlByDay": "Kontrollgrupi külastused nädalapäevade lõikes",
+      "attributedByHour": "Omistatud külastused tunni lõikes",
+      "controlByHour": "Kontrollgrupi külastused tunni lõikes",
+      "peopleInsights": "Inimeste ülevaated",
+      "devices": "Seadmed",
+      "gender": "Sugu",
+      "ageGroup": "Vanuserühm",
+      "segments": "Segmendid",
+      "female": "Naine",
+      "male": "Mees"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "Täiustatud omistamise ülevaated",
+      "leadTimeVisit": "Etteteatamisaeg külastuseks",
+      "exposureVisit": "Kuvamise ja külastuse vaheline aeg",
+      "topStores": "Parimad kauplused omistatud külastuste järgi",
+      "topHomeLocations": "Parimad kodukohad omistamise järgi",
+      "storeName": "Kaupluse nimi",
+      "homeLocations": "Kodukohad"
+    }
+  },
   "audience": {
     "audience": "Publik",
     "clicksByGender": "Klikid soo järgi",

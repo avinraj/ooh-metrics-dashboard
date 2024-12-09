@@ -112,11 +112,43 @@
     "heat": "Calor",
     "live": "En vivo"
   },
-  "attribution":{
-    "attribution":"Atribución",
-    "qrcode":"Código QR",
-    "trackingurl":"URL de seguimiento",
-    "footfall":"Afluencia de personas"
+  "attribution": {
+    "attribution": "Atribución",
+    "qrcode": "Código QR",
+    "trackingurl": "URL de seguimiento",
+    "footfall": "Afluencia de personas",
+    "analytics": {
+      "attributionAnalytics": "Análisis de atribución",
+      "attributionLiftIndex": "Índice de aumento de atribución",
+      "exposed": "Expuesto",
+      "control": "Control",
+      "exposedAudience": "Audiencia expuesta",
+      "attributedFootfall": "Pisadas atribuidas",
+      "footfallRate": "Tasa de pisadas",
+      "controlAudience": "Audiencia de control",
+      "attributedFootfallNote": "Las pisadas atribuidas se refieren al subconjunto de pisadas visto en la plataforma Near.",
+      "controlFootfallNote": "Las pisadas de control se refieren al subconjunto de pisadas visto en la plataforma Near.",
+      "attributedByDay": "Pisadas atribuidas por día de la semana",
+      "controlByDay": "Pisadas de control por día de la semana",
+      "attributedByHour": "Pisadas atribuidas por hora",
+      "controlByHour": "Pisadas de control por hora",
+      "peopleInsights": "Percepciones de las personas",
+      "devices": "Dispositivos",
+      "gender": "Género",
+      "ageGroup": "Grupo de edad",
+      "segments": "Segmentos",
+      "female": "Femenino",
+      "male": "Masculino"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "Perspectivas avanzadas de atribución",
+      "leadTimeVisit": "Tiempo de adelanto para visitar",
+      "exposureVisit": "Exposición a la visita",
+      "topStores": "Tiendas principales por pisadas atribuidas",
+      "topHomeLocations": "Ubicaciones principales del hogar atribuidas",
+      "storeName": "Nombre de la tienda",
+      "homeLocations": "Ubicaciones del hogar"
+    }
   },
   "audience": {
     "audience": "Audiencia",

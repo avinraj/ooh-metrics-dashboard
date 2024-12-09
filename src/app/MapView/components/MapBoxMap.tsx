@@ -1,4 +1,4 @@
-import { CircularProgress, useTheme } from "@mui/material";
+import { Box, CircularProgress, useTheme } from "@mui/material";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
@@ -8,6 +8,8 @@ import location2 from "../../../Data/location/location2.json";
 import location3 from "../../../Data/location/location3.json";
 import location4 from "../../../Data/location/location4.json";
 import location5 from "../../../Data/location/location5.json";
+import { constants } from "../../core/data/constants";
+import MapStylePicker from "./MapStylePicker";
 
 interface MapboxMapProps {
   layerType: "heat" | "point" | "live";
@@ -21,11 +23,10 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
   const primaryColor = theme.palette.primary.main;
 
   const [loading, setLoading] = useState(true);
+  const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/dark-v10");
   let arrIndex = 0;
 
-  mapboxgl.accessToken =
-    "pk.eyJ1Ijoib29obWV0cmljcyIsImEiOiJjbTNndWhvb3cwN3doMm9xejFnbnJhbmxjIn0.gUT_L2_wIqhQlfDMSXXrxA";
-
+  mapboxgl.accessToken = constants.mapboxToken;
   // Combine location data and group by VIN
   const locationData = [
     ...location1,
@@ -223,7 +224,7 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
 
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: "mapbox://styles/mapbox/dark-v10",
+      style: mapStyle,
       center: [121.34, 24.9587],
       zoom: 13,
     });
@@ -271,7 +272,7 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
         mapRef.current = null;
       }
     };
-  }, [layerType]);
+  }, [layerType, mapStyle]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -314,6 +315,14 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
           <CircularProgress color="primary" />
         </div>
       )}
+      <Box sx={{ position: "absolute", zIndex: 1, bottom: "25px" }}>
+        <MapStylePicker
+          selectedMapStyle={mapStyle}
+          onStyleChange={(value: string) => {
+            setMapStyle(value);
+          }}
+        />
+      </Box>
       <div
         ref={mapContainerRef}
         style={{

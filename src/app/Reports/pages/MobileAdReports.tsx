@@ -6,9 +6,12 @@ import BrowserChart from "../components/mobile-ad/BrowserChart";
 import OperatingSystemChart from "../components/mobile-ad/OperatingSystemChart";
 import TelecomOperatorChart from "../components/mobile-ad/TelecomOperatorChart";
 import CreativesChart from "../components/mobile-ad/CreativesChart";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 const MobileAdReports = () => {
   const { selectedMenu } = useSelector((state: any) => state?.selectedMenu);
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   // Set up refs to scroll to specific sections
   const appOrWebsitesRef = useRef<HTMLDivElement>(null);
@@ -33,10 +36,16 @@ const MobileAdReports = () => {
       if (selectedMenu === "mobileAdBrowser" && browserRef.current) {
         browserRef.current.scrollIntoView({ behavior: "smooth" });
       }
-      if (selectedMenu === "mobileAdOperatingSystem" && operatingSystemRef.current) {
+      if (
+        selectedMenu === "mobileAdOperatingSystem" &&
+        operatingSystemRef.current
+      ) {
         operatingSystemRef.current.scrollIntoView({ behavior: "smooth" });
       }
-      if (selectedMenu === "mobileAdTelecomOperator" && telecomOperatorRef.current) {
+      if (
+        selectedMenu === "mobileAdTelecomOperator" &&
+        telecomOperatorRef.current
+      ) {
         telecomOperatorRef.current.scrollIntoView({ behavior: "smooth" });
       }
       if (selectedMenu === "mobileAdCreatives" && creativesRef.current) {
@@ -47,22 +56,46 @@ const MobileAdReports = () => {
 
   return (
     <div>
-      <div ref={appOrWebsitesRef} id="mobileAdAppOrWebsites">
+      <div
+        ref={appOrWebsitesRef}
+        id="mobileAdAppOrWebsites"
+        style={{ height: isMobile ? "auto" : "400px" }}
+      >
         <AppsOrSiteChart />
       </div>
-      <div ref={dayOrHourRef} id="mobileAdDayOrHour">
+      <div
+        ref={dayOrHourRef}
+        id="mobileAdDayOrHour"
+        style={{ height: isMobile ? "auto" : "495px" }}
+      >
         <DayAndHourChart />
       </div>
-      <div ref={browserRef} id="mobileAdBrowser">
+      <div
+        ref={browserRef}
+        id="mobileAdBrowser"
+        style={{ height: isMobile ? "auto" : "400px" }}
+      >
         <BrowserChart />
       </div>
-      <div ref={operatingSystemRef} id="mobileAdOperatingSystem">
+      <div
+        ref={operatingSystemRef}
+        id="mobileAdOperatingSystem"
+        style={{ height: isMobile ? "auto" : "400px" }}
+      >
         <OperatingSystemChart />
       </div>
-      <div ref={telecomOperatorRef} id="mobileAdTelecomOperator">
+      <div
+        ref={telecomOperatorRef}
+        id="mobileAdTelecomOperator"
+        style={{ height: isMobile ? "auto" : "400px" }}
+      >
         <TelecomOperatorChart />
       </div>
-      <div ref={creativesRef} id="mobileAdCreatives">
+      <div
+        ref={creativesRef}
+        id="mobileAdCreatives"
+        style={{ height: isMobile ? "auto" : "400px" }}
+      >
         <CreativesChart />
       </div>
     </div>

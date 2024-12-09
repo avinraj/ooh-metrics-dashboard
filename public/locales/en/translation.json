@@ -44,7 +44,7 @@
     },
     "appsOrWebsites": {
       "appsOrWebsites": "Apps / Websites",
-      "byAppsOrWebsites": "By Apps / Websites"
+      "byAppOrWebsites": "By Apps / Websites"
     },
     "dayAndHour": {
       "dayAndHour": "Day and Hour",
@@ -114,7 +114,39 @@
     "attribution":"Attribution",
     "qrcode":"QR-Code",
     "trackingurl":"Tracking-URL",
-    "footfall":"footfall"
+    "footfall":"footfall",
+    "analytics": {
+      "attributionAnalytics": "Attribution analytics",
+      "attributionLiftIndex": "Attribution Lift Index",
+      "exposed": "Exposed",
+      "control": "Control",
+      "exposedAudience": "Exposed Audience",
+      "attributedFootfall": "Attributed Footfall",
+      "footfallRate": "Footfall Rate",
+      "controlAudience": "Control Audience",
+      "attributedFootfallNote": "Attributed footfall refers to the subset of footfalls seen in the oohmetric platform.",
+      "controlFootfallNote": "Control footfall refers to the subset of footfalls seen in the oohmetric platform.",
+      "attributedByDay": "Attributed Footfall by the day of the week",
+      "controlByDay": "Controll Footfall by the day of the week",
+      "attributedByHour": "Attributed Footfall by the hour",
+      "controlByHour": "Controll Footfall by the hour",
+      "peopleInsights": "People Insights",
+      "devices": "Devices",
+      "gender": "Gender",
+      "ageGroup": "Age Group",
+      "segments": "Segments",
+      "female": "Female",
+      "male": "Male"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "Advanced Attribution Insights",
+      "leadTimeVisit": "Lead Time to visit",
+      "exposureVisit": "Exposure to Visit",
+      "topStores": "Top stores by Attributed Footfall",
+      "topHomeLocations": "Top Attributed Home Locations",
+      "storeName": "Store Name",
+      "homeLocations": "Home Locations"
+    }
   },
   "audience": {
     "audience": "Audience",

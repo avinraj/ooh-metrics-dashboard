@@ -16,20 +16,23 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import AssessmentIcon from "@mui/icons-material/Assessment";
+import GroupsIcon from "@mui/icons-material/Groups";
+import LogoutIcon from "@mui/icons-material/Logout";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import { FaHighlighter, FaMapMarkerAlt } from "react-icons/fa";
-import { IoEyeOutline, IoFootsteps } from "react-icons/io5";
+import { IoFootsteps } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import logo from "../../../assets/oohlogo.png";
 import { languages } from "../../../i18n/languages";
-import { SET_SELECTED_ADTYPE, SET_SELECTED_MENU } from "../../../store/actions";
+import { SET_SELECTED_MENU } from "../../../store/actions";
 import StorageService from "../services/storage.serive";
 
 import AdType from "./AdType";
+import ConfirmModal from "./ConfirmModel";
 import ReportsAcc from "./Reports";
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
   const locationVal = useLocation();
   const dispatch = useDispatch();
 
@@ -39,6 +42,7 @@ const Sidebar: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string>("Highlight");
+  const [modalOpen, setModalOpen] = useState(false);
 
   const { t, i18n } = useTranslation();
   const defaultLang = storageService.get("local", "i18nextLng", false);
@@ -51,26 +55,73 @@ const Sidebar: React.FC = () => {
 
     // Adjust RTL if Arabic is selected
     document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
+    window.location.reload();
   };
 
   const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
 
-  const menuItems = [
-    { label: t("sideBar.highlight"), action: "Highlight", icon: <FaHighlighter />, path: "/highlight" },
-    { label: t("sideBar.reports"), action: "Reports", icon: <AssessmentIcon />, path: "/reports" },
-    { label: t("sideBar.mapView"), action: "Map View", icon: <FaMapMarkerAlt />, path: "/map-view" },
+  const [menuItems, setMenuItems] = useState([
     {
-      label: selectedAdType?.label,
-      action: "Vehicles",
-      icon: selectedAdType?.icon,
-      path: "/vehicles",
+      label: t("sideBar.highlight"),
+      action: "Highlight",
+      icon: <FaHighlighter />,
+      path: "/highlight",
     },
-    { label: t("sideBar.attribution"), action: "Attribution", icon: <IoFootsteps />, path: "/attribution" },
+    {
+      label: t("sideBar.reports"),
+      action: "Reports",
+      icon: <AssessmentIcon />,
+      path: "/reports",
+    },
+    {
+      label: t("sideBar.mapView"),
+      action: "Map View",
+      icon: <FaMapMarkerAlt />,
+      path: "/map-view",
+    },
+    {
+      label: t("sideBar.attribution"),
+      action: "Attribution",
+      icon: <IoFootsteps />,
+      path: "/attribution",
+    },
     // { label: t("sideBar.adType"), action: "Ad Type", image: car, path: "" },
 
     // { label:t("sideBar.deviceIds"), action: "Device IDs", path: "/device-ids" },
-    // { label:t("sideBar.logout"), action: "Log out", path: "/logout" },
-  ];
+    {
+      label: t("sideBar.logout"),
+      action: "Logout",
+      icon: <LogoutIcon />,
+      path: "",
+    },
+  ]);
+
+  useEffect(() => {
+    if (selectedAdType?.value === "mobileAds") {
+      setMenuItems((prevItems) => {
+        const updatedItems = [...prevItems.filter((item) => item.action !== "Audience")];
+        updatedItems.splice(4, 0, {
+          label: t("audience.audience"),
+          action: "Audience",
+          icon: <GroupsIcon />,
+          path: "/audience",
+        });
+        return updatedItems;
+      });
+    } else {
+      setMenuItems((prevItems) => prevItems.filter((item) => item.action !== "Audience"));
+    }
+    setMenuItems((prevItems) => {
+      const updatedItems = prevItems.filter((item) => item.action !== "Vehicles");
+      updatedItems.splice(2, 0, {
+        label: selectedAdType?.label,
+        action: "Vehicles",
+        icon: selectedAdType?.icon,
+        path: "/vehicles",
+      });
+      return updatedItems;
+    });
+  }, [selectedAdType]);
 
   useEffect(() => {
     const currentPath = locationVal.pathname;
@@ -82,22 +133,24 @@ const Sidebar: React.FC = () => {
         selectedMenu: matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action,
       });
     }
-    dispatch({
-      type: SET_SELECTED_ADTYPE,
-      selectedAdType: { label: t("adtype.vehicles.Cars"), icon: <DirectionsCarIcon />, value: "cars" },
-    });
   }, []);
 
   const handleItemClick = (item: { action: string; path: string }) => {
-    setSelectedItem(item.action);
-    dispatch({
-      type: SET_SELECTED_MENU,
-      selectedMenu: item.action,
-    });
-    navigate(item.path);
-    if (isMobile) setMenuOpen(false); // Close sidebar on mobile after selecting an item
+    if (item.action !== "Logout") {
+      setSelectedItem(item.action);
+      dispatch({
+        type: SET_SELECTED_MENU,
+        selectedMenu: item.action,
+      });
+      navigate(item.path);
+      if (isMobile) setMenuOpen(false);
+    } else setModalOpen(true);
   };
 
+  const onLogout = async () => {
+    storageService.remove("local", "token");
+    navigate("/");
+  };
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
   const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null; value: string }) => {
@@ -126,7 +179,7 @@ const Sidebar: React.FC = () => {
         open={!isMobile || menuOpen}
         onClose={toggleDrawer}
         sx={{
-          width: isMobile ? 0 : "18%",
+          width: isMobile || language === "ar" ? 0 : "18%",
           flexShrink: 0,
           "& .MuiDrawer-paper": {
             width: isMobile ? "70%" : "18%",
@@ -173,7 +226,7 @@ const Sidebar: React.FC = () => {
         </Box>
         <List sx={{ padding: 2 }} key={"adType"}>
           <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
-            <AdType onSelectAdType={handleAdTypeSelect} onOpenSwitchModal={() => console.log("Modal opened")} />
+            <AdType onSelectAdType={handleAdTypeSelect} onOpenSwitchModal={() => {}} />
           </Box>
           {menuItems.map((item) =>
             item.action !== "Reports" ? (
@@ -193,7 +246,18 @@ const Sidebar: React.FC = () => {
                       fontSize: "20px",
                     }}
                   >
-                    {item.icon && <Box sx={{ display: "flex", alignItems: "center", marginRight: 2 }}>{item.icon}</Box>}
+                    {item.icon && (
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          marginRight: 2,
+                          height: "25px",
+                        }}
+                      >
+                        {item.icon}
+                      </Box>
+                    )}
                     <ListItemText
                       sx={{
                         color:
@@ -205,9 +269,9 @@ const Sidebar: React.FC = () => {
                 </ListItem>
               </React.Fragment>
             ) : (
-              <Box sx={{ paddingBottom: 1 }} key={"Reports"}>
+              <Box sx={{ paddingBottom: 1 }} key={item?.label}>
                 <ReportsAcc
-                  icon={<IoEyeOutline style={{ marginRight: 8 }} />} // Add the icon here
+                  icon={<RemoveRedEyeOutlinedIcon style={{ marginRight: 13 }} />} // Add the icon here
                   onOpenSwitchModal={(value) => {
                     handleItemClick({ action: value, path: "/reports" });
                   }}
@@ -217,6 +281,12 @@ const Sidebar: React.FC = () => {
           )}
         </List>
       </Drawer>
+      <ConfirmModal
+        open={modalOpen}
+        message="Are you sure you want to log out?"
+        onConfirm={() => onLogout()}
+        onCancel={() => setModalOpen(false)}
+      />
     </>
   );
 };

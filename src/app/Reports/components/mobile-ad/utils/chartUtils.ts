@@ -107,3 +107,76 @@ export const mobileAdChartDataAndOptions = (
 
     return { data, options };
 };
+
+export const attributionChartDataAndOptions = (
+    chartData: {
+        labels: string[];
+        attributeData?: number[];
+    },
+    theme: any,
+    isMobile: boolean,
+    chartColor?: string,
+    percentageVal?: boolean
+) => {
+    const labels = chartData?.labels.map((label) =>
+        label
+    );
+
+    const data = {
+        labels: labels,
+        datasets: [
+            {
+                label: "Attribute",
+                data: chartData?.attributeData,
+                backgroundColor: chartColor ?? theme.palette.primary.main,
+                borderColor: chartColor ?? theme.palette.primary.main,
+                borderRadius: 5,
+                type: "bar",
+            },
+        ],
+    };
+
+    const options: ChartOptions = {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: false,
+            },
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: theme.palette.text.primary,
+                    callback: function (value) {
+                        const label = labels[value as number];
+                        return isMobile ? truncateLabel(label, 3) : label;
+                    },
+                },
+                grid: {
+                    display: false,
+                    color: theme.palette.divider,
+                },
+            },
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    color: theme.palette.text.primary,
+                    callback: function (value: any) {
+                        return isMobile ? truncateLabel(value, 3) : percentageVal ? `${value}%` : value;
+                    },
+                },
+                grid: {
+                    display: false,
+                    color: theme.palette.divider,
+                },
+                position: "left",
+            },
+        },
+    };
+
+    return { data, options };
+
+}
