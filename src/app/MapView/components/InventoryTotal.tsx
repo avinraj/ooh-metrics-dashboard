@@ -14,6 +14,13 @@ import theatreIcon from "../../../assets/cinema_icon.png";
 import fitnessLogo from "../../../assets/gym_icon.png";
 import workspaceLogo from "../../../assets/office-building_icon.png";
 
+
+export const capitalizeAndFormat = (text: string) => {
+  return text
+    .replace(/_/g, " ") // Replace underscores with spaces
+    .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize first letter of each word
+};
+
 interface InventoryTotalProps {
   data: any[];
 }
@@ -25,11 +32,6 @@ const InventoryTotal: React.FC<InventoryTotalProps> = ({ data }) => {
     setIsOpen(!isOpen);
   };
 
-  const capitalizeAndFormat = (text: string) => {
-    return text
-      .replace(/_/g, " ") // Replace underscores with spaces
-      .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize first letter of each word
-  };
 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -48,8 +50,8 @@ const InventoryTotal: React.FC<InventoryTotalProps> = ({ data }) => {
           }}
         >
           {data?.length &&
-            data.map((obj) => (
-              <Grid xs={6} md={3}>
+            data.map((obj, index) => (
+              <Grid xs={6} md={3} key={index}>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <img
                     src={

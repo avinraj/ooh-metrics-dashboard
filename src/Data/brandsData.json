@@ -1,0 +1,154 @@
+{
+  "burger_king": [
+    {
+      "name": "Burger King, No. 2, Unit No 111, Asha Gallery\nCommercial Street\nBengaluru - 560001",
+      "coordinates": [77.6083677, 12.9822268],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No. 89, 2, Gandhi Bazaar, Main Road\nBasavanagudi\nBengaluru - 560004",
+      "coordinates": [77.5753618, 12.9420515],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, 11th Main Road, 4th Block\nJayanagar\nBengaluru - 560011",
+      "coordinates": [77.5862186, 12.9268404],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Shop No 14, Ground & 1st Floor, aneppa Circle, TC Palya\nAkshay Nagar\nBengaluru - 560016",
+      "coordinates": [77.6839161, 13.0206912],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Counter No 1, 3rd Floor, Food Court\n92 Magadi Main Road\nBengaluru - 560023",
+      "coordinates": [77.54745489999999, 12.9758017],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No 19/2, CTS Binnipete\nOld Mysuru Road\nBengaluru - 560023",
+      "coordinates": [77.5645567, 12.978792],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No 21, 2nd Floor, The Forum Mall, Hosur Road\nKoramangala\nBengaluru - 560029",
+      "coordinates": [77.61102079999999, 12.9372565],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, G 002, Property No 1032, Survey No 82/8, Marathahalli Sarjapur Rd\nKaikondrahalli\nBengaluru - 560035",
+      "coordinates": [77.6769228, 12.9142698],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No 755/95/3, Ground Floor, Kote MR Plaza, Ring Road, Anand Nagar\nMarathahalli\nBengaluru - 560037",
+      "coordinates": [77.7017471, 12.9654067],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Stage 1, Salarpuria Plaza, Chinmaya Mission Hospital Rd\nIndiranagar\nBengaluru - 560038",
+      "coordinates": [77.637852, 12.978069],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, 3rd Floor, Food Court, 9th Cross Rd, Pantarapalya\nNayanda Halli\nBengaluru - 560039",
+      "coordinates": [77.525691, 12.9404984],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No 18, No 35/3/18, MC Layout, 17th Cross, BBMP West, Magadi Cord Road\nVijayanagar\nBengaluru - 560040",
+      "coordinates": [77.5447798, 12.9774868],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No 59/1, HRBR Layout, CMR Circle, 4th Cross\nKamanahalli Main Rd\nBengaluru - 560043",
+      "coordinates": [77.64240219999999, 13.0194229],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Unit No 5, Ground Floor, Elements Mall\nThanisandra Main Road\nBengaluru - 560045",
+      "coordinates": [77.6264951, 13.0451306],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Unit S08, 2nd Floor, Phoenix Market City, Whitefield Main Rd\nMahadevapura\nBengaluru - 560048",
+      "coordinates": [77.750556, 12.9745163],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, FC 12, 2nd Floor, Food Court\nWhitefield Main Road\nBengaluru - 560048",
+      "coordinates": [77.750556, 12.9745163],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Shop No R2 & R2A, 26/1, 2nd Floor\nDr Rajkumar Road\nBengaluru - 560055",
+      "coordinates": [77.5561457, 13.0114992],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, 4th Floor, Food Court, Forum Falcon Mall\nKonanakunte\nBengaluru - 560062",
+      "coordinates": [77.56295779999999, 12.8884029],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Ground & First Floor, Survey No.9, Jala Hobil, Bagalur\nKattigenahalli\nBengaluru - 560064",
+      "coordinates": [77.6206146, 13.1215408],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Shop No 102/114 & 113, Prestige Plaza, Mother Diary Road\nYelahanka New Town\nBengaluru - 560064",
+      "coordinates": [77.5735416, 13.0984557],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, SN 6, 2nd Flr, Food Court, RMZ Galleria\nBellary Road\nBengaluru - 560065",
+      "coordinates": [77.5950404, 13.0934032],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No G9 & 10, Gr Flr, Park Square Mall\nWhitefield Main Road\nBengaluru - 560066",
+      "coordinates": [77.7366311, 12.9871522],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No 62, Food Court, Nexus Whitefield Mall\nWhitefield\nBengaluru - 560066",
+      "coordinates": [77.7479488, 12.9596271],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, QSR 1, 3rd Floor, Vega City Mall, Srinivas Industrial Estate\nBTM 2nd Stage\nBengaluru - 560076",
+      "coordinates": [77.6011729, 12.9071647],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, U No T001, 3rd Flr, Royal Meenakshi Mall, Bannerghatta Main Rd\nHulimavu\nBengaluru - 560076",
+      "coordinates": [77.5958428, 12.8757228],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No 125/2, Shop No 5, Ground Floor, Hennur Main Rd\nVisthar\nBengaluru - 560077",
+      "coordinates": [77.6599508, 13.0770893],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Shop No 85,4/19, 30th Main Rd, Kaveri Nagar, Banagirinagara\nBanashankari\nBengaluru - 560085",
+      "coordinates": [77.5612278, 12.9269255],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Unit No 722/1, Gr Flr, Savitru Elegance, Dr Modi Road\nWCR Road\nBengaluru - 560086",
+      "coordinates": [77.5945627, 12.9715987],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, No 1, Ground Floor, Vijayashree Centre, Hesarghatta Main Road\nChikkasandra\nBengaluru - 560090",
+      "coordinates": [77.50386879999999, 13.0697691],
+      "type": "store"
+    },
+    {
+      "name": "Burger King, Unit No T/35, Mall of Asia, Bellary Road, Byatarayanapura\nYelahanka\nBengaluru - 560092",
+      "coordinates": [77.59241120000002, 13.0702337],
+      "type": "store"
+    }
+  ]
+}

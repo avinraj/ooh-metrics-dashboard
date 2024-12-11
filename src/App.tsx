@@ -1,5 +1,12 @@
 import { Brightness4, Brightness7 } from "@mui/icons-material";
-import { Box, CssBaseline, IconButton, ThemeProvider, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  CssBaseline,
+  IconButton,
+  ThemeProvider,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import "./App.css";
@@ -20,12 +27,24 @@ function App() {
   // Get the current route path using useLocation hook inside Router
   return (
     <Router>
-      <AppContent storageService={storageService} mode={mode} setMode={setMode} customTheme={customTheme} i18n={i18n} />
+      <AppContent
+        storageService={storageService}
+        mode={mode}
+        setMode={setMode}
+        customTheme={customTheme}
+        i18n={i18n}
+      />
     </Router>
   );
 }
 
-const AppContent = ({ storageService, mode, setMode, customTheme, i18n }: any) => {
+const AppContent = ({
+  storageService,
+  mode,
+  setMode,
+  customTheme,
+  i18n,
+}: any) => {
   const location = useLocation(); // Use useLocation inside Router
   const currentPath = location.pathname; // This gives the current route path
 
@@ -49,7 +68,10 @@ const AppContent = ({ storageService, mode, setMode, customTheme, i18n }: any) =
         <AppRoutes />
         <IconButton
           sx={{
-            display: currentPath === "/inventory" ? "none" : "grid",
+            display:
+              currentPath === "/inventory" || currentPath === "/brands"
+                ? "none"
+                : "grid",
             position: "fixed",
             bottom: 16,
             right: 16,

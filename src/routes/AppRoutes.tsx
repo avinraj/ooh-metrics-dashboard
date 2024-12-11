@@ -13,12 +13,14 @@ import ReportsMain from "../app/Reports/pages/ReportsMain";
 import Layout from "../layout/Layout";
 import ProtectedRoute from "./ProtectedRoute";
 import MapViewInventory from "../app/MapView/pages/MapViewInventory";
+import MapViewBrands from "../app/MapView/pages/MapViewBrands";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Signup />} />
       <Route path="/inventory" element={<MapViewInventory />} />
+      <Route path="/brands" element={<MapViewBrands />} />
       <Route
         path="/highlight"
         element={

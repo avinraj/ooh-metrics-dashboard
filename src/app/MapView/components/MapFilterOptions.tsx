@@ -12,6 +12,7 @@ import {
   useTheme,
 } from "@mui/material";
 import FilterListIcon from "@mui/icons-material/FilterList";
+import { capitalizeAndFormat } from "./InventoryTotal";
 
 interface MapFilterOptionsProps {
   categories: string[];
@@ -126,12 +127,6 @@ const MapFilterOptions: React.FC<MapFilterOptionsProps> = ({
       </Tooltip>
     </div>
   );
-};
-
-const capitalizeAndFormat = (text: string) => {
-  return text
-    .replace(/_/g, " ") // Replace underscores with spaces
-    .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize first letter of each word
 };
 
 export default MapFilterOptions;

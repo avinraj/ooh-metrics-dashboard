@@ -3,17 +3,19 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
 
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 // import logo from "../../../assets/oohlogo.png";
 import apartment from "../../../assets/apartments.png";
+import burger_king from "../../../assets/burger_king_icon.png";
 import fitness from "../../../assets/fitness.png";
-import store from "../../../assets/store.png";
-import store_marker from "../../../assets/store_marker.png";
 import theatre from "../../../assets/theatre.png";
 import workspace from "../../../assets/workspace.png";
 
 import brands from "../../../Data/brandsData.json";
 import data from "../../../Data/mapData.json";
 import { constants } from "../../core/data/constants";
+import { DrawerComponent } from "./InventoryDrawer";
 import InventoryTotal from "./InventoryTotal";
 import MapFilterOptions from "./MapFilterOptions";
 import MapSearchBox from "./MapSearchBox";
@@ -27,7 +29,7 @@ interface MapboxMapProps {
   layerType: "heat" | "point";
 }
 
-const Mapbox2 = ({ layerType }: MapboxMapProps) => {
+const BrandsMap = ({ layerType }: MapboxMapProps) => {
   const theme = useTheme();
 
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
@@ -49,6 +51,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
   const categories = ["apartments", "workspaces", "fitness", "cinema_theatres"];
   const [loading, setLoading] = useState(true);
   const [markers, setMarkers] = useState<mapboxgl.Marker[]>([]);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const primaryColor = theme.palette.primary.main;
 
@@ -60,8 +63,8 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     iconUrl: string
   ) => {
     const el = document.createElement("div");
-    el.style.width = "50px";
-    el.style.height = "50px";
+    el.style.width = "30px";
+    el.style.height = "30px";
     el.style.backgroundImage = `url(${iconUrl})`;
     el.style.backgroundSize = "contain";
     el.style.backgroundRepeat = "no-repeat";
@@ -96,7 +99,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     if (features && features.length > 0) {
       const feature: any = features[0];
       const locationName = feature?.properties?.name || "Unknown Location";
-      const locationType = feature?.properties?.type;
+      const locationType = feature?.properties?.category;
 
       //   const icon = getLocationIcon(locationType);
 
@@ -136,8 +139,8 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
         return `<img src=${fitness} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       case "cinema_theatre":
         return `<img src=${theatre} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
-      case "store":
-        return `<img src=${store} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case "burger_king":
+        return `<img src=${burger_king} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       default:
         return null;
     }
@@ -249,7 +252,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     const geojsonData = {
       type: "FeatureCollection",
       features: filteredData.map((location: any) => {
-        const iconUrl = location.type === "store" ? store_marker : null;
+        const iconUrl = location.category === "burger_king" ? burger_king : null;
         if (iconUrl) {
           // Call createCustomMarker here for each location
           createCustomMarker("store", location.coordinates, iconUrl);
@@ -288,7 +291,7 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     const geojsonData = {
       type: "FeatureCollection",
       features: filteredData.map((location: any) => {
-        const iconUrl = location.type === "store" ? store_marker : null;
+        const iconUrl = location.category === "burger_king" ? burger_king : null;
 
         if (iconUrl) {
           // You can update or create custom markers here
@@ -467,6 +470,10 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
     setSelectedBrands(selected);
   };
 
+  const handleDrawerToggle = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
   return (
     <div style={{ position: "relative", height: "100vh" }}>
       {loading && (
@@ -597,6 +604,42 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
           />
         </Grid>
       </Grid>
+      <Grid
+        container
+        spacing={1}
+        style={{
+          position: "absolute",
+          zIndex: 2,
+          padding: "10px",
+          bottom: "50%",
+          paddingLeft: "0px",
+          width: "fit-content",
+        }}
+      >
+        <Grid item>
+          <Box
+            sx={{
+              backgroundColor: "grey",
+              borderRadius: "21px",
+              display: "flex",
+            }}
+          >
+            <ArrowForwardIosIcon
+              onClick={handleDrawerToggle}
+              style={{ cursor: "pointer", margin: "10px" }}
+              color="primary"
+            />
+          </Box>
+
+          <DrawerComponent
+            isOpen={drawerOpen}
+            toggleDrawer={handleDrawerToggle}
+            onBrandSelect={(selected) => {
+              setSelectedBrands(selected);
+            }}
+          />
+        </Grid>
+      </Grid>
       <div
         ref={mapContainerRef}
         style={{ height: "100%", width: "100%" }}
@@ -605,4 +648,4 @@ const Mapbox2 = ({ layerType }: MapboxMapProps) => {
   );
 };
 
-export default Mapbox2;
+export default BrandsMap;
