@@ -1,20 +1,5 @@
-import {
-  Box,
-  Button,
-  Grid,
-  Typography,
-  useMediaQuery,
-  useTheme,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
-import gridIcon from "../../../assets/carsection1.jpg";
-import wagonr from "../../../assets/wagonr.webp";
-import ecosport from "../../../assets/ecosport.avif";
+import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+
 import { useState } from "react";
 import FilterPanel from "../../MapView/components/FilterPanel";
 import { CiGrid41 } from "react-icons/ci";
@@ -58,107 +43,107 @@ const Buses = () => {
     },
   ];
 
-  const carsData = [
-    {
-      name: "Mercedes",
-      year: 2012,
-      driver: "John",
-      impressions: "4.59",
-      image: gridIcon,
-    },
-    {
-      name: "Wagon R",
-      year: 2020,
-      driver: "Alice",
-      impressions: "5.12",
-      image: wagonr,
-    },
-    {
-      name: "EcoSport",
-      year: 2018,
-      driver: "Robert",
-      impressions: "4.85",
-      image: ecosport,
-    },
-  ];
+  // const carsData = [
+  //   {
+  //     name: "",
+  //     year: "",
+  //     driver: "",
+  //     impressions: "",
+  //     image: "",
+  //   },
+  //   {
+  //     name: "",
+  //     year: "",
+  //     driver: "",
+  //     impressions: "",
+  //     image: "",
+  //   },
+  //   {
+  //     name: "",
+  //     year: "",
+  //     driver: "",
+  //     impressions: "",
+  //     image: "",
+  //   },
+  // ];
 
-  const renderGridView = () => (
-    <Grid container spacing={2} mt={2}>
-      {carsData.map((car, index) => (
-        <Grid item xs={12} sm={6} md={4} key={index}>
-          <Box sx={{ border: "1px solid white", padding: 1 }}>
-            <img src={car.image} alt={`${car.name}`} width="100%" height="190" style={{ objectFit: "cover" }} />
-            <Box display="flex" justifyContent="space-between">
-              <Typography color="black">
-                {car.name} <br /> ({car.year}) | {car.driver}
-              </Typography>
-              <Typography color="black">
-                {car.impressions} <br />
-                Impressions <br />
-                per mile
-              </Typography>
-            </Box>
-          </Box>
-        </Grid>
-      ))}
-    </Grid>
-  );
+  // const renderGridView = () => (
+  //   <Grid container spacing={2} mt={2}>
+  //     {carsData.map((car, index) => (
+  //       <Grid item xs={12} sm={6} md={4} key={index}>
+  //         <Box sx={{ border: "1px solid white", padding: 1 }}>
+  //           <img src={car.image} alt={`${car.name}`} width="100%" height="190" style={{ objectFit: "cover" }} />
+  //           <Box display="flex" justifyContent="space-between">
+  //             <Typography color="black">
+  //               {car.name} <br /> ({car.year}) | {car.driver}
+  //             </Typography>
+  //             <Typography color="black">
+  //               {car.impressions} <br />
+  //               Impressions <br />
+  //               per mile
+  //             </Typography>
+  //           </Box>
+  //         </Box>
+  //       </Grid>
+  //     ))}
+  //   </Grid>
+  // );
 
-  const renderTableView = () => (
-    <TableContainer>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell>Year</TableCell>
-            <TableCell>Driver</TableCell>
-            <TableCell>Impression</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {carsData.map((car, index) => (
-            <TableRow key={index}>
-              <TableCell>{car.name}</TableCell>
-              <TableCell>{car.year}</TableCell>
-              <TableCell>{car.driver}</TableCell>
-              <TableCell>{car.impressions}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-  );
+  // const renderTableView = () => (
+  //   <TableContainer>
+  //     <Table>
+  //       <TableHead>
+  //         <TableRow>
+  //           <TableCell>Name</TableCell>
+  //           <TableCell>Year</TableCell>
+  //           <TableCell>Driver</TableCell>
+  //           <TableCell>Impression</TableCell>
+  //         </TableRow>
+  //       </TableHead>
+  //       <TableBody>
+  //         {carsData.map((car, index) => (
+  //           <TableRow key={index}>
+  //             <TableCell>{car.name}</TableCell>
+  //             <TableCell>{car.year}</TableCell>
+  //             <TableCell>{car.driver}</TableCell>
+  //             <TableCell>{car.impressions}</TableCell>
+  //           </TableRow>
+  //         ))}
+  //       </TableBody>
+  //     </Table>
+  //   </TableContainer>
+  // );
 
-  const renderPhotoListView = () => (
-    <Grid container direction="column" spacing={2} mt={2}>
-      {carsData.map((car, index) => (
-        <Grid item key={index}>
-          <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-            <img src={car.image} alt={`${car.name}`} width="150" height="100" style={{ objectFit: "cover" }} />
-            <Box>
-              <Typography color="black">{car.name}</Typography>
-              <Typography color="gray">
-                {car.year} | {car.driver}
-              </Typography>
-            </Box>
-          </Box>
-        </Grid>
-      ))}
-    </Grid>
-  );
+  // const renderPhotoListView = () => (
+  //   <Grid container direction="column" spacing={2} mt={2}>
+  //     {carsData.map((car, index) => (
+  //       <Grid item key={index}>
+  //         <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+  //           <img src={car.image} alt={`${car.name}`} width="150" height="100" style={{ objectFit: "cover" }} />
+  //           <Box>
+  //             <Typography color="black">{car.name}</Typography>
+  //             <Typography color="gray">
+  //               {car.year} | {car.driver}
+  //             </Typography>
+  //           </Box>
+  //         </Box>
+  //       </Grid>
+  //     ))}
+  //   </Grid>
+  // );
 
-  const renderContent = () => {
-    switch (layerType) {
-      case "GRID_VIEW":
-        return renderGridView();
-      case "TABLE_VIEW":
-        return renderTableView();
-      case "PHOTO_LIST":
-        return renderPhotoListView();
-      default:
-        return null;
-    }
-  };
+  // const renderContent = () => {
+  //   switch (layerType) {
+  //     case "GRID_VIEW":
+  //       return renderGridView();
+  //     case "TABLE_VIEW":
+  //       return renderTableView();
+  //     case "PHOTO_LIST":
+  //       return renderPhotoListView();
+  //     default:
+  //       return null;
+  //   }
+  // };
 
   return (
     <Grid container>
@@ -226,7 +211,7 @@ const Buses = () => {
         </Box>
       </Grid>
       <Grid item xs={12} p={1} sx={{ backgroundColor: "#DEDEDE" }}>
-        {renderContent()}
+        {/* {renderContent()} */}
       </Grid>
     </Grid>
   );

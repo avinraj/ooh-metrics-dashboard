@@ -1,16 +1,23 @@
 import { Box, Card, Grid, Typography, useTheme } from "@mui/material";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
+import car from "../../assets/images__1_-removebg-preview copy.png";
 import adIcon from "../../assets/addIcon.png";
 import impression from "../../assets/impressions.png";
+import AdsClickIcon from "@mui/icons-material/AdsClick";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import ctr from "../../assets/ctr.png";
 import meter from "../../assets/speed-meter-outline-512.webp";
+import autoIcon from "../../assets/auto-rickshaw.svg";
+import HikingIcon from "@mui/icons-material/Hiking";
+import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
+import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
+import FilterFramesIcon from "@mui/icons-material/FilterFrames";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const HighLight = () => {
   const theme = useTheme();
   const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
-
-  useEffect(() => {}, [selectedAdType]);
 
   const { t } = useTranslation();
   return (
@@ -34,9 +41,7 @@ const HighLight = () => {
         <Grid item xs={12}>
           <Box mt={7}>
             <Typography variant="h3" color={theme.palette.text.primary}>
-              <Box sx={{ display: "inline-block", padding: "0 8px" }}>
-                {t("highlights.highlight")}
-              </Box>
+              <Box sx={{ display: "inline-block", padding: "0 8px" }}>{t("highlights.highlight")}</Box>
             </Typography>
           </Box>
         </Grid>
@@ -45,86 +50,105 @@ const HighLight = () => {
           container
           item
           xs={12}
-          style={{ margin: "0px", marginTop: "40px" }}
+          spacing={4}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+          mt={7}
         >
           {[
             {
               value: 25,
-              label: `TOTAL ${
-                selectedAdType?.label ? selectedAdType.label.toUpperCase() : ""
-              }`,
-              icon: (
-                <div style={{ height: "80px" }}>{selectedAdType?.icon}</div>
-              ),
+              label:
+                selectedAdType?.value === "cars"
+                  ? "TOTAL CARS"
+                  : selectedAdType?.value === "buses"
+                  ? "TOTAL BUSES"
+                  : selectedAdType?.value === "trucks"
+                  ? "TOTAL TRUCKS"
+                  : selectedAdType?.value === "escooters"
+                  ? "TOTAL E-SCOOTER"
+                  : selectedAdType?.value === "twowheelers"
+                  ? "TOTAL 2-WHEELERS"
+                  : selectedAdType?.value === "rickshaws"
+                  ? "TOTAL RICKSHAWS"
+                  : selectedAdType?.value === "robots"
+                  ? "TOTAL ROBOTS"
+                  : selectedAdType?.value === "digitalBillboards"
+                  ? "TOTAL DIGITAL BILLBOARDS"
+                  : selectedAdType?.value === "carRooftoppers"
+                  ? "TOTAL CAR ROOFTOPPERS"
+                  : selectedAdType?.value === "vanBillboards"
+                  ? "TOTAL VAN BILLBOARDS"
+                  : selectedAdType?.value === "backpacks"
+                  ? "TOTAL HUMANS"
+                  : selectedAdType?.value === "mobileAds"
+                  ? "TOTAL IMPRESSIONS"
+                  : selectedAdType?.value === "staticBillboards"
+                  ? "TOTAL SCREENS"
+                  : "",
+              icon:
+                selectedAdType?.value === "robots"
+                  ? SmartToyIcon
+                  : selectedAdType?.value === "staticBillboards"
+                  ? FilterFramesIcon
+                  : selectedAdType?.value === "trucks"
+                  ? LocalShippingIcon
+                  : selectedAdType?.value === "buses"
+                  ? DirectionsBusIcon
+                  : selectedAdType?.value === "twowheelers"
+                  ? TwoWheelerIcon
+                  : selectedAdType?.value === "backpacks"
+                  ? HikingIcon
+                  : selectedAdType?.value === "rickshaws"
+                  ? autoIcon
+                  : selectedAdType?.value === "mobileAds"
+                  ? adIcon
+                  : car,
             },
-            { value: "33,500 miles", label: "TOTAL MILES", icon: meter },
-            { value: "1,103,500 m", label: "TOTAL IMPRESSIONS", icon: adIcon },
-            { value: 33, label: "IMPRESSIONS PER MILE", icon: impression },
-          ].map((item: any, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={3}
-              key={index}
-              style={{
-                display: "flex",
-                paddingInline: "15px",
-                paddingBlock: "10px",
-              }}
-            >
-              <Card
-                sx={{
-                  backgroundColor: "#DEDEDE",
-                  padding: 2,
-                  textAlign: "center",
-                  width: "100%",
-                  height: "100%",
-                  display: "grid",
-                }}
-              >
-                <Typography
-                  variant="h4"
-                  fontWeight={"bold"}
-                  color={theme.palette.primary.contrastText}
-                >
+            {
+              value: "33,500 miles",
+              label: selectedAdType?.value === "mobileAds" ? "TOTAL CLICKS" : "TOTAL MILES",
+              icon: selectedAdType?.value === "mobileAds" ? AdsClickIcon : meter,
+            },
+            {
+              value: "1,103,500 m",
+              label: selectedAdType?.value === "mobileAds" ? "TOTAL REACH" : "TOTAL IMPRESSIONS",
+              icon: selectedAdType?.value === "mobileAds" ? impression : adIcon,
+            },
+            {
+              value: 33,
+              label: selectedAdType?.value === "mobileAds" ? "CTR" : "IMPRESSIONS PER MILE",
+              icon: selectedAdType?.value === "mobileAds" ? ctr : impression,
+            },
+          ].map((item, index) => (
+            <Grid item xs={12} sm={3} key={index}>
+              <Card sx={{ backgroundColor: "#DEDEDE", padding: 2, textAlign: "center" }}>
+                <Typography variant="h4" fontWeight={"bold"} color={theme.palette.primary.contrastText}>
                   {item.value}
                 </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    marginBlock: "10px",
-                  }}
-                >
-                  {index === 0 ? (
-                    item.icon
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mt: 2 }}>
+                  {typeof item.icon === "string" ? (
+                    <img src={item.icon} alt={item.label} width={120} height={120} />
                   ) : (
-                    <img
-                      src={item.icon}
-                      alt={item.label}
-                      width={80}
-                      height={80}
-                    />
+                    <item.icon style={{ fontSize: 120 }} />
                   )}
                 </Box>
-                <div
-                  style={{ display: "flex", alignItems: "end", width: "100%" }}
+                <Box
+                  sx={{
+                    backgroundColor: theme.palette.primary.dark,
+                    mt: 2,
+                    border: "1px solid black",
+                    borderRadius: 3,
+                    padding: "4px 8px",
+                  }}
                 >
-                  <Box
-                    sx={{
-                      backgroundColor: theme.palette.primary.dark,
-                      border: "1px solid black",
-                      borderRadius: 3,
-                      padding: "4px 8px",
-                      width: "100%",
-                    }}
-                  >
-                    <Typography variant="h6" color={theme.palette.text.primary}>
-                      <b>{item.label}</b>
-                    </Typography>
-                  </Box>
-                </div>
+                  <Typography variant="h6" color={theme.palette.text.primary}>
+                    <b>{item.label}</b>
+                  </Typography>
+                </Box>
               </Card>
             </Grid>
           ))}

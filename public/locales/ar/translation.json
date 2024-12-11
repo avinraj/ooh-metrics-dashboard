@@ -7,6 +7,7 @@
     "mapView": "عرض الخريطة",
     "cars": "السيارات",
     "attribution": "نسبة التحميل",
+   
     "deviceIds": "معرفات الأجهزة",
     "logout": "تسجيل الخروج"
   },
@@ -82,6 +83,7 @@
       "Trucks": "شاحنات",
       "Robots": "روبوتات",
       "e-scooter": "سكوتر كهربائي",
+     
       "Rickshaws": "ركشات",
       "2-wheelers": "دراجات نارية"
     },
@@ -95,7 +97,8 @@
     "Mobile Ads": "إعلانات متنقلة",
     "Static Billboards": "لوحات إعلانات ثابتة",
     "Vehicle Ads": "إعلانات المركبات",
-    "Digital Screens": "الشاشات الرقمية"
+    "Digital Screens": "الشاشات الرقمية",
+    "Cinema Theater":"دار السينما"
   },
   "map": {
     "map": "الخريطة",

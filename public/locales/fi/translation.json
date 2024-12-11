@@ -7,6 +7,7 @@
     "mapView": "Karttanäkymä",
     "cars": "Autot",
     "attribution": "Attribuutio",
+   
     "deviceIds": "Laitteen tunnukset",
     "logout": "Kirjaudu ulos"
   },
@@ -100,7 +101,8 @@
     "Mobile Ads": "Mobiilimainokset",
     "Static Billboards": "Staattiset mainostaulut",
     "Vehicle Ads": "Ajoneuvomainokset",
-    "Digital Screens": "Digitaaliset näytöt"
+    "Digital Screens": "Digitaaliset näytöt",
+    "Cinema Theater":"elokuvateatteri"
   },
   "map": {
     "map": "Kartta",

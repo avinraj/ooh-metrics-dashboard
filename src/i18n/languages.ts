@@ -13,4 +13,5 @@ export const languages = [
   { code: 'fi', name: 'Suomi' },
   { code: 'ru', name: 'Русский' },
   { code: 'ko', name: '한국어' },
+  {code:'pt', name:'Português'}
 ];

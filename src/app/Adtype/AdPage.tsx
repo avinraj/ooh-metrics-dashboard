@@ -36,9 +36,9 @@ const AdPage = () => {
     { icon: car, name: t("adtype.vehicles.Cars") },
     { icon: bus, name: t("adtype.vehicles.Buses") },
     { icon: truck, name: t("adtype.vehicles.Trucks") },
-    { icon: robots, name: t("adtype.vehicles.Robots") },
+    { icon: robots, name: t("adtype.vehicles.Robots") || "Robots" }, // Fallback
     { icon: escooter, name: t("adtype.vehicles.e-scooter") },
-    { icon: rickshaw, name: t("adtype.vehicles.Rickshaws") },
+    { icon: rickshaw, name: t("adtype.vehicles.Rickshaws") || "Rickshaws" }, // Fallback
     { icon: twowheeler, name: t("adtype.vehicles.2-wheelers") },
   ];
 

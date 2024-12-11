@@ -1,0 +1,128 @@
+{
+  "sideBar": {
+    "adType": "Tipo de Anúncio",
+    "highlight": "Destaque",
+    "reports": "Relatórios",
+    "audience": "Público",
+    "mapView": "Visão do Mapa",
+    "cars": "Carros",
+    "attribution": "Atribuição",
+    "cinemaTheater":"cinema",
+    "deviceIds": "IDs de Dispositivos",
+    "logout": "Sair"
+  },
+  "filterPanel": {
+    "campaign": "Campanha",
+    "selectDateRange": "Selecionar Intervalo de Datas",
+    "vehicle": "Veículo",
+    "show": "MOSTRAR"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "Impressões",
+      "date": "Data",
+      "vehicle": "Veículo",
+      "chart": "Gráfico",
+      "table": "Tabela",
+      "impressionsPerMile": "Impressões por milha",
+      "miles": "Milhas",
+      "avg": "Média"
+    },
+    "demographics": {
+      "demographics": "Demografia",
+      "age": "Idade",
+      "education": "Educação",
+      "income": "Renda",
+      "ethnicity": "Etnia",
+      "chartType": "Tipo de Gráfico",
+      "verticalBar": "Barra Vertical",
+      "horizontalBar": "Barra Horizontal",
+      "doughnutChart": "Gráfico de Rosca",
+      "lineChart": "Gráfico de Linha"
+    },
+    "affinities": {
+      "affinities": "Afinidades"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "Aplicativos / Sites",
+      "byAppsOrWebsites": "Por Aplicativos / Sites"
+    },
+    "dayAndHour": {
+      "dayAndHour": "Dia e Hora",
+      "byDayAndHour": "Por Dia e Hora",
+      "dayChart": "Gráfico Diário",
+      "hourChart": "Gráfico por Hora"
+    },
+    "browser": {
+      "browser": "Navegador",
+      "byBrowser": "Por Navegador"
+    },
+    "operatingSystem": {
+      "OS": "SO",
+      "byOperatingSystem": "Por Sistema Operacional"
+    },
+    "telecomOperator": {
+      "telecomOperator": "Operadora de Telecomunicações",
+      "byTelecomOperator": "Por Operadora de Telecomunicações"
+    },
+    "creatives": {
+      "creatives": "Criativos",
+      "byCreatives": "Por Criativos",
+      "creativesChart": "Gráfico de Criativos",
+      "sizeChart": "Gráfico de Tamanhos"
+    }
+  },
+  "highlights": {
+    "welcome": "Bem-vindo",
+    "highlight": "Destaque"
+  },
+  "cars": {
+    "cars": "Carros",
+    "grid view": "Visualização em Grade",
+    "table view": "Visualização em Tabela",
+    "photo list": "Lista de Fotos"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "Carros",
+      "Buses": "Ônibus",
+      "Trucks": "Caminhões",
+      "Robots": "Robôs",
+      "e-scooter": "E-scooter",
+      "Rickshaws": "Rickshaws",
+      "2-wheelers": "Veículos de 2 rodas"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "Painéis Digitais",
+      "Car Rooftoppers": "Painéis Digitais de Carros",
+      "Van Digital Billboards": "Painéis Digitais de Vans",
+      "Backpacks": "Mochilas"
+    },
+    "Mobile Ads": "Anúncios Móveis",
+    "Static Billboards": "Painéis Estáticos",
+    "Vehicle Ads": "Anúncios em Veículos",
+    "Digital Screens": "Tela Digital",
+    "Cinema Theater":"teatro de cinema"
+    
+  },
+  "map": {
+    "map": "Mapa",
+    "basic": "Básico",
+    "heat": "Calor",
+    "live": "Ao Vivo"
+  },
+  "attribution": {
+    "attribution": "Atribuição",
+    "qrcode": "QR-Code",
+    "trackingurl": "URL de Rastreamento",
+    "footfall": "Público"
+  },
+  "audience": {
+    "audience": "Público",
+    "clicksByGender": "Cliques por Gênero",
+    "clicksByDevice": "Cliques por Dispositivo",
+    "clicksByAge": "Cliques por Idade",
+    "clicksBySource": "Cliques por Fonte",
+    "ctrBySec": "CTR por Segundo"
+  }
+}

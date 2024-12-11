@@ -32,7 +32,7 @@ import AdType from "./AdType";
 import ConfirmModal from "./ConfirmModel";
 import ReportsAcc from "./Reports";
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
   const locationVal = useLocation();
   const dispatch = useDispatch();
 
@@ -99,9 +99,7 @@ const Sidebar: React.FC = () => {
   useEffect(() => {
     if (selectedAdType?.value === "mobileAds") {
       setMenuItems((prevItems) => {
-        const updatedItems = [
-          ...prevItems.filter((item) => item.action !== "Audience"),
-        ];
+        const updatedItems = [...prevItems.filter((item) => item.action !== "Audience")];
         updatedItems.splice(4, 0, {
           label: t("audience.audience"),
           action: "Audience",
@@ -111,14 +109,10 @@ const Sidebar: React.FC = () => {
         return updatedItems;
       });
     } else {
-      setMenuItems((prevItems) =>
-        prevItems.filter((item) => item.action !== "Audience")
-      );
+      setMenuItems((prevItems) => prevItems.filter((item) => item.action !== "Audience"));
     }
     setMenuItems((prevItems) => {
-      const updatedItems = prevItems.filter(
-        (item) => item.action !== "Vehicles"
-      );
+      const updatedItems = prevItems.filter((item) => item.action !== "Vehicles");
       updatedItems.splice(2, 0, {
         label: selectedAdType?.label,
         action: "Vehicles",
@@ -131,21 +125,12 @@ const Sidebar: React.FC = () => {
 
   useEffect(() => {
     const currentPath = locationVal.pathname;
-    const matchingMenuItem = menuItems.find(
-      (item) => item.path === currentPath
-    );
+    const matchingMenuItem = menuItems.find((item) => item.path === currentPath);
     if (matchingMenuItem) {
-      setSelectedItem(
-        matchingMenuItem.action === "Reports"
-          ? "impressions"
-          : matchingMenuItem.action
-      );
+      setSelectedItem(matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action);
       dispatch({
         type: SET_SELECTED_MENU,
-        selectedMenu:
-          matchingMenuItem.action === "Reports"
-            ? "impressions"
-            : matchingMenuItem.action,
+        selectedMenu: matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action,
       });
     }
   }, []);
@@ -168,11 +153,7 @@ const Sidebar: React.FC = () => {
   };
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
-  const handleAdTypeSelect = (adType: {
-    label: string;
-    icon: JSX.Element | null;
-    value: string;
-  }) => {
+  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null; value: string }) => {
     console.log("Selected Ad Type:", adType);
   };
   return (
@@ -198,7 +179,7 @@ const Sidebar: React.FC = () => {
         open={!isMobile || menuOpen}
         onClose={toggleDrawer}
         sx={{
-          width: isMobile || language === 'ar' ? 0 : "18%",
+          width: isMobile || language === "ar" ? 0 : "18%",
           flexShrink: 0,
           "& .MuiDrawer-paper": {
             width: isMobile ? "70%" : "18%",
@@ -222,14 +203,8 @@ const Sidebar: React.FC = () => {
               alignItems: "center",
             }}
           >
-            <img
-              src={logo}
-              alt="OOH Logo"
-              style={{ marginRight: 10, height: "40px" }}
-            />
-            <h2 style={{ color: theme.palette.primary.contrastText }}>
-              OOHmetrics
-            </h2>
+            <img src={logo} alt="OOH Logo" style={{ marginRight: 10, height: "40px" }} />
+            <h2 style={{ color: theme.palette.primary.contrastText }}>OOHmetrics</h2>
           </div>
 
           <Select
@@ -251,10 +226,7 @@ const Sidebar: React.FC = () => {
         </Box>
         <List sx={{ padding: 2 }} key={"adType"}>
           <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
-            <AdType
-              onSelectAdType={handleAdTypeSelect}
-              onOpenSwitchModal={() => {}}
-            />
+            <AdType onSelectAdType={handleAdTypeSelect} onOpenSwitchModal={() => {}} />
           </Box>
           {menuItems.map((item) =>
             item.action !== "Reports" ? (
@@ -264,16 +236,11 @@ const Sidebar: React.FC = () => {
                     onClick={() => handleItemClick(item)}
                     sx={{
                       backgroundColor:
-                        selectedItem === item.action
-                          ? theme.palette.primary.main
-                          : theme.palette.background.default,
+                        selectedItem === item.action ? theme.palette.primary.main : theme.palette.background.default,
                       "&:hover": {
                         backgroundColor: theme.palette.primary.light,
                       },
-                      border:
-                        selectedItem === item.action
-                          ? "1px solid transparent"
-                          : "1px solid #ccc",
+                      border: selectedItem === item.action ? "1px solid transparent" : "1px solid #ccc",
                       borderRadius: "2px",
                       marginBottom: "8px",
                       fontSize: "20px",
@@ -285,7 +252,7 @@ const Sidebar: React.FC = () => {
                           display: "flex",
                           alignItems: "center",
                           marginRight: 2,
-                          height: '25px'
+                          height: "25px",
                         }}
                       >
                         {item.icon}
@@ -294,9 +261,7 @@ const Sidebar: React.FC = () => {
                     <ListItemText
                       sx={{
                         color:
-                          selectedItem === item.action
-                            ? theme.palette.primary.contrastText
-                            : theme.palette.text.primary,
+                          selectedItem === item.action ? theme.palette.primary.contrastText : theme.palette.text.primary,
                       }}
                       primary={item.label}
                     />
@@ -306,9 +271,7 @@ const Sidebar: React.FC = () => {
             ) : (
               <Box sx={{ paddingBottom: 1 }} key={item?.label}>
                 <ReportsAcc
-                  icon={
-                    <RemoveRedEyeOutlinedIcon style={{ marginRight: 13 }} />
-                  } // Add the icon here
+                  icon={<RemoveRedEyeOutlinedIcon style={{ marginRight: 13 }} />} // Add the icon here
                   onOpenSwitchModal={(value) => {
                     handleItemClick({ action: value, path: "/reports" });
                   }}

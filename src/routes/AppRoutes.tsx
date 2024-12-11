@@ -41,7 +41,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-       <Route
+      <Route
         path="/mobile-ad-reports"
         element={
           <ProtectedRoute>
@@ -51,7 +51,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-        <Route
+      <Route
         path="/audience"
         element={
           <ProtectedRoute>

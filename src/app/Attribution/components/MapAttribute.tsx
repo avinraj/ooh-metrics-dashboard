@@ -66,15 +66,7 @@ const MapAttribute: React.FC = () => {
         source: "earthquakes",
         filter: ["has", "point_count"],
         paint: {
-          "circle-color": [
-            "step",
-            ["get", "point_count"],
-            theme.palette.primary.main,
-            10,
-            "#f28cb1",
-            30,
-            "#f1f075",
-          ],
+          "circle-color": ["step", ["get", "point_count"], theme.palette.primary.main, 10, "#f28cb1", 30, "#f1f075"],
           "circle-radius": ["step", ["get", "point_count"], 15, 10, 20, 30, 25],
         },
       });
@@ -116,9 +108,7 @@ const MapAttribute: React.FC = () => {
 
         const clusterId = features[0]?.properties?.cluster_id;
 
-        const clusterSource = newMap.getSource(
-          "earthquakes"
-        ) as mapboxgl.GeoJSONSource;
+        const clusterSource = newMap.getSource("earthquakes") as mapboxgl.GeoJSONSource;
 
         clusterSource.getClusterExpansionZoom(clusterId, (err, zoom: any) => {
           if (err) return;
@@ -146,19 +136,24 @@ const MapAttribute: React.FC = () => {
   }, [mapStyle]);
 
   return (
-    <div style={{ position: "relative"}}>
-       <Grid
+    <div style={{ position: "relative" }}>
+      <Grid
         container
         spacing={1}
         style={{
           position: "absolute",
           zIndex: 2,
           padding: "10px",
-          bottom: "40px"
+          bottom: "40px",
         }}
       >
         <Grid item>
-          <MapStylePicker selectedMapStyle={mapStyle} onStyleChange={(value: string) => {setMapStyle(value)}} />
+          <MapStylePicker
+            selectedMapStyle={mapStyle}
+            onStyleChange={(value: string) => {
+              setMapStyle(value);
+            }}
+          />
         </Grid>
       </Grid>
       <div ref={mapContainer} style={{ width: "100%", height: "50vh" }} />;
