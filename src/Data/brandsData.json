@@ -150,5 +150,39 @@
       "coordinates": [77.59241120000002, 13.0702337],
       "type": "store"
     }
+  ],
+  "duroflex": [
+    {
+      "name": "Duroflex - COCO JAYANAGAR",
+      "coordinates": [77.58453688465737, 12.91756702106477],
+      "type": "store"
+    },
+    {
+      "name": "Duroflex - COCO BANNERGHATA",
+      "coordinates": [77.59740331349305, 12.888244266036583],
+      "type": "store"
+    },
+    {
+      "name": "Duroflex - COCO INDRANAGAR",
+      "coordinates": [77.64134952883566, 12.964890368402447],
+      "type": "store"
+    },
+    {
+      "name": "Duroflex - COCO WHITEFIELD",
+      "coordinates": [77.73542318811197, 12.957239502838718],
+      "type": "store"
+    }
+  ],
+  "sleepyhead": [
+    {
+      "name": "Sleepyhead BANASWADI",
+      "coordinates": [77.64881237116435, 13.022524573023485],
+      "type": "store"
+    },
+    {
+      "name": "Sleepyhead KORMANGALA",
+      "coordinates": [77.62544333669526, 12.914666536282052],
+      "type": "store"
+    }
   ]
 }

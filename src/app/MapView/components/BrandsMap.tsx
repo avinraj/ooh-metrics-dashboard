@@ -8,6 +8,8 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 // import logo from "../../../assets/oohlogo.png";
 import apartment from "../../../assets/apartments.png";
 import burger_king from "../../../assets/burger_king_icon.png";
+import duroflex from "../../../assets/duroflex_logo.png";
+import sleepyhead from "../../../assets/sleepyhead_logo.png";
 import fitness from "../../../assets/fitness.png";
 import theatre from "../../../assets/theatre.png";
 import workspace from "../../../assets/workspace.png";
@@ -30,7 +32,7 @@ interface MapboxMapProps {
 }
 
 export const inventoryTypes = {
-  apartments: "apatrments",
+  apartments: "apartments",
   fitness: "fitness",
   cinema_theatres: "cinema_theatres",
   workspaces: "workspaces",
@@ -38,6 +40,8 @@ export const inventoryTypes = {
 
 export const brandTypes = {
   burger_king: "burger_king",
+  duroflex: "duroflex",
+  sleepyhead: "sleepyhead",
 };
 
 // Helper function for circle GeoJSON
@@ -77,6 +81,7 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markersRef = useRef<Record<string, mapboxgl.Marker[]>>({});
+  const popupRef = useRef<mapboxgl.Popup | null>(null);
   const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/dark-v10");
   const [selectedLocation, setSelectedLocation] = useState<string[]>([
     inventoryTypes.apartments,
@@ -106,12 +111,12 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
 
   const createCustomMarker = (
     name: string,
-    coordinates: any,
+    data: any,
     iconUrl: string,
     radii = [1000, 3000, 5000], // Radii in meters
     colors = ["#007BFF", "#28A745", "#FFC107"] // Border colors for each radius
   ) => {
-    const uniqueId = `${name}-${coordinates[0]}-${coordinates[1]}`; // Unique ID for the marker
+    const uniqueId = `${name}-${data?.coordinates[0]}-${data?.coordinates[1]}`; // Unique ID for the marker
 
     // Create marker element
     const el = document.createElement("div");
@@ -124,8 +129,28 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
 
     // Add the marker to the map
     const marker = new mapboxgl.Marker(el)
-      .setLngLat(coordinates)
+      .setLngLat(data?.coordinates)
       .addTo(mapRef.current!);
+
+    el.addEventListener("click", () => {
+      // Call handlePointClick and pass the MapMouseEvent-like object
+      if (mapRef.current && mapRef?.current?.getZoom() >= 10) {
+        const point = mapRef?.current?.project(data?.coordinates);
+        const mockEvent = {
+          point,
+          lngLat: { lng: data?.coordinates[0], lat: data?.coordinates[1] },
+        } as mapboxgl.MapMouseEvent;
+
+        const customFeatures = [
+          {
+            properties: data,
+          },
+        ];
+        setTimeout(() => {
+          handlePointClick(mockEvent, customFeatures);
+        }, 500);
+      } else alert("zoom more to view details");
+    });
 
     // Track markers
     if (!markersRef.current[name]) {
@@ -136,7 +161,7 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
     // Add border-only circles and text for each radius
     radii.forEach((radius, index) => {
       const circleGeoJSON: any = createCircle(
-        { lng: coordinates[0], lat: coordinates[1] },
+        { lng: data?.coordinates[0], lat: data?.coordinates[1] },
         radius
       );
 
@@ -169,7 +194,10 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
         type: "Feature",
         geometry: {
           type: "Point",
-          coordinates: [coordinates[0], coordinates[1] + radius / 111000],
+          coordinates: [
+            data?.coordinates[0],
+            data?.coordinates[1] + radius / 111000,
+          ],
         },
         properties: {
           text: `${radius / 1000} km`,
@@ -214,43 +242,64 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
   };
 
   // Function to handle point click event and show popup
-  const handlePointClick = (e: mapboxgl.MapMouseEvent) => {
-    const features = mapRef.current?.queryRenderedFeatures(e.point, {
-      layers: ["unclustered-point-layer"], // Your layer name
-    });
+  const handlePointClick = (e: mapboxgl.MapMouseEvent, features: any = []) => {
+    if (!features?.length) {
+      features = mapRef.current?.queryRenderedFeatures(e.point, {
+        layers: ["unclustered-point-layer"], // Your layer name
+      });
+    }
 
     if (features && features.length > 0) {
       const feature: any = features[0];
       const locationName = feature?.properties?.name || "Unknown Location";
       const locationType = feature?.properties?.category;
-      const locationCoordinates = JSON.parse(feature?.properties?.coordinates);
+      const locationCoordinates =
+        typeof feature?.properties?.coordinates === "string"
+          ? JSON.parse(feature?.properties?.coordinates)
+          : feature?.properties?.coordinates;
       const uniqueId = `${"store"}-${locationCoordinates[0]}-${
         locationCoordinates[1]
       }`;
+
+      // Check if there's an already open popup with the same ID
+      if (
+        popupRef.current &&
+        popupRef?.current?.getElement()?.id === uniqueId
+      ) {
+        // Close the current popup before opening a new one
+        popupRef.current.remove();
+      }
 
       // Create the popup content using HTML
       const htmlContent = `
         <div style="display: grid">
           <div>${getLocationIcon(locationType)}</div>
           <strong>${locationName}</strong>
-           ${
-             feature?.properties?.type === "store"
-               ? `<label>
-              <input type="checkbox" id="toggle-${uniqueId}" />
-              <span>Show/Hide Radius</span>
-            </label>`
-               : ""
-           }
+          ${
+            feature?.properties?.type === "store"
+              ? `<label>
+                  <input type="checkbox" id="toggle-${uniqueId}" />
+                  <span>Show/Hide Radius</span>
+                </label>`
+              : ""
+          }
         </div>
       `;
 
-      const popup: any = new mapboxgl.Popup({
+      // Create and open the new popup
+      const popup = new mapboxgl.Popup({
         closeOnClick: true,
         focusAfterOpen: true,
       })
         .setLngLat(e.lngLat)
         .setHTML(htmlContent)
         .addTo(mapRef.current!);
+
+      const popupElement: any = popup.getElement();
+      popupElement.id = uniqueId;
+
+      // Store the current popup in popupRef
+      popupRef.current = popup;
 
       const toggle: any = document.getElementById(`toggle-${uniqueId}`);
 
@@ -294,12 +343,21 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
       }
 
       // Ensure popup close button doesn't inherit aria-hidden
+
       const closeButton = popup
-        .getElement()
-        .querySelector(".mapboxgl-popup-close-button");
+        ?.getElement()
+        ?.querySelector(".mapboxgl-popup-close-button");
+
       if (closeButton) {
         closeButton.removeAttribute("aria-hidden");
       }
+
+      // Clean up any previously added event listeners for toggle
+      return () => {
+        if (toggle) {
+          toggle.removeEventListener("change", () => {});
+        }
+      };
     }
   };
 
@@ -315,6 +373,10 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
         return `<img src=${theatre} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       case brandTypes.burger_king:
         return `<img src=${burger_king} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case brandTypes.duroflex:
+        return `<img src=${duroflex} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case brandTypes.sleepyhead:
+        return `<img src=${sleepyhead} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       default:
         return null;
     }
@@ -427,10 +489,16 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
       type: "FeatureCollection",
       features: filteredData.map((location: any) => {
         const iconUrl =
-          location.category === "burger_king" ? burger_king : null;
+          location.category === "burger_king"
+            ? burger_king
+            : location.category === "duroflex"
+            ? duroflex
+            : location.category === "sleepyhead"
+            ? sleepyhead
+            : null;
         if (iconUrl) {
           // Call createCustomMarker here for each location
-          createCustomMarker("store", location.coordinates, iconUrl);
+          createCustomMarker("store", location, iconUrl);
         }
         // You need to return the GeoJSON feature for the map layer
         return {
@@ -467,11 +535,17 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
       type: "FeatureCollection",
       features: filteredData.map((location: any) => {
         const iconUrl =
-          location.category === "burger_king" ? burger_king : null;
+          location.category === "burger_king"
+            ? burger_king
+            : location.category === "duroflex"
+            ? duroflex
+            : location.category === "sleepyhead"
+            ? sleepyhead
+            : null;
 
         if (iconUrl) {
           // You can update or create custom markers here
-          createCustomMarker("store", location.coordinates, iconUrl);
+          createCustomMarker("store", location, iconUrl);
         }
 
         return {

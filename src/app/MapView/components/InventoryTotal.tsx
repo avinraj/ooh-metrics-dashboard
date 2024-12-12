@@ -13,6 +13,7 @@ import apartmentsLogo from "../../../assets/apartments_icon.png";
 import theatreIcon from "../../../assets/cinema_icon.png";
 import fitnessLogo from "../../../assets/gym_icon.png";
 import workspaceLogo from "../../../assets/office-building_icon.png";
+import { inventoryTypes } from "./BrandsMap";
 
 
 export const capitalizeAndFormat = (text: string) => {
@@ -55,13 +56,13 @@ const InventoryTotal: React.FC<InventoryTotalProps> = ({ data }) => {
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <img
                     src={
-                      obj?.type === "apartments"
+                      obj?.type === inventoryTypes.apartments
                         ? apartmentsLogo
-                        : obj?.type === "workspaces"
+                        : obj?.type === inventoryTypes.workspaces
                         ? workspaceLogo
-                        : obj?.type === "fitness"
+                        : obj?.type === inventoryTypes.fitness
                         ? fitnessLogo
-                        : obj?.type === "cinema_theatres"
+                        : obj?.type === inventoryTypes.cinema_theatres
                         ? theatreIcon
                         : ""
                     }
