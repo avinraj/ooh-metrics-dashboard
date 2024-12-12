@@ -29,6 +29,37 @@ interface MapboxMapProps {
   layerType: "heat" | "point";
 }
 
+// Helper function for circle GeoJSON
+const createCircle = (center: { lng: number; lat: number }, radius: number) => {
+  const points = 64;
+  const coords = {
+    latitude: center.lat,
+    longitude: center.lng,
+  };
+  const km = radius / 1000;
+
+  const ret = [];
+  const distanceX = km / (111.32 * Math.cos((coords.latitude * Math.PI) / 180));
+  const distanceY = km / 110.574;
+
+  for (let i = 0; i < points; i++) {
+    const theta = (i / points) * (2 * Math.PI);
+    const x = distanceX * Math.cos(theta);
+    const y = distanceY * Math.sin(theta);
+
+    ret.push([coords.longitude + x, coords.latitude + y]);
+  }
+  ret.push(ret[0]);
+
+  return {
+    type: "Feature",
+    geometry: {
+      type: "Polygon",
+      coordinates: [ret],
+    },
+  };
+};
+
 const BrandsMap = ({ layerType }: MapboxMapProps) => {
   const theme = useTheme();
 
@@ -60,8 +91,13 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
   const createCustomMarker = (
     name: string,
     coordinates: any,
-    iconUrl: string
+    iconUrl: string,
+    radii = [1000, 3000, 5000], // Radii in meters
+    colors = ["#007BFF", "#28A745", "#FFC107"] // Border colors for each radius
   ) => {
+    const uniqueId = `${name}-${coordinates[0]}-${coordinates[1]}`; // Unique ID for the marker
+
+    // Create marker element
     const el = document.createElement("div");
     el.style.width = "30px";
     el.style.height = "30px";
@@ -70,13 +106,104 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
     el.style.backgroundRepeat = "no-repeat";
     el.style.cursor = "pointer";
 
+    // Add the marker to the map
     const marker = new mapboxgl.Marker(el)
       .setLngLat(coordinates)
       .addTo(mapRef.current!);
+
+    // Track markers
     if (!markersRef.current[name]) {
       markersRef.current[name] = [];
     }
     markersRef.current[name].push(marker);
+
+    // Add border-only circles and text for each radius
+    radii.forEach((radius, index) => {
+      const circleGeoJSON: any = createCircle(
+        { lng: coordinates[0], lat: coordinates[1] },
+        radius
+      );
+
+      const circleId = `${uniqueId}-circle-${radius}`;
+      const labelId = `${uniqueId}-label-${radius}`;
+
+      // mapRef.current?.on("zoom", () => {
+      //   const currentZoom = mapRef.current?.getZoom() || 0;
+
+      //   if (currentZoom >= 10) {
+      // Add the circle border if not already present
+      if (!mapRef.current?.getSource(circleId)) {
+        mapRef.current?.addSource(circleId, {
+          type: "geojson",
+          data: circleGeoJSON,
+        });
+
+        mapRef.current?.addLayer({
+          id: `${circleId}-layer`,
+          type: "line", // Line type for borders
+          source: circleId,
+          paint: {
+            "line-color": colors[index] || "#000000", // Circle border color
+            "line-width": 2,
+            "line-opacity": 0.5,
+          },
+          layout: {
+            visibility: "none",
+          },
+        });
+      }
+
+      // Add the text label
+      const labelGeoJSON: any = {
+        type: "Feature",
+        geometry: {
+          type: "Point",
+          coordinates: [
+            coordinates[0],
+            coordinates[1] + radius / 111000, // Slight offset to place the label outside the circle
+          ],
+        },
+        properties: {
+          text: `${radius / 1000} km`,
+        },
+      };
+
+      if (!mapRef.current?.getSource(labelId)) {
+        mapRef.current?.addSource(labelId, {
+          type: "geojson",
+          data: labelGeoJSON,
+        });
+
+        mapRef.current?.addLayer({
+          id: `${labelId}-layer`,
+          type: "symbol",
+          source: labelId,
+          layout: {
+            "text-field": ["get", "text"],
+            "text-size": 14,
+            "text-offset": [0, 0.5],
+            "text-anchor": "top",
+            visibility: "none",
+          },
+          paint: {
+            "text-color": colors[index] || "#000000",
+            // "text-opacity": 0.5,
+          },
+        });
+      }
+      // } else {
+      //   // Remove the circle and text label layers if zoom is less than threshold
+      //   if (mapRef.current?.getSource(circleId)) {
+      //     mapRef.current?.removeLayer(`${circleId}-layer`);
+      //     mapRef.current?.removeSource(circleId);
+      //   }
+      //   if (mapRef.current?.getSource(labelId)) {
+      //     mapRef.current?.removeLayer(`${labelId}-layer`);
+      //     mapRef.current?.removeSource(labelId);
+      //   }
+      // }
+      // });
+    });
   };
 
   const removeMarkersByName = (name: string) => {
@@ -100,16 +227,22 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
       const feature: any = features[0];
       const locationName = feature?.properties?.name || "Unknown Location";
       const locationType = feature?.properties?.category;
+      const locationCoordinates = JSON.parse(feature?.properties?.coordinates);
+      const uniqueId = `${"store"}-${locationCoordinates[0]}-${
+        locationCoordinates[1]
+      }`;
 
-      //   const icon = getLocationIcon(locationType);
-
-      // Create the popup content using HTML, from Material UI components
+      // Create the popup content using HTML
       const htmlContent = `
-          <div style="display: grid">
-          <div> ${getLocationIcon(locationType)}</div>
-            <strong>${locationName}</strong>
-          </div>
-        `;
+        <div style="display: grid">
+          <label>
+            <input type="checkbox" id="toggle-${uniqueId}" />
+            <span>Show/Hide Radius</span>
+          </label>
+          <div>${getLocationIcon(locationType)}</div>
+          <strong>${locationName}</strong>
+        </div>
+      `;
 
       const popup: any = new mapboxgl.Popup({
         closeOnClick: true,
@@ -118,6 +251,48 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
         .setLngLat(e.lngLat)
         .setHTML(htmlContent)
         .addTo(mapRef.current!);
+
+      const toggle: any = document.getElementById(`toggle-${uniqueId}`);
+      console.log(toggle, "toggle value");
+
+      if (toggle) {
+        // Check if circles are initially visible and set checkbox accordingly
+        [1000, 3000, 5000].forEach((radius) => {
+          const circleId = `${uniqueId}-circle-${radius}-layer`;
+          const labelId = `${uniqueId}-label-${radius}-layer`;
+
+          // Check if the circle layer is visible
+          const isCircleVisible =
+            mapRef.current?.getLayoutProperty(circleId, "visibility") !==
+            "none";
+
+          // Set the checkbox state based on visibility
+          toggle.checked = isCircleVisible;
+
+          // Event listener to toggle circle visibility
+          toggle.addEventListener("change", () => {
+            if (toggle.checked) {
+              // Show circle and label
+              mapRef.current?.setLayoutProperty(
+                circleId,
+                "visibility",
+                "visible"
+              );
+              mapRef.current?.setPaintProperty(circleId, "line-opacity", 0.5);
+              mapRef.current?.setLayoutProperty(
+                labelId,
+                "visibility",
+                "visible"
+              );
+              mapRef.current?.setPaintProperty(labelId, "text-opacity", 0.5);
+            } else {
+              // Hide circle and label
+              mapRef.current?.setLayoutProperty(circleId, "visibility", "none");
+              mapRef.current?.setLayoutProperty(labelId, "visibility", "none");
+            }
+          });
+        });
+      }
 
       // Ensure popup close button doesn't inherit aria-hidden
       const closeButton = popup
@@ -252,7 +427,8 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
     const geojsonData = {
       type: "FeatureCollection",
       features: filteredData.map((location: any) => {
-        const iconUrl = location.category === "burger_king" ? burger_king : null;
+        const iconUrl =
+          location.category === "burger_king" ? burger_king : null;
         if (iconUrl) {
           // Call createCustomMarker here for each location
           createCustomMarker("store", location.coordinates, iconUrl);
@@ -291,7 +467,8 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
     const geojsonData = {
       type: "FeatureCollection",
       features: filteredData.map((location: any) => {
-        const iconUrl = location.category === "burger_king" ? burger_king : null;
+        const iconUrl =
+          location.category === "burger_king" ? burger_king : null;
 
         if (iconUrl) {
           // You can update or create custom markers here

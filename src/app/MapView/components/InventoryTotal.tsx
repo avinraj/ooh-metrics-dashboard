@@ -51,7 +51,7 @@ const InventoryTotal: React.FC<InventoryTotalProps> = ({ data }) => {
         >
           {data?.length &&
             data.map((obj, index) => (
-              <Grid xs={6} md={3} key={index}>
+              <Grid item xs={6} md={3} key={index}>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <img
                     src={
