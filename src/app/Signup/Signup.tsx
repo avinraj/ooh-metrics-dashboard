@@ -1,13 +1,23 @@
-import { Box, Button, Grid, TextField, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  TextField,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/oohlogo.png";
 import { useAuth } from "../../hooks/useAuth";
 import StorageService from "../core/services/storage.serive";
+import usersData from "../../Data/users.json";
 
 const Signup = () => {
   const theme = useTheme();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string>(""); // State to hold error message
   const navigate = useNavigate();
   const storageService = new StorageService();
   const { isAuthenticated } = useAuth();
@@ -20,9 +30,36 @@ const Signup = () => {
     }
   }, [isAuthenticated]);
 
-  const handleEmailChange = (e: any) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const validateUser = () => {
+    // Find the user in the JSON data that matches the entered email and password
+    const user = usersData.find(
+      (user) => user.email === email && user.password === password
+    );
+    return user;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const user = validateUser();
+    if (user) {
+      // If user is found, proceed with storing the token and navigation
+      storageService.set("local", "token", "234543");
+      navigate(nextRoute);
+    } else {
+      // If user is not found, show an error message
+      setError("Invalid email or password");
+    }
+  };
+
+  const isFormValid = email && password; // Simple validation
 
   return (
     <Grid
@@ -62,9 +99,12 @@ const Signup = () => {
             OOHmetrics
           </Typography>
         </Box>
-        <form>
+        <form onSubmit={handleSubmit}>
           <TextField
-            label="demo@yourcompany.com"
+            onClick={() => {
+              setError("");
+            }}
+            label="Email"
             variant="outlined"
             fullWidth
             margin="normal"
@@ -77,25 +117,35 @@ const Signup = () => {
             }}
           />
           <TextField
+            onClick={() => {
+              setError("");
+            }}
             label="Password"
             type="password"
             variant="outlined"
             fullWidth
             margin="normal"
+            onChange={handlePasswordChange}
+            value={password}
             sx={{
               "& .MuiOutlinedInput-root": {
                 borderRadius: "10px",
               },
             }}
           />
+          {error && (
+            <Typography
+              color="error"
+              sx={{ textAlign: "center", marginTop: 1 }}
+            >
+              {error}
+            </Typography>
+          )}
           <Button
             type="submit"
             variant="contained"
             fullWidth
-            onClick={() => {
-              storageService.set("local", "token", "234543");
-              navigate(nextRoute);
-            }}
+            disabled={!isFormValid} // Disable button if form is invalid
             sx={{
               bgcolor: "#f7ff3c",
               color: "#000",

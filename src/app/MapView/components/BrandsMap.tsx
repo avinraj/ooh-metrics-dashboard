@@ -29,6 +29,17 @@ interface MapboxMapProps {
   layerType: "heat" | "point";
 }
 
+export const inventoryTypes = {
+  apartments: "apatrments",
+  fitness: "fitness",
+  cinema_theatres: "cinema_theatres",
+  workspaces: "workspaces",
+};
+
+export const brandTypes = {
+  burger_king: "burger_king",
+};
+
 // Helper function for circle GeoJSON
 const createCircle = (center: { lng: number; lat: number }, radius: number) => {
   const points = 64;
@@ -68,10 +79,10 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
   const markersRef = useRef<Record<string, mapboxgl.Marker[]>>({});
   const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/dark-v10");
   const [selectedLocation, setSelectedLocation] = useState<string[]>([
-    "apartments",
-    "workspaces",
-    "fitness",
-    "cinema_theatres",
+    inventoryTypes.apartments,
+    inventoryTypes.workspaces,
+    inventoryTypes.fitness,
+    inventoryTypes.cinema_theatres,
   ]);
 
   const [selectedBrands, setSelectedBrands] = useState<string[]>([
@@ -79,7 +90,12 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
   ]);
   // const brands = ["burger_king"];
   const brands: any[] = [];
-  const categories = ["apartments", "workspaces", "fitness", "cinema_theatres"];
+  const categories = [
+    inventoryTypes.apartments,
+    inventoryTypes.workspaces,
+    inventoryTypes.fitness,
+    inventoryTypes.cinema_theatres,
+  ];
   const [loading, setLoading] = useState(true);
   const [markers, setMarkers] = useState<mapboxgl.Marker[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -127,11 +143,6 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
       const circleId = `${uniqueId}-circle-${radius}`;
       const labelId = `${uniqueId}-label-${radius}`;
 
-      // mapRef.current?.on("zoom", () => {
-      //   const currentZoom = mapRef.current?.getZoom() || 0;
-
-      //   if (currentZoom >= 10) {
-      // Add the circle border if not already present
       if (!mapRef.current?.getSource(circleId)) {
         mapRef.current?.addSource(circleId, {
           type: "geojson",
@@ -158,10 +169,7 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
         type: "Feature",
         geometry: {
           type: "Point",
-          coordinates: [
-            coordinates[0],
-            coordinates[1] + radius / 111000, // Slight offset to place the label outside the circle
-          ],
+          coordinates: [coordinates[0], coordinates[1] + radius / 111000],
         },
         properties: {
           text: `${radius / 1000} km`,
@@ -191,18 +199,6 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
           },
         });
       }
-      // } else {
-      //   // Remove the circle and text label layers if zoom is less than threshold
-      //   if (mapRef.current?.getSource(circleId)) {
-      //     mapRef.current?.removeLayer(`${circleId}-layer`);
-      //     mapRef.current?.removeSource(circleId);
-      //   }
-      //   if (mapRef.current?.getSource(labelId)) {
-      //     mapRef.current?.removeLayer(`${labelId}-layer`);
-      //     mapRef.current?.removeSource(labelId);
-      //   }
-      // }
-      // });
     });
   };
 
@@ -235,12 +231,16 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
       // Create the popup content using HTML
       const htmlContent = `
         <div style="display: grid">
-          <label>
-            <input type="checkbox" id="toggle-${uniqueId}" />
-            <span>Show/Hide Radius</span>
-          </label>
           <div>${getLocationIcon(locationType)}</div>
           <strong>${locationName}</strong>
+           ${
+             feature?.properties?.type === "store"
+               ? `<label>
+              <input type="checkbox" id="toggle-${uniqueId}" />
+              <span>Show/Hide Radius</span>
+            </label>`
+               : ""
+           }
         </div>
       `;
 
@@ -253,7 +253,6 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
         .addTo(mapRef.current!);
 
       const toggle: any = document.getElementById(`toggle-${uniqueId}`);
-      console.log(toggle, "toggle value");
 
       if (toggle) {
         // Check if circles are initially visible and set checkbox accordingly
@@ -306,15 +305,15 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
 
   const getLocationIcon = (type: string) => {
     switch (type) {
-      case "apartment":
+      case inventoryTypes.apartments:
         return `<img src=${apartment} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
-      case "workspace":
+      case inventoryTypes.workspaces:
         return `<img src=${workspace} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
-      case "fitness":
+      case inventoryTypes.fitness:
         return `<img src=${fitness} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
-      case "cinema_theatre":
+      case inventoryTypes.cinema_theatres:
         return `<img src=${theatre} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
-      case "burger_king":
+      case brandTypes.burger_king:
         return `<img src=${burger_king} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       default:
         return null;
