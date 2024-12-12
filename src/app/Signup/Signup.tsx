@@ -1,6 +1,6 @@
 import { Box, Button, Grid, TextField, Typography, useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/oohlogo.png";
 import { useAuth } from "../../hooks/useAuth";
 import StorageService from "../core/services/storage.serive";
@@ -11,10 +11,12 @@ const Signup = () => {
   const navigate = useNavigate();
   const storageService = new StorageService();
   const { isAuthenticated } = useAuth();
+  const location = useLocation();
+  const nextRoute = location?.state?.next || "/highlight";
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/highlight");
+      navigate(nextRoute);
     }
   }, [isAuthenticated]);
 
@@ -92,7 +94,7 @@ const Signup = () => {
             fullWidth
             onClick={() => {
               storageService.set("local", "token", "234543");
-              navigate("/highlight");
+              navigate(nextRoute);
             }}
             sx={{
               bgcolor: "#f7ff3c",
