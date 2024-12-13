@@ -16,5 +16,41 @@
     "password": "burger_king",
     "role": "CLIENT",
     "brandAccessTo": ["burger_king"]
+  },
+  {
+    "email": "brand@duroflex.com",
+    "password": "duroflex",
+    "role": "CLIENT",
+    "brandAccessTo": ["duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
+  },
+  {
+    "email": "brand@sleephead.com",
+    "password": "sleephead",
+    "role": "CLIENT",
+    "brandAccessTo": ["duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
+  },
+  {
+    "email": "brand@sleepwell.com",
+    "password": "sleepwell",
+    "role": "CLIENT",
+    "brandAccessTo": ["duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
+  },
+  {
+    "email": "brand@sleepcompany.com",
+    "password": "sleepcompany",
+    "role": "CLIENT",
+    "brandAccessTo": ["duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
+  },
+  {
+    "email": "brand@kurlon.com",
+    "password": "kurlon",
+    "role": "CLIENT",
+    "brandAccessTo": ["duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
+  },
+  {
+    "email": "brand@wakefit.com",
+    "password": "wakefit",
+    "role": "CLIENT",
+    "brandAccessTo": ["duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
   }
 ]
