@@ -50,8 +50,9 @@ const Signup = () => {
     e.preventDefault();
     const user = validateUser();
     if (user) {
-      // If user is found, proceed with storing the token and navigation
       storageService.set("local", "token", "234543");
+      storageService.set("local", "userEmail", user?.email);
+      storageService.set("local", "userRole", user?.role);
       navigate(nextRoute);
     } else {
       // If user is not found, show an error message

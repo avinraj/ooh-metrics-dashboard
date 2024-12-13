@@ -1,11 +1,20 @@
 [
-    {
-      "email": "demo@oohmetrics.com",
-      "password": "12345"
-    },
-    {
-      "email": "nazneen.kashikar@rbrandsasia.com",
-      "password": "burger_king"
-    }
-  ]
-  
+  {
+    "email": "admin@oohmetrics.com",
+    "password": "12345",
+    "role": "ADMIN",
+    "brandAccessTo": ["burger_king", "duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
+  },
+  {
+    "email": "demo@oohmetrics.com",
+    "password": "12345",
+    "role": "CLIENT",
+    "brandAccessTo": ["burger_king", "duroflex"]
+  },
+  {
+    "email": "nazneen.kashikar@rbrandsasia.com",
+    "password": "burger_king",
+    "role": "CLIENT",
+    "brandAccessTo": ["burger_king"]
+  }
+]

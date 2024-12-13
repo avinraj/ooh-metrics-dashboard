@@ -184,5 +184,103 @@
       "coordinates": [77.62544333669526, 12.914666536282052],
       "type": "store"
     }
+  ],
+  "sleepwell": [
+    {
+      "name": "Sleepwell Shoppe - Indra Furnishers| Exclusive Premium Luxury Mattress Store in Bengaluru",
+      "coordinates": [77.58589714232868, 12.904093481442724],
+      "type": "store"
+    },
+    {
+      "name": "Sleepwell World - Kanakapura Road, Bengaluru",
+      "coordinates": [77.56535848650697, 12.891718622048266],
+      "type": "store"
+    },
+    {
+      "name": "Sleepwell Shoppe - Shivaji Nagar, Bengaluru",
+      "coordinates": [77.60929604417827, 12.981554374709512],
+      "type": "store"
+    },
+    {
+      "name": "Sleepwell Gallery - Mahadevapura, Bengaluru",
+      "coordinates": [77.72115329815041, 12.99126827438945],
+      "type": "store"
+    },
+    {
+      "name": "Sleepwell Gallery - Mahadevapura, Bengaluru",
+      "coordinates": [77.72115329815041, 12.99126827438945],
+      "type": "store"
+    }
+  ],
+  "sleep_company": [
+    {
+      "name": "The Sleep Company Experience Store - Indiranagar",
+      "coordinates": [77.64163321164345, 12.964985966383944],
+      "type": "store"
+    },
+    {
+      "name": "The Sleep Company Experience Store - Koramangala",
+      "coordinates": [77.62944801534262, 12.935036177139162],
+      "type": "store"
+    },
+    {
+      "name": "The Sleep Company Experience Store - Whitefield",
+      "coordinates": [77.73229704232868, 12.957242341012526],
+      "type": "store"
+    },
+    {
+      "name": "The Sleep Company Experience Store - Banaswadi",
+      "coordinates": [77.64858632883565, 13.022700843258573],
+      "type": "store"
+    }
+  ],
+  "kurl_on": [
+    {
+      "name": "Kurlon, Duroflex, King Koil, Peps, Repose, Restolex, Wakefit Mattress Store",
+      "coordinates": [77.57132795767131, 12.89728566702888],
+      "type": "store"
+    },
+    {
+      "name": "Kurlon Experience Store - Koramangala",
+      "coordinates": [77.62933642883564, 12.934761473560096],
+      "type": "store"
+    },
+    {
+      "name": "Kurlon Experience Store - Whitefield",
+      "coordinates": [77.74795617116433, 12.9623164475463],
+      "type": "store"
+    },
+    {
+      "name": "Kurlon Mattress Store",
+      "coordinates": [77.63086334232867, 13.030174783251363],
+      "type": "store"
+    }
+  ],
+  "wakefit": [
+    {
+      "name": "Wakefit - Furniture Store in Banashankari, Bengaluru",
+      "coordinates": [77.55033382698605, 12.92518655455511],
+      "type": "store"
+    },
+    {
+      "name": "Wakefit - Furniture Store in Bannerghatta road, Bangalore",
+      "coordinates": [77.59579725767131, 12.876165274356977],
+      "type": "store"
+    },
+    {
+      "name": "Wakefit - Furniture Store In Koramangala, Bengaluru",
+      "coordinates": [77.62961742883566, 12.938947969611274],
+      "type": "store"
+    },
+    {
+      "name": "Wakefit - Furniture Store in Whitefield, Bangalore",
+      "coordinates": [77.71691837301393, 12.99236030237195],
+      "type": "store"
+    },
+    {
+      "name": "Wakefit - Furniture Store In Banaswadi, Bengaluru",
+      "coordinates": [77.64931627116434, 13.022436149363866],
+      "type": "store"
+    }
   ]
 }

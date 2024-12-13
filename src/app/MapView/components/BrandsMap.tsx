@@ -10,10 +10,15 @@ import apartment from "../../../assets/apartments.png";
 import burger_king from "../../../assets/burger_king_icon.png";
 import duroflex from "../../../assets/duroflex_logo.png";
 import sleepyhead from "../../../assets/sleepyhead_logo.png";
+import sleepwell from "../../../assets/sleepweel_logo.png";
+import sleep_company from "../../../assets/sleep_company_logo.png";
+import kurl_on from "../../../assets/kurlon_logo.png";
+import wakefit from "../../../assets/wakefit_logo.png";
 import fitness from "../../../assets/fitness.png";
 import theatre from "../../../assets/theatre.png";
 import workspace from "../../../assets/workspace.png";
 
+import users from "../../../Data/users.json";
 import brands from "../../../Data/brandsData.json";
 import data from "../../../Data/mapData.json";
 import { constants } from "../../core/data/constants";
@@ -22,6 +27,7 @@ import InventoryTotal from "./InventoryTotal";
 import MapFilterOptions from "./MapFilterOptions";
 import MapSearchBox from "./MapSearchBox";
 import MapStylePicker from "./MapStylePicker";
+import StorageService from "../../core/services/storage.serive";
 
 // Your location data
 const locationData: any = data;
@@ -42,6 +48,10 @@ export const brandTypes = {
   burger_king: "burger_king",
   duroflex: "duroflex",
   sleepyhead: "sleepyhead",
+  sleepwell: "sleepwell",
+  sleep_company: "sleep_company",
+  kurl_on: "kurl_on",
+  wakefit: "wakefit",
 };
 
 // Helper function for circle GeoJSON
@@ -77,6 +87,8 @@ const createCircle = (center: { lng: number; lat: number }, radius: number) => {
 
 const BrandsMap = ({ layerType }: MapboxMapProps) => {
   const theme = useTheme();
+  const storageService = new StorageService();
+  const userEmail = storageService.get("local", "userEmail");
 
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
@@ -90,9 +102,10 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
     inventoryTypes.cinema_theatres,
   ]);
 
-  const [selectedBrands, setSelectedBrands] = useState<string[]>([
-    // "burger_king",
-  ]);
+  const defaultBrands =
+    users.find((user) => user.email === userEmail)?.brandAccessTo || [];
+
+  const [selectedBrands, setSelectedBrands] = useState<string[]>(defaultBrands);
   // const brands = ["burger_king"];
   const brands: any[] = [];
   const categories = [
@@ -377,6 +390,14 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
         return `<img src=${duroflex} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       case brandTypes.sleepyhead:
         return `<img src=${sleepyhead} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case brandTypes.sleepwell:
+        return `<img src=${sleepwell} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case brandTypes.sleep_company:
+        return `<img src=${sleep_company} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case brandTypes.kurl_on:
+        return `<img src=${kurl_on} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
+      case brandTypes.wakefit:
+        return `<img src=${wakefit} alt="Icon" style="width: 50px; height: 50px; margin-bottom: 8px;" />`;
       default:
         return null;
     }
@@ -495,6 +516,14 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
             ? duroflex
             : location.category === "sleepyhead"
             ? sleepyhead
+            : location.category === "sleepwell"
+            ? sleepwell
+            : location.category === "sleep_company"
+            ? sleep_company
+            : location.category === "kurl_on"
+            ? kurl_on
+            : location.category === "wakefit"
+            ? wakefit
             : null;
         if (iconUrl) {
           // Call createCustomMarker here for each location
@@ -541,6 +570,14 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
             ? duroflex
             : location.category === "sleepyhead"
             ? sleepyhead
+            : location.category === "sleepwell"
+            ? sleepwell
+            : location.category === "sleep_company"
+            ? sleep_company
+            : location.category === "kurl_on"
+            ? kurl_on
+            : location.category === "wakefit"
+            ? wakefit
             : null;
 
         if (iconUrl) {
@@ -883,6 +920,7 @@ const BrandsMap = ({ layerType }: MapboxMapProps) => {
 
           <DrawerComponent
             isOpen={drawerOpen}
+            brandNames={defaultBrands}
             toggleDrawer={handleDrawerToggle}
             onBrandSelect={(selected) => {
               setSelectedBrands(selected);
