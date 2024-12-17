@@ -68,10 +68,7 @@ const AppContent = ({
         <AppRoutes />
         <IconButton
           sx={{
-            display:
-              currentPath === "/inventory" || currentPath === "/brands"
-                ? "none"
-                : "grid",
+            display: "grid",
             position: "fixed",
             bottom: 16,
             right: 16,
