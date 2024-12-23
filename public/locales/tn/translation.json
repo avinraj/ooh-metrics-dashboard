@@ -8,7 +8,10 @@
     "cars": "கார்கள்",
     "attribution": "சர்விகை",
     "deviceIds": "தொகு அடைகள்",
-    "logout": "வெளியேறு"
+    "logout": "வெளியேறு",
+    "logoutMessage": "நீங்கள் வெளியேற விரும்புகிறீர்களா?",
+    "cancel": "ரத்துசெய்",
+    "confirm": "உறுதிப்படுத்தவும்"
   },
   "filterPanel": {
     "campaign": "மார்க்கெட்",

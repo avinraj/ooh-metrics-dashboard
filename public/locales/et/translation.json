@@ -9,7 +9,10 @@
     "attribution": "Atribuutika",
    
     "deviceIds": "Seadme ID-d",
-    "logout": "Logi välja"
+    "logout": "Logi välja",
+    "logoutMessage": "Kas olete kindel, et soovite välja logida?",
+    "cancel": "Tühista",
+    "confirm": "Kinnita"
   },
   "filterPanel": {
     "campaign": "Kampaania",

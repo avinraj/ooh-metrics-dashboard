@@ -8,7 +8,10 @@
     "cars": "कारें",
     "attribution": "एट्रिब्यूशन",
     "deviceIds": "डिवाइस आईडी",
-    "logout": "लॉग आउट"
+    "logout": "लॉग आउट",
+    "logoutMessage": "क्या आप वाकई लॉग आउट करना चाहते हैं?",
+    "cancel": "रद्द करें",
+    "confirm": "पुष्टि करें"
   },
   "filterPanel": {
     "campaign": "अभियान",

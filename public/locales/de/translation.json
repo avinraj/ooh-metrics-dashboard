@@ -8,7 +8,10 @@
     "cars": "Autos",
     "attribution": "Zuweisung",
     "deviceIds": "Geräte-IDs",
-    "logout": "Abmelden"
+    "logout": "Abmelden",
+    "logoutMessage": "Sind Sie sicher, dass Sie sich abmelden möchten?",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen"
   },
   "filterPanel": {
     "campaign": "Kampagne",

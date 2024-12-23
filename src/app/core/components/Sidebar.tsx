@@ -283,7 +283,7 @@ const Sidebar = () => {
       </Drawer>
       <ConfirmModal
         open={modalOpen}
-        message="Are you sure you want to log out?"
+        message={t("sideBar.logoutMessage")}
         onConfirm={() => onLogout()}
         onCancel={() => setModalOpen(false)}
       />

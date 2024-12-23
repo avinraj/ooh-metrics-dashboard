@@ -8,7 +8,10 @@
     "cars": "కార్లు",
     "attribution": "అట్రిబ్యూషన్",
     "deviceIds": "పరికర ఐడీలు",
-    "logout": "లాగ్ అవుట్"
+    "logout": "లాగ్ అవుట్",
+    "logoutMessage": "మీరు ఖచ్చితంగా లాగ్ అవుట్ చేయాలనుకుంటున్నారా?",
+    "cancel": "రద్దు",
+    "confirm": "నిర్ధారించు"
   },
   "filterPanel": {
     "campaign": "ప్రచారం",

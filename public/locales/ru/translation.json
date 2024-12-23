@@ -8,7 +8,10 @@
     "cars": "Автомобили",
     "attribution": "Атрибуция",
     "deviceIds": "ID устройств",
-    "logout": "Выйти"
+    "logout": "Выйти",
+    "logoutMessage": "Вы уверены, что хотите выйти?",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить"
   },
   "filterPanel": {
     "campaign": "Кампания",

@@ -9,7 +9,10 @@
     "attribution": "Toewijzing",
     
     "deviceIds": "Apparaat ID's",
-    "logout": "Uitloggen"
+    "logout": "Uitloggen",
+    "logoutMessage": "Weet u zeker dat u wilt uitloggen?",
+    "cancel": "Annuleren",
+    "confirm": "Bevestigen"
   },
   "filterPanel": {
     "campaign": "Campagne",

@@ -9,7 +9,10 @@
     "attribution": "Attribuutio",
    
     "deviceIds": "Laitteen tunnukset",
-    "logout": "Kirjaudu ulos"
+    "logout": "Kirjaudu ulos",
+    "logoutMessage": "Oletko varma, että haluat kirjautua ulos?",
+    "cancel": "Peruuta",
+    "confirm": "Vahvista"
   },
   "filterPanel": {
     "campaign": "Kampanja",

@@ -7,9 +7,12 @@
     "mapView": "عرض الخريطة",
     "cars": "السيارات",
     "attribution": "نسبة التحميل",
-   
+
     "deviceIds": "معرفات الأجهزة",
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "logoutMessage": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد"
   },
   "filterPanel": {
     "campaign": "الحملة",
@@ -83,7 +86,7 @@
       "Trucks": "شاحنات",
       "Robots": "روبوتات",
       "e-scooter": "سكوتر كهربائي",
-     
+
       "Rickshaws": "ركشات",
       "2-wheelers": "دراجات نارية"
     },
@@ -98,7 +101,7 @@
     "Static Billboards": "لوحات إعلانات ثابتة",
     "Vehicle Ads": "إعلانات المركبات",
     "Digital Screens": "الشاشات الرقمية",
-    "Cinema Theater":"دار السينما"
+    "Cinema Theater": "دار السينما"
   },
   "map": {
     "map": "الخريطة",

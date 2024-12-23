@@ -8,7 +8,10 @@
     "cars": "ಕಾರುಗಳು",
     "attribution": "ಅಟ್ರಿಬ್ಯೂಶನ್",
     "deviceIds": "ಸಾಧನ ಐಡಿಗಳು",
-    "logout": "ಲಾಗ್ ಔಟ್"
+    "logout": "ಲಾಗ್ ಔಟ್",
+    "logoutMessage": "ನೀವು ಲಾಗ್‌ಔಟ್ ಮಾಡಲು ಬಯಸುತ್ತೀರಿ ಎಂದು ಖಚಿತವಾಗಿ?",
+    "cancel": "ರದ್ದುಮಾಡಿ",
+    "confirm": "ಸ್ಥಿರಪಡಿಸಿ"
   },
   "filterPanel": {
     "campaign": "ಪ್ರಚಾರ",

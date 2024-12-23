@@ -8,7 +8,10 @@
     "cars": "Arabalar",
     "attribution": "Atıf",
     "deviceIds": "Cihaz Kimlikleri",
-    "logout": "Çıkış Yap"
+    "logout": "Çıkış Yap",
+    "logoutMessage": "Çıkış yapmak istediğinizden emin misiniz?",
+    "cancel": "İptal",
+    "confirm": "Onayla"
   },
   "filterPanel": {
     "campaign": "Kampanya",

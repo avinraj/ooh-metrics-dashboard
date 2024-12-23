@@ -8,7 +8,10 @@
     "cars": "Voitures",
     "attribution": "Attribution",
     "deviceIds": "Identifiants des appareils",
-    "logout": "Se déconnecter"
+    "logout": "Se déconnecter",
+    "logoutMessage": "Êtes-vous sûr de vouloir vous déconnecter ?",
+    "cancel": "Annuler",
+    "confirm": "Confirmer"
   },
   "filterPanel": {
     "campaign": "Campagne",
@@ -101,7 +104,7 @@
     "Static Billboards": "Panneaux publicitaires statiques",
     "Vehicle Ads": "Publicités sur véhicules",
     "Digital Screens": "Écrans numériques",
-    "Cinema Theater":"Cinéma-théâtre"
+    "Cinema Theater": "Cinéma-théâtre"
   },
   "map": {
     "map": "Carte",

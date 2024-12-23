@@ -8,7 +8,10 @@
     "cars": "汽车",
     "attribution": "归因",
     "deviceIds": "设备ID",
-    "logout": "登出"
+    "logout": "登出",
+    "logoutMessage": "您确定要注销吗？",
+    "cancel": "取消",
+    "confirm": "确认"
   },
   "filterPanel": {
     "campaign": "活动",

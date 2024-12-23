@@ -8,7 +8,10 @@
     "cars": "Samochody",
     "attribution": "Atrybucja",
     "deviceIds": "Identyfikatory urządzeń",
-    "logout": "Wyloguj się"
+    "logout": "Wyloguj się",
+    "logoutMessage": "Czy na pewno chcesz się wylogować?",
+    "cancel": "Anuluj",
+    "confirm": "Potwierdź"
   },
   "filterPanel": {
     "campaign": "Kampania",

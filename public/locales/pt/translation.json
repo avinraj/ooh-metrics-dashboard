@@ -9,7 +9,10 @@
     "attribution": "Atribuição",
     "cinemaTheater":"cinema",
     "deviceIds": "IDs de Dispositivos",
-    "logout": "Sair"
+    "logout": "Sair",
+    "logoutMessage": "Tem certeza de que deseja sair?",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
   },
   "filterPanel": {
     "campaign": "Campanha",

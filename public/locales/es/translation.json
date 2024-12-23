@@ -9,7 +9,10 @@
     "attribution": "Atribución",
    
     "deviceIds": "ID de dispositivos",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "logoutMessage": "¿Estás seguro de que deseas cerrar sesión?",
+     "cancel": "Cancelar",
+    "confirm": "Confirmar"
   },
   "filterPanel": {
     "campaign": "Campaña",

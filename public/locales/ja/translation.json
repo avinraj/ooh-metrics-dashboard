@@ -8,7 +8,10 @@
     "cars": "車",
     "attribution": "帰属",
     "deviceIds": "デバイスID",
-    "logout": "ログアウト"
+    "logout": "ログアウト",
+    "logoutMessage": "ログアウトしてもよろしいですか？",
+    "cancel": "キャンセル",
+    "confirm": "確認"
   },
   "filterPanel": {
     "campaign": "キャンペーン",

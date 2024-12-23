@@ -8,7 +8,10 @@
     "cars": "Cars",
     "attribution": "Attribution",
     "deviceIds": "Device IDs",
-    "logout": "Log out"
+    "logout": "Log out",
+    "logoutMessage": "Are you sure you want to log out?",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
   },
   "filterPanel": {
     "campaign": "Campaign",
