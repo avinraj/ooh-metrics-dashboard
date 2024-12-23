@@ -1,26 +1,66 @@
-import { Box, Button, Grid, TextField, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  TextField,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/oohlogo.png";
 import { useAuth } from "../../hooks/useAuth";
 import StorageService from "../core/services/storage.serive";
+import usersData from "../../Data/users.json";
 
 const Signup = () => {
   const theme = useTheme();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string>(""); // State to hold error message
   const navigate = useNavigate();
   const storageService = new StorageService();
   const { isAuthenticated } = useAuth();
+  const location = useLocation();
+  const nextRoute = location?.state?.next || "/highlight";
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/highlight");
+      navigate(nextRoute);
     }
   }, [isAuthenticated]);
 
-  const handleEmailChange = (e: any) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const validateUser = () => {
+    // Find the user in the JSON data that matches the entered email and password
+    const user = usersData.find(
+      (user) => user.email === email && user.password === password
+    );
+    return user;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const user = validateUser();
+    if (user) {
+      storageService.set("local", "token", "234543");
+      storageService.set("local", "userEmail", user?.email);
+      storageService.set("local", "userRole", user?.role);
+      navigate(nextRoute);
+    } else {
+      // If user is not found, show an error message
+      setError("Invalid email or password");
+    }
+  };
+
+  const isFormValid = email && password; // Simple validation
 
   return (
     <Grid
@@ -60,9 +100,12 @@ const Signup = () => {
             OOHmetrics
           </Typography>
         </Box>
-        <form>
+        <form onSubmit={handleSubmit}>
           <TextField
-            label="demo@yourcompany.com"
+            onClick={() => {
+              setError("");
+            }}
+            label="Email"
             variant="outlined"
             fullWidth
             margin="normal"
@@ -75,25 +118,35 @@ const Signup = () => {
             }}
           />
           <TextField
+            onClick={() => {
+              setError("");
+            }}
             label="Password"
             type="password"
             variant="outlined"
             fullWidth
             margin="normal"
+            onChange={handlePasswordChange}
+            value={password}
             sx={{
               "& .MuiOutlinedInput-root": {
                 borderRadius: "10px",
               },
             }}
           />
+          {error && (
+            <Typography
+              color="error"
+              sx={{ textAlign: "center", marginTop: 1 }}
+            >
+              {error}
+            </Typography>
+          )}
           <Button
             type="submit"
             variant="contained"
             fullWidth
-            onClick={() => {
-              storageService.set("local", "token", "234543");
-              navigate("/highlight");
-            }}
+            disabled={!isFormValid} // Disable button if form is invalid
             sx={{
               bgcolor: "rgba(254, 158, 18, 1)",
               color: "#000",

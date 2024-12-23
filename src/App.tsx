@@ -1,13 +1,20 @@
 import { Brightness4, Brightness7 } from "@mui/icons-material";
-import { Box, CssBaseline, IconButton, ThemeProvider, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  CssBaseline,
+  IconButton,
+  ThemeProvider,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, useLocation } from "react-router-dom";
-import "./App.css";
-import AppRoutes from "./routes/AppRoutes";
-import getTheme from "./theme/themes";
 import { useTranslation } from "react-i18next";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./App.css";
 import StorageService from "./app/core/services/storage.serive";
 import { languages } from "./i18n/languages";
+import AppRoutes from "./routes/AppRoutes";
+import getTheme from "./theme/themes";
 
 function App() {
   const storageService = new StorageService();
@@ -20,14 +27,24 @@ function App() {
   // Get the current route path using useLocation hook inside Router
   return (
     <Router>
-      <AppContent storageService={storageService} mode={mode} setMode={setMode} customTheme={customTheme} i18n={i18n} />
+      <AppContent
+        storageService={storageService}
+        mode={mode}
+        setMode={setMode}
+        customTheme={customTheme}
+        i18n={i18n}
+      />
     </Router>
   );
 }
 
-const AppContent = ({ storageService, mode, setMode, customTheme, i18n }: any) => {
-  const location = useLocation(); // Use useLocation inside Router
-  const currentPath = location.pathname; // This gives the current route path
+const AppContent = ({
+  storageService,
+  mode,
+  setMode,
+  customTheme,
+  i18n,
+}: any) => {
 
   useEffect(() => {
     const selectedLang: any = storageService.get("local", "i18nextLng", false);
@@ -49,7 +66,7 @@ const AppContent = ({ storageService, mode, setMode, customTheme, i18n }: any) =
         <AppRoutes />
         <IconButton
           sx={{
-            display: currentPath === "/inventory" ? "none" : "grid",
+            display: "grid",
             position: "fixed",
             bottom: 16,
             right: 16,
