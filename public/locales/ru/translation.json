@@ -112,7 +112,21 @@
   "attribution": {
     "attribution": "Атрибуция",
     "qrcode": "QR-код",
-    "trackingurl": "trackingurl",
+    "trackingurl": {
+      "trackingurl": "trackingurl",
+      "livetracking":"Живое отслеживание",
+      "dateAndTime": "Дата и время",
+      "campaignId": "Идентификатор кампании",
+      "deviceModel": "Модель устройства",
+      "deviceType": "Тип устройства",
+      "deviceVendor": "Производитель устройства",
+      "ipAddress": "IP-адрес",
+      "city": "Город",
+      "state": "Штат",
+      "country": "Страна",
+      "url": "URL"
+          },
+   
     "footfall": "Пешеходный трафик ",
     "analytics": {
       "attributionAnalytics": "Аналитика атрибуции",

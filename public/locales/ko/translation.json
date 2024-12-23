@@ -113,7 +113,22 @@
   "attribution": {
     "attribution": "귀속",
     "qrcode": "QR코드 ",
+    "trackingurl": {
     "trackingurl": "추적 URL ",
+      "livetracking":" 실시간 추적",
+      "dateAndTime": "날짜와 시간",
+      "campaignId": "캠페인 ID",
+      "deviceModel": "장치 모델",
+      "deviceType": "장치 유형",
+      "deviceVendor": "장치 공급업체",
+      "ipAddress": "IP 주소",
+      "city": "도시",
+      "state": "주",
+      "country": "국가",
+      "url": "URL"
+          },
+  
+    
     "footfall": "유동 인구 ",
     "analytics": {
       "attributionAnalytics": "귀속 분석",

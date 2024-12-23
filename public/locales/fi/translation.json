@@ -113,7 +113,21 @@
   "attribution": {
     "attribution": "Attribuutio",
     "qrcode": "QR-koodi",
-    "trackingurl": "Seurantalinkki",
+    "trackingurl": {
+      "trackingurl": "Seurantalinkki",
+      "livetracking":" Reaaliaikainen seuranta",
+      "dateAndTime": "Päivämäärä ja kellonaika",
+      "campaignId": "Kampanjan tunnus",
+      "deviceModel": "Laitemalli",
+      "deviceType": "Laitetyyppi",
+      "deviceVendor": "Laitteiden toimittaja",
+      "ipAddress": "IP-osoite",
+      "city": "Kaupunki",
+      "state": "Osavaltio",
+      "country": "Maa",
+      "url": "URL"
+          },
+   
     "footfall": "Jalkaliikenne",
     "analytics": {
       "attributionAnalytics": "Attribuution analytiikka",

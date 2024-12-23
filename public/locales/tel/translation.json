@@ -112,7 +112,21 @@
   "attribution": {
     "attribution": "అట్రిబ్యూషన్",
     "qrcode": "QR కోడ్",
+    "trackingurl": {
     "trackingurl": "ట్రాకింగ్ URL",
+      "livetracking":"ప్రత్యక్ష ట్రాకింగ్",
+      "dateAndTime": "తేదీ మరియు సమయం",
+      "campaignId": "క్యాంపైన్ ID",
+      "deviceModel": "పరికర నమూనా",
+      "deviceType": "పరికర రకం",
+      "deviceVendor": "పరికర సరఫరాదారు",
+      "ipAddress": "IP చిరునామా",
+      "city": "నగరం",
+      "state": "రాష్ట్రం",
+      "country": "దేశం",
+      "url": "URL"
+          },
+    
     "footfall": "ఫుట్‌ఫాల్",
     "analytics": {
       "attributionAnalytics": "అట్రిబ్యూషన్ విశ్లేషణలు",

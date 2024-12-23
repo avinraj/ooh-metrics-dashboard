@@ -113,7 +113,21 @@
   "attribution": {
     "attribution": "Omistamine",
     "qrcode": "QR-kood",
-    "trackingurl": "Jälgimislink",
+    "trackingurl": {
+      "trackingurl": "Jälgimislink",
+      "livetracking":" Reaalajas jälgimine",
+      "dateAndTime": "Kuupäev ja kellaaeg",
+      "campaignId": "Kampaania ID",
+      "deviceModel": "Seadme mudel",
+      "deviceType": "Seadme tüüp",
+      "deviceVendor": "Seadme tarnija",
+      "ipAddress": "IP aadress",
+      "city": "Linn",
+      "state": "Osariik",
+      "country": "Riik",
+      "url": "URL"
+          },
+   
     "footfall": "Külastuste arv",
     "analytics": {
       "attributionAnalytics": "Omistamise analüüs",

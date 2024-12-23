@@ -112,7 +112,21 @@
   "attribution": {
     "attribution": "帰属",
     "qrcode": "QRコード ",
-    "trackingurl": "トラッキングURL ",
+    "trackingurl": {
+      "trackingurl": "トラッキングURL ",
+      "livetracking":"ライブトラッキング",
+      "dateAndTime": "日付と時刻",
+      "campaignId": "キャンペーンID",
+      "deviceModel": "デバイスモデル",
+      "deviceType": "デバイスタイプ",
+      "deviceVendor": "デバイスベンダー",
+      "ipAddress": "IPアドレス",
+      "city": "市",
+      "state": "州",
+      "country": "国",
+      "url": "URL"
+          },
+  
     "footfall": "フットフォール",
     "analytics": {
       "attributionAnalytics": "アトリビューション分析",

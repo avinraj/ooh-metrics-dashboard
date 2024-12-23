@@ -114,7 +114,22 @@
   "attribution": {
     "attribution": "Atribuição",
     "qrcode": "QR-Code",
-    "trackingurl": "URL de Rastreamento",
+    "trackingurl": {
+      "trackingurl": "URL de Rastreamento",
+      "livetracking":"Rastreamento ao vivo",
+      "dateAndTime": "Data e hora",
+      "campaignId": "ID da campanha",
+      "deviceModel": "Modelo do dispositivo",
+      "deviceType": "Tipo de dispositivo",
+      "deviceVendor": "Fornecedor do dispositivo",
+      "ipAddress": "Endereço IP",
+      "city": "Cidade",
+      "state": "Estado",
+      "country": "País",
+      "url": "URL"
+          },
+   
+    
     "footfall": "Público"
   },
   "audience": {

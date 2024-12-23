@@ -112,7 +112,11 @@
   "attribution": {
     "attribution": "ಅಟ್ರಿಬ್ಯೂಶನ್",
     "qrcode": "QR ಕೋಡ್",
-    "trackingurl": "ಟ್ರ್ಯಾಕಿಂಗ್ URL",
+    "trackingurl": {
+      "trackingurl": "ಟ್ರ್ಯಾಕಿಂಗ್ URL",
+      "livetracking":"ಲೈವ್ ಟ್ರ್ಯಾಕಿಂಗ್"
+          },
+   
     "footfall": "ಅಡಿಪಾಯ",
     "analytics": {
       "attributionAnalytics": "ಅಟ್ರಿಬ್ಯೂಶನ್ ವಿಶ್ಲೇಷಣೆ",

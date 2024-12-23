@@ -115,8 +115,22 @@
   "attribution": {
     "attribution": "نسبة التحميل",
     "qrcode": "رمز الاستجابة السريعة",
-    "trackingurl": "رابط التتبع",
+    "trackingurl": {
+"trackingurl":"رابط التتبع",
+"livetracking":"التتبع المباشر",
+"dateAndTime": "التاريخ والوقت",
+"campaignId": "معرف الحملة",
+"deviceModel": "طراز الجهاز",
+"deviceType": "نوع الجهاز",
+"deviceVendor": "بائع الجهاز",
+"ipAddress": "عنوان IP",
+"city": "المدينة",
+"state": "الولاية",
+"country": "البلد",
+"url": "رابط"
+    },
     "footfall": "عدد الزوار",
+   
     "analytics": {
       "attributionAnalytics": "تحليلات الإسناد",
       "attributionLiftIndex": "مؤشر رفع الإسناد",
