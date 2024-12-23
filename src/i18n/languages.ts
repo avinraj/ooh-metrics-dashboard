@@ -13,5 +13,10 @@ export const languages = [
   { code: 'fi', name: 'Suomi' },
   { code: 'ru', name: 'Русский' },
   { code: 'ko', name: '한국어' },
-  {code:'pt', name:'Português'}
+  { code:'pt',  name:'Português'},
+  { code:'hi',  name:'Hindi'},
+  { code:'ml',  name:'Malayalam'},
+  { code:'kn',  name:'Kannada'},
+  { code:'tn',  name:'Tamil'},
+  { code:'tel', name:'Telugu'}
 ];
