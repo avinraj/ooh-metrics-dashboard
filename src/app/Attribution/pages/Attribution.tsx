@@ -1,14 +1,7 @@
 import LinkIcon from "@mui/icons-material/Link";
 import PeopleIcon from "@mui/icons-material/People";
 import QrCodeIcon from "@mui/icons-material/QrCode";
-import {
-  Box,
-  Button,
-  Grid,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import FootfallReport from "../components/FootfallReport";
@@ -24,9 +17,7 @@ const Attribution = () => {
 
   const getButtonStyle = (isActive: boolean) => ({
     ...buttonStyles,
-    backgroundColor: isActive
-      ? theme.palette.primary.main
-      : theme.palette.secondary.main,
+    backgroundColor: isActive ? theme.palette.primary.main : theme.palette.secondary.main,
     fontWeight: isActive ? "bold" : "normal",
     color: theme.palette.text.primary,
     maxHeight: "fit-content",
@@ -70,7 +61,7 @@ const Attribution = () => {
               icon: <QrCodeIcon sx={{ marginRight: 1 }} />,
             },
             {
-              label: t("attribution.trackingurl"),
+              label: t("attribution.trackingurl.trackingurl"),
               value: "trackingUrl",
               icon: <LinkIcon sx={{ marginRight: 1 }} />,
             },
@@ -95,11 +86,7 @@ const Attribution = () => {
         </div>
       </div>
 
-      {selectedOption === "trackingUrl" ? (
-        <TrackingUrl />
-      ) : selectedOption === "footfall" ? (
-        <FootfallReport />
-      ) : null}
+      {selectedOption === "trackingUrl" ? <TrackingUrl /> : selectedOption === "footfall" ? <FootfallReport /> : null}
     </Grid>
   );
 };

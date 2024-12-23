@@ -6,6 +6,7 @@ import yellowMarker from "../../../assets/yellow_marker.png";
 import trackingData from "../../../Data/trackingUrl.json"; // Import JSON data
 import { constants } from "../../core/data/constants";
 import MapStylePicker from "../../MapView/components/MapStylePicker";
+import { t } from "i18next";
 
 const TrackingUrlMap: React.FC = () => {
   const mapContainer = useRef(null);
@@ -104,10 +105,7 @@ const TrackingUrlMap: React.FC = () => {
 
       marker.setLngLat([newLng, newLat]);
 
-      if (
-        newLat > initialPosition.lat + bounceHeight ||
-        newLat < initialPosition.lat - bounceHeight
-      ) {
+      if (newLat > initialPosition.lat + bounceHeight || newLat < initialPosition.lat - bounceHeight) {
         bounceDirection *= -1; // Reverse direction
       }
     };
@@ -118,11 +116,8 @@ const TrackingUrlMap: React.FC = () => {
   };
 
   // Toggle marker generation
-  const toggleMarkerGeneration = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    checked: boolean
-  ) => {
-    console.log(event)
+  const toggleMarkerGeneration = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => {
+    console.log(event);
     setIsGeneratingMarkers(checked);
   };
 
@@ -202,7 +197,9 @@ const TrackingUrlMap: React.FC = () => {
                 color="primary"
               />
             }
-            label={isGeneratingMarkers ? "Live Tracking" : "Live Tracking"}
+            label={
+              isGeneratingMarkers ? t("attribution.trackingurl.livetracking") : t("attribution.trackingurl.livetracking")
+            }
           />
         </Box>
       </div>

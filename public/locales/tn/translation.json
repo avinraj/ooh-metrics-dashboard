@@ -115,7 +115,21 @@
   "attribution": {
     "attribution": "சர்விகை",
     "qrcode": "QR குறியீடு",
-    "trackingurl": "சட்டீங்க URL",
+    "trackingurl": {
+     "trackingurl": "சட்டீங்க URL",
+      "livetracking":"நேரடி கண்காணிப்பு",
+      "dateAndTime": "தேதி மற்றும் நேரம்",
+      "campaignId": "பிரச்சார ஐடி",
+      "deviceModel": "சாதன மாதிரி",
+      "deviceType": "சாதன வகை",
+      "deviceVendor": "சாதன விற்பனையாளர்",
+      "ipAddress": "IP முகவரி",
+      "city": "நகரம்",
+      "state": "மாநிலம்",
+      "country": "நாடு",
+      "url": "URL"
+          },
+    
     "footfall": "அடிப்படை",
     "analytics": {
       "attributionAnalytics": "சர்விகை அனலிட்டிக்ஸ்",

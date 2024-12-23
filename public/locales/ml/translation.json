@@ -115,7 +115,22 @@
   "attribution": {
     "attribution": "അറ്റ്രിബ്യൂഷൻ",
     "qrcode": "QR കോഡ്",
-    "trackingurl": "ട്രാക്കിംഗ് URL",
+     
+    "trackingurl": {
+      "trackingurl": "ട്രാക്കിംഗ് URL",
+      "livetracking":"തത്സമയ ട്രാക്കിംഗ്",
+      "dateAndTime": "തീയതിയും സമയവും",
+      "campaignId": "കാമ്പയിൻ ഐഡി",
+      "deviceModel": "ഉപകരണ മോഡൽ",
+      "deviceType": "ഉപകരണ തരം",
+      "deviceVendor": "ഉപകരണ വിതരണക്കാരൻ",
+      "ipAddress": "IP വിലാസം",
+      "city": "നഗരം",
+      "state": "സംസ്ഥാനം",
+      "country": "രാജ്യം",
+      "url": "URL"
+          },
+   
     "footfall": "ഫുട്‌ഫോൾ",
     "analytics": {
       "attributionAnalytics": "അറ്റ്രിബ്യൂഷൻ അനലിറ്റിക്സ്",

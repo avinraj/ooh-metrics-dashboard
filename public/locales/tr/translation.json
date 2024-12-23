@@ -115,7 +115,21 @@
   "attribution": {
     "attribution": "Atıf",
     "qrcode": "QR Kodu",
-    "trackingurl": "İzleme URL'si",
+    "trackingurl": {
+      "trackingurl": "İzleme URL'si",
+      "livetracking":"Canlı Takip",
+      "dateAndTime": "Tarih ve Saat",
+      "campaignId": "Kampanya Kimliği",
+      "deviceModel": "Cihaz Modeli",
+      "deviceType": "Cihaz Türü",
+      "deviceVendor": "Cihaz Tedarikçisi",
+      "ipAddress": "IP Adresi",
+      "city": "Şehir",
+      "state": "Eyalet",
+      "country": "Ülke",
+      "url": "URL"
+          },
+  
     "footfall": "Yaya trafiği ",
     "analytics": {
       "attributionAnalytics": "Atıf Analitiği",

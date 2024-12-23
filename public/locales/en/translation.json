@@ -116,7 +116,22 @@
   "attribution":{
     "attribution":"Attribution",
     "qrcode":"QR-Code",
-    "trackingurl":"Tracking-URL",
+    "trackingurl": {
+     "trackingurl":"Tracking-URL",
+      "livetracking":"Live Tracking",
+      "dateAndTime":	"Date and Time",
+      "campaignId":"CampaignId",
+      "deviceModel":"Device Model",
+      "deviceType":"Device Type",
+      "deviceVendor":"Device Vendor",
+      "ipAddress":"ipAddress",
+      "city":"City",
+      "state":"State",
+      "url":"URL",
+      "country":"Country"
+      
+          },
+    
     "footfall":"footfall",
     "analytics": {
       "attributionAnalytics": "Attribution analytics",

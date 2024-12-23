@@ -115,7 +115,21 @@
   "attribution": {
     "attribution": "Atrybucja",
     "qrcode": "Kod QR ",
-    "trackingurl": "URL sledzenia",
+    "trackingurl": {
+      "trackingurl": "URL sledzenia",
+      "livetracking":"Śledzenie na żywo",
+      "dateAndTime": "Data i godzina",
+    "campaignId": "ID kampanii",
+    "deviceModel": "Model urządzenia",
+    "deviceType": "Typ urządzenia",
+    "deviceVendor": "Producent urządzenia",
+    "ipAddress": "Adres IP",
+    "city": "Miasto",
+    "state": "Stan",
+    "country": "Kraj",
+    "url": "URL"
+          },
+   
     "footfall": "Ruch pieszy ",
     "analytics": {
       "attributionAnalytics": "Analiza atrybucji",

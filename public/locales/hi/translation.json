@@ -115,7 +115,21 @@
   "attribution": {
     "attribution": "एट्रिब्यूशन",
     "qrcode": "क्यूआर कोड",
-    "trackingurl": "ट्रैकिंग यूआरएल",
+   
+    "trackingurl": {
+      "trackingurl": "ट्रैकिंग यूआरएल",
+      "livetracking":"लाइव ट्रैकिंग",
+      "dateAndTime": "दिनांक और समय",
+      "campaignId": "अभियान आईडी",
+      "deviceModel": "डिवाइस मॉडल",
+      "deviceType": "डिवाइस प्रकार",
+      "deviceVendor": "डिवाइस विक्रेता",
+      "ipAddress": "आईपी पता",
+      "city": "शहर",
+      "state": "राज्य",
+      "country": "देश",
+      "url": "यूआरएल"
+          },
     "footfall": "पदचिन्ह",
     "analytics": {
       "attributionAnalytics": "एट्रिब्यूशन एनालिटिक्स",

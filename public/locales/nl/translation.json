@@ -116,7 +116,21 @@
   "attribution": {
     "attribution": "Toewijzing",
     "qrcode": "QR-code ",
-    "trackingurl": "Volg-URL ",
+    "trackingurl": {
+      "trackingurl": "Volg-URL ",
+      "livetracking":"Live volgen",
+      "dateAndTime": "Datum en tijd",
+    "campaignId": "Campagne-ID",
+    "deviceModel": "Apparaatmodel",
+    "deviceType": "Apparaattype",
+    "deviceVendor": "Apparaatleverancier",
+    "ipAddress": "IP-adres",
+    "city": "Stad",
+    "state": "Staat",
+    "country": "Land",
+    "url": "URL"
+          },
+  
     "footfall": "Voetgangersverkeer ",
     "analytics": {
       "attributionAnalytics": "Attributieanalyse",

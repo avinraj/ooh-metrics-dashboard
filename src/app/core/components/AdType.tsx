@@ -92,12 +92,12 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
           value: "twowheelers",
         },
         {
-          label: t("adtype.vehicles.autorickshaw"),
+          label: t("adtype.vehicles.Rickshaws"),
           icon: <img src={rickshawIcon} alt="Rickshaw Icon" style={{ width: "120%", height: "120%" }} />,
           value: "autorickshaw",
         },
         {
-          label: t("adtype.vehicles.robots"),
+          label: t("adtype.vehicles.Robots"),
           icon: <SmartToyIcon style={{ width: "100%", height: "100%" }} />,
           value: "robots",
         },
