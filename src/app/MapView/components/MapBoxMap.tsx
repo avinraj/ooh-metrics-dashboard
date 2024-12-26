@@ -225,8 +225,8 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: mapStyle,
-      center: [121.34, 24.9587],
-      zoom: 13,
+      center: [76.2673, 9.9312],
+      zoom: 11,
     });
 
     mapRef.current = map;
