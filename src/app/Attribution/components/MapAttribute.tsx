@@ -66,7 +66,15 @@ const MapAttribute: React.FC = () => {
         source: "earthquakes",
         filter: ["has", "point_count"],
         paint: {
-          "circle-color": ["step", ["get", "point_count"], theme.palette.primary.main, 10, "#f28cb1", 30, "#f1f075"],
+          "circle-color": [
+            "step",
+            ["get", "point_count"],
+            theme.palette.primary.main,
+            10,
+            "#f28cb1",
+            30,
+            "#f1f075",
+          ],
           "circle-radius": ["step", ["get", "point_count"], 15, 10, 20, 30, 25],
         },
       });
@@ -108,7 +116,9 @@ const MapAttribute: React.FC = () => {
 
         const clusterId = features[0]?.properties?.cluster_id;
 
-        const clusterSource = newMap.getSource("earthquakes") as mapboxgl.GeoJSONSource;
+        const clusterSource = newMap.getSource(
+          "earthquakes"
+        ) as mapboxgl.GeoJSONSource;
 
         clusterSource.getClusterExpansionZoom(clusterId, (err, zoom: any) => {
           if (err) return;
@@ -156,7 +166,7 @@ const MapAttribute: React.FC = () => {
           />
         </Grid>
       </Grid>
-      <div ref={mapContainer} style={{ width: "100%", height: "50vh" }} />;
+      <div ref={mapContainer} style={{ width: "100%", height: "50vh" }} />
     </div>
   );
 };
