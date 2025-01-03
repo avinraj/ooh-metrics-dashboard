@@ -3,6 +3,7 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
 import carIcon from "../../../assets/car-icon-map.png";
+import scooterIcon from "../../../assets/scooter-icon-map.png";
 import location1 from "../../../Data/location/location1.json";
 import location2 from "../../../Data/location/location2.json";
 import location3 from "../../../Data/location/location3.json";
@@ -10,6 +11,7 @@ import location4 from "../../../Data/location/location4.json";
 import location5 from "../../../Data/location/location5.json";
 import { constants } from "../../core/data/constants";
 import MapStylePicker from "./MapStylePicker";
+import { useSelector } from "react-redux";
 
 interface MapboxMapProps {
   layerType: "heat" | "point" | "live";
@@ -21,6 +23,7 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
 
   const theme = useTheme();
   const primaryColor = theme.palette.primary.main;
+  const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
 
   const [loading, setLoading] = useState(true);
   const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/dark-v10");
@@ -151,7 +154,7 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
   const createLiveLayer = (map: mapboxgl.Map) => {
     if (!map.hasImage("car-icon")) {
       const image = new Image();
-      image.src = carIcon;
+      image.src = selectedAdType?.value === "escooters" || selectedAdType?.value === "twowheelers" ? scooterIcon : carIcon;
       image.onload = () => {
         map.addImage("car-icon", image);
         setupLiveLayer(map); // Proceed after image is loaded
@@ -272,7 +275,7 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
         mapRef.current = null;
       }
     };
-  }, [layerType, mapStyle]);
+  }, [layerType, mapStyle, selectedAdType]);
 
   useEffect(() => {
     const map = mapRef.current;

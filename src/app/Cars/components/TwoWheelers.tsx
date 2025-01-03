@@ -12,9 +12,9 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import gridIcon from "../../../assets/carsection1.jpg";
-import wagonr from "../../../assets/wagonr.webp";
-import ecosport from "../../../assets/ecosport.avif";
+import scooter1 from "../../../assets/scooter-1.jpeg";
+import scooter2 from "../../../assets/scooter-2.jpeg";
+import scooter3 from "../../../assets/scooter-3.jpeg";
 import { useState } from "react";
 import FilterPanel from "../../MapView/components/FilterPanel";
 import { CiGrid41 } from "react-icons/ci";
@@ -60,25 +60,25 @@ const TwoWheerlers = () => {
 
   const carsData = [
     {
-      name: "Mercedes",
+      name: "Honda",
       year: 2012,
       driver: "John",
       impressions: "4.59",
-      image: gridIcon,
+      image: scooter1,
     },
     {
-      name: "Wagon R",
+      name: "Tvs",
       year: 2020,
       driver: "Alice",
       impressions: "5.12",
-      image: wagonr,
+      image: scooter2,
     },
     {
-      name: "EcoSport",
+      name: "Suzuki", 
       year: 2018,
       driver: "Robert",
       impressions: "4.85",
-      image: ecosport,
+      image:  scooter3
     },
   ];
 
