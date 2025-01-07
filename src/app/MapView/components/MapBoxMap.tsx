@@ -3,7 +3,10 @@ import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
 import carIcon from "../../../assets/car-icon-map.png";
+import robotIcon from "../../../assets/robot_icon_map.png";
 import scooterIcon from "../../../assets/scooter-icon-map.png";
+import busIcon from "../../../assets/bus-icon-map.png";
+import truckIcon from "../../../assets/truck-icon-map.png";
 import location1 from "../../../Data/location/location1.json";
 import location2 from "../../../Data/location/location2.json";
 import location3 from "../../../Data/location/location3.json";
@@ -154,7 +157,17 @@ const MapboxMap = ({ layerType }: MapboxMapProps) => {
   const createLiveLayer = (map: mapboxgl.Map) => {
     if (!map.hasImage("car-icon")) {
       const image = new Image();
-      image.src = selectedAdType?.value === "escooters" || selectedAdType?.value === "twowheelers" ? scooterIcon : carIcon;
+      image.src =
+        selectedAdType?.value === "escooters" ||
+        selectedAdType?.value === "twowheelers"
+          ? scooterIcon
+          : selectedAdType?.value === "robots"
+          ? robotIcon
+          : selectedAdType?.value === "trucks"
+          ? truckIcon
+          : selectedAdType?.value === "buses"
+          ? busIcon
+          : carIcon;
       image.onload = () => {
         map.addImage("car-icon", image);
         setupLiveLayer(map); // Proceed after image is loaded
