@@ -25,7 +25,8 @@ import { useTranslation } from "react-i18next";
 const TwoWheerlers = () => {
   const theme = useTheme();
   const { t } = useTranslation();
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("Campaign 1");
+  const [selectedCampaign, setSelectedCampaign] =
+    useState<string>("Campaign 1");
   const [selectedVehicle, setSelectedVehicle] = useState<string>("Car 1");
   const [layerType, setLayerType] = useState("GRID_VIEW");
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -74,11 +75,11 @@ const TwoWheerlers = () => {
       image: scooter2,
     },
     {
-      name: "Suzuki", 
+      name: "Suzuki",
       year: 2018,
       driver: "Robert",
       impressions: "4.85",
-      image:  scooter3
+      image: scooter3,
     },
   ];
 
@@ -87,7 +88,13 @@ const TwoWheerlers = () => {
       {carsData.map((car, index) => (
         <Grid item xs={12} sm={6} md={4} key={index}>
           <Box sx={{ border: "1px solid white", padding: 1 }}>
-            <img src={car.image} alt={`${car.name}`} width="100%" height="190" style={{ objectFit: "cover" }} />
+            <img
+              src={car.image}
+              alt={`${car.name}`}
+              width="100%"
+              height="190"
+              style={{ objectFit: "cover" }}
+            />
             <Box display="flex" justifyContent="space-between">
               <Typography color="black">
                 {car.name} <br /> ({car.year}) | {car.driver}
@@ -134,7 +141,13 @@ const TwoWheerlers = () => {
       {carsData.map((car, index) => (
         <Grid item key={index}>
           <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-            <img src={car.image} alt={`${car.name}`} width="150" height="100" style={{ objectFit: "cover" }} />
+            <img
+              src={car.image}
+              alt={`${car.name}`}
+              width="150"
+              height="100"
+              style={{ objectFit: "cover" }}
+            />
             <Box>
               <Typography color="black">{car.name}</Typography>
               <Typography color="gray">
@@ -174,7 +187,14 @@ const TwoWheerlers = () => {
           onDateRangeSelect={setDateRange}
         />
       </Grid>
-      <Grid item xs={12} display="flex" justifyContent="space-between" alignItems="center" padding={2}>
+      <Grid
+        item
+        xs={12}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        padding={2}
+      >
         <Box
           sx={{
             backgroundColor: theme.palette.primary.main,
@@ -183,7 +203,9 @@ const TwoWheerlers = () => {
             marginTop: 3,
           }}
         >
-          <Typography variant="h3">2-Wheelers</Typography>
+          <Typography variant="h3">
+            {t("adtype.vehicles.2-wheelers")}
+          </Typography>
         </Box>
 
         <Box alignItems="center" display="flex">
@@ -199,7 +221,10 @@ const TwoWheerlers = () => {
                 display="flex"
                 alignItems="center"
                 sx={{
-                  backgroundColor: obj.value === layerType ? theme.palette.primary.main : "transparent",
+                  backgroundColor:
+                    obj.value === layerType
+                      ? theme.palette.primary.main
+                      : "transparent",
                   padding: "5px 10px",
                   borderRadius: "5px",
                   color: theme.palette.text.primary,

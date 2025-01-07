@@ -1,4 +1,17 @@
-import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 import { useState } from "react";
 import FilterPanel from "../../MapView/components/FilterPanel";
@@ -7,11 +20,133 @@ import { CiViewTable } from "react-icons/ci";
 import { MdInsertPhoto } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
+import bus1 from "../../../assets/bus_1.png";
+import bus2 from "../../../assets/bus_2.png";
+import bus3 from "../../../assets/bus_3.png";
+
 const Buses = () => {
   const theme = useTheme();
   const { t } = useTranslation();
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("Campaign 1");
-  const [selectedVehicle, setSelectedVehicle] = useState<string>("Car 1");
+
+  const carsData = [
+    {
+      name: "Bus 1",
+      year: 2022,
+      driver: "John",
+      impressions: "4.59",
+      image: bus1,
+    },
+    {
+      name: "Bus 2",
+      year: 2023,
+      driver: "Alice",
+      impressions: "5.12",
+      image: bus2,
+    },
+    {
+      name: "Bus 3",
+      year: 2022,
+      driver: "Robert",
+      impressions: "4.85",
+      image: bus3,
+    },
+  ];
+
+  const renderGridView = () => (
+    <Grid container spacing={2} mt={2}>
+      {carsData.map((car, index) => (
+        <Grid item xs={12} sm={6} md={4} key={index}>
+          <Box sx={{ border: "1px solid white", padding: 1 }}>
+            <img
+              src={car.image}
+              alt={`${car.name}`}
+              width="100%"
+              height="190"
+              style={{ objectFit: "cover" }}
+            />
+            <Box display="flex" justifyContent="space-between">
+              <Typography color="black">
+                {car.name} <br /> ({car.year}) | {car.driver}
+              </Typography>
+              <Typography color="black">
+                {car.impressions} <br />
+                Impressions <br />
+                per mile
+              </Typography>
+            </Box>
+          </Box>
+        </Grid>
+      ))}
+    </Grid>
+  );
+
+  const renderTableView = () => (
+    <TableContainer>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>Year</TableCell>
+            <TableCell>Driver</TableCell>
+            <TableCell>Impression</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {carsData.map((car, index) => (
+            <TableRow key={index}>
+              <TableCell>{car.name}</TableCell>
+              <TableCell>{car.year}</TableCell>
+              <TableCell>{car.driver}</TableCell>
+              <TableCell>{car.impressions}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+
+  const renderPhotoListView = () => (
+    <Grid container direction="column" spacing={2} mt={2}>
+      {carsData.map((car, index) => (
+        <Grid item key={index}>
+          <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+            <img
+              src={car.image}
+              alt={`${car.name}`}
+              width="150"
+              height="100"
+              style={{ objectFit: "cover" }}
+            />
+            <Box>
+              <Typography color="black">{car.name}</Typography>
+              <Typography color="gray">
+                {car.year} | {car.driver}
+              </Typography>
+            </Box>
+          </Box>
+        </Grid>
+      ))}
+    </Grid>
+  );
+
+  const renderContent = () => {
+    switch (layerType) {
+      case "GRID_VIEW":
+        return renderGridView();
+      case "TABLE_VIEW":
+        return renderTableView();
+      case "PHOTO_LIST":
+        return renderPhotoListView();
+      default:
+        return null;
+    }
+  };
+
+  const [selectedCampaign, setSelectedCampaign] =
+    useState<string>("Campaign 1");
+  const [selectedVehicle, setSelectedVehicle] = useState<string>(
+    carsData[0]?.name
+  );
   const [layerType, setLayerType] = useState("GRID_VIEW");
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [dateRange, setDateRange] = useState<{
@@ -23,7 +158,6 @@ const Buses = () => {
   });
 
   const campaigns = ["Campaign 1", "Campaign 2", "Campaign 3"];
-  const vehicles = ["Car 1", "Car 2", "Car 3"];
 
   const buttonData = [
     {
@@ -43,114 +177,14 @@ const Buses = () => {
     },
   ];
 
-  // const carsData = [
-  //   {
-  //     name: "",
-  //     year: "",
-  //     driver: "",
-  //     impressions: "",
-  //     image: "",
-  //   },
-  //   {
-  //     name: "",
-  //     year: "",
-  //     driver: "",
-  //     impressions: "",
-  //     image: "",
-  //   },
-  //   {
-  //     name: "",
-  //     year: "",
-  //     driver: "",
-  //     impressions: "",
-  //     image: "",
-  //   },
-  // ];
-
-  // const renderGridView = () => (
-  //   <Grid container spacing={2} mt={2}>
-  //     {carsData.map((car, index) => (
-  //       <Grid item xs={12} sm={6} md={4} key={index}>
-  //         <Box sx={{ border: "1px solid white", padding: 1 }}>
-  //           <img src={car.image} alt={`${car.name}`} width="100%" height="190" style={{ objectFit: "cover" }} />
-  //           <Box display="flex" justifyContent="space-between">
-  //             <Typography color="black">
-  //               {car.name} <br /> ({car.year}) | {car.driver}
-  //             </Typography>
-  //             <Typography color="black">
-  //               {car.impressions} <br />
-  //               Impressions <br />
-  //               per mile
-  //             </Typography>
-  //           </Box>
-  //         </Box>
-  //       </Grid>
-  //     ))}
-  //   </Grid>
-  // );
-
-  // const renderTableView = () => (
-  //   <TableContainer>
-  //     <Table>
-  //       <TableHead>
-  //         <TableRow>
-  //           <TableCell>Name</TableCell>
-  //           <TableCell>Year</TableCell>
-  //           <TableCell>Driver</TableCell>
-  //           <TableCell>Impression</TableCell>
-  //         </TableRow>
-  //       </TableHead>
-  //       <TableBody>
-  //         {carsData.map((car, index) => (
-  //           <TableRow key={index}>
-  //             <TableCell>{car.name}</TableCell>
-  //             <TableCell>{car.year}</TableCell>
-  //             <TableCell>{car.driver}</TableCell>
-  //             <TableCell>{car.impressions}</TableCell>
-  //           </TableRow>
-  //         ))}
-  //       </TableBody>
-  //     </Table>
-  //   </TableContainer>
-  // );
-
-  // const renderPhotoListView = () => (
-  //   <Grid container direction="column" spacing={2} mt={2}>
-  //     {carsData.map((car, index) => (
-  //       <Grid item key={index}>
-  //         <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-  //           <img src={car.image} alt={`${car.name}`} width="150" height="100" style={{ objectFit: "cover" }} />
-  //           <Box>
-  //             <Typography color="black">{car.name}</Typography>
-  //             <Typography color="gray">
-  //               {car.year} | {car.driver}
-  //             </Typography>
-  //           </Box>
-  //         </Box>
-  //       </Grid>
-  //     ))}
-  //   </Grid>
-  // );
-
-  // const renderContent = () => {
-  //   switch (layerType) {
-  //     case "GRID_VIEW":
-  //       return renderGridView();
-  //     case "TABLE_VIEW":
-  //       return renderTableView();
-  //     case "PHOTO_LIST":
-  //       return renderPhotoListView();
-  //     default:
-  //       return null;
-  //   }
-  // };
-
   return (
     <Grid container>
       <Grid item xs={12} gap={3} display={"flex"} alignItems={"center"}>
         <FilterPanel
           campaigns={campaigns}
-          vehicles={vehicles}
+          vehicles={carsData.map((obj) => {
+            return obj?.name;
+          })}
           selectedCampaign={selectedCampaign}
           selectedVehicle={selectedVehicle}
           dateRange={dateRange}
@@ -159,7 +193,14 @@ const Buses = () => {
           onDateRangeSelect={setDateRange}
         />
       </Grid>
-      <Grid item xs={12} display="flex" justifyContent="space-between" alignItems="center" padding={2}>
+      <Grid
+        item
+        xs={12}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        padding={2}
+      >
         <Box
           sx={{
             backgroundColor: theme.palette.primary.main,
@@ -168,7 +209,7 @@ const Buses = () => {
             marginTop: 3,
           }}
         >
-          <Typography variant="h3">buses</Typography>
+          <Typography variant="h3">{t("adtype.vehicles.Buses")}</Typography>
         </Box>
 
         <Box alignItems="center" display="flex">
@@ -184,7 +225,10 @@ const Buses = () => {
                 display="flex"
                 alignItems="center"
                 sx={{
-                  backgroundColor: obj.value === layerType ? theme.palette.primary.main : "transparent",
+                  backgroundColor:
+                    obj.value === layerType
+                      ? theme.palette.primary.main
+                      : "transparent",
                   padding: "5px 10px",
                   borderRadius: "5px",
                   color: theme.palette.text.primary,
@@ -211,7 +255,7 @@ const Buses = () => {
         </Box>
       </Grid>
       <Grid item xs={12} p={1} sx={{ backgroundColor: "#DEDEDE" }}>
-        {/* {renderContent()} */}
+        {renderContent()}
       </Grid>
     </Grid>
   );

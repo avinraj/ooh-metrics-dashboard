@@ -12,9 +12,9 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import gridIcon from "../../../assets/carsection1.jpg";
-import wagonr from "../../../assets/wagonr.webp";
-import ecosport from "../../../assets/ecosport.avif";
+import img1 from "../../../assets/rickshaw_1.jpg";
+import img2 from "../../../assets/rickshaw_2.jpg";
+import img3 from "../../../assets/rickshaw_3.jpg";
 import { useState } from "react";
 import FilterPanel from "../../MapView/components/FilterPanel";
 import { CiGrid41 } from "react-icons/ci";
@@ -25,8 +25,33 @@ import { useTranslation } from "react-i18next";
 const Rickshaws = () => {
   const theme = useTheme();
   const { t } = useTranslation();
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("Campaign 1");
-  const [selectedVehicle, setSelectedVehicle] = useState<string>("Car 1");
+
+  const carsData = [
+    {
+      name: "Rickshaw 1",
+      year: 2012,
+      driver: "John",
+      impressions: "4.59",
+      image: img1,
+    },
+    {
+      name: "Rickshaw 2",
+      year: 2020,
+      driver: "Alice",
+      impressions: "5.12",
+      image: img2,
+    },
+    {
+      name: "Rickshaw 3",
+      year: 2018,
+      driver: "Robert",
+      impressions: "4.85",
+      image: img3,
+    },
+  ];
+  const [selectedCampaign, setSelectedCampaign] =
+    useState<string>("Campaign 1");
+  const [selectedVehicle, setSelectedVehicle] = useState<string>(carsData[0]?.name);
   const [layerType, setLayerType] = useState("GRID_VIEW");
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [dateRange, setDateRange] = useState<{
@@ -38,7 +63,6 @@ const Rickshaws = () => {
   });
 
   const campaigns = ["Campaign 1", "Campaign 2", "Campaign 3"];
-  const vehicles = ["Car 1", "Car 2", "Car 3"];
 
   const buttonData = [
     {
@@ -58,36 +82,18 @@ const Rickshaws = () => {
     },
   ];
 
-  const carsData = [
-    {
-      name: "Mercedes",
-      year: 2012,
-      driver: "John",
-      impressions: "4.59",
-      image: gridIcon,
-    },
-    {
-      name: "Wagon R",
-      year: 2020,
-      driver: "Alice",
-      impressions: "5.12",
-      image: wagonr,
-    },
-    {
-      name: "EcoSport",
-      year: 2018,
-      driver: "Robert",
-      impressions: "4.85",
-      image: ecosport,
-    },
-  ];
-
   const renderGridView = () => (
     <Grid container spacing={2} mt={2}>
       {carsData.map((car, index) => (
         <Grid item xs={12} sm={6} md={4} key={index}>
           <Box sx={{ border: "1px solid white", padding: 1 }}>
-            <img src={car.image} alt={`${car.name}`} width="100%" height="190" style={{ objectFit: "cover" }} />
+            <img
+              src={car.image}
+              alt={`${car.name}`}
+              width="100%"
+              height="190"
+              style={{ objectFit: "cover" }}
+            />
             <Box display="flex" justifyContent="space-between">
               <Typography color="black">
                 {car.name} <br /> ({car.year}) | {car.driver}
@@ -134,7 +140,13 @@ const Rickshaws = () => {
       {carsData.map((car, index) => (
         <Grid item key={index}>
           <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-            <img src={car.image} alt={`${car.name}`} width="150" height="100" style={{ objectFit: "cover" }} />
+            <img
+              src={car.image}
+              alt={`${car.name}`}
+              width="150"
+              height="100"
+              style={{ objectFit: "cover" }}
+            />
             <Box>
               <Typography color="black">{car.name}</Typography>
               <Typography color="gray">
@@ -165,7 +177,9 @@ const Rickshaws = () => {
       <Grid item xs={12} gap={3} display={"flex"} alignItems={"center"}>
         <FilterPanel
           campaigns={campaigns}
-          vehicles={vehicles}
+          vehicles={carsData.map((obj) => {
+            return obj?.name;
+          })}
           selectedCampaign={selectedCampaign}
           selectedVehicle={selectedVehicle}
           dateRange={dateRange}
@@ -174,7 +188,14 @@ const Rickshaws = () => {
           onDateRangeSelect={setDateRange}
         />
       </Grid>
-      <Grid item xs={12} display="flex" justifyContent="space-between" alignItems="center" padding={2}>
+      <Grid
+        item
+        xs={12}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        padding={2}
+      >
         <Box
           sx={{
             backgroundColor: theme.palette.primary.main,
@@ -183,7 +204,7 @@ const Rickshaws = () => {
             marginTop: 3,
           }}
         >
-          <Typography variant="h3">Rickshaws</Typography>
+          <Typography variant="h3">{t("adtype.vehicles.Rickshaws")}</Typography>
         </Box>
 
         <Box alignItems="center" display="flex">
@@ -199,7 +220,10 @@ const Rickshaws = () => {
                 display="flex"
                 alignItems="center"
                 sx={{
-                  backgroundColor: obj.value === layerType ? theme.palette.primary.main : "transparent",
+                  backgroundColor:
+                    obj.value === layerType
+                      ? theme.palette.primary.main
+                      : "transparent",
                   padding: "5px 10px",
                   borderRadius: "5px",
                   color: theme.palette.text.primary,

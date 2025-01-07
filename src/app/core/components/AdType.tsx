@@ -138,7 +138,7 @@ const AdType: React.FC<AdTypeProps> = ({ onOpenSwitchModal, onSelectAdType }) =>
       title: t("adtype.Static Billboards"),
       options: [],
       icon: <FilterFramesIcon style={{ width: "100%", height: "100%" }} />,
-      value: "statisBillboards",
+      value: "staticBillboards",
     },
     {
       title: t("adtype.Cinema Theater"),

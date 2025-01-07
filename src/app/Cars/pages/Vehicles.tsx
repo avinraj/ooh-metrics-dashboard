@@ -5,6 +5,7 @@ import Trucks from "../components/Trucks";
 import Escooters from "../components/Escooters";
 import TwoWheerlers from "../components/TwoWheelers";
 import Rickshaws from "../components/Rickshaws";
+import Robots from "../components/Robots";
 
 const Vehicles = () => {
   const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
@@ -19,8 +20,10 @@ const Vehicles = () => {
     <Escooters />
   ) : selectedAdType?.value === "twowheelers" ? (
     <TwoWheerlers />
-  ) : selectedAdType?.value === "rickshaws" ? (
+  ) : selectedAdType?.value === "autorickshaw" ? (
     <Rickshaws />
+  ) :  selectedAdType?.value === "robots" ? (
+    <Robots />
   ) : null;
 };
 

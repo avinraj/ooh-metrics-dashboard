@@ -76,11 +76,11 @@ const Escooters = () => {
       image: scooter2,
     },
     {
-      name: "Suzuki", 
+      name: "Suzuki",
       year: 2018,
       driver: "Robert",
       impressions: "4.85",
-      image:  scooter3
+      image: scooter3,
     },
   ];
 
@@ -204,7 +204,7 @@ const Escooters = () => {
             marginTop: 3,
           }}
         >
-          <Typography variant="h3">E-Scooter</Typography>
+          <Typography variant="h3">{t("adtype.vehicles.e-scooter")}</Typography>
         </Box>
 
         <Box alignItems="center" display="flex">
