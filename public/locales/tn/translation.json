@@ -127,7 +127,8 @@
       "city": "நகரம்",
       "state": "மாநிலம்",
       "country": "நாடு",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "கடை முகவரி"
           },
     
     "footfall": "அடிப்படை",

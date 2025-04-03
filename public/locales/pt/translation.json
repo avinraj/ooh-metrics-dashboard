@@ -129,7 +129,8 @@
       "city": "Cidade",
       "state": "Estado",
       "country": "País",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "Endereço da loja"
           },
    
     

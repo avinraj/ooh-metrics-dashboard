@@ -1,0 +1,305 @@
+{
+    "reportDate": "1-Apr-25",
+    "totalBudget": "₹ 173,333.29",
+    "totalImpressionGoal": "1,333,333",
+    "uniqueUserReach": "203,054",
+    "campaignPacing": "23%",
+    "campaign": {
+        "campaignName": "Microsoft WIN 11 x iOOH_Croma",
+        "startDate": "24-Mar-25",
+        "endDate": "24-Apr-25",
+        "impressions": "300,882",
+        "clicks": "2,080",
+        "avgCTR": "0.69%",
+        "cpm": "₹ 130.00",
+        "spend": "₹ 39,114.66"
+    },
+    "summary": [
+        {
+            "date": "24-Mar-2025",
+            "impressions": 17448,
+            "clicks": 62,
+            "ctr": 0.36,
+            "spend": 2268.24
+        },
+        {
+            "date": "25-Mar-2025",
+            "impressions": 28173,
+            "clicks": 140,
+            "ctr": 0.50,
+            "spend": 3662.49
+        },
+        {
+            "date": "26-Mar-2025",
+            "impressions": 34156,
+            "clicks": 285,
+            "ctr": 0.83,
+            "spend": 4440.28
+        },
+        {
+            "date": "27Mar-2025",
+            "impressions":   43349,
+            "clicks": 217,
+            "ctr": 0.50,
+            "spend": 5635.37
+        },
+        {
+            "date": "28-Mar-2025",
+            "impressions":   44692,
+            "clicks": 251,
+            "ctr": 0.56,
+            "spend": 5809.96
+        },
+        {
+            "date": "29-Mar-2025",
+            "impressions":   43981,
+            "clicks": 279,
+            "ctr": 0.63,
+            "spend": 5717.53
+        },
+        {
+            "date": "30-Mar-2025",
+            "impressions":   44097,
+            "clicks": 446,
+            "ctr": 1.01,
+            "spend": 5732.61
+        },
+        {
+            "date": "31-Mar-2025",
+            "impressions":   44986,
+            "clicks": 400,
+            "ctr": 0.89,
+            "spend": 5848.18
+        }
+    ],
+    "lineItemStats": {
+        "duroflex_banglore": [
+            {
+                "date": "24-Mar-2025",
+                "impressions": 10307,
+                "clicks": 58,
+                "ctr": 0.56
+            },
+            {
+                "date": "25-Mar-2025",
+                "impressions": 20862,
+                "clicks": 123,
+                "ctr": 0.59
+            },
+            {
+                "date": "26-Mar-2025",
+                "impressions": 29006,
+                "clicks": 272,
+                "ctr": 0.94
+            },
+            {
+                "date": "27Mar-2025",
+                "impressions": 31113,
+                "clicks": 194,
+                "ctr": 0.62
+            },
+            {
+                "date": "28-Mar-2025",
+                "impressions": 32100,
+                "clicks": 196,
+                "ctr": 0.61
+            },
+            {
+                "date": "29-Mar-2025",
+                "impressions": 31289,
+                "clicks": 226,
+                "ctr": 0.72
+            },
+            {
+                "date": "30-Mar-2025",
+                "impressions": 31416,
+                "clicks": 393,
+                "ctr": 1.25
+            },
+            {
+                "date": "31-Mar-2025",
+                "impressions": 31128,
+                "clicks": 275,
+                "ctr": 0.88
+            }
+        ],
+        "duroflex_banglore_competitors": [
+            {
+                "date": "24-Mar-2025",
+                "impressions": 7141,
+                "clicks": 4,
+                "ctr": 0.06
+            },
+            {
+                "date": "25-Mar-2025",
+                "impressions": 7311,
+                "clicks": 17,
+                "ctr": 0.23
+            },
+            {
+                "date": "26-Mar-2025",
+                "impressions": 5150,
+                "clicks": 13,
+                "ctr": 0.25
+            },
+            {
+                "date": "27Mar-2025",
+                "impressions": 12236,
+                "clicks": 23,
+                "ctr": 0.19
+            },
+            {
+                "date": "28-Mar-2025",
+                "impressions":   12592,
+                "clicks": 55,
+                "ctr": 0.44
+            },
+            {
+                "date": "29-Mar-2025",
+                "impressions":   12692 ,
+                "clicks": 53,
+                "ctr": 0.42
+            },
+            {
+                "date": "30-Mar-2025",
+                "impressions":   12681 ,
+                "clicks": 53,
+                "ctr": 0.42
+            },
+            {
+                "date": "31-Mar-2025",
+                "impressions":   13858 ,
+                "clicks": 125,
+                "ctr": 0.90
+            }
+        ]
+    },
+    "OSAndCreativeStats": {
+        "OS_stats": [
+            {
+                "OS": "Android",
+                "impressions": 272209,
+                "clicks": 2025,
+                "ctr": 0.74
+            },
+            {
+                "OS": "iOS",
+                "impressions": 28673,
+                "clicks": 55,
+                "ctr": 0.19
+            }
+        ],
+        "overall": [
+            {
+                "adSize": "300x250",
+                "impressions": 74156,
+                "clicks": 259,
+                "ctr": 0.35
+            },
+            {
+                "adSize": "320x480",
+                "impressions":   37898 ,
+                "clicks":   477 ,
+                "ctr": 1.26
+            },
+            {
+                "adSize": "320x50",
+                "impressions":     162839,
+                "clicks":   986 ,
+                "ctr": 0.61
+            },
+            {
+                "adSize": "728x90",
+                "impressions":       25989,
+                "clicks":   358 ,
+                "ctr": 1.38
+            }
+        ],
+        "duroflex_banglore": [
+            {
+                "adSize": "300x250",
+                "impressions": 57047,
+                "clicks": 231,
+                "ctr": 0.40
+            },
+            {
+                "adSize": "320x480",
+                "impressions":   28061 ,
+                "clicks":   352 ,
+                "ctr": 1.25
+            },
+            {
+                "adSize": "320x50",
+                "impressions":     109205,
+                "clicks":   800 ,
+                "ctr": 0.73
+            },
+            {
+                "adSize": "728x90",
+                "impressions":       22908,
+                "clicks":   354 ,
+                "ctr": 1.55
+            }
+        ],
+        "duroflex_banglore_competitors": [
+            {
+                "adSize": "300x250",
+                "impressions": 17109,
+                "clicks": 28,
+                "ctr": 0.16
+            },
+            {
+                "adSize": "320x480",
+                "impressions":   9837 ,
+                "clicks":   125 ,
+                "ctr": 1.27
+            },
+            {
+                "adSize": "320x50",
+                "impressions":     53634,
+                "clicks":   186 ,
+                "ctr": 0.35
+            },
+            {
+                "adSize": "728x90",
+                "impressions":       3081,
+                "clicks":   4 ,
+                "ctr": 0.13
+            }
+        ]
+    },
+    "footfallStats": [
+        {
+            "date": "24-Mar-2025",
+            "total": 19
+        },
+        {
+            "date": "25-Mar-2025",
+            "total": 18
+        },
+        {
+            "date": "26-Mar-2025",
+            "total": 36
+        },
+        {
+            "date": "27-Mar-2025",
+            "total": 22
+        },
+        {
+            "date": "28-Mar-2025",
+            "total": 54
+        },
+        {
+            "date": "29-Mar-2025",
+            "total": 39
+        },
+        {
+            "date": "30-Mar-2025",
+            "total": 45
+        },
+        {
+            "date": "31-Mar-2025",
+            "total": 54
+        }
+    ]
+}

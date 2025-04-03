@@ -128,8 +128,8 @@
       "city":"City",
       "state":"State",
       "url":"URL",
-      "country":"Country"
-      
+      "country":"Country",
+      "storeAddress": "Store Address"
           },
     
     "footfall":"footfall",

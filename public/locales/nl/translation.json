@@ -128,7 +128,8 @@
     "city": "Stad",
     "state": "Staat",
     "country": "Land",
-    "url": "URL"
+    "url": "URL",
+    "storeAddress": "Winkeladres"
           },
   
     "footfall": "Voetgangersverkeer ",

@@ -31,6 +31,8 @@ import StorageService from "../services/storage.serive";
 import AdType from "./AdType";
 import ConfirmModal from "./ConfirmModel";
 import ReportsAcc from "./Reports";
+import { duroflexEmail } from "../../../Data/users";
+import WeeklyReportsAcc from "./WeeklyReports";
 
 const Sidebar = () => {
   const locationVal = useLocation();
@@ -39,6 +41,7 @@ const Sidebar = () => {
   const storageService = new StorageService();
   const theme = useTheme();
   const navigate = useNavigate();
+  const email = storageService.get("local", "email");
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string>("Highlight");
@@ -97,9 +100,28 @@ const Sidebar = () => {
   ]);
 
   useEffect(() => {
+    if (email === duroflexEmail) {
+      setMenuItems((prevItems) => {
+        const newItems = [...prevItems];
+        if (!newItems.some((item) => item.action === "WeeklyReports")) {
+          newItems.splice(1, 0, {
+            label: "Weekly Reports",
+            action: "WeeklyReports",
+            icon: <AssessmentIcon />,
+            path: "/weekly-reports",
+          });
+        }
+        return newItems;
+      });
+    }
+  }, [email]);
+
+  useEffect(() => {
     if (selectedAdType?.value === "mobileAds") {
       setMenuItems((prevItems) => {
-        const updatedItems = [...prevItems.filter((item) => item.action !== "Audience")];
+        const updatedItems = [
+          ...prevItems.filter((item) => item.action !== "Audience"),
+        ];
         updatedItems.splice(4, 0, {
           label: t("audience.audience"),
           action: "Audience",
@@ -109,10 +131,14 @@ const Sidebar = () => {
         return updatedItems;
       });
     } else {
-      setMenuItems((prevItems) => prevItems.filter((item) => item.action !== "Audience"));
+      setMenuItems((prevItems) =>
+        prevItems.filter((item) => item.action !== "Audience")
+      );
     }
     setMenuItems((prevItems) => {
-      const updatedItems = prevItems.filter((item) => item.action !== "Vehicles");
+      const updatedItems = prevItems.filter(
+        (item) => item.action !== "Vehicles"
+      );
       updatedItems.splice(2, 0, {
         label: selectedAdType?.label,
         action: "Vehicles",
@@ -125,12 +151,21 @@ const Sidebar = () => {
 
   useEffect(() => {
     const currentPath = locationVal.pathname;
-    const matchingMenuItem = menuItems.find((item) => item.path === currentPath);
+    const matchingMenuItem = menuItems.find(
+      (item) => item.path === currentPath
+    );
     if (matchingMenuItem) {
-      setSelectedItem(matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action);
+      setSelectedItem(
+        matchingMenuItem.action === "Reports"
+          ? "impressions"
+          : matchingMenuItem.action
+      );
       dispatch({
         type: SET_SELECTED_MENU,
-        selectedMenu: matchingMenuItem.action === "Reports" ? "impressions" : matchingMenuItem.action,
+        selectedMenu:
+          matchingMenuItem.action === "Reports"
+            ? "impressions"
+            : matchingMenuItem.action,
       });
     }
   }, []);
@@ -153,7 +188,11 @@ const Sidebar = () => {
   };
   const toggleDrawer = () => setMenuOpen(!menuOpen);
 
-  const handleAdTypeSelect = (adType: { label: string; icon: JSX.Element | null; value: string }) => {
+  const handleAdTypeSelect = (adType: {
+    label: string;
+    icon: JSX.Element | null;
+    value: string;
+  }) => {
     console.log("Selected Ad Type:", adType);
   };
   return (
@@ -203,8 +242,14 @@ const Sidebar = () => {
               alignItems: "center",
             }}
           >
-            <img src={logo} alt="OOH Logo" style={{ marginRight: 10, height: "40px" }} />
-            <h2 style={{ color: theme.palette.primary.contrastText }}>OOHmetrics</h2>
+            <img
+              src={logo}
+              alt="OOH Logo"
+              style={{ marginRight: 10, height: "40px" }}
+            />
+            <h2 style={{ color: theme.palette.primary.contrastText }}>
+              OOHmetrics
+            </h2>
           </div>
 
           <Select
@@ -226,21 +271,51 @@ const Sidebar = () => {
         </Box>
         <List sx={{ padding: 2 }} key={"adType"}>
           <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
-            <AdType onSelectAdType={handleAdTypeSelect} onOpenSwitchModal={() => {}} />
+            <AdType
+              onSelectAdType={handleAdTypeSelect}
+              onOpenSwitchModal={() => {}}
+            />
           </Box>
           {menuItems.map((item) =>
-            item.action !== "Reports" ? (
+            item.action === "Reports" ? (
+              <Box sx={{ paddingBottom: 1 }} key={item?.label}>
+                <ReportsAcc
+                  icon={
+                    <RemoveRedEyeOutlinedIcon style={{ marginRight: 13 }} />
+                  } // Add the icon here
+                  onOpenSwitchModal={(value) => {
+                    handleItemClick({ action: value, path: "/reports" });
+                  }}
+                />
+              </Box>
+            ) : item.action === "WeeklyReports" ? (
+              <Box sx={{ paddingBottom: 1 }} key={item?.label}>
+                <WeeklyReportsAcc
+                  icon={
+                    <RemoveRedEyeOutlinedIcon style={{ marginRight: 13 }} />
+                  } // Add the icon here
+                  onOpenSwitchModal={(value) => {
+                    handleItemClick({ action: value, path: "/weekly-reports" });
+                  }}
+                />
+              </Box>
+            ) : (
               <React.Fragment key={item.label}>
                 <ListItem disablePadding>
                   <ListItemButton
                     onClick={() => handleItemClick(item)}
                     sx={{
                       backgroundColor:
-                        selectedItem === item.action ? theme.palette.primary.main : theme.palette.background.default,
+                        selectedItem === item.action
+                          ? theme.palette.primary.main
+                          : theme.palette.background.default,
                       "&:hover": {
                         backgroundColor: theme.palette.primary.light,
                       },
-                      border: selectedItem === item.action ? "1px solid transparent" : "1px solid #ccc",
+                      border:
+                        selectedItem === item.action
+                          ? "1px solid transparent"
+                          : "1px solid #ccc",
                       borderRadius: "2px",
                       marginBottom: "8px",
                       fontSize: "20px",
@@ -261,22 +336,15 @@ const Sidebar = () => {
                     <ListItemText
                       sx={{
                         color:
-                          selectedItem === item.action ? theme.palette.primary.contrastText : theme.palette.text.primary,
+                          selectedItem === item.action
+                            ? theme.palette.primary.contrastText
+                            : theme.palette.text.primary,
                       }}
                       primary={item.label}
                     />
                   </ListItemButton>
                 </ListItem>
               </React.Fragment>
-            ) : (
-              <Box sx={{ paddingBottom: 1 }} key={item?.label}>
-                <ReportsAcc
-                  icon={<RemoveRedEyeOutlinedIcon style={{ marginRight: 13 }} />} // Add the icon here
-                  onOpenSwitchModal={(value) => {
-                    handleItemClick({ action: value, path: "/reports" });
-                  }}
-                />
-              </Box>
             )
           )}
         </List>

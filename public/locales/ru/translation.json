@@ -127,7 +127,8 @@
       "city": "Город",
       "state": "Штат",
       "country": "Страна",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "Адрес магазина"
           },
    
     "footfall": "Пешеходный трафик ",

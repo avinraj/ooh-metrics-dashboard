@@ -130,7 +130,8 @@
       "city": "Ciudad",
       "state": "Estado",
       "country": "País",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "Dirección de la tienda"
           },
   
     "footfall": "Afluencia de personas",

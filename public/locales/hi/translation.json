@@ -128,7 +128,8 @@
       "city": "शहर",
       "state": "राज्य",
       "country": "देश",
-      "url": "यूआरएल"
+      "url": "यूआरएल",
+      "storeAddress": "स्टोर का पता"
           },
     "footfall": "पदचिन्ह",
     "analytics": {

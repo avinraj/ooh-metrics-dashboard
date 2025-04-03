@@ -128,7 +128,8 @@
       "city": "Kaupunki",
       "state": "Osavaltio",
       "country": "Maa",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "Myymälän osoite"
           },
    
     "footfall": "Jalkaliikenne",

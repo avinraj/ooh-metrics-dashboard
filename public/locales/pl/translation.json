@@ -127,7 +127,8 @@
     "city": "Miasto",
     "state": "Stan",
     "country": "Kraj",
-    "url": "URL"
+    "url": "URL",
+    "storeAddress": "Adres sklepu"
           },
    
     "footfall": "Ruch pieszy ",

@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  CircularProgress,
   Grid,
   TextField,
   Typography,
@@ -12,9 +13,12 @@ import logo from "../../assets/oohlogo.png";
 import { useAuth } from "../../hooks/useAuth";
 import StorageService from "../core/services/storage.serive";
 import usersData from "../../Data/users.json";
+import authService from "./services/auth.service";
+import { duroflexEmail } from "../../Data/users";
 
 const Signup = () => {
   const theme = useTheme();
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string>(""); // State to hold error message
@@ -38,26 +42,43 @@ const Signup = () => {
     setPassword(e.target.value);
   };
 
-  const validateUser = () => {
-    // Find the user in the JSON data that matches the entered email and password
-    const user = usersData.find(
-      (user) => user.email === email && user.password === password
-    );
-    return user;
+  const validateUser = async () => {
+    try {
+      if(email === duroflexEmail){
+        const response: any = await authService.login(email, password);
+        if (response?.auth_token) {
+          storageService.set("local", "token", response.auth_token);
+          storageService.set("local", "email", response.email);
+          navigate(nextRoute);
+        } else {
+          setError("Your email or password was incorrect!");
+        }
+      }else {
+        const user = usersData.find(
+          (user) => user.email === email && user.password === password
+        );
+        if(user){
+          storageService.set("local", "token", "234543");
+          storageService.set("local", "email", user?.email);
+          navigate(nextRoute);
+        }
+        else {
+          setError("Your email or password was incorrect!");
+        }
+      }
+    
+    } catch (error) {
+      setLoading(false);
+      setError("Your email or password was incorrect!");
+      console.error("Error :", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const user = validateUser();
-    if (user) {
-      storageService.set("local", "token", "234543");
-      storageService.set("local", "userEmail", user?.email);
-      storageService.set("local", "userRole", user?.role);
-      navigate(nextRoute);
-    } else {
-      // If user is not found, show an error message
-      setError("Invalid email or password");
-    }
+    validateUser();
   };
 
   const isFormValid = email && password; // Simple validation
@@ -160,7 +181,7 @@ const Signup = () => {
               },
             }}
           >
-            Let's Go &gt;
+            {loading ? <CircularProgress size={24} /> : `Let's Go >`}
           </Button>
         </form>
       </Grid>

@@ -117,7 +117,8 @@
     "qrcode": "QR ಕೋಡ್",
     "trackingurl": {
       "trackingurl": "ಟ್ರ್ಯಾಕಿಂಗ್ URL",
-      "livetracking":"ಲೈವ್ ಟ್ರ್ಯಾಕಿಂಗ್"
+      "livetracking":"ಲೈವ್ ಟ್ರ್ಯಾಕಿಂಗ್",
+      "storeAddress": "ಅಂಗಡಿಯ ವಿಳಾಸ"
           },
    
     "footfall": "ಅಡಿಪಾಯ",

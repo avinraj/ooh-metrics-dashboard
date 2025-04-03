@@ -127,7 +127,8 @@
       "city": "市",
       "state": "州",
       "country": "国",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "店舗の住所"
           },
   
     "footfall": "フットフォール",

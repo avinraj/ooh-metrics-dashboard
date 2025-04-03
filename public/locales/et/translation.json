@@ -128,7 +128,8 @@
       "city": "Linn",
       "state": "Osariik",
       "country": "Riik",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "Poja aadress"
           },
    
     "footfall": "Külastuste arv",

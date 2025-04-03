@@ -127,7 +127,8 @@
     "city": "Stadt",
     "state": "Staat",
     "country": "Land",
-    "url": "URL"
+    "url": "URL",
+    "storeAddress": "Geschäftsadresse"
           },
    
     "footfall": "Fußverkehr",

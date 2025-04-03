@@ -127,7 +127,8 @@
       "city": "城市",
       "state": "州",
       "country": "国家",
-      "url": "网址"
+      "url": "网址",
+      "storeAddress": "商店地址"
           },
   
     "footfall": "人流量 ",

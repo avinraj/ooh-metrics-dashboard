@@ -128,7 +128,8 @@
       "city": "도시",
       "state": "주",
       "country": "국가",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "가게 주소"
           },
   
     

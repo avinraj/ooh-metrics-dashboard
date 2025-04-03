@@ -127,7 +127,8 @@
       "city": "Ville",
       "state": "État",
       "country": "Pays",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "Adresse du magasin"
           },
    
     "footfall": "Fréquentation",

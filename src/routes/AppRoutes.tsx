@@ -12,6 +12,7 @@ import MobileAdReports from "../app/Reports/pages/MobileAdReports";
 import ReportsMain from "../app/Reports/pages/ReportsMain";
 import Layout from "../layout/Layout";
 import ProtectedRoute from "./ProtectedRoute";
+import WeeklyReports from "../app/Reports/pages/WeeklyReports";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,16 @@ const AppRoutes = () => {
           <ProtectedRoute>
             <Layout>
               <HighLight />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/weekly-reports"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <WeeklyReports />
             </Layout>
           </ProtectedRoute>
         }

@@ -127,7 +127,8 @@
       "city": "Şehir",
       "state": "Eyalet",
       "country": "Ülke",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "Mağaza adresi"
           },
   
     "footfall": "Yaya trafiği ",

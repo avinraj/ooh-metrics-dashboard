@@ -127,7 +127,8 @@
       "city": "నగరం",
       "state": "రాష్ట్రం",
       "country": "దేశం",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "అంగడి చిరునామా"
           },
     
     "footfall": "ఫుట్‌ఫాల్",

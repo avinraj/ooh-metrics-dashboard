@@ -128,7 +128,8 @@
       "city": "നഗരം",
       "state": "സംസ്ഥാനം",
       "country": "രാജ്യം",
-      "url": "URL"
+      "url": "URL",
+      "storeAddress": "സ്റ്റോർ വിലാസം"
           },
    
     "footfall": "ഫുട്‌ഫോൾ",
