@@ -1,0 +1,658 @@
+{
+    "duroflex": [
+        {
+            "name": "Duroflex Experience Centre, Whitefield bengaluru karnataka",
+            "coordinates": [77.73541277, 12.95698019]
+        },
+        {
+            "name": "Duroflex Experience Centre, Sarjapur bengaluru karnataka",
+            "coordinates": [77.72103053, 12.89590161]
+        },
+        {
+            "name": "Duroflex Experience Centre, Koramangala bengaluru karnataka",
+            "coordinates": [77.629678, 12.9346621]
+        },
+        {
+            "name": "Duroflex Experience Centre, Bommanahalli bengaluru karnataka",
+            "coordinates": [77.63443225, 12.89866589]
+        },
+        {
+            "name": "Duroflex Experience Centre, Indiranagar bengaluru karnataka",
+            "coordinates": [77.64172425, 12.96450957] 
+        },
+        {
+            "name": "Duroflex Experience Centre, Rajajinagar bengaluru karnataka",
+            "coordinates": [77.55338788, 13.00427795] 
+        },
+        {
+            "name": "Duroflex Experience Centre, Yelahanka bengaluru karnataka",
+            "coordinates": [77.5978645, 13.0967806] 
+        },
+        {
+            "name": "Duroflex Experience Centre, Jayanagar bengaluru karnataka",
+            "coordinates": [77.5843694, 12.9172001] 
+        },
+        {
+            "name": "Duroflex Experience Centre, Kengeri bengaluru karnataka",
+            "coordinates": [77.48254593, 12.91738136]
+        },
+        {
+            "name": "Duroflex Experience Centre, Electronic City bengaluru karnataka",
+            "coordinates": [77.6578114, 12.8647286]
+        },
+        {
+            "name": "Duroflex Experience Centre, Kasaba Hobli bengaluru karnataka",
+            "coordinates": [77.63760514, 13.03323996]
+        },
+        {
+            "name": "Duroflex Experience Centre, Marathahalli bengaluru karnataka",
+            "coordinates": [77.69732398, 12.94211975]
+        },
+        {
+            "name": "Duroflex Experience Centre, Banashankari bengaluru karnataka",
+            "coordinates": [77.5510916, 12.9248983]
+        },
+        {
+            "name": "Duroflex Experience Centre, Omkar Nagar bengaluru karnataka",
+            "coordinates": [77.5970693, 12.8882187]
+        },
+        {
+            "name": "Duroflex Experience Centre, Malleshwaram bengaluru karnataka",
+            "coordinates": [77.57095316, 12.99152502]
+        },
+        {
+            "name": "Duroflex Experience Centre, New Bel Road bengaluru karnataka",
+            "coordinates": [77.5674174, 13.0352339]
+        },
+        {
+            "name": "Duroflex Experience Centre, Banaswadi bengaluru karnataka",
+            "coordinates": [77.659906, 13.016968]
+        },
+        {
+            "name": "Duroflex Experience Centre, HSR Layout bengaluru karnataka",
+            "coordinates": [77.651716, 12.9205686]
+        },
+        {
+            "name": "Duroflex Experience Centre, 6th Block, Rajajinagar bengaluru karnataka",
+            "coordinates": [77.55353459, 12.97865717]
+        }
+    ],
+    "competitors": [
+        {
+            "name": "Urban Ladder",
+            "coordinates": [77.7200, 12.9600]
+          },
+          {
+            "name": "Peps The Great Sleep Store (Ramagondanahalli)",
+            "coordinates": [77.7420, 12.9605]
+          },
+          {
+            "name": "Springwel Planet Bliss",
+            "coordinates": [77.7285, 12.9610]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Whitefield",
+            "coordinates": [77.7500, 12.9650]
+          },
+          {
+            "name": "Sleepwell Gallery - Whitefield, Bengaluru",
+            "coordinates": [77.7400, 12.9700]
+          },
+          {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [77.7300, 12.9750]
+          },
+          {
+            "name": "Godrej Interio - Furniture Store in Sidhapura, Bengaluru",
+            "coordinates": [77.730181, 12.955796]
+          },
+          {
+            "name": "Kurlon Experience Store - Whitefield",
+            "coordinates": [77.7500, 12.9600]
+          },
+          {
+            "name": "Wakefit Furniture Store In Sarjapur Road, Bengaluru",
+            "coordinates": [77.7525, 12.8956]
+          },
+          {
+            "name": "Sleepwell Gallery - Best Ortho Comfort Mattress in Dommasandra, Bengaluru",
+            "coordinates": [77.7620, 12.8950]
+          },
+          {
+            "name": "Kurlon Experience Store - Dommasandra",
+            "coordinates": [77.7625, 12.8955]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Sarjapur Road",
+            "coordinates": [77.7500, 12.9100]
+          },
+          {
+            "name": "Sleepwell Gallery",
+            "coordinates": [77.7400, 12.9000]
+          },
+          {
+            "name": "Land of Beds - Mattress Dealers",
+            "coordinates": [77.6290, 12.9355]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Koramangala",
+            "coordinates": [77.6295, 12.9345]
+          },
+          {
+            "name": "Sleepwell Home Komforts - Koramangala, Bengaluru",
+            "coordinates": [77.6292, 12.9350]
+          },
+          {
+            "name": "Kurlon Experience Store - Koramangala",
+            "coordinates": [77.6293, 12.9348]
+          },
+          {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [77.6291, 12.9352]
+          },
+          {
+            "name": "Mattress at Bangalore - Geoson Agencies - Wakefit Store - Multibrand",
+            "coordinates": [77.6288, 12.9354]
+          },
+          {
+            "name": "Centuary Mattresses Experience Store - Koramangala",
+            "coordinates": [77.6294, 12.9349]
+          },
+          {
+            "name": "Homehues - Curtains/Matresses/Furnishings",
+            "coordinates": [77.6296, 12.9347]
+          },
+          {
+            "name": "Wakefit - Furniture Store In Koramangala, Bengaluru",
+            "coordinates": [77.6297, 12.9346]
+          },
+          {
+            "name": "Sleepsenze Mattress & Pillows",
+            "coordinates": [ 77.640339,12.909373839809154]
+          },
+          {
+            "name": "Sulfex Mattress Factory Outlet Bangalore",
+            "coordinates": [ 77.64445391534261,12.905691927472677]
+          },
+          {
+            "name": "Peps The Great Sleep Store - GB Palya",
+            "coordinates": [77.63576045767131,12.896750811005019]
+          },
+          {
+            "name": "Anu Furniture Bommanahalli",
+            "coordinates": [ 77.63478227116434,12.898351559068454]
+          },
+          {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [ 77.63367454232868,12.900185848070205]
+          },
+          {
+            "name": "SleepyCat Sleep Studio - Indiranagar",
+            "coordinates": [77.6400, 12.9780]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Indiranagar",
+            "coordinates": [77.6415, 12.9785]
+          },
+          {
+            "name": "Restolex Mattress Showroom - Indiranagar",
+            "coordinates": [77.6420, 12.9790]
+          },
+          {
+            "name": "M-Lap Natural Latex & Orthopaedic Mattress",
+            "coordinates": [77.6430, 12.9800]
+          },
+          {
+            "name": "Peps Great Sleep Store",
+            "coordinates": [77.6440, 12.9810]
+          },
+          {
+            "name": "SLEEPLOGIC",
+            "coordinates": [77.6450, 12.9820]
+          },
+          {
+            "name": "Urban Ladder",
+            "coordinates": [77.6460, 12.9830]
+          },
+          {
+            "name": "SLEEPWELL GALLERY (Shakthi's)",
+            "coordinates": [77.5550, 13.0050]
+          },
+          {
+            "name": "Comfort n Dreamz",
+            "coordinates": [77.5560, 13.0060]
+          },
+          {
+            "name": "Neev Mattress",
+            "coordinates": [77.5570, 13.0070]
+          },
+          {
+            "name": "Sleepwell Exclusive Dealer - Mahalakshmi Layout, Bengaluru",
+            "coordinates": [77.5580, 13.0080]
+          },
+          {
+            "name": "Dreamzee Bangalore Showroom",
+            "coordinates": [77.5590, 13.0090]
+          },
+          {
+            "name": "2M Sleep Care Mattress Shop",
+            "coordinates": [77.5600, 13.0100]
+          },
+          {
+            "name": "Kurlon Mattress Store - Pari Furniture",
+            "coordinates": [77.5610, 13.0110]
+          },
+          {
+            "name": "Wakefit - Furniture Store In Basaveshwara Nagar, Bangalore",
+            "coordinates": [77.5620, 13.0120]
+          },
+          {
+            "name": "Kurlon Experience Store - Basaveshwara Nagar",
+            "coordinates": [77.5630, 13.0130]
+          },
+          {
+            "name": "Peps The Great Sleep Store",
+            "coordinates": [77.5640, 13.0140]
+          },
+          {
+            "name": "Wakefit - Furniture Store In Yelahanka",
+            "coordinates": [ 77.59733054232868,13.095863871634231]
+          },
+          {
+            "name": "Restolex Mattress Showroom - Yelahanka",
+            "coordinates": [77.59794072883565,13.096924971314188]
+          },
+          {
+            "name": "Kurlon Experience Store - Yelahanka Bangalore",
+            "coordinates": [77.59728847116433,13.09535837200956]
+          },
+          {
+            "name": "Sofas & More by Stanley - Yelahanka",
+            "coordinates": [ 77.59734138650695,13.095317321874989]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Yelahanka",
+            "coordinates": [ 77.59494074232869, 13.094646672537943]
+          },
+          {
+            "name": "Kurlon Home, Yelahanka",
+            "coordinates": [ 77.59399327116435,13.088090726426126]
+          },
+          {
+            "name": "Scandia Lifestyle",
+            "coordinates": [ 77.60164818650695,13.091815724767399]
+          },
+          {
+            "name": "Sleepwell Shoppe - Yelahanka, Bengaluru",
+            "coordinates": [ 77.57767345767131,13.097960769523233]
+          },
+          {
+            "name": "Wakefit Mattress",
+            "coordinates": [77.56635681349304,13.098018621439165]
+          },
+          {
+            "name": "PEPS - The Great Sleep Store",
+            "coordinates": [77.5931, 12.9304]
+          },
+          {
+            "name": "Restolex Mattress Showroom - Jayanagar",
+            "coordinates": [77.5935, 12.9308]
+          },
+          {
+            "name": "Springfit Mattress Retailer - Floating Walls Pvt. Ltd.",
+            "coordinates": [77.5940, 12.9312]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Jayanagar",
+            "coordinates": [77.5938, 12.9306]
+          },
+          {
+            "name": "Sleepwell Showroom (Emdee Nextgen Solutions)",
+            "coordinates": [77.5942, 12.9310]
+          },
+          {
+            "name": "Magniflex Italian Mattress Studio In Bangalore",
+            "coordinates": [77.5945, 12.9315]
+          },
+          {
+            "name": "MM Foam-Company Store",
+            "coordinates": [77.5948, 12.9318]
+          },
+          {
+            "name": "Nilkamal Sleep - Jayanagar",
+            "coordinates": [77.5950, 12.9320]
+          },
+          {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [77.5953, 12.9323]
+          },
+          {
+            "name": "Damro Furniture JP Nagar",
+            "coordinates": [77.5955, 12.9325]
+          },
+          {
+            "name": "Wakefit - Furniture Store In JP Nagar, Bengaluru",
+            "coordinates": [77.5958, 12.9328]
+          },
+          {
+            "name": "Springwel Mattress Store",
+            "coordinates": [77.5960, 12.9330]
+          },
+          {
+            "name": "Wakefit - Furniture Store in Kengeri, Bengaluru",
+            "coordinates": [77.4865, 12.9150]
+          },
+          {
+            "name": "SV Furniture Decor",
+            "coordinates": [77.4860, 12.9160]
+          },
+          {
+            "name": "Centuary Mattresses Store - M.R Steel Furnitures - Pattanagere",
+            "coordinates": [77.4980, 12.9200]
+          },
+          {
+            "name": "Royaloak Furniture Mysore Road",
+            "coordinates": [77.5022, 12.9271]
+          },
+          {
+            "name": "Standard Furniture & Wakefit Store",
+            "coordinates": [77.5950, 12.9716]
+          },
+          {
+            "name": "Peps The Great Sleep Store - Rayasandra",
+            "coordinates": [77.6500, 12.8452]
+          },
+          {
+            "name": "Sleepwell World - Exclusive Premium Luxury Mattress Showroom",
+            "coordinates": [77.5940, 12.9710]
+          },
+          {
+            "name": "Mattresses & More. Kurlon Wakefit Sleepwell Duroflex PEPS Cots",
+            "coordinates": [77.5935, 12.9705]
+          },
+          {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [77.5930, 12.9700]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Electronic City",
+            "coordinates": [77.6730, 12.8390]
+          },
+          {
+            "name": "Royaloak Furniture Electronic City",
+            "coordinates": [77.6640, 12.8410]
+          },
+          {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [77.5739, 12.9182]
+          },
+          {
+            "name": "Snug Furnishing Studio",
+            "coordinates": [77.6500, 12.9716]
+          },
+          {
+            "name": "Nilambur Furniture Bangalore",
+            "coordinates": [77.6411, 13.0285]
+          },
+          {
+            "name": "Kurlon Korner",
+            "coordinates": [77.5946, 12.9719]
+          },
+          {
+            "name": "Wakefit - Furniture Store In Marathahalli, Bangalore",
+            "coordinates": [ 77.69722827116433,12.942349810112388]
+          },
+          {
+            "name": "Royaloak Furniture Marathahalli",
+            "coordinates": [77.69739681349304,12.942551072255377]
+          },
+          {
+            "name": "Nilkamal Sleep - Kadubeesanahalli",
+            "coordinates": [ 77.696399,12.941019529593312]
+          },
+          {
+            "name": "Milan",
+            "coordinates": [77.69953527116434,12.948967524092241]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Marathahalli",
+            "coordinates": [ 77.70094354232867,12.957953517868747]
+          },
+          {
+            "name": "Nilkamal Homes - Premium Furniture and Homeware store",
+            "coordinates": [ 77.69917718650697,12.94962461167491]
+          },
+          {
+            "name": "Wakefit - Furniture Store in Banashankari, Bengaluru",
+            "coordinates": [ 77.55036681349304,12.925126712552157]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Banashankari",
+            "coordinates": [ 77.5511868981504,12.925059997641078]
+          },
+          {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [ 77.55498681349306,12.923422998840874]
+          },
+          {
+            "name": "Willow Home",
+            "coordinates": [ 77.55490972883565,12.923829170292926]
+          },
+          {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [ 77.55293146259471,12.91181382325937]
+          },
+          {
+            "name": "Ashley Furniture Homestore Banashankari",
+            "coordinates": [ 77.55737954232868,12.922678999386108]
+          },
+          {
+            "name": "Creative Lifestyle - Furniture, CENTUARY MATTRESS EXCLUSIVE SHOWROOM",
+            "coordinates": [77.5440, 12.9230]
+          },
+          {
+            "name": "Peps The Great Sleep Store - Dream Sleep Store",
+            "coordinates": [ 77.55969689815042,12.920419086630512]
+          },
+          {
+            "name": "Peps The Great Sleep Store",
+            "coordinates": [77.5262, 12.9165]
+          },
+          {
+            "name": "Wakefit - Furniture Store in Bannerghatta road, Bangalore",
+            "coordinates": [ 77.59576256485248,12.876065941590122]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Bannerghatta",
+            "coordinates": [77.6014, 12.8870]
+          },
+          {
+            "name": "PEPS The Great Sleep Store Mattress, Sri Raghavendra Comforts",
+            "coordinates": [77.6038, 12.8805]
+          },
+          {
+            "name": "Peps Showroom Arekere Bannerghatta Road",
+            "coordinates": [77.5973, 12.8831]
+          },
+          {
+            "name": "Peps Mattress Studio",
+            "coordinates": [77.5965, 12.8823]
+          },
+          {
+            "name": "Peps The Great Sleep Store",
+            "coordinates": [77.5931, 12.8790]
+          },
+          {
+            "name": "Mattress and Furnishing Showroom",
+            "coordinates": [77.5945, 12.8842]
+          },
+          {
+            "name": "Springfit Mattress Retailer - Floating wall Pvt Ltd",
+            "coordinates": [77.6082, 12.8932]
+          },
+          {
+            "name": "Springwel Mattress Store",
+            "coordinates": [77.6095, 12.8925]
+          },
+          {
+            "name": "Kurlon Mattress Xpress",
+            "coordinates": [77.5998, 12.8886]
+          },
+          {
+            "name": "Kurl-on Mattress",
+            "coordinates": [77.5903, 12.8808]
+          },
+          {
+            "name": "The Sleep Company Experience Store - Seshadripuram, Bengaluru",
+            "coordinates": [77.5734, 12.9915]
+        },
+        {
+            "name": "Kurlon Mattress Store - Seshadripuram, Bengaluru",
+            "coordinates": [77.5712, 12.9908]
+        },
+        {
+            "name": "Peps Showroom Malleshwara",
+            "coordinates": [77.5678, 12.9923]
+        },
+        {
+            "name": "Sleepwell World - Disha Mattress & Linens",
+            "coordinates": [77.5685, 12.9931]
+        },
+        {
+            "name": "Sleepwell Shoppe - Malleshwaram, Bengaluru",
+            "coordinates": [77.5692, 12.9940]
+        },
+        {
+            "name": "SLEEPWELL MATTRESS SHOPPEE",
+            "coordinates": [77.56725872883565,13.036092820598421]
+        },
+        {
+            "name": "The Sleep Company Experience Store- Bel Road",
+            "coordinates": [77.56485208087572,13.038779875107721]
+        },
+        {
+            "name": "Springwel Planet Bliss",
+            "coordinates": [ 77.56581008465737,13.037241367358453]
+        },
+        {
+            "name": "Wakefit - Furniture Store in Mathikere, Bengaluru",
+            "coordinates": [77.57045919436857,13.030518075893776]
+        },
+        {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [77.55952900000001,13.03164463438713]
+        },
+        {
+            "name": "Kurlon Mattress Store",
+            "coordinates": [ 77.65924254232868,13.017118383071866]
+        },
+        {
+            "name": "Restolex Mattress showroom - Banaswadi",
+            "coordinates": [77.66026479436837,13.01708855641704]
+        },
+        {
+            "name": "Ashley Furniture Homestore Banaswadi",
+            "coordinates": [77.66081186553272,13.017315737395979]
+        },
+        {
+            "name": "Sunday Mattresses & Beds",
+            "coordinates": [ 77.66155418650695,13.016481836738691] 
+        },
+        {
+            "name": "Sleepwell Gallery - Banaswadi, Bengaluru", 
+            "coordinates": [77.66233294232869,13.01604361581674]
+        },
+        {
+            "name": "Rajasthan furniture" ,
+            "coordinates": [ 77.6623566, 13.015812311714443]
+        },
+        {
+            "name": "Sleepwell World - Horamavu Signal, Banaswadi" ,
+            "coordinates": [ 77.65628576368317,13.018648830341116]
+        },
+        {
+            "name": "Repose Sleep Station - Mattress Store Bangalore" ,
+            "coordinates": [77.65145035582174, 13.02136837975517 ]
+        },
+        {
+            "name": "Wakefit - Furniture Store In Banaswadi, Bengaluru",
+            "coordinates": [77.64928235582171,13.02252026679113]
+        },
+        {
+            "name": "The Sleep Company Experience Store - Banaswadi",
+            "coordinates": [ 77.64864037301392,13.022619020047792]
+        },
+        {
+            "name": "Nilkamal Sleep - Banaswadi" ,
+            "coordinates": [ 77.64841472883565,13.02272147288641]
+        },
+        {
+            "name": "The Sleep Company Experience Store - HSR",
+            "coordinates": [77.63583227116433,12.9127095491606]
+        },
+        {
+            "name": "Kurlon Mattress Firm - HSR" ,
+            "coordinates": [77.63635454232868,12.912813581880789]
+        },
+        {
+            "name": "Wakefit - Furniture Store in HSR Layout, Bengaluru" ,
+            "coordinates": [77.63658918650697,12.912425006897676]
+        },
+        {
+            "name": "Nilkamal Sleep - HSR Layout" ,
+            "coordinates": [ 77.649022,12.918021832028343]
+        },
+        {
+            "name": "Restolex Mattress Palace" ,
+            "coordinates": [ 77.64486491534261,12.913203208896444]
+        },
+        {
+            "name": "MM Foam Mattress Company Showroom Bangalore" ,
+            "coordinates": [ 77.64444037301394,12.912511549297305]
+        },
+        {
+            "name": "Sleepwell", 
+            "coordinates": [ 77.65142999999999,12.921551800111185]
+        },
+        {
+            "name": "SUKRITI HOME INTERIOR | HSR LAYOUT " ,
+            "coordinates": [77.6495774576713,12.91726634466011]
+        },
+        {
+            "name": "SOBHA RESTOPLUS SPRING MATTRESS OFFICAL SHOWROOM" ,
+            "coordinates": [77.65083162698608,12.904953554514039]
+        },
+        {
+            "name": "Bed & Blocks" ,
+            "coordinates": [ 77.65142727116434,12.91625220577017]
+        },
+        {
+            "name": "Kurlon Mattress Store" ,
+            "coordinates": [ 77.55318672883566,12.977819868488414]
+        },
+        {
+            "name": "Peps The Great Sleep Store - Rajajinagar " ,
+            "coordinates": [77.55414533068523,12.98030812891053]
+        },
+        {
+            "name": "Kurlon Mattress Store" ,
+            "coordinates": [77.5603694576713,12.982919136809521]
+        },
+        {
+            "name": "SleepyCat Sleep Studio- Basaveshwar Nagar" ,
+            "coordinates": [77.53715845767132,12.985108771494579]
+        },
+        {
+            "name": "Springwel Mattress Store" ,
+            "coordinates": [ 77.53709854232868,12.98509495353688]
+        },
+        {
+            "name": "The Sleep Company Experience Store - Basveshwarnagar" ,
+            "coordinates": [ 77.53728208465738,12.98586104405478]
+        },
+        {
+            "name": "Sleepypanda -Mattress for Good night Sleep" ,
+            "coordinates": [ 77.56300027116436,12.987225316765981]
+        }
+    ]
+}

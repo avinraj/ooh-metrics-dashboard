@@ -13,6 +13,8 @@ import ReportsMain from "../app/Reports/pages/ReportsMain";
 import Layout from "../layout/Layout";
 import ProtectedRoute from "./ProtectedRoute";
 import WeeklyReports from "../app/Reports/pages/WeeklyReports";
+import Creatives from "../app/Creatives/pages/Creatives";
+import TrackingUrls from "../app/TrackingUrls/pages/TrackingUrls";
 
 const AppRoutes = () => {
   return (
@@ -24,6 +26,26 @@ const AppRoutes = () => {
           <ProtectedRoute>
             <Layout>
               <HighLight />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/creatives"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Creatives />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/tracking-urls"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <TrackingUrls />
             </Layout>
           </ProtectedRoute>
         }

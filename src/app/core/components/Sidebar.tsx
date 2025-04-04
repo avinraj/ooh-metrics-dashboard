@@ -7,8 +7,6 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  MenuItem,
-  Select,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -16,6 +14,8 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 
+import LinkIcon from "@mui/icons-material/Link";
+import ImageIcon from "@mui/icons-material/Image";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -24,14 +24,13 @@ import { FaHighlighter, FaMapMarkerAlt } from "react-icons/fa";
 import { IoFootsteps } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import logo from "../../../assets/oohlogo.png";
-import { languages } from "../../../i18n/languages";
-import { SET_SELECTED_MENU } from "../../../store/actions";
+import { SET_SELECTED_ADTYPE, SET_SELECTED_MENU } from "../../../store/actions";
 import StorageService from "../services/storage.serive";
 
+import { duroflexEmail } from "../../../Data/users";
 import AdType from "./AdType";
 import ConfirmModal from "./ConfirmModel";
 import ReportsAcc from "./Reports";
-import { duroflexEmail } from "../../../Data/users";
 import WeeklyReportsAcc from "./WeeklyReports";
 
 const Sidebar = () => {
@@ -47,19 +46,19 @@ const Sidebar = () => {
   const [selectedItem, setSelectedItem] = useState<string>("Highlight");
   const [modalOpen, setModalOpen] = useState(false);
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const defaultLang = storageService.get("local", "i18nextLng", false);
-  const [language, setLanguage] = useState(defaultLang ? defaultLang : "en");
+  const [language] = useState(defaultLang ? defaultLang : "en");
 
-  const handleLanguageChange = (event: any) => {
-    const selectedLanguage = event.target.value as string;
-    setLanguage(selectedLanguage);
-    i18n.changeLanguage(selectedLanguage);
+  // const handleLanguageChange = (event: any) => {
+  //   const selectedLanguage = event.target.value as string;
+  //   setLanguage(selectedLanguage);
+  //   i18n.changeLanguage(selectedLanguage);
 
-    // Adjust RTL if Arabic is selected
-    document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
-    window.location.reload();
-  };
+  //   // Adjust RTL if Arabic is selected
+  //   document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
+  //   window.location.reload();
+  // };
 
   const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
 
@@ -69,12 +68,6 @@ const Sidebar = () => {
       action: "Highlight",
       icon: <FaHighlighter />,
       path: "/highlight",
-    },
-    {
-      label: t("sideBar.reports"),
-      action: "Reports",
-      icon: <AssessmentIcon />,
-      path: "/reports",
     },
     {
       label: t("sideBar.mapView"),
@@ -101,10 +94,34 @@ const Sidebar = () => {
 
   useEffect(() => {
     if (email === duroflexEmail) {
+      dispatch({
+        type: SET_SELECTED_ADTYPE,
+        selectedAdType: {
+          title: t("adtype.Mobile Ads"),
+          value: "mobileAds",
+        },
+      });
+      storageService.set("local", "adType", "mobileAds");
       setMenuItems((prevItems) => {
         const newItems = [...prevItems];
-        if (!newItems.some((item) => item.action === "WeeklyReports")) {
+        if (!newItems.some((item) => item.action === "Creatives")) {
           newItems.splice(1, 0, {
+            label: "Creatives",
+            action: "Creatives",
+            icon: <ImageIcon />,
+            path: "/creatives",
+          });
+        }
+        if (!newItems.some((item) => item.action === "Tracking Urls")) {
+          newItems.splice(2, 0, {
+            label: "Tracking Urls",
+            action: "Tracking Urls",
+            icon: <LinkIcon />,
+            path: "/tracking-urls",
+          });
+        }
+        if (!newItems.some((item) => item.action === "WeeklyReports")) {
+          newItems.splice(3, 0, {
             label: "Weekly Reports",
             action: "WeeklyReports",
             icon: <AssessmentIcon />,
@@ -113,40 +130,55 @@ const Sidebar = () => {
         }
         return newItems;
       });
+    } else {
+      setMenuItems((prevItems) => {
+        const newItems = [...prevItems];
+        if (!newItems.some((item) => item.action === "Reports")) {
+          newItems.splice(1, 0, {
+            label: t("sideBar.reports"),
+            action: "Reports",
+            icon: <AssessmentIcon />,
+            path: "/reports",
+          });
+        }
+        return newItems;
+      });
     }
   }, [email]);
 
   useEffect(() => {
-    if (selectedAdType?.value === "mobileAds") {
+    if (email !== duroflexEmail) {
+      if (selectedAdType?.value === "mobileAds") {
+        setMenuItems((prevItems) => {
+          const updatedItems = [
+            ...prevItems.filter((item) => item.action !== "Audience"),
+          ];
+          updatedItems.splice(4, 0, {
+            label: t("audience.audience"),
+            action: "Audience",
+            icon: <GroupsIcon />,
+            path: "/audience",
+          });
+          return updatedItems;
+        });
+      } else {
+        setMenuItems((prevItems) =>
+          prevItems.filter((item) => item.action !== "Audience")
+        );
+      }
       setMenuItems((prevItems) => {
-        const updatedItems = [
-          ...prevItems.filter((item) => item.action !== "Audience"),
-        ];
-        updatedItems.splice(4, 0, {
-          label: t("audience.audience"),
-          action: "Audience",
-          icon: <GroupsIcon />,
-          path: "/audience",
+        const updatedItems = prevItems.filter(
+          (item) => item.action !== "Vehicles"
+        );
+        updatedItems.splice(2, 0, {
+          label: selectedAdType?.label,
+          action: "Vehicles",
+          icon: selectedAdType?.icon,
+          path: "/vehicles",
         });
         return updatedItems;
       });
-    } else {
-      setMenuItems((prevItems) =>
-        prevItems.filter((item) => item.action !== "Audience")
-      );
     }
-    setMenuItems((prevItems) => {
-      const updatedItems = prevItems.filter(
-        (item) => item.action !== "Vehicles"
-      );
-      updatedItems.splice(2, 0, {
-        label: selectedAdType?.label,
-        action: "Vehicles",
-        icon: selectedAdType?.icon,
-        path: "/vehicles",
-      });
-      return updatedItems;
-    });
   }, [selectedAdType]);
 
   useEffect(() => {
@@ -252,7 +284,7 @@ const Sidebar = () => {
             </h2>
           </div>
 
-          <Select
+          {/* <Select
             value={language}
             onChange={handleLanguageChange}
             size="small"
@@ -267,15 +299,18 @@ const Sidebar = () => {
                 {`${lang?.name} (${lang?.code.toUpperCase()})`}
               </MenuItem>
             ))}
-          </Select>
+          </Select> */}
         </Box>
         <List sx={{ padding: 2 }} key={"adType"}>
-          <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
-            <AdType
-              onSelectAdType={handleAdTypeSelect}
-              onOpenSwitchModal={() => {}}
-            />
-          </Box>
+          {email !== duroflexEmail && (
+            <Box sx={{ paddingTop: 1, paddingBottom: 1 }}>
+              <AdType
+                onSelectAdType={handleAdTypeSelect}
+                onOpenSwitchModal={() => {}}
+              />
+            </Box>
+          )}
+
           {menuItems.map((item) =>
             item.action === "Reports" ? (
               <Box sx={{ paddingBottom: 1 }} key={item?.label}>

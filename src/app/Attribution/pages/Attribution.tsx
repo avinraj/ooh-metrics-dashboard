@@ -1,6 +1,4 @@
 import LinkIcon from "@mui/icons-material/Link";
-import PeopleIcon from "@mui/icons-material/People";
-import QrCodeIcon from "@mui/icons-material/QrCode";
 import {
   Box,
   Button,
@@ -9,27 +7,27 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import moment from "moment";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import FootfallReport from "../components/FootfallReport";
+import { duroflexEmail } from "../../../Data/users";
+import { AnalyticsModel } from "../../../models/analytics";
+import { TrackingLinksModel } from "../../../models/trackingLinks";
+import StorageService from "../../core/services/storage.serive";
 import { buttonStyles } from "../../Reports/components/ImpressionsChart";
+import DuroflexTrackingUrl from "../components/Duroflex/DuroflexTrackingUrl";
+import FootfallReport from "../components/FootfallReport";
 import TrackingUrl from "../components/TrackingUrl";
 import analyticsService from "../services/analytics.service";
-import trackingLinksService from "../services/trackingLinks.service";
-import { TrackingLinksModel } from "../../../models/trackingLinks";
-import { AnalyticsModel } from "../../../models/analytics";
 import campaignService from "../services/campaign.service";
-import moment from "moment";
-import StorageService from "../../core/services/storage.serive";
-import DuroflexTrackingUrl from "../components/Duroflex/DuroflexTrackingUrl";
-import { duroflexEmail } from "../../../Data/users";
+import trackingLinksService from "../services/trackingLinks.service";
 
 const Attribution = () => {
   const theme = useTheme();
   const { t } = useTranslation();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const [selectedOption, setSelectedOption] = useState<string>("footfall");
+  const [selectedOption, setSelectedOption] = useState<string>("trackingUrl");
   const [analyticsData, setAnalyticsData] = useState<AnalyticsModel[]>([]);
   const [trackingLinksData, setTrackingLinksData] = useState<
     TrackingLinksModel[]
@@ -190,21 +188,21 @@ const Attribution = () => {
           }}
         >
           {[
-            {
-              label: t("attribution.qrcode"),
-              value: "qrCode",
-              icon: <QrCodeIcon sx={{ marginRight: 1 }} />,
-            },
+            // {
+            //   label: t("attribution.qrcode"),
+            //   value: "qrCode",
+            //   icon: <QrCodeIcon sx={{ marginRight: 1 }} />,
+            // },
             {
               label: t("attribution.trackingurl.trackingurl"),
               value: "trackingUrl",
               icon: <LinkIcon sx={{ marginRight: 1 }} />,
             },
-            {
-              label: t("attribution.footfall"),
-              value: "footfall",
-              icon: <PeopleIcon sx={{ marginRight: 1 }} />,
-            },
+            // {
+            //   label: t("attribution.footfall"),
+            //   value: "footfall",
+            //   icon: <PeopleIcon sx={{ marginRight: 1 }} />,
+            // },
           ].map((button) => (
             <Button
               key={button.value}

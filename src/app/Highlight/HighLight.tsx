@@ -90,7 +90,7 @@ const HighLight = () => {
         sx={{
           backgroundColor: theme.palette.primary.dark,
           width: "100%",
-          height: "100vh",
+          height: "115vh",
           padding: 1,
         }}
       >
@@ -112,6 +112,54 @@ const HighLight = () => {
           </Box>
         </Grid>
 
+        {/* campaign card */}
+        <Grid
+          container
+          item
+          xs={12}
+          spacing={4}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+          mt={2}
+        >
+          <Grid item xs={12} sm={6} md={3}>
+            <Card
+              sx={{
+                backgroundColor: "#DEDEDE",
+                padding: 2,
+                textAlign: "center",
+              }}
+            >
+              <Box>
+                <Typography variant="body1">
+                  <strong>Campaign Name:</strong> Duroflex April Campaign
+                </Typography>
+                <Typography variant="body1">
+                  <strong>Campaign Duration:</strong> 24-03-2025 to 24-04-2025
+                </Typography>
+                <Typography variant="body1">
+                  <strong>Campaign Type:</strong> Mobile Ads
+                </Typography>
+                <Typography variant="body1">
+                  <strong>Location:</strong> 19 Duroflex Stores
+                </Typography>
+                <Typography variant="body1">
+                  <strong>Competitor Targeting:</strong> YES
+                </Typography>
+                <Typography variant="body1">
+                  <strong>Tracking URL:</strong> YES
+                </Typography>
+                <Typography variant="body1">
+                  <strong>Footfall Analysis:</strong> YES
+                </Typography>
+              </Box>
+            </Card>
+          </Grid>
+        </Grid>
+
         {/* Cards Section */}
         <Grid
           container
@@ -123,7 +171,7 @@ const HighLight = () => {
             justifyContent: "space-between",
             alignItems: "center",
           }}
-          mt={7}
+          mt={2}
         >
           {cards.map((item, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
