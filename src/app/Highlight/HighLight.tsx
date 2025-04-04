@@ -21,6 +21,8 @@ import impressionIcon from "../../assets/impressions.png";
 import ctrIcon from "../../assets/ctr.png";
 import meterIcon from "../../assets/speed-meter-outline-512.webp";
 import autoIcon from "../../assets/auto-rickshaw.svg";
+import StorageService from "../core/services/storage.serive";
+import { duroflexEmail } from "../../Data/users";
 
 const adTypeData: any = {
   cars: { label: "TOTAL CARS", icon: carIcon },
@@ -44,6 +46,8 @@ const HighLight = () => {
   const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
   console.log(selectedAdType, "Ad Type");
   const { t } = useTranslation();
+  const storageService = new StorageService();
+  const email = storageService.get("local", "email");
 
   // Extract the current ad type's data
   const currentAdType = adTypeData[selectedAdType?.value] || {
@@ -90,20 +94,13 @@ const HighLight = () => {
         sx={{
           backgroundColor: theme.palette.primary.dark,
           width: "100%",
-          height: "115vh",
+          height: "97vh",
           padding: 1,
         }}
       >
-        {/* Welcome Section */}
-        <Grid item xs={12}>
-          <Typography variant="h3" color={theme.palette.text.primary}>
-            {t("highlights.welcome")}, Zoho
-          </Typography>
-        </Grid>
-
         {/* Highlight Title */}
         <Grid item xs={12}>
-          <Box mt={7}>
+          <Box mt={3}>
             <Typography variant="h3" color={theme.palette.text.primary}>
               <Box sx={{ display: "inline-block", padding: "0 8px" }}>
                 {t("highlights.highlight")}
@@ -113,52 +110,94 @@ const HighLight = () => {
         </Grid>
 
         {/* campaign card */}
-        <Grid
-          container
-          item
-          xs={12}
-          spacing={4}
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-          mt={2}
-        >
-          <Grid item xs={12} sm={6} md={3}>
-            <Card
-              sx={{
-                backgroundColor: "#DEDEDE",
-                padding: 2,
-                textAlign: "center",
-              }}
-            >
-              <Box>
-                <Typography variant="body1">
-                  <strong>Campaign Name:</strong> Duroflex April Campaign
-                </Typography>
-                <Typography variant="body1">
-                  <strong>Campaign Duration:</strong> 24-03-2025 to 24-04-2025
-                </Typography>
-                <Typography variant="body1">
-                  <strong>Campaign Type:</strong> Mobile Ads
-                </Typography>
-                <Typography variant="body1">
-                  <strong>Location:</strong> 19 Duroflex Stores
-                </Typography>
-                <Typography variant="body1">
-                  <strong>Competitor Targeting:</strong> YES
-                </Typography>
-                <Typography variant="body1">
-                  <strong>Tracking URL:</strong> YES
-                </Typography>
-                <Typography variant="body1">
-                  <strong>Footfall Analysis:</strong> YES
-                </Typography>
-              </Box>
-            </Card>
+        {email === duroflexEmail && (
+          <Grid
+            container
+            item
+            xs={12}
+            spacing={4}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+            mt={1}
+          >
+            <Grid item xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  backgroundColor: "#DEDEDE",
+                  padding: 2,
+                  textAlign: "center",
+                }}
+              >
+                <Box>
+                  <Typography
+                    variant="body1"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div style={{ textAlign: "start" }}>
+                      Campaign Name:
+                    </div>{" "}
+                    <strong>Duroflex April Campaign</strong>
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div style={{ textAlign: "start" }}>
+                      Campaign Duration:
+                    </div>{" "}
+                    <strong> 24-03-2025 to 24-04-2025</strong>
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div style={{ textAlign: "start" }}>
+                      Campaign Type:
+                    </div>
+                    <strong> Mobile Ads</strong>
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div style={{ textAlign: "start" }}>Location:</div>
+                    <strong>19 Duroflex Stores</strong>
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div style={{ textAlign: "start" }}>
+                      Competitor Targeting:
+                    </div>{" "}
+                    <strong> YES</strong>
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div style={{ textAlign: "start" }}>
+                      Tracking URL:
+                    </div>{" "}
+                    <strong> YES</strong>
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <div style={{ textAlign: "start" }}>
+                      Footfall Analysis:
+                    </div>{" "}
+                    <strong> YES</strong>
+                  </Typography>
+                </Box>
+              </Card>
+            </Grid>
           </Grid>
-        </Grid>
+        )}
 
         {/* Cards Section */}
         <Grid
@@ -171,7 +210,7 @@ const HighLight = () => {
             justifyContent: "space-between",
             alignItems: "center",
           }}
-          mt={2}
+          mt={1}
         >
           {cards.map((item, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
