@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme, Card, CardContent, Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
 import weeklyData from "../../../../Data/duroflexWeeklyReport.json";
@@ -63,7 +63,11 @@ const WeeklySummary = () => {
         >
           <Typography variant="h3">Overall Summary</Typography>
         </Box>
-        <Box>
+
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <Card sx={{ height: "95%", display: "flex", flexDirection: "column" }}>
+              <CardContent sx={{ flexGrow: 1 }}>
           <Typography variant="body1">
             <strong>Report Date:</strong> {weeklyData?.reportDate ?? ""}
           </Typography>
@@ -81,8 +85,13 @@ const WeeklySummary = () => {
             <strong>Total Impression Goal:</strong>{" "}
             {weeklyData?.totalImpressionGoal ?? ""}
           </Typography>
-
+        </CardContent>
+      </Card>
+    </Grid>
           {/* Campaign Details */}
+    <Grid item xs={12} sm={6}>
+      <Card sx={{ height: "95%", display: "flex", flexDirection: "column" }}>
+        <CardContent sx={{ flexGrow: 1 }}>
           <Typography
             variant="h5"
             sx={{ fontWeight: "bold", marginBottom: "10px" }}
@@ -117,7 +126,10 @@ const WeeklySummary = () => {
             <strong>Total Amount Spent (INR):</strong>{" "}
             {weeklyData?.campaign?.spend ?? ""}
           </Typography>
-        </Box>
+        </CardContent>
+      </Card>
+    </Grid>
+  </Grid>
       </div>
 
       <MobileAdChartTable
