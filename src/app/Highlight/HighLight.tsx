@@ -1,5 +1,5 @@
 import { Box, Card, Grid, Typography, useTheme } from "@mui/material";
-import AdsClickIcon from "@mui/icons-material/AdsClick";
+// import AdsClickIcon from "@mui/icons-material/AdsClick";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AdUnitsIcon from "@mui/icons-material/AdUnits";
 import HikingIcon from "@mui/icons-material/Hiking";
@@ -18,11 +18,14 @@ import { useSelector } from "react-redux";
 import carIcon from "../../assets/images__1_-removebg-preview copy.png";
 import adIcon from "../../assets/addIcon.png";
 import impressionIcon from "../../assets/impressions.png";
-import ctrIcon from "../../assets/ctr.png";
+// import ctrIcon from "../../assets/ctr.png";
 import meterIcon from "../../assets/speed-meter-outline-512.webp";
 import autoIcon from "../../assets/auto-rickshaw.svg";
 import StorageService from "../core/services/storage.serive";
 import { duroflexEmail } from "../../Data/users";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import PeopleIcon from "@mui/icons-material/People";
+import SpeedIcon from "@mui/icons-material/Speed";
 
 const adTypeData: any = {
   cars: { label: "TOTAL CARS", icon: carIcon },
@@ -59,33 +62,37 @@ const HighLight = () => {
 
   // Cards Data
   const cards = [
+    // {
+    //   value: 25,
+    //   label: currentAdType.label,
+    //   icon: currentAdType.icon,
+    // },
     {
-      value: 25,
-      label: currentAdType.label,
-      icon: currentAdType.icon,
+      value: "203,054",
+      label: "UNIQUE USER REACH",
+      icon: PeopleIcon,
     },
     {
-      value: "33,500 miles",
+      value: "23%",
       label:
-        selectedAdType?.value === "mobileAds" ? "TOTAL CLICKS" : "TOTAL MILES",
-      icon: selectedAdType?.value === "mobileAds" ? AdsClickIcon : meterIcon,
+        selectedAdType?.value === "mobileAds" ? "CAMPAIGN PACING" : "TOTAL MILES",
+      icon: selectedAdType?.value === "mobileAds" ?  SpeedIcon : meterIcon,
     },
     {
-      value: "1,103,500 m",
+      value: "173,333.29",
       label:
         selectedAdType?.value === "mobileAds"
-          ? "TOTAL REACH"
+          ? "TOTAL BUDGET"
           : "TOTAL IMPRESSIONS",
-      icon: selectedAdType?.value === "mobileAds" ? impressionIcon : adIcon,
+      icon: selectedAdType?.value === "mobileAds" ? AttachMoneyIcon : adIcon,
     },
     {
-      value: 33,
+      value:" 1,333,333",
       label:
-        selectedAdType?.value === "mobileAds" ? "CTR" : "IMPRESSIONS PER MILE",
-      icon: selectedAdType?.value === "mobileAds" ? ctrIcon : impressionIcon,
+        selectedAdType?.value === "mobileAds" ? "TOTAL IMPRESSION GOAL" : "IMPRESSIONS PER MILE",
+      icon: selectedAdType?.value === "mobileAds" ? impressionIcon : impressionIcon,
     },
   ];
-
   return (
     <Grid container>
       <Grid
@@ -218,7 +225,14 @@ const HighLight = () => {
                 sx={{
                   backgroundColor: "#DEDEDE",
                   padding: 2,
+                  height: "250px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  alignItems: "center",
                   textAlign: "center",
+                  borderRadius: 2,
+                  boxShadow: 3,
                 }}
               >
                 {/* Value */}
@@ -226,6 +240,7 @@ const HighLight = () => {
                   variant="h4"
                   fontWeight="bold"
                   color={theme.palette.primary.contrastText}
+                  sx={{ mt: 1 }}
                 >
                   {item.value}
                 </Typography>
@@ -236,18 +251,20 @@ const HighLight = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    mt: 2,
+                    flexGrow: 1,
+                    mt: 1,
                   }}
                 >
                   {typeof item.icon === "string" ? (
                     <img
                       src={item.icon}
                       alt={item.label}
-                      width={120}
-                      height={120}
+                      width={60}
+                      height={60}
+                      style={{ objectFit: "contain" }}
                     />
                   ) : (
-                    <item.icon style={{ fontSize: 120 }} />
+                    <item.icon style={{ fontSize: 60, color: "black" }} />
                   )}
                 </Box>
 
@@ -256,12 +273,13 @@ const HighLight = () => {
                   sx={{
                     backgroundColor: theme.palette.primary.dark,
                     mt: 2,
-                    border: "1px solid black",
-                    borderRadius: 3,
-                    padding: "4px 8px",
+                    border: "2px solid black",
+                    borderRadius: "3px",
+                    padding: "6px 12px",
+                    width: "100%",
                   }}
                 >
-                  <Typography variant="h6" color={theme.palette.text.primary}>
+                  <Typography variant="body1" color={theme.palette.text.primary}>
                     <b>{item.label}</b>
                   </Typography>
                 </Box>
