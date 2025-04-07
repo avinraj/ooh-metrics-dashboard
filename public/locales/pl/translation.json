@@ -8,7 +8,10 @@
     "cars": "Samochody",
     "attribution": "Atrybucja",
     "deviceIds": "Identyfikatory urządzeń",
-    "logout": "Wyloguj się"
+    "logout": "Wyloguj się",
+    "logoutMessage": "Czy na pewno chcesz się wylogować?",
+    "cancel": "Anuluj",
+    "confirm": "Potwierdź"
   },
   "filterPanel": {
     "campaign": "Kampania",
@@ -100,7 +103,8 @@
     "Mobile Ads": "Reklamy mobilne",
     "Static Billboards": "Stacjonarne bilbordy",
     "Vehicle Ads": "Reklamy na pojazdach",
-    "Digital Screens": "Cyfrowe ekrany"
+    "Digital Screens": "Cyfrowe ekrany",
+    "Cinema Theater":"Kino-teatr"
   },
   "map": {
     "map": "Mapa",
@@ -111,7 +115,22 @@
   "attribution": {
     "attribution": "Atrybucja",
     "qrcode": "Kod QR ",
-    "trackingurl": "URL sledzenia",
+    "trackingurl": {
+      "trackingurl": "URL sledzenia",
+      "livetracking":"Śledzenie na żywo",
+      "dateAndTime": "Data i godzina",
+    "campaignId": "ID kampanii",
+    "deviceModel": "Model urządzenia",
+    "deviceType": "Typ urządzenia",
+    "deviceVendor": "Producent urządzenia",
+    "ipAddress": "Adres IP",
+    "city": "Miasto",
+    "state": "Stan",
+    "country": "Kraj",
+    "url": "URL",
+    "storeAddress": "Adres sklepu"
+          },
+   
     "footfall": "Ruch pieszy ",
     "analytics": {
       "attributionAnalytics": "Analiza atrybucji",

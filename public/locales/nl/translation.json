@@ -7,8 +7,12 @@
     "mapView": "Kaartweergave",
     "cars": "Auto's",
     "attribution": "Toewijzing",
+    
     "deviceIds": "Apparaat ID's",
-    "logout": "Uitloggen"
+    "logout": "Uitloggen",
+    "logoutMessage": "Weet u zeker dat u wilt uitloggen?",
+    "cancel": "Annuleren",
+    "confirm": "Bevestigen"
   },
   "filterPanel": {
     "campaign": "Campagne",
@@ -100,7 +104,8 @@
     "Mobile Ads": "Mobiele advertenties",
     "Static Billboards": "Statistische billboards",
     "Vehicle Ads": "Voertuigreclames",
-    "Digital Screens": "Digitale schermen"
+    "Digital Screens": "Digitale schermen",
+    "Cinema Theater":"bioscoop"
   },
   "map": {
     "map": "Kaart",
@@ -111,7 +116,22 @@
   "attribution": {
     "attribution": "Toewijzing",
     "qrcode": "QR-code ",
-    "trackingurl": "Volg-URL ",
+    "trackingurl": {
+      "trackingurl": "Volg-URL ",
+      "livetracking":"Live volgen",
+      "dateAndTime": "Datum en tijd",
+    "campaignId": "Campagne-ID",
+    "deviceModel": "Apparaatmodel",
+    "deviceType": "Apparaattype",
+    "deviceVendor": "Apparaatleverancier",
+    "ipAddress": "IP-adres",
+    "city": "Stad",
+    "state": "Staat",
+    "country": "Land",
+    "url": "URL",
+    "storeAddress": "Winkeladres"
+          },
+  
     "footfall": "Voetgangersverkeer ",
     "analytics": {
       "attributionAnalytics": "Attributieanalyse",

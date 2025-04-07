@@ -1,0 +1,166 @@
+{
+  "sideBar": {
+    "adType": "ಜಾಹೀರಾತು ಪ್ರಕಾರ",
+    "highlight": "ಹೈಲೈಟ್",
+    "reports": "ಅહેવಾಲುಗಳು",
+    "audience": "ಪ್ರೇಕ್ಷಕರು",
+    "mapView": "ನಕ್ಷೆ ವೀಕ್ಷಣೆ",
+    "cars": "ಕಾರುಗಳು",
+    "attribution": "ಅಟ್ರಿಬ್ಯೂಶನ್",
+    "deviceIds": "ಸಾಧನ ಐಡಿಗಳು",
+    "logout": "ಲಾಗ್ ಔಟ್",
+    "logoutMessage": "ನೀವು ಲಾಗ್‌ಔಟ್ ಮಾಡಲು ಬಯಸುತ್ತೀರಿ ಎಂದು ಖಚಿತವಾಗಿ?",
+    "cancel": "ರದ್ದುಮಾಡಿ",
+    "confirm": "ಸ್ಥಿರಪಡಿಸಿ"
+  },
+  "filterPanel": {
+    "campaign": "ಪ್ರಚಾರ",
+    "selectDateRange": "ದಿನಾಂಕ ಶ್ರೇಣಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "vehicle": "ವಾಹನ",
+    "show": "ತೋರಿಸು"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "ಇಂಪ್ರೆಷನ್‌ಗಳು",
+      "date": "ದಿನಾಂಕ",
+      "vehicle": "ವಾಹನ",
+      "chart": "ಚಾರ್ಟ್",
+      "table": "ಕೋಷ್ಟಕ",
+      "impressionsPerMile": "ಪ್ರತಿ ಮೈಲ್‌ಗೆ ಇಂಪ್ರೆಷನ್‌ಗಳು",
+      "miles": "ಮೈಲುಗಳು",
+      "avg": "ಸರಾಸರಿ"
+    },
+    "demographics": {
+      "demographics": "ಜನಸಾಂಖ್ಯಿಕರು",
+      "age": "ವಯಸ್ಸು",
+      "education": "ಶಿಕ್ಷಣ",
+      "income": "ಆದಾಯ",
+      "ethnicity": "ಜಾತಿ",
+      "chartType": "ಚಾರ್ಟ್ ಪ್ರಕಾರ",
+      "verticalBar": "ಕೆದರಳುವ ಕಂಬ",
+      "horizontalBar": "ಹಾರಿಜಾಂಟಲ್ ಕಂಬ",
+      "doughnutChart": "ಡೋನಟ್ ಚಾರ್ಟ್",
+      "lineChart": "ರೇಖಾ ಚಾರ್ಟ್"
+    },
+    "affinities": {
+      "affinities": "ಸಂಬಂಧಗಳು"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "ಅಪ್‌ಗಳು / ವೆಬ್‌ಸೈಟ್‌ಗಳು",
+      "byAppOrWebsites": "ಅಪ್‌ಗಳು / ವೆಬ್‌ಸೈಟ್‌ಗಳ ಪ್ರಕಾರ"
+    },
+    "dayAndHour": {
+      "dayAndHour": "ದಿನ ಮತ್ತು ಗಂಟೆ",
+      "byDayAndHour": "ದಿನ / ಗಂಟೆ ಪ್ರಕಾರ",
+      "dayChart": "ದಿನ ಚಾರ್ಟ್",
+      "hourChart": "ಗಂಟೆ ಚಾರ್ಟ್"
+    },
+    "browser": {
+      "browser": "ಬ್ರೌಸರ್",
+      "byBrowser": "ಬ್ರೌಸರ್ ಪ್ರಕಾರ"
+    },
+    "operatingSystem": {
+      "OS": "ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್",
+      "byOperatingSystem": "ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್ ಪ್ರಕಾರ"
+    },
+    "telecomOperator": {
+      "telecomOperator": "ಟೆಲಿಕಾಂ ಆಪರೇಟರ್",
+      "byTelecomOperator": "ಟೆಲಿಕಾಂ ಆಪರೇಟರ್ ಪ್ರಕಾರ"
+    },
+    "creatives": {
+      "creatives": "ಕ್ರೀಟಿವ್ಸ್",
+      "byCreatives": "ಕ್ರೀಟಿವ್ಸ್ ಪ್ರಕಾರ",
+      "creativesChart": "ಕ್ರೀಟಿವ್ಸ್ ಚಾರ್ಟ್",
+      "sizeChart": "ಗಾತ್ರ ಚಾರ್ಟ್"
+    }
+  },
+  "highlights": {
+    "welcome": "ಸ್ವಾಗತ",
+    "highlight": "ಹೈಲೈಟ್"
+  },
+  "cars": {
+    "cars": "ಕಾರುಗಳು",
+    "grid view": "ಗ್ರಿಡ್ ವೀಕ್ಷಣೆ",
+    "table view": "ಕೋಷ್ಟಕ ವೀಕ್ಷಣೆ",
+    "photo list": "ಫೋಟೋ ಪಟ್ಟಿ"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "ಕಾರುಗಳು",
+      "Buses": "ಬಸ್ಸುಗಳು",
+      "Trucks": "ಟ್ರಕ್‌ಗಳು",
+      "Robots": "ರೋಬೋಟ್‌ಗಳು",
+      "e-scooter": "ಇ-ಸ್ಕೂಟರ್",
+      "Rickshaws": "ಆಟೊ ರಿಕ್ಷಾ",
+      "2-wheelers": "2 ಚಕ್ರ ವಾಹನಗಳು"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "ಡಿಜಿಟಲ್ ಬಿಲ್‌ಬೋರ್ಡ್‌ಗಳು",
+      "Car Rooftoppers": "ಕಾರು ರೂಫ್‌ಟಾಪ್ಪರ್‌ಗಳು",
+      "Van Digital Billboards": "ವ್ಯಾನ್ ಡಿಜಿಟಲ್ ಬಿಲ್‌ಬೋರ್ಡ್‌ಗಳು",
+      "Backpacks": "ಬ್ಯಾಕ್‌ಪ್ಯಾಕ್‌ಗಳು"
+    },
+    "Mobile Ads": "ಮೊಬೈಲ್ ಜಾಹೀರಾತುಗಳು",
+    "Static Billboards": "ಸ್ಥಿರ ಬಿಲ್‌ಬೋರ್ಡ್‌ಗಳು",
+    "Vehicle Ads": "ವಾಹನ ಜಾಹೀರಾತುಗಳು",
+    "Digital Screens": "ಡಿಜಿಟಲ್ ಪರದೆಗಳು",
+    "Cinema Theater": "ಚಲನಚಿತ್ರ ಹಾಲ್"
+  },
+  "map": {
+    "map": "ನಕ್ಷೆ",
+    "basic": "ಮೂಲಭೂತ",
+    "heat": "ಹೀಟ್",
+    "live": "ಲೈವ್"
+  },
+  "attribution": {
+    "attribution": "ಅಟ್ರಿಬ್ಯೂಶನ್",
+    "qrcode": "QR ಕೋಡ್",
+    "trackingurl": {
+      "trackingurl": "ಟ್ರ್ಯಾಕಿಂಗ್ URL",
+      "livetracking":"ಲೈವ್ ಟ್ರ್ಯಾಕಿಂಗ್",
+      "storeAddress": "ಅಂಗಡಿಯ ವಿಳಾಸ"
+          },
+   
+    "footfall": "ಅಡಿಪಾಯ",
+    "analytics": {
+      "attributionAnalytics": "ಅಟ್ರಿಬ್ಯೂಶನ್ ವಿಶ್ಲೇಷಣೆ",
+      "attributionLiftIndex": "ಅಟ್ರಿಬ್ಯೂಶನ್ ಲಿಫ್ಟ್ ಸೂಚ್ಯಂಕ",
+      "exposed": "ಎಕ್ಸ್‌ಪೋಸ್",
+      "control": "ನಿಯಂತ್ರಣ",
+      "exposedAudience": "ಎಕ್ಸ್‌ಪೋಸ್ ಪ್ರೇಕ್ಷಕರು",
+      "attributedFootfall": "ಅಟ್ರಿಬ್ಯೂಟೆಡ್ ಅಡಿಪಾಯ",
+      "footfallRate": "ಅಡಿಪಾಯ ದರ",
+      "controlAudience": "ನಿಯಂತ್ರಣ ಪ್ರೇಕ್ಷಕರು",
+      "attributedFootfallNote": "ಅಟ್ರಿಬ್ಯೂಟೆಡ್ ಅಡಿಪಾಯ OOmetric ವೇದಿಕೆಯಲ್ಲಿ ಕಂಡುಬರುವ subset.",
+      "controlFootfallNote": "ನಿಯಂತ್ರಣ ಅಡಿಪಾಯ OOmetric ವೇದಿಕೆಯಲ್ಲಿ ಕಂಡುಬರುವ subset.",
+      "attributedByDay": "ದಿನದ ಪ್ರಕಾರ ಅಟ್ರಿಬ್ಯೂಟೆಡ್ ಅಡಿಪಾಯ",
+      "controlByDay": "ದಿನದ ಪ್ರಕಾರ ನಿಯಂತ್ರಣ ಅಡಿಪಾಯ",
+      "attributedByHour": "ಗಂಟೆಯ ಪ್ರಕಾರ ಅಟ್ರಿಬ್ಯೂಟೆಡ್ ಅಡಿಪಾಯ",
+      "controlByHour": "ಗಂಟೆಯ ಪ್ರಕಾರ ನಿಯಂತ್ರಣ ಅಡಿಪಾಯ",
+      "peopleInsights": "ಜನ洞察ಗಳು",
+      "devices": "ಸಾಧನಗಳು",
+      "gender": "ಲಿಂಗ",
+      "ageGroup": "ವಯೋವರ್ಗ",
+      "segments": "ವಿಭಾಗಗಳು",
+      "female": "ಹೆಣ್ಣು",
+      "male": "ಗಂಡು"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "ಆಧುನಿಕ ಅಟ್ರಿಬ್ಯೂಶನ್洞察ಗಳು",
+      "leadTimeVisit": "ಲೀಡ್ ಟೈಮ್ ಭೇಟಿ",
+      "exposureVisit": "ಎಕ್ಸ್‌ಪೋಸರ್ ಭೇಟಿ",
+      "topStores": "ಉನ್ನತ ಅಂಗಡಿಗಳು",
+      "topHomeLocations": "ಉನ್ನತ ಮನೆ ಸ್ಥಳಗಳು",
+      "storeName": "ಅಂಗಡಿ ಹೆಸರು",
+      "homeLocations": "ಮನೆ ಸ್ಥಳಗಳು"
+    }
+  },
+  "audience": {
+    "audience": "ಪ್ರೇಕ್ಷಕರು",
+    "clicksByGender": "ಲಿಂಗದ ಪ್ರಕಾರ ಕ್ಲಿಕ್‌ಗಳು",
+    "clicksByDevice": "ಸಾಧನದ ಪ್ರಕಾರ ಕ್ಲಿಕ್‌ಗಳು",
+    "clicksByAge": "ವಯಸ್ಸಿನ ಪ್ರಕಾರ ಕ್ಲಿಕ್‌ಗಳು",
+    "clicksBySource": "ಮೂಲದ ಪ್ರಕಾರ ಕ್ಲಿಕ್‌ಗಳು",
+    "ctrBySec": "ಸೆಕೆಂಡಿಗೆ CTR"
+  }
+}

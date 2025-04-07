@@ -1,26 +1,87 @@
-import { Box, Button, Grid, TextField, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Grid,
+  TextField,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/oohlogo.png";
 import { useAuth } from "../../hooks/useAuth";
 import StorageService from "../core/services/storage.serive";
+import usersData from "../../Data/users.json";
+import authService from "./services/auth.service";
+import { duroflexEmail } from "../../Data/users";
 
 const Signup = () => {
   const theme = useTheme();
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string>(""); // State to hold error message
   const navigate = useNavigate();
   const storageService = new StorageService();
   const { isAuthenticated } = useAuth();
+  const location = useLocation();
+  const nextRoute = location?.state?.next || "/highlight";
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/highlight");
+      navigate(nextRoute);
     }
   }, [isAuthenticated]);
 
-  const handleEmailChange = (e: any) => {
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const validateUser = async () => {
+    try {
+      if(email === duroflexEmail){
+        const response: any = await authService.login(email, password);
+        if (response?.auth_token) {
+          storageService.set("local", "token", response.auth_token);
+          storageService.set("local", "email", response.email);
+          navigate(nextRoute);
+        } else {
+          setError("Your email or password was incorrect!");
+        }
+      }else {
+        const user = usersData.find(
+          (user) => user.email === email && user.password === password
+        );
+        if(user){
+          storageService.set("local", "token", "234543");
+          storageService.set("local", "email", user?.email);
+          navigate(nextRoute);
+        }
+        else {
+          setError("Your email or password was incorrect!");
+        }
+      }
+    
+    } catch (error) {
+      setLoading(false);
+      setError("Your email or password was incorrect!");
+      console.error("Error :", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    validateUser();
+  };
+
+  const isFormValid = email && password; // Simple validation
 
   return (
     <Grid
@@ -60,9 +121,12 @@ const Signup = () => {
             OOHmetrics
           </Typography>
         </Box>
-        <form>
+        <form onSubmit={handleSubmit}>
           <TextField
-            label="demo@yourcompany.com"
+            onClick={() => {
+              setError("");
+            }}
+            label="Email"
             variant="outlined"
             fullWidth
             margin="normal"
@@ -75,27 +139,37 @@ const Signup = () => {
             }}
           />
           <TextField
+            onClick={() => {
+              setError("");
+            }}
             label="Password"
             type="password"
             variant="outlined"
             fullWidth
             margin="normal"
+            onChange={handlePasswordChange}
+            value={password}
             sx={{
               "& .MuiOutlinedInput-root": {
                 borderRadius: "10px",
               },
             }}
           />
+          {error && (
+            <Typography
+              color="error"
+              sx={{ textAlign: "center", marginTop: 1 }}
+            >
+              {error}
+            </Typography>
+          )}
           <Button
             type="submit"
             variant="contained"
             fullWidth
-            onClick={() => {
-              storageService.set("local", "token", "234543");
-              navigate("/highlight");
-            }}
+            disabled={!isFormValid} // Disable button if form is invalid
             sx={{
-              bgcolor: "#f7ff3c",
+              bgcolor: "rgba(254, 158, 18, 1)",
               color: "#000",
               fontSize: "16px",
               fontWeight: 600,
@@ -107,7 +181,7 @@ const Signup = () => {
               },
             }}
           >
-            Let's Go &gt;
+            {loading ? <CircularProgress size={24} /> : `Let's Go >`}
           </Button>
         </form>
       </Grid>
@@ -116,156 +190,3 @@ const Signup = () => {
 };
 
 export default Signup;
-// <Grid container sx={{ height: "100vh", width: "100vw" }}>
-//   {/* Left Section */}
-//   <Grid
-//     item
-//     xs={6}
-//     sx={{
-//       backgroundColor: "#606060",
-//       //height: "100%", width: "100%"
-//     }}
-//   >
-//     <Box
-//       display="flex"
-//       justifyContent="center"
-//       alignItems="center"
-//       height="100%"
-//     >
-//       <Typography
-//         variant="h3"
-//         sx={{ color: theme.palette.primary.main, fontSize: 60 }}
-//       >
-//         <b>
-//           The marketing Co-pilot <br /> you always needed
-//         </b>
-//       </Typography>
-//     </Box>
-//   </Grid>
-
-//   {/* Right Section */}
-//   <Grid
-//     item
-//     xs={6}
-//     sx={{
-//       // height: "100%",
-//       display: "flex",
-//       justifyContent: "center",
-//       alignItems: "center",
-//     }}
-//   >
-//     <Box
-//       sx={{
-//         backgroundColor: theme.palette.primary.main,
-//         borderRadius: 0,
-//         height: "100%",
-//         display: "flex",
-//         flexDirection: "column",
-//         alignItems: "center",
-//         width: "100%",
-//       }}
-//     >
-//       <Box
-//         display="flex"
-//         alignItems="center"
-//         justifyContent="center"
-//         p={5}
-//         sx={{ width: "100%" }}
-//       >
-//         <img src={logo} alt="OOHmetrics Logo" height={70} width={30} />
-//         <Typography
-//           variant="h4"
-//           sx={{
-//             marginLeft: 1,
-//             textAlign: "center",
-//             fontSize: 50,
-//             color: theme.palette.primary.contrastText,
-//           }}
-//         >
-//           <b>OOHmetrics</b>
-//         </Typography>
-//       </Box>
-//       <Card
-//         sx={{
-//           maxWidth: 400,
-//           width: "100%",
-//           margin: "0 auto",
-//           padding: 3,
-//           marginTop: 5,
-//           boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-//           borderRadius: 4,
-//         }}
-//       >
-//         <Typography
-//           variant="h5"
-//           sx={{ textAlign: "center", marginBottom: 2 }}
-//         >
-//           <b>Sign Up</b>
-//         </Typography>
-//         <form>
-//           <TextField
-//             label="Email"
-//             variant="outlined"
-//             fullWidth
-//             margin="normal"
-//             onChange={handleEmailChange}
-//             value={email}
-//           />
-//           <Button
-//             type="submit"
-//             variant="contained"
-//             onClick={() => {
-//               storageService.set("local", "token", "234543");
-//               navigate("/home");
-//               // navigate("/signup");
-//             }}
-//             sx={{
-//               bgcolor: theme.palette.secondary.contrastText,
-//               color: theme.palette.primary.main,
-//               fontSize: "16px",
-//               width: "100%",
-//               "&:hover": {
-//                 bgcolor: "grey",
-//               },
-//             }}
-//           >
-//             Continue
-//           </Button>
-//         </form>
-//         <Box>
-//           <h4 style={{ textAlign: "center" }}>or</h4>
-//           <Button
-//             variant="outlined"
-//             sx={{
-//               textTransform: "none",
-//               color: theme.palette.secondary.contrastText,
-//               backgroundColor: theme.palette.background.default,
-//               border: "1px solid #ddd",
-//               padding: "10px 24px",
-//               borderRadius: "4px",
-//               fontSize: "16px",
-//               display: "flex",
-//               alignItems: "center",
-//               justifyContent: "center",
-//               width: "100%",
-//               "&:hover": {
-//                 backgroundColor: theme.palette.secondary.main,
-//                 borderColor: "#ddd",
-//               },
-//             }}
-//           >
-//             <Box
-//               component="img"
-//               src={googleImg}
-//               alt="Google logo"
-//               sx={{ width: 24, height: 24, marginRight: 1 }}
-//             />
-//             <Typography sx={{ fontSize: "20px" }}>
-//               <b>Continue with Google</b>
-//             </Typography>
-//           </Button>
-//         </Box>
-//       </Card>
-//     </Box>
-//   </Grid>
-// </Grid>

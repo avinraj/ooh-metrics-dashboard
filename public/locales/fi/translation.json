@@ -7,8 +7,12 @@
     "mapView": "Karttanäkymä",
     "cars": "Autot",
     "attribution": "Attribuutio",
+   
     "deviceIds": "Laitteen tunnukset",
-    "logout": "Kirjaudu ulos"
+    "logout": "Kirjaudu ulos",
+    "logoutMessage": "Oletko varma, että haluat kirjautua ulos?",
+    "cancel": "Peruuta",
+    "confirm": "Vahvista"
   },
   "filterPanel": {
     "campaign": "Kampanja",
@@ -100,7 +104,8 @@
     "Mobile Ads": "Mobiilimainokset",
     "Static Billboards": "Staattiset mainostaulut",
     "Vehicle Ads": "Ajoneuvomainokset",
-    "Digital Screens": "Digitaaliset näytöt"
+    "Digital Screens": "Digitaaliset näytöt",
+    "Cinema Theater":"elokuvateatteri"
   },
   "map": {
     "map": "Kartta",
@@ -111,7 +116,22 @@
   "attribution": {
     "attribution": "Attribuutio",
     "qrcode": "QR-koodi",
-    "trackingurl": "Seurantalinkki",
+    "trackingurl": {
+      "trackingurl": "Seurantalinkki",
+      "livetracking":" Reaaliaikainen seuranta",
+      "dateAndTime": "Päivämäärä ja kellonaika",
+      "campaignId": "Kampanjan tunnus",
+      "deviceModel": "Laitemalli",
+      "deviceType": "Laitetyyppi",
+      "deviceVendor": "Laitteiden toimittaja",
+      "ipAddress": "IP-osoite",
+      "city": "Kaupunki",
+      "state": "Osavaltio",
+      "country": "Maa",
+      "url": "URL",
+      "storeAddress": "Myymälän osoite"
+          },
+   
     "footfall": "Jalkaliikenne",
     "analytics": {
       "attributionAnalytics": "Attribuution analytiikka",

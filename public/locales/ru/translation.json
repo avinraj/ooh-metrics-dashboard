@@ -8,7 +8,10 @@
     "cars": "Автомобили",
     "attribution": "Атрибуция",
     "deviceIds": "ID устройств",
-    "logout": "Выйти"
+    "logout": "Выйти",
+    "logoutMessage": "Вы уверены, что хотите выйти?",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить"
   },
   "filterPanel": {
     "campaign": "Кампания",
@@ -100,7 +103,8 @@
     "Mobile Ads": "Мобильная реклама",
     "Static Billboards": "Статические рекламные щиты",
     "Vehicle Ads": "Реклама на транспортных средствах",
-    "Digital Screens": "Цифровые экраны"
+    "Digital Screens": "Цифровые экраны",
+    "Cinema Theater":"Кинотеатр"
   },
   "map": {
     "map": "Карта",
@@ -111,7 +115,22 @@
   "attribution": {
     "attribution": "Атрибуция",
     "qrcode": "QR-код",
-    "trackingurl": "trackingurl",
+    "trackingurl": {
+      "trackingurl": "trackingurl",
+      "livetracking":"Живое отслеживание",
+      "dateAndTime": "Дата и время",
+      "campaignId": "Идентификатор кампании",
+      "deviceModel": "Модель устройства",
+      "deviceType": "Тип устройства",
+      "deviceVendor": "Производитель устройства",
+      "ipAddress": "IP-адрес",
+      "city": "Город",
+      "state": "Штат",
+      "country": "Страна",
+      "url": "URL",
+      "storeAddress": "Адрес магазина"
+          },
+   
     "footfall": "Пешеходный трафик ",
     "analytics": {
       "attributionAnalytics": "Аналитика атрибуции",

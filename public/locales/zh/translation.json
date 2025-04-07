@@ -8,7 +8,10 @@
     "cars": "汽车",
     "attribution": "归因",
     "deviceIds": "设备ID",
-    "logout": "登出"
+    "logout": "登出",
+    "logoutMessage": "您确定要注销吗？",
+    "cancel": "取消",
+    "confirm": "确认"
   },
   "filterPanel": {
     "campaign": "活动",
@@ -100,7 +103,8 @@
     "Mobile Ads": "移动广告",
     "Static Billboards": "静态广告牌",
     "Vehicle Ads": "车身广告",
-    "Digital Screens": "数字屏幕"
+    "Digital Screens": "数字屏幕",
+    "Cinema Theater":"电影院剧院"
   },
   "map": {
     "map": "地图",
@@ -111,7 +115,22 @@
   "attribution": {
     "attribution": "归因",
     "qrcode": "二维码",
-    "trackingurl": "跟踪链接 ",
+    "trackingurl": {
+      "trackingurl": "跟踪链接 ",
+      "livetracking":"实时追踪",
+      "dateAndTime": "日期和时间",
+      "campaignId": "活动编号",
+      "deviceModel": "设备型号",
+      "deviceType": "设备类型",
+      "deviceVendor": "设备供应商",
+      "ipAddress": "IP地址",
+      "city": "城市",
+      "state": "州",
+      "country": "国家",
+      "url": "网址",
+      "storeAddress": "商店地址"
+          },
+  
     "footfall": "人流量 ",
     "analytics": {
       "attributionAnalytics": "归因分析",

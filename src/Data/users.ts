@@ -1,0 +1,1 @@
+export const duroflexEmail = "admin@duroflexworld.com"

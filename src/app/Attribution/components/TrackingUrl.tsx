@@ -1,45 +1,38 @@
-import {
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  useTheme,
-} from "@mui/material";
+import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, useTheme } from "@mui/material";
 import React from "react";
 import data from "../../../Data/trackingUrl.json";
 import TrackingUrlMap from "./TrackingUrlMap";
+import { useTranslation } from "react-i18next";
 
 const TrackingUrl: React.FC = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
   return (
-    <Box sx={{width: "100%"}}>
-        <TrackingUrlMap />
+    <Box sx={{ width: "100%" }}>
+      <TrackingUrlMap />
       <Box
         sx={{
           overflowX: "auto",
           backgroundColor: theme.palette.secondary.main,
           borderRadius: "5px",
-          marginTop: "10px"
+          marginTop: "10px",
         }}
       >
         <TableContainer>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Date & Time</TableCell>
-                <TableCell>CampaignId</TableCell>
-                <TableCell>Device model</TableCell>
-                <TableCell>Device Type</TableCell>
-                <TableCell>Device Vendor</TableCell>
-                <TableCell>IP Address</TableCell>
-                <TableCell>City</TableCell>
-                <TableCell>State</TableCell>
-                <TableCell>Country</TableCell>
-                <TableCell>Url</TableCell>
-                <TableCell>Tracking URL</TableCell>
+                <TableCell>{t("attribution.trackingurl.dateAndTime")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.campaignId")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.deviceModel")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.deviceType")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.deviceVendor")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.ipAddress")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.city")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.state")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.country")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.url")}</TableCell>
+                <TableCell>{t("attribution.trackingurl.trackingurl")}</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -55,22 +48,12 @@ const TrackingUrl: React.FC = () => {
                   <TableCell>{obj.state}</TableCell>
                   <TableCell>{obj.country}</TableCell>
                   <TableCell>
-                    <a
-                      href={obj.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "blue" }}
-                    >
+                    <a href={obj.url} target="_blank" rel="noopener noreferrer" style={{ color: "blue" }}>
                       {obj.url}
                     </a>
                   </TableCell>
                   <TableCell>
-                    <a
-                      href={obj.trackingUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "blue" }}
-                    >
+                    <a href={obj.trackingUrl} target="_blank" rel="noopener noreferrer" style={{ color: "blue" }}>
                       {obj.trackingUrl}
                     </a>
                   </TableCell>

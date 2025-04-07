@@ -1,11 +1,9 @@
-// chartUtils.ts
-
 import { ChartOptions } from "chart.js";
 
 // Helper function to truncate label for mobile views
 export const truncateLabel = (label: string | number | undefined, maxLength: number) => {
-    const labelString = label != null ? String(label) : '';
-
+    if (label == null) return '';
+    const labelString = String(label);
     return labelString.length > maxLength ? `${labelString.slice(0, maxLength)}...` : labelString;
 };
 
@@ -19,36 +17,41 @@ export const mobileAdChartDataAndOptions = (
     theme: any,
     isMobile: boolean
 ) => {
-    const labels = chartData?.labels.map((label) =>
-        label
-    );
+    const labels = chartData?.labels ?? [];
+
+    const datasets: any = [
+        {
+            label: "Impressions",
+            data: chartData?.impressionsData ?? [],
+            backgroundColor: theme.palette.primary.main,
+            borderColor: theme.palette.primary.main,
+            borderRadius: 5,
+            type: "bar",
+        },
+    ];
+
+    const hasCTRData = chartData?.ctrData && chartData.ctrData.length > 0;
+
+    if (hasCTRData) {
+        datasets.unshift({
+            label: "CTR (%)",
+            data: chartData.ctrData,
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            borderColor: theme.palette.text.disabled,
+            borderWidth: 2,
+            type: "line",
+            fill: false,
+            tension: 0.4,
+            yAxisID: "y2",
+        });
+    }
 
     const data = {
-        labels: labels,
-        datasets: [
-            {
-                label: "CTR (%)",
-                data: chartData?.ctrData || [],
-                backgroundColor: "rgba(0, 0, 0, 0)",
-                borderColor: theme.palette.text.disabled,
-                borderWidth: 2,
-                type: "line",
-                fill: false,
-                tension: 0.4,
-                yAxisID: "y2",
-            },
-            {
-                label: "Impressions",
-                data: chartData?.impressionsData,
-                backgroundColor: theme.palette.primary.main,
-                borderColor: theme.palette.primary.main,
-                borderRadius: 5,
-                type: "bar", // Bar chart for clicks
-            },
-        ],
+        labels,
+        datasets,
     };
 
-    const options: ChartOptions = {
+    const options: any = {
         responsive: true,
         plugins: {
             legend: {
@@ -65,7 +68,7 @@ export const mobileAdChartDataAndOptions = (
             x: {
                 ticks: {
                     color: theme.palette.text.primary,
-                    callback: function (value) {
+                    callback: function (value: any) {
                         const label = labels[value as number];
                         return isMobile ? truncateLabel(label, 3) : label;
                     },
@@ -89,19 +92,20 @@ export const mobileAdChartDataAndOptions = (
                 },
                 position: "left",
             },
-            y2: {
-                // Secondary Y-axis for CTR
-                position: "right",
-                ticks: {
-                    color: theme.palette.text.primary,
-                    callback: function (value) {
-                        return `${value}%`; // Display % for CTR
+            ...(hasCTRData ? {
+                y2: {
+                    position: "right",
+                    ticks: {
+                        color: theme.palette.text.primary,
+                        callback: function (value: number) {
+                            return `${value}%`;
+                        },
+                    },
+                    grid: {
+                        display: false,
                     },
                 },
-                grid: {
-                    display: false,
-                },
-            },
+            } : {}),
         },
     };
 
@@ -118,18 +122,16 @@ export const attributionChartDataAndOptions = (
     chartColor?: string,
     percentageVal?: boolean
 ) => {
-    const labels = chartData?.labels.map((label) =>
-        label
-    );
+    const labels = chartData?.labels ?? [];
 
     const data = {
-        labels: labels,
+        labels,
         datasets: [
             {
                 label: "Attribute",
-                data: chartData?.attributeData,
-                backgroundColor: chartColor ?? theme.palette.primary.main,
-                borderColor: chartColor ?? theme.palette.primary.main,
+                data: chartData?.attributeData ?? [],
+                backgroundColor: chartColor,
+                borderColor: chartColor,
                 borderRadius: 5,
                 type: "bar",
             },

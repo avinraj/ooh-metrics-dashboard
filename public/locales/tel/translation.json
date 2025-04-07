@@ -1,0 +1,176 @@
+{
+  "sideBar": {
+    "adType": "ప్రకటన రకం",
+    "highlight": "హైలైట్",
+    "reports": "నివేదికలు",
+    "audience": "ప్రేక్షకులు",
+    "mapView": "మ్యాప్ వీక్షణ",
+    "cars": "కార్లు",
+    "attribution": "అట్రిబ్యూషన్",
+    "deviceIds": "పరికర ఐడీలు",
+    "logout": "లాగ్ అవుట్",
+    "logoutMessage": "మీరు ఖచ్చితంగా లాగ్ అవుట్ చేయాలనుకుంటున్నారా?",
+    "cancel": "రద్దు",
+    "confirm": "నిర్ధారించు"
+  },
+  "filterPanel": {
+    "campaign": "ప్రచారం",
+    "selectDateRange": "తేదీ పరిధిని ఎంచుకోండి",
+    "vehicle": "వాహనం",
+    "show": "చూపించు"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "ఇంప్రెషన్లు",
+      "date": "తేదీ",
+      "vehicle": "వాహనం",
+      "chart": "చార్ట్",
+      "table": "పట్టిక",
+      "impressionsPerMile": "మైల్‌కు ఇంప్రెషన్లు",
+      "miles": "మైళ్లు",
+      "avg": "సగటు"
+    },
+    "demographics": {
+      "demographics": "డెమోగ్రాఫిక్స్",
+      "age": "వయసు",
+      "education": "విద్య",
+      "income": "ఆదాయం",
+      "ethnicity": "జాతి",
+      "chartType": "చార్ట్ రకం",
+      "verticalBar": "వర్టికల్ బార్",
+      "horizontalBar": "హారిజాంటల్ బార్",
+      "doughnutChart": "డోనట్ చార్ట్",
+      "lineChart": "లైన్ చార్ట్"
+    },
+    "affinities": {
+      "affinities": "సంబంధాలు"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "యాప్‌లు / వెబ్‌సైట్లు",
+      "byAppOrWebsites": "యాప్‌లు / వెబ్‌సైట్లు ప్రకారం"
+    },
+    "dayAndHour": {
+      "dayAndHour": "రోజు మరియు గంట",
+      "byDayAndHour": "రోజు / గంట ప్రకారం",
+      "dayChart": "రోజు చార్ట్",
+      "hourChart": "గంట చార్ట్"
+    },
+    "browser": {
+      "browser": "బ్రౌజర్",
+      "byBrowser": "బ్రౌజర్ ప్రకారం"
+    },
+    "operatingSystem": {
+      "OS": "ఆపరేటింగ్ సిస్టమ్",
+      "byOperatingSystem": "ఆపరేటింగ్ సిస్టమ్ ప్రకారం"
+    },
+    "telecomOperator": {
+      "telecomOperator": "టెలికాం ఆపరేటర్",
+      "byTelecomOperator": "టెలికాం ఆపరేటర్ ప్రకారం"
+    },
+    "creatives": {
+      "creatives": "క్రియేటివ్స్",
+      "byCreatives": "క్రియేటివ్స్ ప్రకారం",
+      "creativesChart": "క్రియేటివ్స్ చార్ట్",
+      "sizeChart": "సైజు చార్ట్"
+    }
+  },
+  "highlights": {
+    "welcome": "స్వాగతం",
+    "highlight": "హైలైట్"
+  },
+  "cars": {
+    "cars": "కార్లు",
+    "grid view": "గ్రిడ్ వీక్షణ",
+    "table view": "పట్టిక వీక్షణ",
+    "photo list": "ఫోటో జాబితా"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "కార్లు",
+      "Buses": "బస్సులు",
+      "Trucks": "ట్రక్కులు",
+      "Robots": "రోబోలు",
+      "e-scooter": "ఈ-స్కూటర్",
+      "Rickshaws": "రిక్షాలు",
+      "2-wheelers": "2-చక్రవాహనాలు"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "డిజిటల్ బిల్బోర్డ్స్",
+      "Car Rooftoppers": "కారు రూఫ్టాపర్స్",
+      "Van Digital Billboards": "వాన్ డిజిటల్ బిల్బోర్డ్స్",
+      "Backpacks": "బ్యాక్‌ప్యాక్స్"
+    },
+    "Mobile Ads": "మొబైల్ ప్రకటనలు",
+    "Static Billboards": "స్థిర బిల్బోర్డ్స్",
+    "Vehicle Ads": "వాహన ప్రకటనలు",
+    "Digital Screens": "డిజిటల్ స్క్రీన్లు",
+    "Cinema Theater": "సినిమా థియేటర్"
+  },
+  "map": {
+    "map": "మ్యాప్",
+    "basic": "బేసిక్",
+    "heat": "హీట్",
+    "live": "లైవ్"
+  },
+  "attribution": {
+    "attribution": "అట్రిబ్యూషన్",
+    "qrcode": "QR కోడ్",
+    "trackingurl": {
+    "trackingurl": "ట్రాకింగ్ URL",
+      "livetracking":"ప్రత్యక్ష ట్రాకింగ్",
+      "dateAndTime": "తేదీ మరియు సమయం",
+      "campaignId": "క్యాంపైన్ ID",
+      "deviceModel": "పరికర నమూనా",
+      "deviceType": "పరికర రకం",
+      "deviceVendor": "పరికర సరఫరాదారు",
+      "ipAddress": "IP చిరునామా",
+      "city": "నగరం",
+      "state": "రాష్ట్రం",
+      "country": "దేశం",
+      "url": "URL",
+      "storeAddress": "అంగడి చిరునామా"
+          },
+    
+    "footfall": "ఫుట్‌ఫాల్",
+    "analytics": {
+      "attributionAnalytics": "అట్రిబ్యూషన్ విశ్లేషణలు",
+      "attributionLiftIndex": "అట్రిబ్యూషన్ లిఫ్ట్ ఇండెక్స్",
+      "exposed": "ఎక్స్పోజ్",
+      "control": "కంట్రోల్",
+      "exposedAudience": "ఎక్స్పోజ్‌డ్ ప్రేక్షకులు",
+      "attributedFootfall": "అట్రిబ్యూషన్ ఫుట్‌ఫాల్",
+      "footfallRate": "ఫుట్‌ఫాల్ రేటు",
+      "controlAudience": "కంట్రోల్ ప్రేక్షకులు",
+      "attributedFootfallNote": "అట్రిబ్యూషన్ ఫుట్‌ఫాల్ OOmetric ప్లాట్‌ఫామ్‌లో కనిపించిన subset.",
+      "controlFootfallNote": "కంట్రోల్ ఫుట్‌ఫాల్ OOmetric ప్లాట్‌ఫామ్‌లో కనిపించిన subset.",
+      "attributedByDay": "రోజు ప్రకారం అట్రిబ్యూషన్ ఫుట్‌ఫాల్",
+      "controlByDay": "రోజు ప్రకారం కంట్రోల్ ఫుట్‌ఫాల్",
+      "attributedByHour": "గంట ప్రకారం అట్రిబ్యూషన్ ఫుట్‌ఫాల్",
+      "controlByHour": "గంట ప్రకారం కంట్రోల్ ఫుట్‌ఫాల్",
+      "peopleInsights": "వ్యక్తుల洞察ాలు",
+      "devices": "పరికరాలు",
+      "gender": "లింగం",
+      "ageGroup": "వయసు గ్రూప్",
+      "segments": "విభాగాలు",
+      "female": "మహిళ",
+      "male": "పురుషుడు"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "అడ్వాన్స్‌డ్ అట్రిబ్యూషన్洞察ాలు",
+      "leadTimeVisit": "లీడ్ టైమ్ సందర్శన",
+      "exposureVisit": "ఎక్స్పోజర్ సందర్శన",
+      "topStores": "టాప్ స్టోర్లను",
+      "topHomeLocations": "టాప్ హోమ్ స్థానాలు",
+      "storeName": "స్టోర్ పేరు",
+      "homeLocations": "హోమ్ స్థానాలు"
+    }
+  },
+  "audience": {
+    "audience": "ప్రేక్షకులు",
+    "clicksByGender": "లింగం ప్రకారం క్లిక్స్",
+    "clicksByDevice": "పరికరం ప్రకారం క్లిక్స్",
+    "clicksByAge": "వయసు ప్రకారం క్లిక్స్",
+    "clicksBySource": "మూలం ప్రకారం క్లిక్స్",
+    "ctrBySec": "సెకను ప్రకారం CTR"
+  }
+}

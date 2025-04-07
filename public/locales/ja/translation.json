@@ -8,7 +8,10 @@
     "cars": "車",
     "attribution": "帰属",
     "deviceIds": "デバイスID",
-    "logout": "ログアウト"
+    "logout": "ログアウト",
+    "logoutMessage": "ログアウトしてもよろしいですか？",
+    "cancel": "キャンセル",
+    "confirm": "確認"
   },
   "filterPanel": {
     "campaign": "キャンペーン",
@@ -100,7 +103,8 @@
     "Mobile Ads": "モバイル広告",
     "Static Billboards": "静的広告板",
     "Vehicle Ads": "車両広告",
-    "Digital Screens": "デジタルスクリーン"
+    "Digital Screens": "デジタルスクリーン",
+    "Cinema Theater":"映画館劇場"
   },
   "map": {
     "map": "地図",
@@ -111,7 +115,22 @@
   "attribution": {
     "attribution": "帰属",
     "qrcode": "QRコード ",
-    "trackingurl": "トラッキングURL ",
+    "trackingurl": {
+      "trackingurl": "トラッキングURL ",
+      "livetracking":"ライブトラッキング",
+      "dateAndTime": "日付と時刻",
+      "campaignId": "キャンペーンID",
+      "deviceModel": "デバイスモデル",
+      "deviceType": "デバイスタイプ",
+      "deviceVendor": "デバイスベンダー",
+      "ipAddress": "IPアドレス",
+      "city": "市",
+      "state": "州",
+      "country": "国",
+      "url": "URL",
+      "storeAddress": "店舗の住所"
+          },
+  
     "footfall": "フットフォール",
     "analytics": {
       "attributionAnalytics": "アトリビューション分析",

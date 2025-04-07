@@ -1,0 +1,176 @@
+{
+  "sideBar": {
+    "adType": "विज्ञापन प्रकार",
+    "highlight": "हाइलाइट",
+    "reports": "रिपोर्ट",
+    "audience": "दर्शक",
+    "mapView": "मानचित्र दृश्य",
+    "cars": "कारें",
+    "attribution": "एट्रिब्यूशन",
+    "deviceIds": "डिवाइस आईडी",
+    "logout": "लॉग आउट",
+    "logoutMessage": "क्या आप वाकई लॉग आउट करना चाहते हैं?",
+    "cancel": "रद्द करें",
+    "confirm": "पुष्टि करें"
+  },
+  "filterPanel": {
+    "campaign": "अभियान",
+    "selectDateRange": "तिथि सीमा चुनें",
+    "vehicle": "वाहन",
+    "show": "दिखाएं"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "इंप्रेशन",
+      "date": "तारीख",
+      "vehicle": "वाहन",
+      "chart": "चार्ट",
+      "table": "तालिका",
+      "impressionsPerMile": "प्रति मील इंप्रेशन",
+      "miles": "मील",
+      "avg": "औसत"
+    },
+    "demographics": {
+      "demographics": "जनसांख्यिकी",
+      "age": "आयु",
+      "education": "शिक्षा",
+      "income": "आय",
+      "ethnicity": "जातीयता",
+      "chartType": "चार्ट प्रकार",
+      "verticalBar": "ऊर्ध्वाधर बार",
+      "horizontalBar": "क्षैतिज बार",
+      "doughnutChart": "डोनट चार्ट",
+      "lineChart": "रेखा चार्ट"
+    },
+    "affinities": {
+      "affinities": "रुझान"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "ऐप्स / वेबसाइट्स",
+      "byAppOrWebsites": "ऐप्स / वेबसाइट्स द्वारा"
+    },
+    "dayAndHour": {
+      "dayAndHour": "दिन और घंटा",
+      "byDayAndHour": "दिन और घंटा द्वारा",
+      "dayChart": "दिन चार्ट",
+      "hourChart": "घंटा चार्ट"
+    },
+    "browser": {
+      "browser": "ब्राउज़र",
+      "byBrowser": "ब्राउज़र द्वारा"
+    },
+    "operatingSystem": {
+      "OS": "ऑपरेटिंग सिस्टम",
+      "byOperatingSystem": "ऑपरेटिंग सिस्टम द्वारा"
+    },
+    "telecomOperator": {
+      "telecomOperator": "दूरसंचार ऑपरेटर",
+      "byTelecomOperator": "दूरसंचार ऑपरेटर द्वारा"
+    },
+    "creatives": {
+      "creatives": "क्रिएटिव्स",
+      "byCreatives": "क्रिएटिव्स द्वारा",
+      "creativesChart": "क्रिएटिव्स चार्ट",
+      "sizeChart": "आकार चार्ट"
+    }
+  },
+  "highlights": {
+    "welcome": "स्वागत है",
+    "highlight": "हाइलाइट"
+  },
+  "cars": {
+    "cars": "कारें",
+    "grid view": "ग्रिड दृश्य",
+    "table view": "तालिका दृश्य",
+    "photo list": "फोटो सूची"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "कारें",
+      "Buses": "बसें",
+      "Trucks": "ट्रक",
+      "Robots": "रोबोट",
+      "e-scooter": "ई-स्कूटर",
+      "Rickshaws": "रिक्शा",
+      "2-wheelers": "2-पहिया वाहन"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "डिजिटल बिलबोर्ड्स",
+      "Car Rooftoppers": "कार रूफटॉपर्स",
+      "Van Digital Billboards": "वैन बिलबोर्ड्स",
+      "Backpacks": "बैगपैक"
+    },
+    "Mobile Ads": "मोबाइल विज्ञापन",
+    "Static Billboards": "स्थैतिक बिलबोर्ड्स",
+    "Vehicle Ads": "वाहन विज्ञापन",
+    "Digital Screens": "डिजिटल स्क्रीन",
+    "Cinema Theater": "सिनेमा थिएटर"
+  },
+  "map": {
+    "map": "मानचित्र",
+    "basic": "मूल",
+    "heat": "हीट",
+    "live": "लाइव"
+  },
+  "attribution": {
+    "attribution": "एट्रिब्यूशन",
+    "qrcode": "क्यूआर कोड",
+   
+    "trackingurl": {
+      "trackingurl": "ट्रैकिंग यूआरएल",
+      "livetracking":"लाइव ट्रैकिंग",
+      "dateAndTime": "दिनांक और समय",
+      "campaignId": "अभियान आईडी",
+      "deviceModel": "डिवाइस मॉडल",
+      "deviceType": "डिवाइस प्रकार",
+      "deviceVendor": "डिवाइस विक्रेता",
+      "ipAddress": "आईपी पता",
+      "city": "शहर",
+      "state": "राज्य",
+      "country": "देश",
+      "url": "यूआरएल",
+      "storeAddress": "स्टोर का पता"
+          },
+    "footfall": "पदचिन्ह",
+    "analytics": {
+      "attributionAnalytics": "एट्रिब्यूशन एनालिटिक्स",
+      "attributionLiftIndex": "एट्रिब्यूशन लिफ्ट इंडेक्स",
+      "exposed": "एक्सपोज़्ड",
+      "control": "नियंत्रण",
+      "exposedAudience": "एक्सपोज़्ड दर्शक",
+      "attributedFootfall": "एट्रिब्यूटेड पदचिन्ह",
+      "footfallRate": "पदचिन्ह दर",
+      "controlAudience": "नियंत्रित दर्शक",
+      "attributedFootfallNote": "एट्रिब्यूटेड पदचिन्ह ओओएचमेट्रिक प्लेटफ़ॉर्म में देखे गए पदचिन्हों का उपसमूह है।",
+      "controlFootfallNote": "नियंत्रित पदचिन्ह ओओएचमेट्रिक प्लेटफ़ॉर्म में देखे गए पदचिन्हों का उपसमूह है।",
+      "attributedByDay": "सप्ताह के दिनों द्वारा एट्रिब्यूटेड पदचिन्ह",
+      "controlByDay": "सप्ताह के दिनों द्वारा नियंत्रित पदचिन्ह",
+      "attributedByHour": "घंटे के अनुसार एट्रिब्यूटेड पदचिन्ह",
+      "controlByHour": "घंटे के अनुसार नियंत्रित पदचिन्ह",
+      "peopleInsights": "लोगों की अंतर्दृष्टि",
+      "devices": "डिवाइस",
+      "gender": "लिंग",
+      "ageGroup": "आयु वर्ग",
+      "segments": "खंड",
+      "female": "महिला",
+      "male": "पुरुष"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "उन्नत एट्रिब्यूशन अंतर्दृष्टि",
+      "leadTimeVisit": "लीड समय से विजिट",
+      "exposureVisit": "एक्सपोजर से विजिट",
+      "topStores": "शीर्ष स्टोर्स द्वारा एट्रिब्यूटेड पदचिन्ह",
+      "topHomeLocations": "शीर्ष एट्रिब्यूटेड होम लोकेशन",
+      "storeName": "स्टोर का नाम",
+      "homeLocations": "होम लोकेशन"
+    }
+  },
+  "audience": {
+    "audience": "दर्शक",
+    "clicksByGender": "लिंग द्वारा क्लिक",
+    "clicksByDevice": "डिवाइस द्वारा क्लिक",
+    "clicksByAge": "आयु द्वारा क्लिक",
+    "clicksBySource": "स्रोत द्वारा क्लिक",
+    "ctrBySec": "एसईसी द्वारा सीटीआर"
+  }
+}

@@ -7,8 +7,12 @@
     "mapView": "Vista del mapa",
     "cars": "Autos",
     "attribution": "Atribución",
+   
     "deviceIds": "ID de dispositivos",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "logoutMessage": "¿Estás seguro de que deseas cerrar sesión?",
+     "cancel": "Cancelar",
+    "confirm": "Confirmar"
   },
   "filterPanel": {
     "campaign": "Campaña",
@@ -101,7 +105,9 @@
     "Mobile Ads": "Anuncios móviles",
     "Static Billboards": "Vallas publicitarias estáticas",
     "Vehicle Ads": "Anuncios en vehículos",
-    "Digital Screens": "Pantallas digitales"
+    "Digital Screens": "Pantallas digitales",
+    "Cinema Theater":"sala de cine"
+
   },
   "map": {
     "map": "Mapa",
@@ -112,7 +118,22 @@
   "attribution": {
     "attribution": "Atribución",
     "qrcode": "Código QR",
-    "trackingurl": "URL de seguimiento",
+    "trackingurl": {
+      "trackingurl": "URL de seguimiento",
+      "livetracking":"Seguimiento en vivo",
+      "dateAndTime": "Fecha y hora",
+      "campaignId": "ID de campaña",
+      "deviceModel": "Modelo del dispositivo",
+      "deviceType": "Tipo de dispositivo",
+      "deviceVendor": "Proveedor del dispositivo",
+      "ipAddress": "Dirección IP",
+      "city": "Ciudad",
+      "state": "Estado",
+      "country": "País",
+      "url": "URL",
+      "storeAddress": "Dirección de la tienda"
+          },
+  
     "footfall": "Afluencia de personas",
     "analytics": {
       "attributionAnalytics": "Análisis de atribución",

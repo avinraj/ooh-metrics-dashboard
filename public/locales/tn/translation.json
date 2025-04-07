@@ -1,0 +1,176 @@
+{
+  "sideBar": {
+    "adType": "ஆட்டிப்புருவா வகை",
+    "highlight": "திகுப்படை",
+    "reports": "அனலீசுகள்",
+    "audience": "அudience",
+    "mapView": "நக்ஷத்திரம் பார்வை",
+    "cars": "கார்கள்",
+    "attribution": "சர்விகை",
+    "deviceIds": "தொகு அடைகள்",
+    "logout": "வெளியேறு",
+    "logoutMessage": "நீங்கள் வெளியேற விரும்புகிறீர்களா?",
+    "cancel": "ரத்துசெய்",
+    "confirm": "உறுதிப்படுத்தவும்"
+  },
+  "filterPanel": {
+    "campaign": "மார்க்கெட்",
+    "selectDateRange": "தேதி வரம்பை தேர்ந்தெடு",
+    "vehicle": "வாகனம்",
+    "show": "காட்சிப்படுத்து"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "அனுபவங்கள்",
+      "date": "தேதி",
+      "vehicle": "வாகனம்",
+      "chart": "தட்சணம்",
+      "table": "சட்டம்",
+      "impressionsPerMile": "மைலுக்கு அனுபவங்கள்",
+      "miles": "மைல்கள்",
+      "avg": "சராசரி"
+    },
+    "demographics": {
+      "demographics": "ประชากியல்",
+      "age": "வயது",
+      "education": "கல்வி",
+      "income": "ஆதாயம்",
+      "ethnicity": "जाति",
+      "chartType": "தட்சணப் வகை",
+      "verticalBar": "தழகுப்பிரபா",
+      "horizontalBar": "விரிவான கம்பி",
+      "doughnutChart": "டைன்மாட் தட்சணம்",
+      "lineChart": "இணை தட்சணம்"
+    },
+    "affinities": {
+      "affinities": "உருப்படிகள்"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "அப்/வலைத்தளங்கள்",
+      "byAppOrWebsites": "அப்/வலைத்தளங்கள் வகை"
+    },
+    "dayAndHour": {
+      "dayAndHour": "நாள் மற்றும் மணி",
+      "byDayAndHour": "நாள்/மணி வகை",
+      "dayChart": "நாள் தட்சணம்",
+      "hourChart": "மணி தட்சணம்"
+    },
+    "browser": {
+      "browser": "ப்ரவுசர்",
+      "byBrowser": "ப்ரவுசர் வகை"
+    },
+    "operatingSystem": {
+      "OS": "அமைப்பியல் பொறியியல்",
+      "byOperatingSystem": "அமைப்பியல் பொறியியல் வகை"
+    },
+    "telecomOperator": {
+      "telecomOperator": "டெலிகாம் போனர்களின் ஆபரேட்டர்",
+      "byTelecomOperator": "டெலிகாம் போனர்களின் ஆபரேட்டர் வகை"
+    },
+    "creatives": {
+      "creatives": "சட்டிப்புகள்",
+      "byCreatives": "சட்டிப்புகள் வகை",
+      "creativesChart": "சட்டிப்புகள் தட்சணம்",
+      "sizeChart": "பரிமாண தட்சணம்"
+    }
+  },
+  "highlights": {
+    "welcome": "வரவேற்பு",
+    "highlight": "திகுப்படை"
+  },
+  "cars": {
+    "cars": "கார்கள்",
+    "grid view": "பிடி பார்வை",
+    "table view": "சட்டம் பார்வை",
+    "photo list": "பட பட்டியல்"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "கார்கள்",
+      "Buses": "பஸ்‌க்கள்",
+      "Trucks": "ட்ரக்‌க்கள்",
+      "Robots": "ரோபோட்கள்",
+      "e-scooter": "இ-ஸ்கூட்டர்",
+      "Rickshaws": "ஆட்டோ ரிக்க்ஷா",
+      "2-wheelers": "2 சக்கர வாகனங்கள்"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "டிஜிட்டல் பில்‌போர்ட்கள்",
+      "Car Rooftoppers": "கார் ரோபெட்ஸ்",
+      "Van Digital Billboards": "வான் டிஜிட்டல் பில்‌போர்ட்கள்",
+      "Backpacks": "பைருப்பைகள்"
+    },
+    "Mobile Ads": "மொபைல் அறிவிப்புகள்",
+    "Static Billboards": "அமைங்காத பில்‌போர்ட்கள்",
+    "Vehicle Ads": "வாகன அறிவிப்புகள்",
+    "Digital Screens": "டிஜிட்டல் திரைகள்",
+    "Cinema Theater": "சினிமா அரங்கம்"
+  },
+  "map": {
+    "map": "நக்ஷத்திரம்",
+    "basic": "ஆதார",
+    "heat": "பசுமை",
+    "live": "வீடியோ"
+  },
+  "attribution": {
+    "attribution": "சர்விகை",
+    "qrcode": "QR குறியீடு",
+    "trackingurl": {
+     "trackingurl": "சட்டீங்க URL",
+      "livetracking":"நேரடி கண்காணிப்பு",
+      "dateAndTime": "தேதி மற்றும் நேரம்",
+      "campaignId": "பிரச்சார ஐடி",
+      "deviceModel": "சாதன மாதிரி",
+      "deviceType": "சாதன வகை",
+      "deviceVendor": "சாதன விற்பனையாளர்",
+      "ipAddress": "IP முகவரி",
+      "city": "நகரம்",
+      "state": "மாநிலம்",
+      "country": "நாடு",
+      "url": "URL",
+      "storeAddress": "கடை முகவரி"
+          },
+    
+    "footfall": "அடிப்படை",
+    "analytics": {
+      "attributionAnalytics": "சர்விகை அனலிட்டிக்ஸ்",
+      "attributionLiftIndex": "சர்விகை உயர்வு மதிப்பு",
+      "exposed": "காட்சிக்கிடைத்தவர்கள்",
+      "control": "நிர்வாக",
+      "exposedAudience": "காட்சிக்கிடைத்தோர் அudience",
+      "attributedFootfall": "சர்விகைக்கிடைக்குள் அடிப்படை",
+      "footfallRate": "அடிப்படை சதவீதம்",
+      "controlAudience": "நிர்வாக அudience",
+      "attributedFootfallNote": "அடிப்படை OOmetric மேலாண்மையில் காணப்படுபவைகள்.",
+      "controlFootfallNote": "நிர்வாக OOmetric மேலாண்மையில் காணப்படுபவைகள்.",
+      "attributedByDay": "நாளுக்குச் சர்விகைக்கிடை அடிப்படை",
+      "controlByDay": "நாளுக்குச் நிர்வாக அடிப்படை",
+      "attributedByHour": "மணிக்கு சர்விகைக்கிடை அடிப்படை",
+      "controlByHour": "மணிக்கு நிர்வாக அடிப்படை",
+      "peopleInsights": "மக்கள் விஷேடிகள்",
+      "devices": "தொகுதிகள்",
+      "gender": "பாலினம்",
+      "ageGroup": "வயதிய группுகள்",
+      "segments": "இலக்குகள்",
+      "female": "பெண்",
+      "male": "புல்லால்"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "மட்டளான சர்விகை விஷேடிகள்",
+      "leadTimeVisit": "முந்தைய நேரம் பயணம்",
+      "exposureVisit": "காட்சிக்கிடை பயணம்",
+      "topStores": "உச்சம் அங்காடிகள்",
+      "topHomeLocations": "உச்சம் வீட்டிடங்கள்",
+      "storeName": "அங்காடி பெயர்",
+      "homeLocations": "வீட்டிடங்கள்"
+    }
+  },
+  "audience": {
+    "audience": "அudience",
+    "clicksByGender": "பாலினத்திற்கு கிளிக்கள்",
+    "clicksByDevice": "தொகுதிக்கு கிளிக்கள்",
+    "clicksByAge": "வயதிக்கு கிளிக்கள்",
+    "clicksBySource": "மூலத்திற்கு கிளிக்கள்",
+    "ctrBySec": "நொடிக்கு CTR"
+  }
+}

@@ -2,19 +2,17 @@ import {
   Box,
   Button,
   Grid,
-  Typography,
-  useMediaQuery,
-  useTheme,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import gridIcon from "../../../assets/carsection1.jpg";
-import wagonr from "../../../assets/wagonr.webp";
-import ecosport from "../../../assets/ecosport.avif";
+
 import { useState } from "react";
 import FilterPanel from "../../MapView/components/FilterPanel";
 import { CiGrid41 } from "react-icons/ci";
@@ -22,63 +20,35 @@ import { CiViewTable } from "react-icons/ci";
 import { MdInsertPhoto } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
+import bus1 from "../../../assets/bus_1.png";
+import bus2 from "../../../assets/bus_2.png";
+import bus3 from "../../../assets/bus_3.png";
+
 const Buses = () => {
   const theme = useTheme();
   const { t } = useTranslation();
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("Campaign 1");
-  const [selectedVehicle, setSelectedVehicle] = useState<string>("Car 1");
-  const [layerType, setLayerType] = useState("GRID_VIEW");
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const [dateRange, setDateRange] = useState<{
-    startDate: Date;
-    endDate: Date;
-  }>({
-    startDate: new Date(),
-    endDate: new Date(),
-  });
-
-  const campaigns = ["Campaign 1", "Campaign 2", "Campaign 3"];
-  const vehicles = ["Car 1", "Car 2", "Car 3"];
-
-  const buttonData = [
-    {
-      label: t("cars.grid view"),
-      value: "GRID_VIEW",
-      icon: <CiGrid41 size={30} />,
-    },
-    {
-      label: t("cars.table view"),
-      value: "TABLE_VIEW",
-      icon: <CiViewTable size={30} />,
-    },
-    {
-      label: t("cars.photo list"),
-      value: "PHOTO_LIST",
-      icon: <MdInsertPhoto size={30} />,
-    },
-  ];
 
   const carsData = [
     {
-      name: "Mercedes",
-      year: 2012,
+      name: "Bus 1",
+      year: 2022,
       driver: "John",
       impressions: "4.59",
-      image: gridIcon,
+      image: bus1,
     },
     {
-      name: "Wagon R",
-      year: 2020,
+      name: "Bus 2",
+      year: 2023,
       driver: "Alice",
       impressions: "5.12",
-      image: wagonr,
+      image: bus2,
     },
     {
-      name: "EcoSport",
-      year: 2018,
+      name: "Bus 3",
+      year: 2022,
       driver: "Robert",
       impressions: "4.85",
-      image: ecosport,
+      image: bus3,
     },
   ];
 
@@ -87,7 +57,13 @@ const Buses = () => {
       {carsData.map((car, index) => (
         <Grid item xs={12} sm={6} md={4} key={index}>
           <Box sx={{ border: "1px solid white", padding: 1 }}>
-            <img src={car.image} alt={`${car.name}`} width="100%" height="190" style={{ objectFit: "cover" }} />
+            <img
+              src={car.image}
+              alt={`${car.name}`}
+              width="100%"
+              height="190"
+              style={{ objectFit: "cover" }}
+            />
             <Box display="flex" justifyContent="space-between">
               <Typography color="black">
                 {car.name} <br /> ({car.year}) | {car.driver}
@@ -134,7 +110,13 @@ const Buses = () => {
       {carsData.map((car, index) => (
         <Grid item key={index}>
           <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-            <img src={car.image} alt={`${car.name}`} width="150" height="100" style={{ objectFit: "cover" }} />
+            <img
+              src={car.image}
+              alt={`${car.name}`}
+              width="150"
+              height="100"
+              style={{ objectFit: "cover" }}
+            />
             <Box>
               <Typography color="black">{car.name}</Typography>
               <Typography color="gray">
@@ -160,12 +142,49 @@ const Buses = () => {
     }
   };
 
+  const [selectedCampaign, setSelectedCampaign] =
+    useState<string>("Campaign 1");
+  const [selectedVehicle, setSelectedVehicle] = useState<string>(
+    carsData[0]?.name
+  );
+  const [layerType, setLayerType] = useState("GRID_VIEW");
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const [dateRange, setDateRange] = useState<{
+    startDate: Date;
+    endDate: Date;
+  }>({
+    startDate: new Date(),
+    endDate: new Date(),
+  });
+
+  const campaigns = ["Campaign 1", "Campaign 2", "Campaign 3"];
+
+  const buttonData = [
+    {
+      label: t("cars.grid view"),
+      value: "GRID_VIEW",
+      icon: <CiGrid41 size={30} />,
+    },
+    {
+      label: t("cars.table view"),
+      value: "TABLE_VIEW",
+      icon: <CiViewTable size={30} />,
+    },
+    {
+      label: t("cars.photo list"),
+      value: "PHOTO_LIST",
+      icon: <MdInsertPhoto size={30} />,
+    },
+  ];
+
   return (
     <Grid container>
       <Grid item xs={12} gap={3} display={"flex"} alignItems={"center"}>
         <FilterPanel
           campaigns={campaigns}
-          vehicles={vehicles}
+          vehicles={carsData.map((obj) => {
+            return obj?.name;
+          })}
           selectedCampaign={selectedCampaign}
           selectedVehicle={selectedVehicle}
           dateRange={dateRange}
@@ -174,7 +193,14 @@ const Buses = () => {
           onDateRangeSelect={setDateRange}
         />
       </Grid>
-      <Grid item xs={12} display="flex" justifyContent="space-between" alignItems="center" padding={2}>
+      <Grid
+        item
+        xs={12}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        padding={2}
+      >
         <Box
           sx={{
             backgroundColor: theme.palette.primary.main,
@@ -183,7 +209,7 @@ const Buses = () => {
             marginTop: 3,
           }}
         >
-          <Typography variant="h3">buses</Typography>
+          <Typography variant="h3">{t("adtype.vehicles.Buses")}</Typography>
         </Box>
 
         <Box alignItems="center" display="flex">
@@ -199,7 +225,10 @@ const Buses = () => {
                 display="flex"
                 alignItems="center"
                 sx={{
-                  backgroundColor: obj.value === layerType ? theme.palette.primary.main : "transparent",
+                  backgroundColor:
+                    obj.value === layerType
+                      ? theme.palette.primary.main
+                      : "transparent",
                   padding: "5px 10px",
                   borderRadius: "5px",
                   color: theme.palette.text.primary,

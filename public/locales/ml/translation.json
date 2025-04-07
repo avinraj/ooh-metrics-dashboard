@@ -1,0 +1,177 @@
+{
+  "sideBar": {
+    "adType": "വിജ്ഞാപന തരം",
+    "highlight": "ഹൈലൈറ്റ്",
+    "reports": "റിപ്പോർട്ടുകൾ",
+    "audience": "പ്രേക്ഷകർ",
+    "mapView": "മാപ്പ് കാഴ്ച",
+    "cars": "കാറുകൾ",
+    "attribution": "അറ്റ്രിബ്യൂഷൻ",
+    "deviceIds": "ഡിവൈസ് ഐഡികൾ",
+    "logout": "ലോഗ് ഔട്ട്",
+    "logoutMessage": "നിങ്ങൾ ലോഗൗട്ട് ചെയ്യണമെന്ന് ഉറപ്പാണോ?",
+    "cancel": "റദ്ദാക്കുക",
+    "confirm": "സ്ഥിരീകരിക്കുക"
+  },
+  "filterPanel": {
+    "campaign": "ക്യാമ്പെയ്ൻ",
+    "selectDateRange": "തീയതി പരിധി തിരഞ്ഞെടുക്കുക",
+    "vehicle": "വാഹനം",
+    "show": "കാണിക്കുക"
+  },
+  "reports": {
+    "impressions": {
+      "impressions": "ഇംപ്രഷനുകൾ",
+      "date": "തീയതി",
+      "vehicle": "വാഹനം",
+      "chart": "ചാർട്ട്",
+      "table": "ടേബിൾ",
+      "impressionsPerMile": "മൈലിന് ഇംപ്രഷനുകൾ",
+      "miles": "മൈലുകൾ",
+      "avg": "ശരാശരി"
+    },
+    "demographics": {
+      "demographics": "ഡെമോഗ്രാഫിക്സ്",
+      "age": "പ്രായം",
+      "education": "വിദ്യാഭ്യാസം",
+      "income": "വരുമാനം",
+      "ethnicity": "ജാതി",
+      "chartType": "ചാർട്ട് തരം",
+      "verticalBar": "വെർട്ടിക്കൽ ബാർ",
+      "horizontalBar": "ഹോറിസോണ്ടൽ ബാർ",
+      "doughnutChart": "ഡോണട്ട് ചാർട്ട്",
+      "lineChart": "ലൈൻ ചാർട്ട്"
+    },
+    "affinities": {
+      "affinities": "ആസക്തികൾ"
+    },
+    "appsOrWebsites": {
+      "appsOrWebsites": "ആപ്സ് / വെബ്സൈറ്റുകൾ",
+      "byAppOrWebsites": "ആപ്സ് / വെബ്സൈറ്റുകൾ പ്രകാരം"
+    },
+    "dayAndHour": {
+      "dayAndHour": "ദിവസവും മണിക്കൂറും",
+      "byDayAndHour": "ദിവസം/മണിക്കൂർ പ്രകാരം",
+      "dayChart": "ദിവസ ചാർട്ട്",
+      "hourChart": "മണിക്കൂർ ചാർട്ട്"
+    },
+    "browser": {
+      "browser": "ബ്രൗസർ",
+      "byBrowser": "ബ്രൗസർ പ്രകാരം"
+    },
+    "operatingSystem": {
+      "OS": "ഓപറേറ്റിംഗ് സിസ്റ്റം",
+      "byOperatingSystem": "ഓപറേറ്റിംഗ് സിസ്റ്റം പ്രകാരം"
+    },
+    "telecomOperator": {
+      "telecomOperator": "ടെലികോം ഓപ്പറേറ്റർ",
+      "byTelecomOperator": "ടെലികോം ഓപ്പറേറ്റർ പ്രകാരം"
+    },
+    "creatives": {
+      "creatives": "ക്രിയേറ്റീവുകൾ",
+      "byCreatives": "ക്രിയേറ്റീവുകൾ പ്രകാരം",
+      "creativesChart": "ക്രിയേറ്റീവ്സ് ചാർട്ട്",
+      "sizeChart": "വലുപ്പ ചാർട്ട്"
+    }
+  },
+  "highlights": {
+    "welcome": "സ്വാഗതം",
+    "highlight": "ഹൈലൈറ്റ്"
+  },
+  "cars": {
+    "cars": "കാറുകൾ",
+    "grid view": "ഗ്രിഡ് കാഴ്ച",
+    "table view": "ടേബിൾ കാഴ്ച",
+    "photo list": "ഫോട്ടോ പട്ടിക"
+  },
+  "adtype": {
+    "vehicles": {
+      "Cars": "കാറുകൾ",
+      "Buses": "ബസുകൾ",
+      "Trucks": "ട്രക്കുകൾ",
+      "Robots": "റോബോട്ടുകൾ",
+      "e-scooter": "ഇ-സ്കൂട്ടർ",
+      "Rickshaws": "ഓട്ടോറിക്ഷകൾ",
+      "2-wheelers": "2-ചക്രവാഹനങ്ങൾ"
+    },
+    "digitalScreens": {
+      "digitalBillboards": "ഡിജിറ്റൽ ബിൽബോർഡുകൾ",
+      "Car Rooftoppers": "കാർ റൂഫ്റ്റോപ്പർസ്",
+      "Van Digital Billboards": "വാൻ ഡിജിറ്റൽ ബിൽബോർഡുകൾ",
+      "Backpacks": "ബാക്ക്പാക്കുകൾ"
+    },
+    "Mobile Ads": "മൊബൈൽ പരസ്യങ്ങൾ",
+    "Static Billboards": "സ്ഥിര ബിൽബോർഡുകൾ",
+    "Vehicle Ads": "വാഹന പരസ്യങ്ങൾ",
+    "Digital Screens": "ഡിജിറ്റൽ സ്ക്രീനുകൾ",
+    "Cinema Theater": "സിനിമ തീയേറ്റർ"
+  },
+  "map": {
+    "map": "മാപ്പ്",
+    "basic": "ബേസിക്",
+    "heat": "ഹീറ്റ്",
+    "live": "ലൈവ്"
+  },
+  "attribution": {
+    "attribution": "അറ്റ്രിബ്യൂഷൻ",
+    "qrcode": "QR കോഡ്",
+     
+    "trackingurl": {
+      "trackingurl": "ട്രാക്കിംഗ് URL",
+      "livetracking":"തത്സമയ ട്രാക്കിംഗ്",
+      "dateAndTime": "തീയതിയും സമയവും",
+      "campaignId": "കാമ്പയിൻ ഐഡി",
+      "deviceModel": "ഉപകരണ മോഡൽ",
+      "deviceType": "ഉപകരണ തരം",
+      "deviceVendor": "ഉപകരണ വിതരണക്കാരൻ",
+      "ipAddress": "IP വിലാസം",
+      "city": "നഗരം",
+      "state": "സംസ്ഥാനം",
+      "country": "രാജ്യം",
+      "url": "URL",
+      "storeAddress": "സ്റ്റോർ വിലാസം"
+          },
+   
+    "footfall": "ഫുട്‌ഫോൾ",
+    "analytics": {
+      "attributionAnalytics": "അറ്റ്രിബ്യൂഷൻ അനലിറ്റിക്സ്",
+      "attributionLiftIndex": "അറ്റ്രിബ്യൂഷൻ ലിഫ്റ്റ് ഇൻഡെക്സ്",
+      "exposed": "എക്സ്പോസ്ഡ്",
+      "control": "കോൺട്രോൾ",
+      "exposedAudience": "എക്സ്പോസ്ഡ് പ്രേക്ഷകർ",
+      "attributedFootfall": "അറ്റ്രിബ്യൂഷൻ ഫുട്‌ഫോൾ",
+      "footfallRate": "ഫുട്‌ഫോൾ നിരക്ക്",
+      "controlAudience": "കോൺട്രോൾ പ്രേക്ഷകർ",
+      "attributedFootfallNote": "അറ്റ്രിബ്യൂഷൻ ഫുട്‌ഫോൾ OOmetric പ്ലാറ്റ്‌ഫോമിൽ കണ്ട subset ആണ്.",
+      "controlFootfallNote": "കോൺട്രോൾ ഫുട്‌ഫോൾ OOmetric പ്ലാറ്റ്‌ഫോമിൽ കണ്ട subset ആണ്.",
+      "attributedByDay": "ദിവസം പ്രകാരം അറ്റ്രിബ്യൂഷൻ ഫുട്‌ഫോൾ",
+      "controlByDay": "ദിവസം പ്രകാരം കോൺട്രോൾ ഫുട്‌ഫോൾ",
+      "attributedByHour": "മണിക്കൂർ പ്രകാരം അറ്റ്രിബ്യൂഷൻ ഫുട്‌ഫോൾ",
+      "controlByHour": "മണിക്കൂർ പ്രകാരം കോൺട്രോൾ ഫുട്‌ഫോൾ",
+      "peopleInsights": "ആളുകളുടെ洞察ങ്ങൾ",
+      "devices": "ഡിവൈസുകൾ",
+      "gender": "ലിംഗം",
+      "ageGroup": "പ്രായസംഘം",
+      "segments": "വിഭാഗങ്ങൾ",
+      "female": "സ്ത്രീ",
+      "male": "പുരുഷൻ"
+    },
+    "advanced": {
+      "advancedAttributionInsights": "അഡ്വാൻസ്ഡ് അറ്റ്രിബ്യൂഷൻ洞察ങ്ങൾ",
+      "leadTimeVisit": "ലീഡ് ടൈം സന്ദർശനം",
+      "exposureVisit": "എക്സ്പോഷർ സന്ദർശനം",
+      "topStores": "മുകളിൽ സൂപ്പർ സ്റ്റോറുകൾ",
+      "topHomeLocations": "മുകളിൽ വീടിന്റെ പ്രദേശങ്ങൾ",
+      "storeName": "സ്റ്റോർ പേര്",
+      "homeLocations": "വീടുകളുടെ സ്ഥലങ്ങൾ"
+    }
+  },
+  "audience": {
+    "audience": "പ്രേക്ഷകർ",
+    "clicksByGender": "ലിംഗം പ്രകാരം ക്ലിക്കുകൾ",
+    "clicksByDevice": "ഡിവൈസ് പ്രകാരം ക്ലിക്കുകൾ",
+    "clicksByAge": "പ്രായം പ്രകാരം ക്ലിക്കുകൾ",
+    "clicksBySource": "ഉറവിടം പ്രകാരം ക്ലിക്കുകൾ",
+    "ctrBySec": "സെക് പ്രകാരം CTR"
+  }
+}

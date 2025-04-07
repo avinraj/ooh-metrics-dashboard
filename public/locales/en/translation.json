@@ -8,7 +8,10 @@
     "cars": "Cars",
     "attribution": "Attribution",
     "deviceIds": "Device IDs",
-    "logout": "Log out"
+    "logout": "Log out",
+    "logoutMessage": "Are you sure you want to log out?",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
   },
   "filterPanel": {
     "campaign": "Campaign",
@@ -100,7 +103,9 @@
     "Mobile Ads": "Mobile Ads",
     "Static Billboards": "Static Billboards",
     "Vehicle Ads": "Vehicle Ads",
-    "Digital Screens": "Digital Screens"
+    "Digital Screens": "Digital Screens",
+    "Cinema Theater":"Cinema Theater"
+
   },
   "map": {
     "map": "Map",
@@ -111,7 +116,22 @@
   "attribution":{
     "attribution":"Attribution",
     "qrcode":"QR-Code",
-    "trackingurl":"Tracking-URL",
+    "trackingurl": {
+     "trackingurl":"Tracking-URL",
+      "livetracking":"Live Tracking",
+      "dateAndTime":	"Date and Time",
+      "campaignId":"CampaignId",
+      "deviceModel":"Device Model",
+      "deviceType":"Device Type",
+      "deviceVendor":"Device Vendor",
+      "ipAddress":"ipAddress",
+      "city":"City",
+      "state":"State",
+      "url":"URL",
+      "country":"Country",
+      "storeAddress": "Store Address"
+          },
+    
     "footfall":"footfall",
     "analytics": {
       "attributionAnalytics": "Attribution analytics",

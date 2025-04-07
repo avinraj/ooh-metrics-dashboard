@@ -7,8 +7,12 @@
     "mapView": "지도 보기",
     "cars": "차량",
     "attribution": "귀속",
+  
     "deviceIds": "디바이스 ID",
-    "logout": "로그아웃"
+    "logout": "로그아웃",
+    "logoutMessage": "로그아웃하시겠습니까?",
+    "cancel": "취소",
+    "confirm": "확인"
   },
   "filterPanel": {
     "campaign": "캠페인",
@@ -100,7 +104,8 @@
     "Mobile Ads": "모바일 광고",
     "Static Billboards": "정적 광고판",
     "Vehicle Ads": "차량 광고",
-    "Digital Screens": "디지털 화면"
+    "Digital Screens": "디지털 화면",
+    "Cinema Theater":"영화관"
   },
   "map": {
     "map": "지도",
@@ -111,7 +116,23 @@
   "attribution": {
     "attribution": "귀속",
     "qrcode": "QR코드 ",
+    "trackingurl": {
     "trackingurl": "추적 URL ",
+      "livetracking":" 실시간 추적",
+      "dateAndTime": "날짜와 시간",
+      "campaignId": "캠페인 ID",
+      "deviceModel": "장치 모델",
+      "deviceType": "장치 유형",
+      "deviceVendor": "장치 공급업체",
+      "ipAddress": "IP 주소",
+      "city": "도시",
+      "state": "주",
+      "country": "국가",
+      "url": "URL",
+      "storeAddress": "가게 주소"
+          },
+  
+    
     "footfall": "유동 인구 ",
     "analytics": {
       "attributionAnalytics": "귀속 분석",

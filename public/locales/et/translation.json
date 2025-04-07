@@ -7,8 +7,12 @@
     "mapView": "Kaardi vaade",
     "cars": "Autod",
     "attribution": "Atribuutika",
+   
     "deviceIds": "Seadme ID-d",
-    "logout": "Logi välja"
+    "logout": "Logi välja",
+    "logoutMessage": "Kas olete kindel, et soovite välja logida?",
+    "cancel": "Tühista",
+    "confirm": "Kinnita"
   },
   "filterPanel": {
     "campaign": "Kampaania",
@@ -100,7 +104,8 @@
     "Mobile Ads": "Mobiilireklaamid",
     "Static Billboards": "Staatiilised reklaampostid",
     "Vehicle Ads": "Sõiduki reklaamid",
-    "Digital Screens": "Digitaalsed ekraanid"
+    "Digital Screens": "Digitaalsed ekraanid",
+    "Cinema Theater":"kinoteater"
   },
   "map": {
     "map": "Kaart",
@@ -111,7 +116,22 @@
   "attribution": {
     "attribution": "Omistamine",
     "qrcode": "QR-kood",
-    "trackingurl": "Jälgimislink",
+    "trackingurl": {
+      "trackingurl": "Jälgimislink",
+      "livetracking":" Reaalajas jälgimine",
+      "dateAndTime": "Kuupäev ja kellaaeg",
+      "campaignId": "Kampaania ID",
+      "deviceModel": "Seadme mudel",
+      "deviceType": "Seadme tüüp",
+      "deviceVendor": "Seadme tarnija",
+      "ipAddress": "IP aadress",
+      "city": "Linn",
+      "state": "Osariik",
+      "country": "Riik",
+      "url": "URL",
+      "storeAddress": "Poja aadress"
+          },
+   
     "footfall": "Külastuste arv",
     "analytics": {
       "attributionAnalytics": "Omistamise analüüs",

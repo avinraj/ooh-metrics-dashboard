@@ -12,19 +12,50 @@ import MobileAdReports from "../app/Reports/pages/MobileAdReports";
 import ReportsMain from "../app/Reports/pages/ReportsMain";
 import Layout from "../layout/Layout";
 import ProtectedRoute from "./ProtectedRoute";
-import MapViewInventory from "../app/MapView/pages/MapViewInventory";
+import WeeklyReports from "../app/Reports/pages/WeeklyReports";
+import Creatives from "../app/Creatives/pages/Creatives";
+import TrackingUrls from "../app/TrackingUrls/pages/TrackingUrls";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Signup />} />
-      <Route path="/inventory" element={<MapViewInventory />} />
       <Route
         path="/highlight"
         element={
           <ProtectedRoute>
             <Layout>
               <HighLight />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/creatives"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <Creatives />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/tracking-urls"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <TrackingUrls />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/weekly-reports"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <WeeklyReports />
             </Layout>
           </ProtectedRoute>
         }
@@ -39,7 +70,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-       <Route
+      <Route
         path="/mobile-ad-reports"
         element={
           <ProtectedRoute>
@@ -49,7 +80,7 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-        <Route
+      <Route
         path="/audience"
         element={
           <ProtectedRoute>

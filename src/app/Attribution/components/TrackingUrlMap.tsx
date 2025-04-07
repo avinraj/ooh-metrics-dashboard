@@ -6,6 +6,7 @@ import yellowMarker from "../../../assets/yellow_marker.png";
 import trackingData from "../../../Data/trackingUrl.json"; // Import JSON data
 import { constants } from "../../core/data/constants";
 import MapStylePicker from "../../MapView/components/MapStylePicker";
+import { t } from "i18next";
 
 const TrackingUrlMap: React.FC = () => {
   const mapContainer = useRef(null);
@@ -56,7 +57,7 @@ const TrackingUrlMap: React.FC = () => {
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }).setHTML(
             `<div><strong>Date & Time:</strong> ${markerData.dataTime}<br>
-            <strong>Lattitude:</strong> ${markerData.lat}<br>
+            <strong>Latitude:</strong> ${markerData.lat}<br>
              <strong>Longitude:</strong> ${markerData.long}<br>
            <div>`
           )
@@ -104,10 +105,7 @@ const TrackingUrlMap: React.FC = () => {
 
       marker.setLngLat([newLng, newLat]);
 
-      if (
-        newLat > initialPosition.lat + bounceHeight ||
-        newLat < initialPosition.lat - bounceHeight
-      ) {
+      if (newLat > initialPosition.lat + bounceHeight || newLat < initialPosition.lat - bounceHeight) {
         bounceDirection *= -1; // Reverse direction
       }
     };
@@ -118,10 +116,7 @@ const TrackingUrlMap: React.FC = () => {
   };
 
   // Toggle marker generation
-  const toggleMarkerGeneration = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    checked: boolean
-  ) => {
+  const toggleMarkerGeneration = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => {
     console.log(event);
     setIsGeneratingMarkers(checked);
   };
@@ -145,24 +140,11 @@ const TrackingUrlMap: React.FC = () => {
   // Update markers when new data arrives
   useEffect(() => {
     if (mapRef.current && dynamicData.length > trackingData.length) {
-      const prevLatestMarker = dynamicData[dynamicData.length - 2];
       const newMarkerData = dynamicData[dynamicData.length - 1];
 
+      // Update all existing markers to yellow
       markersRef.current.forEach((marker) => {
-        if (
-          marker.getLngLat().lng === prevLatestMarker.long &&
-          marker.getLngLat().lat === prevLatestMarker.lat
-        ) {
-          marker.getElement().style.backgroundImage = `url(${yellowMarker})`;
-          marker.setPopup(
-            new mapboxgl.Popup({ offset: 25 }).setHTML(
-              `<div><strong>Date & Time:</strong> ${prevLatestMarker.dataTime}<br>
-              <strong>Lattitude:</strong> ${prevLatestMarker.lat}<br>
-               <strong>Longitude:</strong> ${prevLatestMarker.long}<br>
-             <div>`
-            )
-          );
-        }
+        marker.getElement().style.backgroundImage = `url(${yellowMarker})`;
       });
 
       // Add the new marker as orange with a jumping effect
@@ -175,13 +157,13 @@ const TrackingUrlMap: React.FC = () => {
       el.style.backgroundPosition = "center";
       el.style.cursor = "pointer";
 
-      // Create the new marker and apply it to the map
+      // Create the new marker and add it to the map
       const newMarker = new mapboxgl.Marker(el)
         .setLngLat([newMarkerData.long, newMarkerData.lat])
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }).setHTML(
             `<div><strong>Date & Time:</strong> ${newMarkerData.dataTime}<br>
-             <strong>Lattitude:</strong> ${newMarkerData.lat}<br>
+             <strong>Latitude:</strong> ${newMarkerData.lat}<br>
               <strong>Longitude:</strong> ${newMarkerData.long}<br>
             <div>`
           )
@@ -215,7 +197,9 @@ const TrackingUrlMap: React.FC = () => {
                 color="primary"
               />
             }
-            label={isGeneratingMarkers ? "Live Tracking" : "Live Tracking"}
+            label={
+              isGeneratingMarkers ? t("attribution.trackingurl.livetracking") : t("attribution.trackingurl.livetracking")
+            }
           />
         </Box>
       </div>

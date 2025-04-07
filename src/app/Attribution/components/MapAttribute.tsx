@@ -146,22 +146,27 @@ const MapAttribute: React.FC = () => {
   }, [mapStyle]);
 
   return (
-    <div style={{ position: "relative"}}>
-       <Grid
+    <div style={{ position: "relative" }}>
+      <Grid
         container
         spacing={1}
         style={{
           position: "absolute",
           zIndex: 2,
           padding: "10px",
-          bottom: "40px"
+          bottom: "40px",
         }}
       >
         <Grid item>
-          <MapStylePicker selectedMapStyle={mapStyle} onStyleChange={(value: string) => {setMapStyle(value)}} />
+          <MapStylePicker
+            selectedMapStyle={mapStyle}
+            onStyleChange={(value: string) => {
+              setMapStyle(value);
+            }}
+          />
         </Grid>
       </Grid>
-      <div ref={mapContainer} style={{ width: "100%", height: "50vh" }} />;
+      <div ref={mapContainer} style={{ width: "100%", height: "50vh" }} />
     </div>
   );
 };
