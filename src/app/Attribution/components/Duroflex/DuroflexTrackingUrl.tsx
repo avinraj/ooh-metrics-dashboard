@@ -5,7 +5,7 @@ import {
   GridFilterModel,
   GridPaginationModel,
 } from "@mui/x-data-grid";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnalyticsModel } from "../../../../models/analytics";
 import { TrackingLinksModel } from "../../../../models/trackingLinks";
@@ -21,7 +21,7 @@ const DuroflexTrackingUrl: React.FC<DuroflexTrackingUrlProps> = ({
   trackingLinksData,
 }) => {
   const { t } = useTranslation();
-  const [tableData, setTableData] = useState<AnalyticsModel[]>(analyticsData);
+  const [tableData, setTableData] = useState<AnalyticsModel[]>([]);
   const [paginationModel, setPaginationModel] = useState<GridPaginationModel>({
     page: 0,
     pageSize: 10,
@@ -40,6 +40,10 @@ const DuroflexTrackingUrl: React.FC<DuroflexTrackingUrlProps> = ({
     () => new Map(trackingLinksData.map((link) => [link._id, link.name])),
     [trackingLinksData]
   );
+
+  useEffect(() => {
+    setTableData(analyticsData?.length ? analyticsData : []);
+  }, [analyticsData]);
 
   // Define Columns for DataGrid
   const columns: GridColDef[] = [
