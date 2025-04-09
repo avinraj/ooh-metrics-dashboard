@@ -3,7 +3,6 @@ import { t } from "i18next";
 import mapboxgl from "mapbox-gl";
 import { useEffect, useRef, useState } from "react";
 import orangeMarker from "../../../../assets/orange_marker.png";
-import yellowMarker from "../../../../assets/yellow_marker.png";
 import { constants } from "../../../core/data/constants";
 import MapStylePicker from "../../../MapView/components/MapStylePicker";
 import analyticsService from "../../services/analytics.service";
@@ -23,6 +22,7 @@ const DuroflexTrackingUrlMap: React.FC<DuroflexTrackingUrlMapProps> = ({
   const [dynamicData, setDynamicData] = useState<any[]>([]);
   const [isGeneratingMarkers, setIsGeneratingMarkers] = useState(true);
   const [isMapLoaded, setIsMapLoaded] = useState(false);
+  const sourceId = useRef("tracking-points");
   const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/dark-v10");
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const DuroflexTrackingUrlMap: React.FC<DuroflexTrackingUrlMapProps> = ({
       if (mapRef.current) {
         markersRef.current.forEach((marker) => marker.remove());
         markersRef.current = [];
-        addMarkers(data, mapRef.current);
+        updatePointsOnMap(data, mapRef.current);
       }
     }
   }, [data, isMapLoaded]);
@@ -64,48 +64,80 @@ const DuroflexTrackingUrlMap: React.FC<DuroflexTrackingUrlMapProps> = ({
     }
   }, [mapStyle]);
 
-  const addMarkers = (data: any[], map: mapboxgl.Map) => {
-    if (!data?.length) return;
-    const bounds = new mapboxgl.LngLatBounds();
+  const updatePointsOnMap = (points: any[], map: mapboxgl.Map) => {
+    const features = points.slice(0, -1).map((item) => ({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [item.longitude || item.long, item.latitude || item.lat],
+      },
+      properties: {
+        dataTime: item.createdAt,
+        lat: item.latitude || item.lat,
+        long: item.longitude || item.long,
+      },
+    }));
 
-    data.forEach((markerData, index) => {
-      const markerImage = yellowMarker;
+    const geojson: any = {
+      type: "FeatureCollection",
+      features,
+    };
 
-      const el = document.createElement("div");
-      el.style.width = "32px";
-      el.style.height = "32px";
-      el.style.backgroundImage = `url(${markerImage})`;
-      el.style.backgroundSize = "contain";
-      el.style.backgroundRepeat = "no-repeat";
-      el.style.backgroundPosition = "center";
+    if (map.getSource(sourceId.current)) {
+      (map.getSource(sourceId.current) as mapboxgl.GeoJSONSource).setData(
+        geojson
+      );
+    } else {
+      map.addSource(sourceId.current, {
+        type: "geojson",
+        data: geojson,
+      });
 
-      if (markerData.latitude && markerData.longitude) {
-        const marker = new mapboxgl.Marker(el)
-          .setLngLat([markerData.longitude, markerData.latitude])
-          .setPopup(
-            new mapboxgl.Popup({ offset: 25 }).setHTML(
-              `<div><strong>Date & Time:</strong> ${markerData.createdAt}<br>
-              <strong>Latitude:</strong> ${markerData.latitude}<br>
-              <strong>Longitude:</strong> ${markerData.longitude}<br>
-            </div>`
-            )
+      map.addLayer({
+        id: sourceId.current,
+        type: "circle",
+        source: sourceId.current,
+        paint: {
+          "circle-radius": 6,
+          "circle-color": "#FFD700",
+          "circle-stroke-width": 1,
+          "circle-stroke-color": "#fff",
+        },
+      });
+
+      // Add popup for each circle
+      map.on("click", sourceId.current, (e: any) => {
+        const coordinates = e.features?.[0]?.geometry?.coordinates as [
+          number,
+          number
+        ];
+        const props = e.features?.[0]?.properties;
+
+        if (!coordinates || !props) return;
+
+        new mapboxgl.Popup()
+          .setLngLat(coordinates)
+          .setHTML(
+            `
+            <div>
+              <strong>Date & Time:</strong> ${props.dataTime}<br/>
+              <strong>Latitude:</strong> ${props.lat}<br/>
+              <strong>Longitude:</strong> ${props.long}
+            </div>
+          `
           )
           .addTo(map);
-        markersRef.current.push(marker);
-        bounds.extend([markerData.longitude, markerData.latitude]);
+      });
 
-        if (index === data.length - 1) {
-          map.flyTo({
-            center: [markerData.longitude, markerData.latitude],
-            zoom: 10,
-            speed: 1,
-            curve: 1,
-          });
-        }
-      }
-    });
+      // Change cursor to pointer on hover
+      map.on("mouseenter", sourceId.current, () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
 
-    map.fitBounds(bounds, { padding: 20 });
+      map.on("mouseleave", sourceId.current, () => {
+        map.getCanvas().style.cursor = "";
+      });
+    }
   };
 
   const animateMarker = (marker: mapboxgl.Marker) => {
@@ -164,9 +196,11 @@ const DuroflexTrackingUrlMap: React.FC<DuroflexTrackingUrlMapProps> = ({
     if (mapRef.current && dynamicData.length > data.length) {
       const newMarkerData = dynamicData[dynamicData.length - 1];
 
-      markersRef.current.forEach((marker) => {
-        marker.getElement().style.backgroundImage = `url(${yellowMarker})`;
-      });
+      // Remove old markers
+      markersRef.current.forEach((marker) => marker.remove());
+      markersRef.current = [];
+
+      updatePointsOnMap(dynamicData.slice(0, -1), mapRef.current);
 
       const el = document.createElement("div");
       el.style.width = "32px";
@@ -189,8 +223,8 @@ const DuroflexTrackingUrlMap: React.FC<DuroflexTrackingUrlMapProps> = ({
             )
           )
           .addTo(mapRef.current);
-        markersRef.current.push(newMarker);
 
+        markersRef.current.push(newMarker);
         animateMarker(newMarker);
 
         mapRef.current.flyTo({
