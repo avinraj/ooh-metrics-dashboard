@@ -1,12 +1,12 @@
 [
   {
-    "email": "admin@oohmetrics.com",
+    "email": "admin@oohmetrics.co",
     "password": "12345",
     "role": "ADMIN",
     "brandAccessTo": ["burger_king", "duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
   },
   {
-    "email": "demo@oohmetrics.com",
+    "email": "demo@oohmetrics.co",
     "password": "12345",
     "role": "CLIENT",
     "brandAccessTo": ["burger_king", "duroflex"]
