@@ -1,9 +1,9 @@
 {
-    "reportDate": "15-Apr-25",
+    "reportDate": "22-Apr-25",
     "totalBudget": "₹ 173,333.29",
     "totalImpressionGoal": "1,333,333",
-    "uniqueUserReach": "5,32,505",
-    "campaignPacing": "69%",
+    "uniqueUserReach": "6,99,441",
+    "campaignPacing": "92%",
     "campaign": {
         "campaignName": "Microsoft WIN 11 x iOOH_Croma",
         "startDate": "24-Mar-25",
@@ -168,7 +168,56 @@
             "clicks": 473,
             "ctr": 1.03,
             "spend": 5948.93
-        }
+        },
+        {
+            "date": "15-Apr-25",
+            "impressions": 43407,
+            "clciks": 815,
+            "ctr": 1.88,
+            "spend": 5642.91
+           },
+           {
+            "date": "16-Apr-25",
+            "impressions": 42163,
+            "clciks": 970,
+            "ctr": 2.30,
+            "spend": 5481.19
+           },
+           {
+            "date": "17-Apr-25",
+            "impressions": 44454,
+            "clciks": 1097,
+            "ctr": 2.47,
+            "spend": 5779.02
+           },
+           {
+            "date": "18-Apr-25",
+            "impressions": 44068,
+            "clciks": 933,
+            "ctr": 2.12,
+            "spend": 5728.84
+           },
+           {
+            "date": "19-Apr-25",
+            "impressions": 44074,
+            "clciks": 966,
+            "ctr": 2.19,
+            "spend": 5729.62
+           },
+           {
+            "date": "20-Apr-25",
+            "impressions": 43269,
+            "clciks": 928,
+            "ctr": 2.14,
+            "spend": 5624.969999999999
+           },
+           {
+            "date": "21-Apr-25",
+            "impressions": 44611,
+            "clciks": 1043,
+            "ctr": 2.34,
+            "spend": 5799.429999999999
+           }
     ],
     "lineItemStats": {
         "duroflex_banglore": [
@@ -303,7 +352,49 @@
                 "impressions":   32010,
                 "clicks": 323,
                 "ctr": 1.01
-            }
+            },
+            {
+                "date": "15-Apr-25",
+                "impressions": 2905,
+                "clciks": 698,
+                "ctr": 2.35
+               },
+               {
+                "date": "16-Apr-25",
+                "impressions": 30299,
+                "clciks": 845,
+                "ctr": 2.79
+               },
+               {
+                "date": "17-Apr-25",
+                "impressions": 30746,
+                "clciks": 914,
+                "ctr": 2.97
+               },
+               {
+                "date": "18-Apr-25",
+                "impressions": 30426,
+                "clciks": 785,
+                "ctr": 2.58
+               },
+               {
+                "date": "19-Apr-25",
+                "impressions": 30270,
+                "clciks": 773,
+                "ctr": 2.55
+               },
+               {
+                "date": "20-Apr-25",
+                "impressions": 29618,
+                "clciks": 719,
+                "ctr": 2.43
+               },
+               {
+                "date": "21-Apr-25",
+                "impressions": 30842,
+                "clciks": 846,
+                "ctr": 2.74
+               }
         ],
         "duroflex_banglore_competitors": [
             {
@@ -437,100 +528,142 @@
                 "impressions":   13751,
                 "clicks": 150,
                 "ctr": 1.09
-            }
+            },
+            {
+                "date": "15-Apr-25",
+                "impressions": 13702,
+                "clciks": 117,
+                "ctr": 0.85
+               },
+               {
+                "date": "16-Apr-25",
+                "impressions":11864,
+                "clciks": 125,
+                "ctr": 1.05
+               },
+               {
+                "date": "17-Apr-25",
+                "impressions": 13708,
+                "clciks": 183,
+                "ctr": 1.33
+               },
+               {
+                "date": "18-Apr-25",
+                "impressions": 13642,
+                "clciks": 148,
+                "ctr": 1.08
+               },
+               {
+                "date": "19-Apr-25",
+                "impressions": 13804,
+                "clciks": 193,
+                "ctr": 1.40
+               },
+               {
+                "date": "20-Apr-25",
+                "impressions": 13651,
+                "clciks": 209,
+                "ctr": 1.53
+               },
+               {
+                "date": "21-Apr-25",
+                "impressions": 13769,
+                "clciks": 197,
+                "ctr": 1.43
+               }
         ]
     },
     "OSAndCreativeStats": {
         "OS_stats": [
             {
                 "OS": "Android",
-                "impressions": 848534,
-                "clicks": 9442,
-                "ctr": 1.11
+                "impressions": 1146409,
+                "clicks": 16158,
+                "ctr": 1.41
             },
             {
                 "OS": "iOS",
-                "impressions": 71022,
-                "clicks": 152,
-                "ctr": 0.21
+                "impressions": 79193,
+                "clicks": 188,
+                "ctr": 0.24
             }
         ],
         "overall": [
             {
                 "adSize": "300x250",
-                "impressions": 255187,
-                "clicks": 1451,
-                "ctr": 0.57
+                "impressions": 306297,
+                "clicks": 2317,
+                "ctr": 0.76
             },
             {
                 "adSize": "320x480",
-                "impressions":   113011,
-                "clicks":   2953,
-                "ctr": 2.61
+                "impressions":   135900,
+                "clicks":   4252,
+                "ctr": 3.13
             },
             {
                 "adSize": "320x50",
-                "impressions":     455242,
-                "clicks":   3694,
-                "ctr": 0.81
+                "impressions":     627006,
+                "clicks":   6689,
+                "ctr": 1.07
             },
             {
                 "adSize": "728x90",
-                "impressions":      96116,
-                "clicks":   1496,
-                "ctr": 1.56
+                "impressions":      156399,
+                "clicks":   3088,
+                "ctr": 1.97
             }
         ],
         "duroflex_banglore": [
             {
                 "adSize": "300x250",
-                "impressions": 184857,
-                "clicks": 1297,
-                "ctr": 0.70
+                "impressions": 224870,
+                "clicks": 2114,
+                "ctr": 0.94
             },
             {
                 "adSize": "320x480",
-                "impressions":   90589 ,
-                "clicks":   1822,
-                "ctr": 2.01
+                "impressions":   109233 ,
+                "clicks":   3090,
+                "ctr": 2.83
             },
             {
                 "adSize": "320x50",
-                "impressions":    285112,
-                "clicks":   2633,
-                "ctr": 0.92
+                "impressions":    381420,
+                "clicks":   4650,
+                "ctr": 1.22
             },
             {
                 "adSize": "728x90",
-                "impressions":    89827,
-                "clicks":  1458,
-                "ctr": 1.62
+                "impressions":    146768,
+                "clicks":  2936,
+                "ctr": 2.00
             }
         ],
         "duroflex_banglore_competitors": [
             {
                 "adSize": "300x250",
-                "impressions": 70330,
-                "clicks": 154,
-                "ctr": 0.22
+                "impressions": 81427,
+                "clicks": 203,
+                "ctr": 0.25
             },
             {
                 "adSize": "320x480",
-                "impressions":   22422 ,
-                "clicks":   1131,
-                "ctr": 5.04
+                "impressions":   26667 ,
+                "clicks":   1162,
+                "ctr": 4.36
             },
             {
                 "adSize": "320x50",
-                "impressions":    170130,
-                "clicks":   1061,
-                "ctr": 0.62
+                "impressions":    245586,
+                "clicks":   2039,
+                "ctr": 0.83
             },
             {
                 "adSize": "728x90",
-                "impressions":    6289,
-                "clicks":   38,
-                "ctr": 0.60
+                "impressions":    9631,
+                "clicks":   152,
+                "ctr": 1.58
             }
         ]
     },
@@ -618,6 +751,34 @@
         {
             "date": "13-Apr-2025",
             "total": 38
+        },
+        {
+            "date": "14-Apr-2025",
+            "total": 39
+        },
+        {
+            "date": "15-Apr-2025",
+            "total": 41
+        },
+        {
+            "date": "16-Apr-2025",
+            "total": 35
+        },
+        {
+            "date": "17-Apr-2025",
+            "total": 40
+        },
+        {
+            "date": "18-Apr-2025",
+            "total": 34
+        },
+        {
+            "date": "19-Apr-2025",
+            "total": 26
+        },
+        {
+            "date": "20-Apr-2025",
+            "total": 30
         }
     ]
 }
