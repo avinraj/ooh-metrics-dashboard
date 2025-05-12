@@ -11,23 +11,23 @@ const DayOfWeekChart = ({ type }: DayOfWeekChartProps) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const attributedDataArr: any[] = [
-    { name: "Monday", value: 12 },
-    { name: "Tuesday", value: 18 },
-    { name: "Wednesday", value: 21 },
-    { name: "Thursday", value: 21 },
-    { name: "Friday", value: 12 },
-    { name: "Saturday", value: 18 },
-    { name: "Sunday", value: 41 },
+    { name: "Monday", value: 117 },
+    { name: "Tuesday", value: 155 },
+    { name: "Wednesday", value: 134 },
+    { name: "Thursday", value: 142 },
+    { name: "Friday", value: 162 },
+    { name: "Saturday", value: 121 },
+    { name: "Sunday", value: 160 },
   ];
 
   const controlDataArr: any[] = [
-    { name: "Monday", value: 4 },
-    { name: "Tuesday", value: 66 },
-    { name: "Wednesday", value: 34 },
-    { name: "Thursday", value: 23 },
-    { name: "Friday", value: 27 },
-    { name: "Saturday", value: 18 },
-    { name: "Sunday", value: 8 },
+    { name: "Monday", value: 121 },
+    { name: "Tuesday", value: 125 },
+    { name: "Wednesday", value: 110 },
+    { name: "Thursday", value: 109 },
+    { name: "Friday", value: 98 },
+    { name: "Saturday", value: 87 },
+    { name: "Sunday", value: 96 },
   ];
 
   const processData = () => {

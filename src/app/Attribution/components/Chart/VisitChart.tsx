@@ -11,21 +11,22 @@ const VisitChart = ({ type }: VisitChartProps) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const attributedDataArr: any[] = [
-    { name: "1", value: 12 },
-    { name: "2", value: 18 },
-    { name: "3", value: 21 },
-    { name: "4", value: 21 },
-    { name: "5", value: 12 },
-    { name: "6", value: 18 },
-    { name: "7", value: 41 },
+    { name: "0", value: 18 },
+    { name: "1", value: 14 },
+    { name: "2", value: 22 },
+    { name: "3", value: 10 },
+    { name: "4", value: 12 },
+    { name: "5", value: 10 },
+    { name: "6", value: 8 },
+    { name: "7", value: 6 },
   ];
 
   const controlDataArr: any[] = [
-    { name: "1", value: 14 },
-    { name: "2", value: 56 },
-    { name: "3", value: 34 },
-    { name: "4", value: 22 },
-    { name: "5", value: 16 },
+    { name: "1", value: 42 },
+    { name: "2", value: 23 },
+    { name: "3", value: 18 },
+    { name: "4", value: 10 },
+    { name: "5", value: 7 },
   ];
 
   const processData = () => {

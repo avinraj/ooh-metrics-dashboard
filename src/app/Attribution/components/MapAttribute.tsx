@@ -4,25 +4,12 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import React, { useEffect, useRef, useState } from "react";
 import { constants } from "../../core/data/constants";
 import MapStylePicker from "../../MapView/components/MapStylePicker";
-
-// Array of cities with coordinates
-const cities = [
-  { name: "Delhi", coordinates: [77.1025, 28.7041] },
-  { name: "Mumbai", coordinates: [72.8777, 19.076] },
-  { name: "Chennai", coordinates: [80.2785, 13.0827] },
-  { name: "Bengaluru", coordinates: [77.5946, 12.9716] },
-  { name: "Kolkata", coordinates: [88.3639, 22.5726] },
-  { name: "Hyderabad", coordinates: [78.4744, 17.385] },
-  { name: "Bhubaneswar", coordinates: [85.8245, 20.2961] },
-  { name: "Pune", coordinates: [73.8567, 18.5204] },
-  { name: "Ahmedabad", coordinates: [72.5714, 23.0225] },
-  { name: "Jaipur", coordinates: [75.7873, 26.9124] },
-];
+import duroflexStores from "../../../Data/duroflexStores.json"
 
 // Generate GeoJSON data from the cities array
 const geoJsonData: any = {
   type: "FeatureCollection",
-  features: cities.map((city) => ({
+  features: duroflexStores.duroflex.map((city) => ({
     type: "Feature",
     geometry: {
       type: "Point",
@@ -45,8 +32,8 @@ const MapAttribute: React.FC = () => {
     const newMap = new mapboxgl.Map({
       container: mapContainer.current!,
       style: mapStyle,
-      center: [78.9629, 20.5937], // Center of India
-      zoom: 4,
+      center: [77.5946, 12.9716],
+      zoom: 9,
     });
 
     newMap.on("load", () => {

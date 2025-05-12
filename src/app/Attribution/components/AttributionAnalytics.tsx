@@ -9,8 +9,8 @@ import PeopleInsights from "./PeopleInsights";
 // Data extracted from the PDF
 const data = {
   footfall: {
-    exposed: { audience: 301194, attributed: 275, rate: 0.091 },
-    control: { audience: 15193717, attributed: 7395, rate: 0.049 },
+    exposed: { audience: 757616, attributed: 991, rate: 0.131 },
+    control: { audience: 1089202, attributed: 746, rate: 0.068 },
   },
   gender: { female: 63, male: 37 },
   devices: [
@@ -43,7 +43,7 @@ const AttributionAnalytics: React.FC = () => {
       </Typography>
       <Typography variant="subtitle2" gutterBottom fontWeight={"bolder"}>
       {t("attribution.analytics.attributionLiftIndex")}
-        <span style={{ marginLeft: "10px" }}>185.714</span>
+        <span style={{ marginLeft: "10px" }}>192.647</span>
       </Typography>
 
       <Grid container spacing={2}>

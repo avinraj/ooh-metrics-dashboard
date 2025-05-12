@@ -26,21 +26,21 @@ const PeopleInsights: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   // Example data for male and female percentages
-  const femalePercentage = 65; // Female percentage (example: 65%)
-  const malePercentage = 35; // Male percentage (example: 35%)
+  const femalePercentage = 45; // Female percentage (example: 65%)
+  const malePercentage = 55; // Male percentage (example: 35%)
 
   const ageGroup = [
-    { label: "18-25", value: 24 },
-    { label: "26-35", value: 27 },
-    { label: "36-45", value: 36 },
-    { label: "46 +", value: 12 },
+    { label: "18-25", value: 17 },
+    { label: "26-35", value: 26 },
+    { label: "36-45", value: 35 },
+    { label: "45 +", value: 22 },
   ];
 
   const segments = [
-    { label: "Travellers", value: 2.0 },
-    { label: "Professionals", value: 6.2 },
-    { label: "Affluents", value: 3.9 },
-    { label: "Students", value: 1.4 },
+    { label: "Travellers", value:7.9 },
+    { label: "Professionals", value: 23.4 },
+    { label: "Affluents", value: 12.2 },
+    { label: "Students", value: 0 },
   ];
 
   return (

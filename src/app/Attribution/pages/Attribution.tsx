@@ -1,4 +1,5 @@
 import LinkIcon from "@mui/icons-material/Link";
+import PeopleIcon from "@mui/icons-material/People";
 import {
   Box,
   Button,
@@ -198,11 +199,15 @@ const Attribution = () => {
               value: "trackingUrl",
               icon: <LinkIcon sx={{ marginRight: 1 }} />,
             },
-            // {
-            //   label: t("attribution.footfall"),
-            //   value: "footfall",
-            //   icon: <PeopleIcon sx={{ marginRight: 1 }} />,
-            // },
+            ...(email === duroflexEmail
+              ? [
+                  {
+                    label: t("attribution.footfall"),
+                    value: "footfall",
+                    icon: <PeopleIcon sx={{ marginRight: 1 }} />,
+                  },
+                ]
+              : []),
           ].map((button) => (
             <Button
               key={button.value}

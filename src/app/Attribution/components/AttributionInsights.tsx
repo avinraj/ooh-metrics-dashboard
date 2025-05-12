@@ -1,36 +1,46 @@
 import {
-    Box,
-    Grid,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Typography
+  Box,
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
 } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import VisitChart from "./Chart/VisitChart";
 
 const AttributionInsights: React.FC = () => {
-  const { t} = useTranslation()
+  const { t } = useTranslation();
 
   const data = {
     stores: [
-      {
-        name: "H&M Viviana Mall Mumbai",
-        location: "Mumbai",
-        footfall: "400606",
-      },
-      { name: "H&M 1 MG Bangalore", location: "Bangalore", footfall: "560008" },
+      { name: "Duroflex Experience Centre Marathahalli, Bangalore" },
+      { name: "Duroflex Experience Centre Malleshwaram, Bangalore" },
+      { name: "Duroflex Experience Centre Jayanagar, Bangalore" },
+      { name: "Duroflex Experience Centre Indiranagar, Bangalore" },
+      { name: "Duroflex Experience Centre Koramangala, Bangalore" },
+      { name: "Duroflex Experience Centre Banashankari, Bangalore" },
+      { name: "Duroflex Experience Centre Kengeri, Bangalore" },
+      { name: "Duroflex Experience Centre Bommanahalli, Bangalore" },
+      { name: "Duroflex Experience Centre Yelahanka, Bangalore" },
+      { name: "Duroflex Experience Centre 6th Block Rajajinagar, Bangalore" },
     ],
     locations: [
-      "400059",
+      "500044",
+      "560008",
       "400072",
-      "203001",
-      "140301"
-    ]
+      "560003",
+      "560016",
+      "560040",
+      "560070",
+      "560071",
+      "560085",
+      "600037",
+    ],
   };
 
   return (
@@ -41,14 +51,14 @@ const AttributionInsights: React.FC = () => {
         sx={{ opacity: 0.5 }}
         gutterBottom
       >
-         {t("attribution.advanced.advancedAttributionInsights")}
+        {t("attribution.advanced.advancedAttributionInsights")}
       </Typography>
 
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <div>
             <Typography variant="subtitle2" fontWeight={"bolder"} gutterBottom>
-            {t("attribution.advanced.leadTimeVisit")}
+              {t("attribution.advanced.leadTimeVisit")}
             </Typography>
           </div>
           <VisitChart type="attributed" />
@@ -57,7 +67,7 @@ const AttributionInsights: React.FC = () => {
         <Grid item xs={12} md={6}>
           <div>
             <Typography variant="subtitle2" fontWeight={"bolder"} gutterBottom>
-            {t("attribution.advanced.exposureVisit")}
+              {t("attribution.advanced.exposureVisit")}
             </Typography>
           </div>
           <VisitChart type="control" />
@@ -66,7 +76,7 @@ const AttributionInsights: React.FC = () => {
         <Grid item xs={12} md={6}>
           <div>
             <Typography variant="subtitle2" fontWeight={"bolder"} gutterBottom>
-            {t("attribution.advanced.topStores")}
+              {t("attribution.advanced.topStores")}
             </Typography>
           </div>
           <TableContainer
@@ -80,7 +90,7 @@ const AttributionInsights: React.FC = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>  {t("attribution.advanced.storeName")}</TableCell>
+                  <TableCell> {t("attribution.advanced.storeName")}</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -97,7 +107,7 @@ const AttributionInsights: React.FC = () => {
         <Grid item xs={12} md={6}>
           <div>
             <Typography variant="subtitle2" fontWeight={"bolder"} gutterBottom>
-            {t("attribution.advanced.topHomeLocations")}
+              {t("attribution.advanced.topHomeLocations")}
             </Typography>
           </div>
           <TableContainer
@@ -111,7 +121,10 @@ const AttributionInsights: React.FC = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>            {t("attribution.advanced.homeLocations")}</TableCell>
+                  <TableCell>
+                    {" "}
+                    {t("attribution.advanced.homeLocations")}
+                  </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>

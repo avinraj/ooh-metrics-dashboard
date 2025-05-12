@@ -15,11 +15,11 @@ const DevicesChart: React.FC = () => {
   const chartInstance: any = useRef<Chart | null>(null);
 
   const devicesData = [
-    { PROFILE_INDEX: 1, DEVICE_COUNT: 910, group: "redmi", percent: 12 },
-    { PROFILE_INDEX: 2, DEVICE_COUNT: 270, group: "xiaomi", percent: 18 },
-    { PROFILE_INDEX: 3, DEVICE_COUNT: 430, group: "apple", percent: 21 },
-    { PROFILE_INDEX: 4, DEVICE_COUNT: 500, group: "samsung", percent: 41 },
-    { PROFILE_INDEX: 5, DEVICE_COUNT: 500, group: "vivo", percent: 8 },
+    { PROFILE_INDEX: 3, DEVICE_COUNT: 430, group: "apple", percent: 17 },
+    { PROFILE_INDEX: 1, DEVICE_COUNT: 910, group: "oneplus", percent: 39 },
+    { PROFILE_INDEX: 2, DEVICE_COUNT: 270, group: "oppo", percent: 7 },
+    { PROFILE_INDEX: 4, DEVICE_COUNT: 500, group: "samsung", percent: 19 },
+    { PROFILE_INDEX: 5, DEVICE_COUNT: 500, group: "vivo", percent: 18 },
   ];
 
   const groupedDevicesData = devicesData.reduce(
