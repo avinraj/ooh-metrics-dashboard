@@ -7,6 +7,8 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  MenuItem,
+  Select,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -32,6 +34,8 @@ import AdType from "./AdType";
 import ConfirmModal from "./ConfirmModel";
 import ReportsAcc from "./Reports";
 import WeeklyReportsAcc from "./WeeklyReports";
+import i18n from "../../../i18n/i18n";
+import { languages } from "../../../i18n/languages";
 
 const Sidebar = () => {
   const locationVal = useLocation();
@@ -48,17 +52,17 @@ const Sidebar = () => {
 
   const { t } = useTranslation();
   const defaultLang = storageService.get("local", "i18nextLng", false);
-  const [language] = useState(defaultLang ? defaultLang : "en");
+  const [language, setLanguage] = useState(defaultLang ? defaultLang : "en");
 
-  // const handleLanguageChange = (event: any) => {
-  //   const selectedLanguage = event.target.value as string;
-  //   setLanguage(selectedLanguage);
-  //   i18n.changeLanguage(selectedLanguage);
+  const handleLanguageChange = (event: any) => {
+    const selectedLanguage = event.target.value as string;
+    setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
 
-  //   // Adjust RTL if Arabic is selected
-  //   document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
-  //   window.location.reload();
-  // };
+    // Adjust RTL if Arabic is selected
+    document.body.dir = selectedLanguage === "ar" ? "rtl" : "ltr";
+    window.location.reload();
+  };
 
   const { selectedAdType } = useSelector((state: any) => state?.selectedAdType);
 
@@ -284,7 +288,7 @@ const Sidebar = () => {
             </h2>
           </div>
 
-          {/* <Select
+          <Select
             value={language}
             onChange={handleLanguageChange}
             size="small"
@@ -299,7 +303,7 @@ const Sidebar = () => {
                 {`${lang?.name} (${lang?.code.toUpperCase()})`}
               </MenuItem>
             ))}
-          </Select> */}
+          </Select>
         </Box>
         <List sx={{ padding: 2 }} key={"adType"}>
           {email !== duroflexEmail && (

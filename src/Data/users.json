@@ -52,5 +52,11 @@
     "password": "wakefit",
     "role": "CLIENT",
     "brandAccessTo": ["duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
+  },
+  {
+    "email": "hector@oohconnect.co",
+    "password": "98765",
+    "role": "CLIENT",
+    "brandAccessTo": ["duroflex", "sleepyhead", "sleepwell", "sleep_company", "kurl_on", "wakefit"]
   }
 ]
